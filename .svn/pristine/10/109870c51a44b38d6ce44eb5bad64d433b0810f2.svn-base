@@ -1,0 +1,1285 @@
+/*MEDIA QUERIES*/
+
+@media (min-width: 320px) {
+    .page-bar {
+        /* margin-top: -13px !important;*/
+    }
+
+
+    .dataTables_wrapper > div:nth-child(2n) > div:nth-child(2n) {
+        position: absolute;
+    }
+}
+
+
+@media (min-width: 320px) and (orientation: portrait) {
+    /*.form-group.row {
+		margin-left: 15px !important;
+		margin-bottom: -15px !important;
+	}*/
+}
+
+
+@media (min-width: 480px) and (orientation: portrait) {
+    /*.form-group.row {
+		margin-left: 15px !important;
+		margin-bottom: -15px !important;
+	}*/
+}
+
+@media (min-width: 480px) {
+    .page-bar {
+        /* margin-top: -13px !important;*/
+    }
+
+    .dataTables_wrapper > div:nth-child(2n) > div:nth-child(2n) {
+        position: relative;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .margin-bottom-sm {
+        margin-bottom: 15px;
+    }
+
+    .page-bar {
+        /* margin-top: -13px !important;*/
+    }
+
+    .dataTables_wrapper > div:nth-child(2n) > div:nth-child(2n) {
+        position: absolute;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+
+    .form-group.row {
+        /*margin-left: 15px !important;
+        margin-bottom: -15px !important;*/
+    }
+
+        .form-group.row > navcon-field {
+            padding-left: 0px !important;
+        }
+}
+
+
+
+/*tablets*/
+@media (min-width: 768px) and (orientation: landscape) {
+    .margin-bottom-sm {
+        margin-bottom: 15px;
+    }
+
+    .page-bar {
+        /* margin-top: -13px !important;*/
+    }
+
+    .dataTables_wrapper > div:nth-child(2n) > div:nth-child(2n) {
+        position: relative;
+    }
+}
+
+/*desktop*/
+@media (min-width: 992px) {
+    .modal-fullwidth {
+        left: 25% !important;
+        width: 98% !important;
+    }
+}
+
+/*large devices*/
+@media (min-width: 1200px) {
+    .modal-fullwidth {
+        left: 35% !important;
+        width: 70% !important;
+    }
+
+    .margin-left-min60-device-large {
+        margin-left: -60px;
+    }
+}
+
+@media (min-width: 1400px) {
+}
+
+
+/*common*/
+
+#contentstable_wrapper .btn-group.tabletools-dropdown-on-portlet {
+    left: -70px !important;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.textremarkswidth {
+    width: 243px !important;
+}
+
+.textleftalign {
+    text-align: left !important;
+    padding-top: 0px !important;
+}
+
+.portlet-body .table-scrollable:nth-of-type(1) {
+    overflow: hidden !important;
+}
+
+/*Org Chart*/
+#orgChartContainer {
+    /*   width: 1000px;*/
+    height: 536px;
+    padding-bottom: 10%;
+    overflow: auto;
+    background: transparent;
+    position: relative;
+}
+
+#orgChart {
+    width: auto;
+    height: 1170px; /* this should be the css value from the chart's width. you could set
+    this programmatically with javascript or just take a good guess */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    position: absolute;
+    left: 452px;
+    top: -470px;
+}
+
+    #orgChart div.node {
+        background: none;
+        width: 180px;
+        height: 180px;
+        top: 0px;
+    }
+
+div.orgChart td {
+    padding: 0px;
+}
+
+.prg {
+    background-color: lightblue;
+    transform: rotate(90deg);
+    height: 170px;
+    text-align: left;
+    overflow: auto;
+}
+
+.prginfo {
+    width: auto;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.prgbtn {
+    background-color: cadetblue;
+    padding-top: 2px;
+    height: 25px;
+}
+
+    .prgbtn .org-add-button, .prgbtn .org-del-button {
+        bottom: initial;
+    }
+
+.jstree-grid-wrapper {
+    border: 1px solid #869ab3;
+}
+
+.center_div {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #eceef1;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    padding: 30px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.testtitle {
+    background-color: #BDD0CF !important;
+    margin-top: -5px;
+    height: 40px;
+    padding-top: 10px;
+}
+
+.badge1 {
+    width: 32px;
+    height: 40px;
+    padding: 1px 11px;
+    background-color: orange;
+}
+
+.divcircle {
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    padding: 2% 0;
+    line-height: 0;
+    position: relative;
+    background: #6ebebd;
+    color: white;
+    font-family: Helvetica, Arial Black, sans;
+}
+
+.testprogress {
+    margin-top: -10px !important;
+}
+
+.divProgressBar {
+    height: 100%;
+    text-align: right;
+    padding: 0 10px;
+    line-height: 22px;
+    width: 0;
+    box-sizing: border-box;
+}
+
+.testScore {
+    width: 61px;
+    height: 22px;
+    background-color: blue;
+    vertical-align: middle;
+    line-height: 15px;
+    font-weight: 400;
+    font-size: 14px !important;
+}
+
+.dataTables_length > label {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+.dataTables_filter > label {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.tile > a {
+    color: transparent;
+}
+
+.shuffle-animation {
+    /*margin-right: -19px;
+    margin-left: -15px;*/
+}
+
+.popover-content {
+    width: 300px;
+}
+
+.float-center {
+    float: right;
+    position: relative;
+    left: -29px;
+}
+
+.date-picker > span > input {
+    background-color: white;
+}
+
+.shuffle-animation > .page-bar > .page-toolbar {
+    display: none !important;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+
+.no-padding-left {
+    padding-left: 0;
+    margin-left: -140px !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.checkboxborder {
+    border-style: groove;
+    padding-left: 20px !important;
+    padding-bottom: 15px;
+}
+
+    .checkboxborder > .box {
+        padding-left: 20px !important;
+    }
+
+    .checkboxborder > .check {
+        left: 10px !important;
+    }
+
+.navcon-group {
+    float: none !important;
+}
+
+    .navcon-group > label {
+        /*width: 130px;*/
+        margin-right: 20px;
+        /*margin-top: 0px;
+        padding-top:0px;*/
+        text-align: right;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .navcon-group > input, .navcon-group > textarea {
+        /*width: calc(100% - 154px);*/
+        display: inline !important;
+    }
+
+.no-field-space {
+    margin-left: -30px;
+}
+
+.navcon-value > input {
+    width: auto;
+}
+
+.navcon-group > .input-group {
+    width: 100%;
+}
+
+    .navcon-group > .input-group > label {
+        width: 130px;
+        /* margin-top: 10px;
+        margin-top: 0px;
+        padding-top:0px;*/
+        text-align: right;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .navcon-group > .input-group > span {
+        padding-left: 23px;
+        width: 100%;
+    }
+
+.navcon-group > .ui-select-container {
+    display: inline-block;
+    width: calc(100% - 154px);
+}
+
+.navcon-radio-group {
+    float: left !important;
+    padding-left: 2px;
+}
+
+.radio-label {
+    float: left !important;
+}
+
+
+.navcon-group > input[type=checkbox], .navcon-group > input[type=radio] {
+    display: inline !important;
+    padding: 0;
+    width: 18px !important;
+    height: 18px;
+    background: url(layout/img/green.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+
+.navcon-input-radio {
+    display: inline !important;
+    padding: 0;
+    width: 18px !important;
+    height: 18px;
+    background: url(layout/img/green.png) no-repeat;
+    border: none;
+    cursor: pointer;
+    margin-top: 2px !important;
+}
+
+.navcon-checkbox, .navcon-radio {
+    vertical-align: top;
+    padding-top: 2px;
+}
+
+.navcon-select {
+    vertical-align: top;
+    /*padding-top: 10px;*/
+}
+
+.navcon-textarea {
+    vertical-align: top;
+}
+
+.ui-select-match > li {
+    height: 27px !important;
+}
+
+.ui-select-match-item > a {
+    top: -2px !important;
+}
+
+.dataTables_filter > label > input {
+    display: inline-block;
+    margin-left: 0px !important;
+}
+
+.navcon-group > .bootstrap-switch {
+    display: inline-block !important;
+}
+
+.navcon-search {
+    font-size: 14px;
+    padding: 7px 12px;
+    font-weight: normal;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: none;
+    text-align: center;
+    background-color: #eee;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.dataTables_length > label > select {
+    display: inline-block !important;
+}
+
+
+.modal-footer > button {
+    margin-right: -4px !important;
+}
+
+.ui-select-choices.ui-select-dropdown {
+    margin-top: -4px;
+}
+
+.remove-field-space {
+    width: 86% !important;
+    margin-left: -97px !important;
+}
+
+.error-messages.ng-active {
+    background: #d9534f;
+    color: white;
+    padding: 5px;
+    border-radius: 5px !important;
+    margin-top: 6px;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin-left: 0px;
+    float: left;
+    text-align: left;
+}
+
+    .error-messages.ng-active:after {
+        position: absolute;
+        top: -10px;
+        content: "";
+        left: 20px;
+        border-style: solid;
+        border-color: transparent transparent #d9534f;
+        border-width: 5px;
+    }
+
+.error-margin {
+    margin-left: 144px;
+}
+
+.error-messages-item {
+    /*display: inline;   */
+}
+
+.form-control:focus {
+    border-color: #66afe9 !important;
+    outline: 0 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.button-right {
+    float: right !important;
+    margin-right: 14px;
+}
+
+
+
+
+
+
+/*navcon modal*/
+
+.navcon-modal-sm {
+    max-width: 20% !important;
+    margin-left: -10% !important;
+}
+
+.navcon-modal-md {
+    max-width: 40% !important;
+    margin-left: -20% !important;
+}
+
+.navcon-modal-lg {
+    max-width: 60% !important;
+    margin-left: -30% !important;
+}
+
+
+/*navcon modal*/
+
+.page-content {
+    overflow-x: hidden;
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+}
+
+navcon-table {
+    font-size: 13px !important;
+}
+
+
+
+/*login*/
+
+
+div.well {
+    /*height: 250px;*/
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+    border: 1px solid #e3e3e3;
+    background-color: #ededed;
+}
+
+.Absolute-Center {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+    .Absolute-Center.is-Responsive {
+        margin-top: 12%;
+        margin-left: 30%;
+        padding: 40px;
+    }
+
+#logo-container {
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/*login*/
+
+.paginate_button.current {
+    padding-bottom: 2px !important;
+    padding-top: 2px !important;
+}
+
+.paginate_button.previous {
+    margin-right: -10px !important;
+}
+
+.paginate_button.next {
+    margin-left: 2px !important;
+}
+
+.dt-buttons {
+    padding-top: 7px !important;
+}
+
+
+.table-bordered > tbody > tr > td {
+    border-bottom: 0px !important;
+    border-right: 0px !important;
+    font-size: 11.0pt !important;
+}
+
+
+div[type="loginPage"] {
+    /*margin-top: 33%;*/
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    background: #dcdcdc !important;
+    color: #333 !important;
+    margin-right: 0px !important;
+}
+
+.tree-textBox {
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.dataTables_length {
+    padding-top: 10px !important;
+}
+
+.box.blue-hoki.portlet.portlet {
+    border-top: 1px solid #869ab3;
+}
+
+.margin-space-left-min-60 {
+    margin-left: -60px;
+}
+
+.navcon-disable {
+    background: aliceblue !important;
+    background-color: aliceblue !important;
+    color: royalblue !important;
+}
+
+
+.slimscrollbar {
+    height: auto;
+    max-height: 250px;
+    overflow-x: hidden;
+    min-width: 135px;
+    margin-top: 0px;
+}
+
+
+
+.loading-overlay {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.field-margin-top-14 {
+    margin-top: -14px;
+}
+
+/*border-top: 1px solid #869ab3;*/
+/* 
+  Allow angular.js to be loaded in body, hiding cloaked elements until 
+  templates compile.  The !important is important given that there may be 
+  other selectors that are more specific or come later and might alter display.  
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
+
+.no-label {
+    padding-left: 0px !important;
+}
+
+    .no-label > form > div > label {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+        width: 0px;
+    }
+
+    .no-label > form > div > div {
+        position: absolute;
+        width: 100% !important;
+    }
+
+
+.control-checkbox {
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+}
+
+.control-checkbox-box > form > div {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    background-color: #eee;
+    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(204, 204, 204);
+    border-right-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+}
+
+.control-checkbox > from > div > input {
+    margin-top: 2px;
+}
+
+.control-checkbox > input[type=checkbox] {
+    margin-top: 3px !important;
+    margin-left: -12px !important;
+}
+
+.control-checkbox-box > form > div > input[type=checkbox] {
+    margin-left: 0px !important;
+}
+
+.checkbox-label-suffix {
+    text-align: left !important;
+    padding-top: 0px;
+    width: auto !important;
+}
+
+.checkboxlist-label-suffix {
+    margin-top: -23px;
+    width: 520px;
+    margin-left: 25px;
+}
+
+.radio-label-suffix {
+    text-align: left !important;
+    padding-top: 0px;
+}
+
+
+.radio-label-suffix {
+    width: auto !important;
+}
+
+.radio-label-suffix {
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+}
+
+
+.nextcontrol-padding-left {
+    padding-left: 43px !important;
+    padding-right: 0px !important;
+}
+
+.input-group-addon {
+    line-height: inherit !important;
+}
+
+em {
+    color: red;
+    content: "*";
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+.no-margin-left {
+    margin-left: 0px !important;
+}
+
+
+.no-margin-right {
+    margin-right: 0px !important;
+}
+
+.btn-cancel {
+    background-color: #fff !important;
+    border: 1px solid #ccc !important;
+}
+
+
+    .btn-cancel > a {
+        color: #333 !important;
+    }
+
+.select-label {
+    padding-top: 10px !important;
+}
+
+.multiselect-label {
+    padding-top: 5px !important;
+}
+
+.ui-select-container > .select2-choice {
+    height: 34px !important;
+    padding-top: 3px !important;
+}
+
+
+
+.has-error .select2-container .select2-choice, .has-error .select2-container .select2-choices {
+    border-color: #a94442 !important;
+}
+
+.field-label {
+    /*text-align: right;*/
+    /*margin-right: 20px;*/
+    font-weight: 600;
+    padding-right: 15px !important;
+    padding-top: 8px; /*added by peer*/
+    color: #666666;
+    margin-left: -8px;
+}
+
+.data-label {
+    text-align: left;
+    /*margin-right: 20px;*/
+    font-weight: 400;
+    padding-right: 15px !important;
+    padding-top: 8px;
+    color: #666666;
+}
+
+.data-label-header {
+    text-align: left;
+    /*margin-right: 20px;*/
+    font-weight: 400;
+    padding-right: 15px !important;
+    padding-top: 8px;
+    color: #000000;
+}
+
+.ui-select-container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.field-date-span {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.field-date-input {
+    width: 80% !important;
+}
+
+.field-date-div-group {
+    float: left !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.field-checkbox-input {
+    float: left !important;
+    width: 17px !important;
+    margin-top: 0px !important;
+    height: 20px !important;
+}
+
+.field-checkbox-label {
+    width: auto;
+    padding-left: 10px;
+    margin-top: -3px;
+    color: #666666;
+    text-align: center;
+}
+
+.field-checkbox-span {
+    padding-left: 0px !important;
+    height: 34px;
+    padding-top: 9px;
+}
+
+
+.field-radio-group {
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+    padding-top: 8px;
+}
+
+.form-control {
+    /*height:34px !important;*/
+}
+
+
+.span-anonymous {
+    border: 1px solid #ccc;
+    padding-left: 5px !important;
+}
+
+    .span-anonymous > label {
+        margin-top: 6px !important;
+    }
+
+    .span-anonymous > input {
+        margin-top: 7px !important;
+    }
+
+.field-group {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+    .field-group > input, .field-group > textarea {
+        width: 100% !important;
+        border-radius: 5PX !important;
+    }
+
+
+    .field-group > .ui-select-container {
+        width: 100% !important;
+    }
+
+navcon-table-editor form {
+    /*padding-bottom: 7px !important;*/
+}
+
+    navcon-table-editor form .field-label-readonly {
+        padding-top: 0px;
+        margin-bottom: 0px;
+    }
+
+.table-editor {
+    /*background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1pt solid lightgray;*/
+}
+
+.table-editor-header-row {
+    /*height: 38px;*/
+    border-bottom: 1pt solid lightgray;
+    /*padding-top: 10px;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    padding-bottom: 10px;*/
+}
+
+    .table-editor-header-row td {
+        background-color: #243649;
+        color: #E7E7E7;
+    }
+
+.table-editor-header-data {
+    /*text-align: left;*/
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.table-editor-header-sno {
+    /*width: 60px;
+    float: left;*/
+    padding-left: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle !important;
+}
+
+.table-editor-header-del {
+    width: 80px;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.table-editor-body-row {
+    background-color: #f5f5f5;
+    border-bottom: 1pt solid lightgray;
+    /*margin-left: -15px !important;
+    margin-right: -15px !important;
+    padding-top: 8px;*/
+}
+
+.table-editor-sno {
+    padding-top: 7px;
+    /*width: 60px;
+    float: left;*/
+    padding-left: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle !important;
+}
+
+.table-editor-save {
+    width: 80px;
+    float: left;
+    text-align: center;
+}
+
+.table-editor-del {
+    float: left;
+    text-align: center !important;
+}
+
+.labelhide {
+    display: none;
+}
+
+.table-editor-bottom {
+    padding-top: 10px;
+    background-color: #ededed;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+.table-editor-add {
+    margin-right: 9px;
+}
+
+.fileupload-confirm > label {
+    margin-left: 21px;
+    text-align: left;
+    margin-top: -1px;
+}
+
+.fileupload-confirm > input {
+    position: absolute;
+}
+
+.disable-control {
+    pointer-events: none;
+    /*opacity: 0.5;*/
+}
+
+    .disable-control .panel-heading {
+        pointer-events: auto;
+    }
+
+    .disable-control .panel-body {
+        pointer-events: none;
+    }
+
+.date-button {
+    margin-right: 0px !important;
+}
+
+.field-label-readonly {
+    text-align: left;
+    font-weight: 500;
+    padding-right: 15px !important;
+    padding-top: 8px;
+    color: #666666;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.dataTables_wrapper table thead th {
+    text-align: center;
+}
+
+.tableColumnStyle {
+    text-align: center;
+}
+
+.greenbg {
+    padding: 7px;
+    background-color: #090;
+    color: #FFF;
+}
+
+.amberbg {
+    padding: 7px;
+    background-color: #F93;
+    color: #FFF;
+}
+
+.redbg {
+    padding: 7px;
+    background-color: #C00;
+    color: #FFF;
+}
+
+.navcon-modal-report {
+    margin-left: 5% !important;
+    left: 0px !important;
+    width: 90% !important;
+}
+
+.modal-footer .btn {
+    margin-bottom: 5px !important;
+}
+
+.colorpicker-input {
+    width: 30% !important;
+    height: 34px !important;
+    border-radius: 0px !important;
+}
+
+.sp-replacer {
+    margin-top: -1px !important;
+    margin-left: -3px !important;
+    height: 34px !important;
+}
+
+.paginate_button.next.disabled {
+    display: none !important;
+}
+
+.paginate_button.previous.disabled {
+    display: none !important;
+}
+
+#PCCAssignTemplate, #AddEditSubject, #PMCAssignTemplate {
+    margin-top: 14px;
+}
+
+.filterYearFrom .ui-select-container.select2 {
+    margin-left: -5px;
+}
+
+.filterYearTo .ui-select-container.select2 {
+    margin-left: -9px;
+}
+
+#uploadpanelreadonly {
+    margin-top: -27px;
+}
+
+#portletfileupload .portlet-title {
+    background-color: #243649;
+}
+
+.dashboard-bg:hover {
+    cursor: pointer;
+    outline: none;
+    border: 1pt solid transparent !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+
+.dashboard-bg i:hover {
+    color: #000 !important;
+}
+
+.dashboard-bg.bg-light-gray:hover {
+    cursor: default;
+    border-color: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.historyScroll {
+    max-height: 615px;
+}
+
+@media (max-width: 1280px) {
+    .historyScroll {
+        max-height: 528px;
+    }
+}
+
+.historyScroll .mCSB_outside + .mCSB_scrollTools {
+    right: -6px !important;
+}
+
+.dashboard-legend .nav-pills > li + li {
+    margin-left: -2px;
+}
+
+navcon-table[type=History] .table-striped > tbody > tr:nth-child(odd) {
+    /*background-color: #ECF0F1 !important;*/
+    background-color: transparent !important;
+}
+
+navcon-table[type=History] table.dataTable tbody tr {
+    /*background-color: #ffffff;*/
+    background-color: transparent !important;
+}
+
+    navcon-table[type=History] table.dataTable tbody tr.odd.selected {
+        /*background-color: #B0BED9 !important;*/
+        background-color: transparent !important;
+    }
+
+    navcon-table[type=History] table.dataTable tbody tr.even.selected {
+        /*background-color: #B0BED9 !important;*/
+        background-color: transparent !important;
+    }
+
+.modal-header {
+    background-color: #243649 !important;
+    color: #fff !important;
+}
+
+    .modal-header .close {
+        background-image: url(../images/remove-icon-small_white.png) !important;
+        opacity: 0.9 !important;
+    }
+
+.modal-content {
+    border: 2px solid #243649;
+}
+
+.sp-input {
+    background-color: white !important;
+}
+
+#portletfileupload > .portlet-title > .caption {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*SSRS Report Style */
+.SubmitButtonCell {
+    vertical-align: middle !important;
+}
+
+/*.ParamsGrid.MenuBarBkGnd {
+    background-color: lightgray !important;
+}
+
+.MenuBarBkGnd.ToolBarBackground {
+    background-color: darkgray !important;
+}
+
+div[role='main'] {
+    background-color: lightgray !important;
+    
+}
+
+div[id='mainReportViewer_ToggleParam']{
+    display:none;
+}
+
+div[id|='oReportDiv'] {
+    border-color: darkgray !important;
+}
+
+input[value='View Report'] {
+    background: #449d44;
+    border: 1px solid #169F85;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    color: #fff;
+    padding: 7px 14px;
+    font-size: 14px;
+    outline: none !important;
+    background-image: none !important;
+    filter: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+    .glyphui.glyphui-back {
+    background-color: lightyellow;
+    color: green;
+    font-weight: 800;
+}*/
+
+div[id*=_oReportDiv] table {
+    overflow: auto;
+}
+/*SSRS Report Style */

@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:x="urn:schemas-microsoft-com:office:excel"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">  <!-- it's important for d3.js -->
+    <base href="/">
+    <title>RMS</title>
+    <link href="Assets/Styles/others/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/Styles/others/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/Styles/others/angular-gridster.min.css" rel="stylesheet" type="text/css" />
+    <link href="ext-modules/navconFramework/navconFramework.css" rel="stylesheet" type="text/css" />
+    <link href="ext-modules/navconMenu/navconMenu.css" rel="stylesheet" type="text/css" />
+    <link href="ext-modules/navconDashboard/navconDashboard.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/Styles/layout/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/Styles/others/components.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/Styles/others/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/Styles/others/navcon-style.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/Styles/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" />
+    <link id="style_color" rel="stylesheet" type="text/css" href="Assets/Styles/layout/css/themes/darkblue.css">
+    <link id="style_color" rel="stylesheet" type="text/css" href="Assets/Styles/layout/css/custom.css">
+    <link href="app/widgets/navconChart/navconChart.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="Assets/Styles/ui-select/select.css">
+    <link rel="stylesheet" href="Assets/Styles/ui-select/select2.css">
+    <link rel="stylesheet" href="Assets/Styles/ui-select/selectize.default.css">
+    <link href="Assets/Styles/ui-select/select2_new.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Assets/Styles/toastr/toastr.css">
+    <link href="Assets/Styles/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="Assets/Styles/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="Assets/Styles/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="Assets/Styles/typeahead/typeahead.css" rel="stylesheet">
+    <!-- END CORE PLUGINS -->
+    <link href="Assets/Styles/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!--date picker-->
+    <link href="Assets/Styles/clockface/css/clockface.css" rel="stylesheet" />
+    <link href="Assets/Styles/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <link href="Assets/Styles/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" />
+    <link href="Assets/Styles/bootstrap-colorpicker/css/colorpicker.css" rel="stylesheet" />
+    <link href="Assets/Styles/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />
+    <link href="Assets/Styles/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
+    <!-- Kendo -->
+    <link href="Assets/Styles/kendo/kendo.common.min.css" rel="stylesheet">
+    <link href="Assets/Styles/kendo/kendo.default.min.css" rel="stylesheet">
+    <link href="ext-modules/navconKendo/navconKendo.css" rel="stylesheet" />
+    <!-- Kendo -->
+</head>
+
+<body class="page-header-fixed page-quick-sidebar-over-content" flow-prevent-drop
+      flow-drag-enter="style={border: '5px solid green'}"
+      flow-drag-leave="style={}" window-exit ng-esc="clickEsc()">
+
+    <div style="height:100%;">
+        <navcon-framework title=""
+                          subtitle=""
+                          icon-file="">
+        </navcon-framework>
+    </div>
+
+    <script src="Assets/Scripts/jquery-2.1.3.min.js"></script>
+    <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+    <script src="Assets/Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="Assets/Scripts/angular.min.js"></script>
+    <script src="Assets/Scripts/others/angular-cookies.js"></script>
+    <script src="Assets/Scripts/others/angular-animate.min.js"></script>
+    <script src="Assets/Scripts/angular-route.min.js"></script>
+    <script src="Assets/Scripts/others/angular-gridster.min.js"></script>
+    <script src="Assets/Scripts/bootstrap.min.js"></script>
+    <script src="Assets/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Assets/Scripts/others/ngStorage.min.js"></script>
+    <script src="Assets/Scripts/angular-sanitize/angular-sanitize.js"></script>
+    <script src="Assets/Scripts/angularjs/plugins/ocLazyLoad.min.js"></script>
+    <script src="Assets/Scripts/angular-message/angular-messages.js"></script>
+
+    <!--  Color Picker-->
+    <!--<script src="Assets/Scripts/jscolor.js"></script>-->
+
+    <!-- ui-select files-->
+    <script src="Assets/Scripts/angularjs/plugins/ui-select/dist/select.js"></script>
+   
+
+
+    <script src="Assets/Scripts/toastr/toastr.min.js"></script>
+   
+    <script src="Assets/Scripts/moment.js"></script>
+    <script src="Assets/Scripts/angularjs/plugins/extras.angular.plus/ngplus-overlay.js"></script>
+
+    <!-- Owl Carousel Assets -->
+  
+    <script src="Assets/Scripts/owl-carousel/js/bootstrap-collapse.js"></script>
+    <script src="Assets/Scripts/owl-carousel/js/bootstrap-transition.js"></script>
+    <script src="Assets/Scripts/owl-carousel/js/bootstrap-tab.js"></script>
+    <script src="Assets/Scripts/owl-carousel/js/google-code-prettify/prettify.js"></script>
+    <script src="Assets/Scripts/owl-carousel/js/application.js"></script>
+    <script src="Assets/Scripts/owl-carousel/owl.carousel.min.js"></script>
+
+    <!---- OrgChart ---->
+    <!--<link href='Assets/Styles/jquery-orgChart/jquery.orgchart.css' rel='stylesheet' />
+    <script src='Assets/scripts/jquery-orgChart/prettify.js'></script>
+    <script src='Assets/scripts/jquery-orgChart/jquery.orgchart.js'></script>-->
+
+
+    <!---fusionchart------>
+    <script src='Assets/Scripts/fusioncharts/fusioncharts.js'></script>
+    <script src='Assets/Scripts/fusioncharts/fusioncharts.theme.fint.js'></script>
+    <script src='Assets/Scripts/fusioncharts/angular-fusioncharts.min.js'></script>
+
+    <!--Typeahead------>
+    <script src='Assets/scripts/typeahead/typeahead.js'></script>
+ 
+    <!-- Angular loading-->
+    <script src='Assets/scripts/angular-loading/angular-loading-overlay.js'></script>
+    <script src='Assets/scripts/angular-loading/angular-loading-overlay-spinjs.js'></script>
+    <!-- Angular loading-->
+    <!-- File upload -->
+    <script src="Assets/Scripts/flow/dist/ng-flow-standalone.min.js"></script>
+    <!-- File upload -->
+    <!-- idle -->
+    <script src="Assets/Scripts/idle/angular-idle.js"></script>
+    <script src="Assets/Scripts/idle/angular-timer-all.min.js"></script>
+    <!-- idle -->
+    <!-- BEGIN CORE PLUGINS -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/global/plugins/respond.min.js"></script>
+    <script src="../../assets/global/plugins/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="Assets/Scripts/others/jquery-migrate.min.js" type="text/javascript"></script>
+
+    <script src="Assets/Scripts/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="Assets/Scripts/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="Assets/Scripts/others/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="Assets/Scripts/others/jquery.cokie.min.js" type="text/javascript"></script>
+    <script src="Assets/Scripts/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="Assets/Scripts/bootstrap-switch/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="Assets/Scripts/angular-bootstrap-switch/angular-bootstrap-switch.js" type="text/javascript"></script>
+
+    <!---- datepicker ---->
+    <script src="Assets/Scripts/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="Assets/Scripts/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="Assets/Scripts/clockface/js/clockface.js"></script>
+    <script src="Assets/Scripts/moment.min.js"></script>
+    <script src="Assets/Scripts/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="Assets/Scripts/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script src="Assets/Scripts/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
+    <script src="Assets/Scripts/others/components-pickers.js"></script>
+    <!---- datepicker ---->
+
+    <!-- Colorpicker ---->
+        <script src="Assets/Scripts/spectrum-colorpicker/spectrum.js"></script>
+        <link href="Assets/Styles/spectrum-colorpicker/spectrum.css" rel="stylesheet" />
+        <script src="Assets/Scripts/spectrum-colorpicker/angular-spectrum-colorpicker.min.js"></script>
+    <!-- Colorpicker ---->
+
+    <link href="Assets/Styles/bootstrap-dialog/bootstrap-dialog.min.css" rel="stylesheet" />
+
+    <script src="Assets/Scripts/bootstrap-dialog/bootstrap-dialog.min.js"></script>
+
+    <script src="Assets/Scripts/others/components-dropdowns.js"></script>
+
+    <script src="Assets/Scripts/signalr/jquery.signalR-2.1.2.js"></script>
+
+    <!--<script src="Assets/Scripts/angular-resource/angular-resource.js"></script>-->
+    <!--Multiselect-->
+    <link href="Assets/Styles/jquery-multi-select/css/multi-select.css" rel="stylesheet" />
+    <script src="Assets/Scripts/jquery-multi-select/js/jquery.multi-select.js"></script>
+
+    <!--<link href="Assets/Styles/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" />-->
+
+
+    <!--Modal-->
+    <link href="Assets/Styles/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/Styles/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+
+    <script src="Assets/Scripts/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+    <script src="Assets/Scripts/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+
+    <!---D3.js--->
+    <!--<script src="Assets/Scripts/d3/d3.js"></script>-->
+    <!--<script src="Assets/Scripts/nvd3/build/nv.d3.js"></script>-->
+    <!--<script src="Assets/Scripts/angular-nvd3/dist/angular-nvd3.js"></script>-->
+    <!--<link rel="stylesheet" href="scripts/nvd3/build/nv.d3.css">-->
+    <!---D3.js--->
+
+    <!--Metrnic-->
+    <script src="Assets/Scripts/others/metronic.js" type="text/javascript"></script>
+
+    <script src="Assets/Scripts/layout/scripts/layout.js" type="text/javascript"></script>
+
+    <!--Select2-->
+    <!--<link href="Assets/Styles/select2/select2.css" rel="stylesheet" />
+    <script src="Assets/Scripts/select2/select2.min.js"></script>-->
+
+    <link href="Assets/Styles/select2/select2.css" rel="stylesheet" />
+    <script src="Assets/Scripts/select2/select2.min.js"></script>
+    <!--<script src="scripts/select2/select2.min.js">
+    <link href="scripts/select2/select2.css" rel="stylesheet" />-->
+
+    <!-- DataTable -->
+    <link href="Assets/Styles/datatables/media/css/jquery.dataTables.min_new.css" rel="stylesheet" />
+    <script src="Assets/Scripts/datatables/datatables.js"></script>
+    <script src="Assets/Scripts/datatables/jquery.dataTables.columnFilter.js"></script>
+    <script src="Assets/Scripts/datatables/dataTables.rowsGroup.js"></script>
+
+    <!--tree-->
+    <link href="Assets/Styles/jstree/dist/themes/default/style.min.css" rel="stylesheet" />
+    <script src="Assets/Scripts/jstree/jstree.min.js"></script>
+    <script src="Assets/Scripts/jstree/jstreegrid.js"></script>
+
+    <!-- angular-block-ui.min -->
+    <script src="Assets/Scripts/angular-block-ui/angular-block-ui.min.js"></script>
+    <link href="Assets/Styles/angular-block-ui/angular-block-ui.min.css" rel="stylesheet" />
+    <!-- angular-block-ui.min -->
+
+    <!-- Authentication -->
+    <script src="Assets/Scripts/authentication/angular-local-storage.min.js"></script>
+    <script src="Assets/Scripts/authentication/loading-bar.min.js"></script>
+
+    <!-- Kendo -->
+    <script src="Assets/Scripts/kendo/kendo.all.min.js"></script>
+    <script src="Assets/Scripts/kendo/kendo.timezones.min.js"></script>
+    <script src="Assets/Scripts/kendo/kendo.viewYear.js"></script>
+    <script src="Assets/Scripts/kendo/kendo.toDoView.js"></script>
+    <!--<script src="Assets/Scripts/kendo/pako_deflate.min.js"></script>-->
+    <!-- Kendo -->
+    
+    <!--framework directives--->
+    <script src="start/app.js"></script>
+    <script src="common/modules.js"></script>
+    <!--<script src="start/appModule.js"></script>
+    <script src="start/appRouteConfig.js"></script>-->
+    <script src="services/loadingOverlay.Service.js"></script>
+
+    <!--<script src="ext-modules/navconMenu/navconMenu.module.js"></script>-->
+    <script src="ext-modules/navconMenu/navconMenu.controller.js"></script>
+    <script src="ext-modules/navconMenu/navconMenu.directive.js"></script>
+    <script src="ext-modules/navconMenu/navconMenuItem.directive.js"></script>
+    <script src="ext-modules/navconMenu/navconMenuGroup.directive.js"></script>
+
+    <!--<script src="ext-modules/navconDashboard/navconDashboard.module.js"></script>-->
+    <script src="ext-modules/navconDashboard/navconDashboard.directive.js"></script>
+    <script src="ext-modules/navconDashboard/navconWidgetBody.directive.js"></script>
+
+    <!--<script src="ext-modules/navconFramework/navconFramework.module.js"></script>-->
+    <script src="ext-modules/navconFramework/navconFramework.controller.js"></script>
+    <script src="ext-modules/navconFramework/navconFramework.directive.js"></script>
+    <script src="ext-modules/navconFramework/navconUserProfile/navconUserProfileSmall.directive.js"></script>
+    <script src="ext-modules/navconFramework/navconUserProfile/navconUserProfile.directive.js"></script>
+
+    <script src="ext-modules/navconTable/navconTable.directive.js"></script>
+    <script src="ext-modules/navconPortlet/navconPortlet.directive.js"></script>
+    <script src="ext-modules/navconPagebar/navconPagebar.directive.js"></script>
+    <script src="ext-modules/navconModal/navconModal.directive.js"></script>
+
+    <script src="app/multiselect/multiselectcheckbox.js"></script>
+    <script src="ext-modules/navconField/navconField.directive.js"></script>
+    <link href="ext-modules/navconField/navconField.css" rel="stylesheet" />
+
+    <script src="ext-modules/navconField/navconValidation.directive.js"></script>
+    <script src="ext-modules/navconTree/navconTree.directive.js"></script>
+    <script src="ext-modules/navconCalendar/navconCalendar.directive.js"></script>
+    <!--<script src="ext-modules/navconCalendar/navconOrgchart.directive.js"></script>-->
+    <script src="ext-modules/navconDropdown/navconDropdown.directive.js"></script>
+    <script src="ext-modules/navconForm/navconForm.directive.js"></script>
+    <script src="ext-modules/navconFChart/navconFChart.directive.js"></script>
+
+    <script src="ext-modules/navconEvaluation/navconEvaluation.directive.js"></script>
+    <link href="ext-modules/navconEvaluation/navconEvaluation.css" rel="stylesheet" />
+
+    <script src="ext-modules/navconDelete/navconDelete.directive.js"></script>
+
+    <script src="ext-modules/navconUpload/navconUpload.directive.js"></script>
+    <link href="ext-modules/navconUpload/navconUpload.css" rel="stylesheet" />
+
+    <script src="ext-modules/navconRating/navconRating.directive.js"></script>
+
+    <link href="ext-modules/navconReport/navconReport.css" rel="stylesheet" type="text/css" />
+    <script src="ext-modules/navconReport/navconReport.directive.js"></script>
+    <script src="ext-modules/navconReport/navconReportPage.directive.js"></script>
+
+    <script src="ext-modules/navconTableEditor/navconTableEditor.directive.js"></script>
+    <script src="ext-modules/navconPopover/navconPopover.directive.js"></script>
+    <script src="ext-modules/navconPopover/navconReadmore.directive.js"></script>
+
+    <!-- Kendo Template -->
+    <script src="ext-modules/navconKendo/navconKendoTemplate.directive.js"></script>
+    <script src="ext-modules/navconKendo/navconKendoTable.directive.js"></script>
+    <script src="ext-modules/navconKendo/navconKendoSchedule.directive.js"></script>
+    <!-- Kendo Template -->
+
+    <!----mCustomScrollbar ---->
+    <script src="Assets/Scripts/jquery-slimscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link href="Assets/Styles/jquery-slimscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!--framework directives--->
+    <!-- navcon file -->
+    <script src="common/navcon.js"></script>
+    <script src="common/navconPage.js"></script>
+    <script src="common/navconPageAPI.js"></script>
+    <script src="common/navconAlert.js"></script>
+    <script src="common/navconMenuroute.js"></script>
+    <script src="common/navconKendo.js"></script>
+    <script src="common/navconKendoTable.js"></script>
+    <script src="common/navconKendoSchedule.js"></script>
+    <!-- navcon file -->
+    
+    <!--Dashboard---->
+    <!--<script src="app/dashboard/dashboard.module.js"></script>-->
+    <script src="app/dashboard/dashboard.directive.js"></script>
+    <!--myspace--->
+    <script src="app/dashboard/directives/mycount.directive.js"></script>
+    <script src="app/dashboard/directives/myreport.directive.js"></script>
+    <script src="app/dashboard/directives/mysummary.directive.js"></script>
+    <script src="app/dashboard/directives/myriskmatrix.directive.js"></script>
+    
+    <!-- Authentication -->
+    <script src="services/authInterceptor.Service.js"></script>
+    <script src="services/auth.Service.js"></script>
+
+    <!-- Photo -->
+    <script src="Assets/Scripts/angular-resource/angular-resource.js"></script>
+    <!--<script src="app/photo/photo.module.js"></script>-->
+    <script src="app/photo/appInfo.controller.js"></script>
+    <script src="app/photo/egFiles.controller.js"></script>
+    <script src="app/photo/egPhotoUploader.controller.js"></script>
+    <script src="app/photo/egUpload.controller.js"></script>
+    <script src="app/photo/photoManagerClient.controller.js"></script>
+    <script src="app/photo/photoManager.controller.js"></script>
+
+    <!-- Reusable Blocks/Modules -->
+    <!--<script src="exception/exception.module.js"></script>-->
+    <script src="exception/exception-handler.provider.js"></script>
+    <script src="exception/exception.controller.js"></script>
+    <!--<script src="logger/logger.module.js"></script>-->
+    <script src="logger/logger.controller.js"></script>
+    <!--<script src="router/router.module.js"></script>-->
+    <script src="router/routehelper.controller.js"></script>
+
+    <!-- core module -->
+    <!--<script src="core/core.module.js"></script>-->
+    <script src="start/settings.js"></script>
+    <script src="core/config.controller.js"></script>
+    <script src="services/data.Service.js"></script>
+    <script src="core/chartdata.js"></script>
+    <script src="services/signalRHubProxy.Service.js"></script>
+    <!--<script src="services/utilities.Service.js"></script>-->
+
+    <!-- Tiles -->
+    <!--<script src="app/tiles/tiles.module.js"></script>-->
+    <script src="app/tiles/tiles.controller.js"></script>
+
+    <!-- loginPage -->
+    <!--<script src="app/login/login.module.js"></script>-->
+    <script src="app/login/login.controller.js"></script>
+    <script src="app/login/directives/login.directive.js"></script>
+
+
+    <!--<script src="app/sort/page1/part1page1.module.js"></script>
+    <script src="app/sort/page1/part1page1.controller.js"></script>-->   
+
+    <!--chart--->
+    <script src="app/widgets/navconChart/navconChart.directive.js"></script>
+
+    
+    <!-- Administration
+    <script src="app/administration/administration.module.js"></script>
+    <script src="app/administration/administration.controller.js"></script>-->
+
+    <!-- User Management -->
+    <!--<script src="app/usermanagement/usermanagement.module.js"></script>-->
+    <script src="app/usermanagement/usermanagement.controller.js"></script>
+    <!--<script src="app/usermanagement/directives/usermanagement.directive.js"></script>-->
+
+    <!-- Role Management -->
+    <!--<script src="app/rolemanagement/rolemanagement.module.js"></script>-->
+    <script src="app/rolemanagement/rolemanagement.controller.js"></script>
+
+    <!-- User Access Rights -->
+    <!--<script src="app/useraccessrights/useraccessrights.module.js"></script>-->
+    <script src="app/useraccessrights/useraccessrights.controller.js"></script>
+
+    <!-- Master Configuration -->
+    <!--<script src="app/masterconfiguration/masterconfiguration.module.js"></script>
+    <script src="app/masterconfiguration/masterconfiguration.controller.js"></script>-->
+
+    <!-- Action Log -->
+    <!--<script src="app/actionlog/actionlog.module.js"></script>
+    <script src="app/actionlog/actionlog.controller.js"></script>-->
+
+    <!-- Notification Setup -->
+    <!--<script src="app/notificationsetup/notificationsetup.module.js"></script>
+    <script src="app/notificationsetup/notificationsetup.controller.js"></script>-->
+
+    <!-- Notifications -->
+    <!--<script src="app/notifications/notifications.module.js"></script>
+    <script src="app/notifications/notifications.controller.js"></script>-->
+
+    <!-- User Import -->
+    <!--<script src="app/userimport/userimport.module.js"></script>-->
+    <script src="app/userimport/userimport.controller.js"></script>
+
+    <!-- Quarantine -->
+    <!--<script src="app/quarantine/quarantine.module.js"></script>
+    <script src="app/quarantine/quarantine.controller.js"></script>-->
+
+    <!-- User Profile -->
+    <!--<script src="app/userprofile/userprofile.module.js"></script>-->
+    <script src="app/userprofile/userprofile.controller.js"></script>
+
+    <!-- Change Password -->
+    <!--<script src="app/changepassword/changepassword.module.js"></script>-->
+    <script src="app/changepassword/changepassword.controller.js"></script>
+   
+
+    <!-- Dashboard Management -->
+    <!--<script src="app/dashboardmanagement/dashboardmanagement.module.js"></script>
+    <script src="app/dashboardmanagement/dashboardmanagement.controller.js"></script>
+    <script src="app/dashboarddetails/dashboarddetails.directives.js"></script>-->
+
+    <!-- Dashboard Reports -->
+    <!--<script src="app/dashboardreports/dashboardreports.module.js"></script>
+    <script src="app/dashboardreports/dashboardreports.controller.js"></script>-->
+
+  
+
+    <!-- News announcements -->
+    <!--<script src="app/news/news.module.js"></script>-->
+    <script src="app/news/news.controller.js"></script>
+
+    <!-- Notification Master -->
+    <!--<script src="app/notificationmaster/notificationmaster.module.js"></script>
+    <script src="app/notificationmaster/notificationmaster.controller.js"></script>-->
+
+  <script>
+        jQuery(document).ready(function () {
+            // initiate layout and plugins
+            Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout
+        });
+    </script>
+</body>
+</html>

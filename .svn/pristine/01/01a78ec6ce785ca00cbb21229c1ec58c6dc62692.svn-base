@@ -1,0 +1,113 @@
+﻿
+/*dropdown style*/
+.ui-select-choices-row-inner > span > .navcondd {
+    background-color: aliceblue !important;
+    padding: 5px;
+    /*border: 1px solid grey;*/
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .ui-select-choices-row-inner > span > .navcondd:hover {
+        background-color: aliceblue !important;
+        /*border: 1px solid blue;*/
+    }
+
+.ui-select-match > span > .navcondd {
+    /*padding: 5px;*/
+    width: 100%;
+}
+
+    .ui-select-match > span > .navcondd:hover {
+        border: none;
+    }
+
+.selectize-input > .ui-select-match {
+    width: 100%;
+}
+
+.navcondd > table {
+    width: 100%;
+}
+
+    .navcondd > table > tbody > tr > td {
+        width: 10%;
+    }
+
+    .navcondd > table > tbody > tr:nth-last-child(odd), .navcondd > table > tbody > tr:nth-last-child(even) {
+        width: 70%;
+    }
+
+.navcondd > table, th, td {
+    /*border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;*/
+}
+
+    .navcondd > table tr:nth-child(odd) {
+        /*background-color: #f1f1f1;
+    width: 20%;*/
+    }
+
+    .navcondd > table tr:nth-child(even) {
+        /*background-color: #ffffff;
+    width: 20%;*/
+    }
+
+.navcontabact {
+    border: 1px solid black;
+}
+
+/*.dropdown-menu li.divider {
+    margin-bottom: 22px;
+}*/
+
+span[mf-dropdown-static-include] {
+    /*position: absolute;*/
+    width: 94%;
+}
+
+    span[mf-dropdown-static-include] table {
+        position: absolute;
+        width: 95%;
+    }
+
+        span[mf-dropdown-static-include] table thead {
+            margin-top: -50px;
+            /*margin-left: -27px;*/
+            position: absolute;
+            width: 100%;
+            display: inherit;
+        }
+
+            span[mf-dropdown-static-include] table thead th {
+                border: none;
+                padding-top: 0px;
+                background-color: #243649;
+                color: #E7E7E7;
+            }
+
+                span[mf-dropdown-static-include] table thead th:first-child {
+                    padding-left: 20px;
+                }
+
+                span[mf-dropdown-static-include] table thead th:last-child {
+                    padding-left: 18px;
+                    /*padding-right: 53%;
+                    padding-left: 16%;*/
+                }
+
+        span[mf-dropdown-static-include] table tbody {
+            margin-top: -20px;
+            margin-left: 10px;
+            position: absolute;
+            width: 97%;
+            display: inherit;
+        }
+
+            span[mf-dropdown-static-include] table tbody td {
+                border: none;
+                padding-top: 0px;
+                padding-left: 2%;
+                white-space: normal;
+            }

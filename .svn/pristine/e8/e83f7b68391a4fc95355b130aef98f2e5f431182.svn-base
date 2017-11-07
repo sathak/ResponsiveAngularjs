@@ -1,0 +1,40 @@
+<div class="form-group">
+    <table class="table table-hover table-bordered table-striped">
+        <thead>
+            <tr style="background:#243649;color:#fff;">
+                <th style="width:12%;">Sl. No.</th>
+                <th style="width:55%;">Name</th>
+                <th style="width:10%;">Size</th>
+                <th style="width:30%;" ng-if="!readonly || showOnly">Settings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="file in myFiles">
+                <td>{{$index+1}}</td>
+                <td>{{file.name}}</td>
+                <td>{{(file.status !== undefined && file.status == "new") ? ((file.size/1024).toFixed() + "KB") : file.size}}</td>
+                <td ng-if="!readonly || showOnly">
+                    <div class="btn-group">
+                        <a ng-disabled="$parent.openStatus(file)" ng-click="$parent.openClick(file)" class="btn btn-mini btn-info" ng-click="file.retry()">
+                            Open
+                        </a>
+                        <span ng-hide="photoChangeable == false"  ng-if="!readonly">
+                            <a class="btn btn-mini btn-danger" ng-click="$parent.remove(file)">
+                                Remove
+                            </a>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="navcon-group fileupload-confirm" ng-show="(isAgreeVisible && !readonly)">
+        <input type="checkbox" class="icheck form-control ng-pristine ng-valid ng-touched" ng-model="isAgree" ng-true-value="'yes'" ng-false-value="'no'">
+        <label class="navcon-checkbox  control-label">{{agreeText}}</label>
+    </div>
+    <input type="file" id="fileUpload" accept="*.*" file-model="myFiles" style="visibility: hidden; position: absolute;">
+    <button ng-disabled="(multipleFile == undefined || !multipleFile)  && myFiles.length >= 1 || isAgree == 'no'" type="button" ng-click="chooseClick()" class="btn default box" ng-hide="photoChangeable == false" ng-if="!readonly">Choose Files</button>
+    <button type="button" ng-click="upload()" class="btn default box" ng-hide="hideUpload()">Upload</button>
+</div>
+
+

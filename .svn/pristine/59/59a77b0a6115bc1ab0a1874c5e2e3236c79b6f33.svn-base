@@ -1,0 +1,146 @@
+﻿(function () {
+    'use strict';
+
+    angular
+        .module('app.usermanagement')
+        .controller('usermanagement', usermanagement);
+
+    function usermanagement($scope, dataservice, logger, $compile, $timeout, $location, pageConfig, $rootScope, menuSettings) {
+        var vm = this;
+      //  activate();
+        vm.readOnly = false;
+
+        if (pageConfig === undefined || pageConfig.fields === undefined) {
+            $location.url('/');
+            return false;
+        }
+        vm.rights = navcon.getUserRights(menuSettings, "padministration", "usermanagement");
+        vm.formManage = {};
+
+        /*Settings*/
+        vm.pageConfig = pageConfig;
+
+        //vm.kendofieldsFields = angular.copy(vm.pageConfig.fields.kendofieldsFields);
+        //vm.kendofieldsTable = angular.copy(vm.pageConfig.tables.kendofieldsTable);
+
+        /*Page Config Common Varriable Assign */
+        navcon.getPageConfig(vm, vm.pageConfig);
+
+        var clockNumberIndex = navcon.getItemIndexByProperty(vm.kendofieldsFields, "ClockNumber");
+        var userNameIndex = navcon.getItemIndexByProperty(vm.kendofieldsFields, "UserName");
+        var locationIndex = navcon.getItemIndexByProperty(vm.kendofieldsFields, "BaseId");
+        var departmentIndex = navcon.getItemIndexByProperty(vm.kendofieldsFields, "DepartmentId");
+        var userStatusIdIndex = navcon.getItemIndexByProperty(vm.kendofieldsFields, "UserStatusId");
+        //var phoneNumberIndex = navcon.getItemIndexByProperty(vm.kendofieldsFields, "PhoneNumber");
+        //vm.kendofieldsFields[phoneNumberIndex].templateOptions.pattern = '^((\\+)?\\d{1,3}[- ]?)?\\d{10}$';
+
+        activate();
+
+        defaultData(vm.pageConfig.data);
+
+        function activate() {
+            //getServerData('userManagementAll').then(function (data) {
+            //    if (data === undefined || data.length === 0) return;
+            //    vm.userManagementTable.data = data;
+            //    vm.userManagementTableData = data;
+
+            //    watchAttributes();
+            //});
+
+            var filterFields = navcon.getFieldsDataToSave(vm.filterFields, 'Save', '', false);
+            filterFields.userStatus = -1;
+
+            dataservice.postServerData("", filterFields, false, "", "UserManagement/GetAllUsers").then(function (data) {
+                vm.kendofieldsTable.data = data;
+                vm.kendofieldsTableData = data;
+
+                //watchAttributes();
+            });
+
+        };
+
+        function defaultData(data) {
+            navcon.save.loadListDefaultData(data, vm.kendofieldsFields);
+            navcon.kendo.loadListDefaultData(data, vm.kendofieldsFields);
+        }
+        
+        vm.tableCellClick = function (row, column, data, type, cellObj, oTable) {
+            vm.showHide('User');
+            vm.UserId = data.Id;
+            vm.selectedRow = navcon.save.selectedRowIndex(vm.kendofieldsTable, data, vm.kendofieldsFields.primaryKey);
+
+            getUserById(vm.UserId);
+
+            vm.enableFields(false);
+            vm.isSave = true;
+            vm.isUpdate = true;
+            vm.showHistory = true;
+            vm.kendofieldsFields.mode = 'view';
+        }
+
+        vm.showHide = function (id, mode) {
+            if (!$('#' + id).hasClass('in')) {
+                $('#' + id).toggleClass('in');
+            }
+
+            if (mode === 'add') {
+                clearFields();
+                vm.UserId = 0;
+                vm.isSave = false;
+                vm.isUpdate = true;
+                vm.enableFields(true);
+                //vm.isITAR = false;
+                disableUsername(false);
+                vm.showClockNumber = false;
+                vm.showUserStatus = true;
+                vm.showHistory = false;
+                vm.kendofieldsFields.mode = 'save';
+                $('table.dataTable tbody tr').removeClass('selected');
+                $('table.dataTable tbody tr').css("background-color", "");
+            }
+        }
+
+        function getUserById(userId) {
+            if (userId !== 0) {
+                var dataUser = getServerData('userManagementId', userId).then(function (dataUser) {
+                    if (dataUser !== undefined && dataUser !== null) {
+                        if (userId !== 0) {
+                            if (dataUser.UserStatusId === 1) dataUser.UserStatusId = true;
+                            else if (dataUser.UserStatusId === 0) dataUser.UserStatusId = false;
+                            clearFields();
+                            navcon.updateFieldsData(vm.kendofieldsFields, dataUser, vm, false, vm);
+
+                            if (dataUser.IsSystemUser)
+                                vm.showUserStatus = false;
+                            else
+                                vm.showUserStatus = true;
+                        }
+                        vm.isEdit = false;
+                        vm.isDelete = false;
+                        vm.isCancel = false;
+                        vm.showClockNumber = true;
+                        //vm.isITAR = true;
+                        vm.allowEditUserName = dataUser.UserNameEditable;
+                        disableUsername(true);
+                    }
+                });
+            }
+        }
+
+        function getServerData(type, rowId) {
+            return dataservice.getServerData(type, rowId).then(function (data) {
+                return data;
+            });
+        };
+
+        function clearFields() {
+            navcon.clearFieldsData(vm.kendofieldsFields);
+            vm.kendofieldsFields[userStatusIdIndex].data = true;
+            //navcon.clearFieldsData(vm.userManagementHistoryFields);            
+        }
+
+        vm.enableFields = function (isEnabled) {
+            vm.readOnly = !isEnabled;
+        }
+    }
+})();

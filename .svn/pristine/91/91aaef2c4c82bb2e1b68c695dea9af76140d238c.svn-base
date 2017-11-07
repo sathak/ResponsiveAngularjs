@@ -1,0 +1,160 @@
+<navcon-portlet header-title="" navcon-data="vm" class="box blue-hoki" icon="" tools-disp="" is-title="false" border="false">
+    <div class="form-group row">
+        <div class="paginationBtns col-md-12 nopadding" ng-hide="true">
+            <!--<div class="col-md-1" ng-if="1=2">
+                <select class="schedulerPage" ng-model="schedulerPage.data" style="width: 50%;"></select>
+            </div>-->
+            <div class="col-md-9">
+                <select class="schedulerMS col-md-12" ng-model="schedulerGroup.data"></select>
+                <!--<button class="schedulerMSB col-md-1" ng-if="1=2" ng-click="multiselectGroup()">Group</button>-->
+            </div>
+            <div class="col-md-2 text-right nopadding">
+                <button class="k-button k-primary btnPrev" ng-click="prevPage()"><span class="k-icon k-i-collapse-w"></span> Prev</button>
+                <button class="k-button k-primary btnNext" ng-click="nextPage()">Next <span class="k-icon k-i-expand-w"></span></button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="margin-bottom-10 kendoCustomFooter">
+                <div class="kendoLegend col-md-12" ng-if="legendView"></div>
+                <!--<button class="schedulerPDF col-md-1" ng-click="getPDF('.kendoSchedule')">PDF</button>-->
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="kendoSchedule"></div>
+        </div>
+    </div>
+</navcon-portlet>
+
+<script id="groupHeaderTemplate" type="text/x-kendo-template">
+    <strong style="color: #=color#">#=text#</strong>
+</script>
+
+<!--<script id="event-template1" type="text/x-kendo-template">
+    <div>Title: #: title #</div>
+    <div>
+        Attendees:
+        # for (var i = 0; i < resources.length; i++) { #
+        #: resources[i].text #
+        # } #
+    </div>
+</script>
+<script>
+      function getColor(data) {
+        if (data.title === "The Help") {
+          return "red";
+        } else {
+          return "blur";
+        }
+      }
+</script>
+<script id="event-template2" type="text/x-kendo-template">
+    <div class="movie-template" style="background-color:#:getColor(data)#">
+        <img src="#= image #">
+        <p>
+            #: kendo.toString(start, "hh:mm") # - #: kendo.toString(end, "hh:mm") #
+        </p>
+        <h3>#: title #</h3>
+        <a href="#= imdb #">Movie in IMDB</a>
+    </div>
+</script>-->
+
+<script id="event-template" type="text/x-kendo-template">
+    <div class="k-scheduler-event-title" style="background-color:#: color #">
+        <!--<div class="k-events k-button">-->
+        #: kendo.toString(start, "hh:mm") # - #: kendo.toString(end, "hh:mm") #
+        <br />
+        #: title #
+        <br />
+        <!--</div>-->
+    </div>
+</script>
+
+<script id="event-agenda-template" type="text/x-kendo-template">
+    <span class="k-scheduler-event-title" style="background-color:#: color #">
+        <!--<div class="k-events k-button">-->
+        #: kendo.toString(start, "hh:mm") # - #: kendo.toString(end, "hh:mm") #
+        <br />
+        #: title #
+        <br />
+        <!--</div>-->
+    </span>
+</script>
+
+<script id="tooltip-slotevent-template" type="text/x-kendo-template">
+    #var uid = target.parent().attr("data-uid");#
+    #var scheduler = target.closest("[data-role=scheduler]").data("kendoScheduler");#
+    #var model = scheduler.occurrenceByUid(uid);#
+
+    #if(model) {#
+    <strong>start:</strong> #=kendo.toString(model.start, "hh:mm")# -
+    <strong>end:</strong> #=kendo.toString(model.end, "hh:mm")#
+    <br />
+    <strong>Title:</strong> #=model.title#
+    <br />
+    #} else {#
+    <strong>No event data is available</strong>
+    #}#
+</script>
+
+<script id="tooltip-slot-template" type="text/x-kendo-template">
+    #var scheduler = target.closest("[data-role=scheduler]").data("kendoScheduler");#
+    #var slot = scheduler.slotByElement(target);#
+    #console.log(slot);#
+    #if(slot) {#
+    <strong>start:</strong> #=kendo.format('{0:d}',slot.startDate)# -
+    <strong>end:</strong> #=kendo.format('{0:d}',slot.endDate)#
+    <!--<br />
+    <strong>slot group index:</strong> #=slot.groupIndex#
+    <br />
+    <strong>slot isDay:</strong> #=slot.isDaySlot#
+    <br />-->
+    #} else {#
+    <strong>No slot data is available</strong>
+    #}#
+</script>
+
+<script id="editor1" type="text/x-kendo-template">
+    <h3>Edit meeting</h3>
+    <p>
+        <label>Title: <input name="title" /></label>
+    </p>
+    <p>
+        <label>Start: <input data-role="datetimepicker" name="start" /></label>
+    </p>
+    <p>
+        <label>End: <input data-role="datetimepicker" name="end" /></label>
+    </p>
+</script>
+
+<script id="editor-template" type="text/x-kendo-template">
+    <div class="boxc-col">
+        <form role="form" class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-md-3">Start</label>
+                <div class="col-md-6">
+                    <input kendo-date-picker k-ng-model="dataItem.start" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3">End</label>
+                <div class="col-md-6">
+                    <input kendo-date-picker k-ng-model="dataItem.end" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3">Comment</label>
+                <div class="col-md-7">
+                    <textarea data-bind="value:comment" rows="2" cols="25" class="form-control" placeholder="Comment"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
+<script id="legend-template" type="text/x-kendo-template">
+    <span class="legend">
+        <span class="mark" style="background-color: #=color#">&nbsp;&nbsp;</span>
+        <span class="title">#=text#</span>
+    </span>
+</script>

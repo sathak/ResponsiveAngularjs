@@ -1,0 +1,21 @@
+<navcon-modal  ng-if="page == 'no' && export == 'false'" navcon-data="this" field-data="" title="{{reportTitle}}" icon="fa fa-flask" footer="" id="reports_{{reportId}}" type="reports_{{reportId}}" size="navcon-modal-report">
+    <div class="col-md-12">
+        <iframe id="reportIframe"style="border: transparent;"></iframe>
+    </div>
+    <div class="col-md-1 col-md-offset-11">
+        <navcon-button text="Close" ng-click="closeReport();"></navcon-button>
+    </div>
+</navcon-modal>
+
+<div ng-if="page == 'yes'" class="row">
+    <div class="col-md-12">
+        <iframe style="border: transparent;"></iframe>
+
+    </div>
+</div>
+
+<div ng-if="page == 'no' && export == 'true'" navcon-data="navconData" class="row">
+    <div class="col-md-12">
+        <iframe id="reportIframe" style="border: transparent;display:none;"></iframe>
+    </div>
+</div>

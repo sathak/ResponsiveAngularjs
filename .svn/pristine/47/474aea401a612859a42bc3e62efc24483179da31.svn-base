@@ -1,0 +1,47 @@
+/* global toastr:false, moment:false */
+(function () {
+    'use strict';
+
+    angular
+        .module('app.core')
+        .constant('toastr', toastr)
+        .constant('moment', moment)
+        .constant('menuSettings', {
+            data: []
+        })
+        .constant('ngAuthSettings', {
+            //apiServiceBaseUri: 'http://appserver/Safetaltest/api/',
+            //loginServiceUri: 'http://appserver/Safetaltest/',
+            apiServiceBaseUri: 'http://appserver/SafeTalBuildServices/api/',
+            loginServiceUri: 'http://appserver/SafeTalBuildServices/',
+            clientId: 'ngAuthApp',
+            uploadPath: '',
+            signalRServer: 'http://appserver/SafeTalBuildServices',
+            reportBaseUri: 'http://localhost:59337/assets/images/ReportPreview/',
+            appURL: 'http://localhost:59337/',
+            relativeUrl: '../../',
+            sessionTimeOut: 1800,
+            sessionConfirmTimeOut: 30,
+            enableSessionTimeOut: true,
+            enableFieldLevelValidation: false,
+            version: "1.0.0",
+            environment: "development",
+            //environment: "production"
+            SSO: false,
+            SSOLogoutUrl: 'http://appserver/SafeTalBuildServices/logout.aspx',
+            SSOError: 'You do not have sufficient permission to access this application.',
+            feedback: {
+                "mailto":"p.fazil@navcon.ae",
+                "cc":"",
+                "bcc":"",
+                "subject": "",
+                "body":""
+            },
+            helpURL: "http://www.navconaerospace.com/",
+            FlyingOpsRefCode: "FOPS",
+            OrganisationName: "BAE System"
+        })
+		.constant('apiEndUrl', {
+
+		});
+})();

@@ -1,0 +1,15 @@
+<div class="form-group">
+    <span ng-hide="true">{{myImage[0].name}}</span>
+    <div class="fileinput-new thumbnail" style="width: 160px; height: 160px;">
+        <img id="photoPreview" ng-src="{{src}}" alt="" style="width: 150px; height: 150px;">
+    </div>
+    <div class="navcon-group fileupload-confirm" ng-hide="!isAgreeVisible || (photoChangeable == false || myImage.length >= 1)">
+        <input type="checkbox" class="icheck form-control ng-pristine ng-valid ng-touched" ng-model="isAgree" ng-true-value="'yes'" ng-false-value="'no'">
+        <label class="navcon-checkbox  control-label">{{agreeText}}</label>
+    </div>
+
+    <input type="file" id="photoUpload" accept="image/*" file-model="myImage" style="visibility: hidden; position: absolute;">
+    <button type="button" ng-click="chooseClick()" class="btn default box" ng-disabled="isAgree == 'no'" ng-hide="photoChangeable == false || myImage.length >= 1">Choose</button>
+    <button type="button" ng-click="upload()" class="btn default box" ng-hide="photoChangeable == false || mode.toLowerCase() == 'save' || myImage[0].status === undefined || myImage[0].status === '' ">Upload</button>
+    <button type="button" ng-click="remove()" ng-if="!readonly" class="btn default box" ng-hide="photoChangeable == false || myImage.length === 0">{{cancel()}}</button>
+</div>

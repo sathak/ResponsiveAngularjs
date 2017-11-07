@@ -1,0 +1,17 @@
+<navcon-form footer='' field-data="loginfields" type="loginform" navcon-data="navconData">
+    <div class="form-group input-group">
+        <navcon-field field-data="loginfields" field-key="username"></navcon-field>
+    </div>
+
+    <div class="form-group input-group">
+        <navcon-field field-data="loginfields" field-key="userpassword"></navcon-field>
+    </div>
+    <div class="form-group">
+        <navcon-button icon="glyphicon" text="Submit" ng-click="login()"></navcon-button>
+        <navcon-button icon="glyphicon" text="Back" ng-click="login()"></navcon-button>
+        <div data-ng-hide="message == ''" class="alert alert-danger">
+            {{message}}
+        </div>
+    </div>
+</navcon-form>
+

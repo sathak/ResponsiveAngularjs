@@ -1,0 +1,41 @@
+﻿.evaluation-body {
+    padding-left: 30px;
+    width: 97%;
+}
+
+.evaluation-header {
+    background-color: #BDD0CF !important;
+    color: #000 !important;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.evaluation-row {
+    padding-top: 1px;
+    border: 1px solid #ddd;
+}
+
+.evaluation-text {
+    width: 99%;
+}
+
+.evaluation-select {
+    width: 99%;
+}
+
+.selectize-control > .selectize-input > input {
+    width: 99%;
+}
+
+.evaluation-Remarks {
+    width: 99%;
+}
+
+.evaluation-Remarks-Failure {
+    border: 1px solid #ff0000 !important;
+}
+
+.evaluation-mandatory {
+    border: 1px solid #a94442 !important;
+}

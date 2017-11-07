@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group row {{(!isModuleAvailable) ? '': 'navcon-dashboardproject'}}" style="padding: 5px;">
+            <div class="{{projectData.length <= 1 ? 'col-md-push-9' : 'col-md-push-6'}} col-md-3 text-right" ng-hide="!isModuleAvailable">
+                <div class="row">
+                    <div class="col-md-5">
+                        <label class="field-label" style="color: #dfdfdf;padding-right: 0px !important;">Module:</label>
+                    </div>
+                    <!--<select class="text-left col-md-8" style="color: #000;" ng-model="userModule" ng-options="x for x in moduleData"></select>-->
+                    <ui-select name="module" theme="select2" ng-model="userModule" class="text-left col-md-7" ng-click="onClick('module',$select.selected,$event)">
+                        <!--ng-blur="onBlur($event)" on-select="dropdownSelect($item, item.selectOptions.items)">-->
+                        <ui-select-match placeholder="Select module"><span ng-bind-html="$select.selected || $select.search"></span></ui-select-match>
+                        <ui-select-choices repeat="itm in moduleData | filter: $select.search">
+                            <!--refresh="selectRefreshResults($select)" refresh-delay="0">-->
+                            <span ng-bind-html="itm | highlight: ($select.search)"></span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+            <div class="{{moduleData.length < 1 ? 'col-md-push-9' : 'col-md-push-6'}} col-md-3 text-right" ng-hide="(!isModuleAvailable || projectData.length <= 1)">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label class="field-label" style="color: #dfdfdf;padding-right: 0px !important;">Project:</label>
+                    </div>
+                    <!--<select style="color: #000;" ng-model="userProject" ng-options="x.ProjectName for x in projectData"></select>-->
+                    <ui-select name="project" theme="select2" ng-model="userProject" class="text-left col-md-9" ng-click="onClick('project',$select.selected,$event)">
+                        <!--ng-blur="onBlur($event)" ng-click="onClick(item.key,$event)" on-select="dropdownSelect($item, item.selectOptions.items)">-->
+                        <ui-select-match placeholder="Select project"><span ng-bind-html="$select.selected['ProjectName'] || $select.search"></span></ui-select-match>
+                        <ui-select-choices repeat="itm in projectData | filter: $select.search">
+                            <!--refresh="selectRefreshResults($select)" refresh-delay="0">-->
+                            <span ng-bind-html="itm['ProjectName'] | highlight: ($select.search)"></span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-12">
+                <div gridster="gridsterOpts" class="margin-bottom-40">
+                    <ul>
+                        <li gridster-item="item" ng-repeat="item in widgets" ng-class="'dashboardWidget_'+item.widgetId">
+                            <navcon-widget-body page-config="pageConfig" item="item" widgets="widgets">
+
+                            </navcon-widget-body>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

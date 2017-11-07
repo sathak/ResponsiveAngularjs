@@ -1,0 +1,111 @@
+<!--<navcon-pagebar breadcrumbs="vm.breadcrumbs"></navcon-pagebar>-->
+<div class="row">
+    <div class="col-md-12">
+        <navcon-portlet title="My Profile" navcon-data="vm" class="" icon="" type="userprofile" tools-disp="">
+            <!--<div class="pull-right statusdiv" style="display: block;" ng-if="!vm.isEdit" >
+                <ul class="nav navbar-right panel_toolbox" style="margin-top: 0px !important;">
+                    <li data-toggle="tooltip" title="Edit" data-original-title="Edit">
+                        <a class="collapse-link" ng-click="vm.edit();">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>-->
+            <div class="center">
+            
+                <div class="well">
+                    <div class="form-group row">
+                        <div class="col-md-6 col-md-push-1">
+                            <navcon-form navcon-data="vm" footer='' field-data="vm.userProfileFields" type="userprofile" form-manage="vm.formManage" ng-if="vm.userProfileFields!=undefined" read-only="vm.readOnly">
+                                <legend>My Profile</legend>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="ClockNumber"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="UserName"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="FirstName"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="LastName"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="PhoneNumber"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="Email"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="BaseId"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="DepartmentId"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="ProjectUser"></navcon-field>
+                                </div>
+                                <div class="form-group row">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="Roles"></navcon-field>
+                                </div>
+                                <!--<div class="form-group row; col-md-10 text-center" ng-if="!vm.isUpdate">
+                                    <navcon-field field-key="ITARWarning" label-class="" field-class="col-md-12 IncreaseWidth"></navcon-field>
+                                </div>-->
+                            </navcon-form>
+                        </div>
+                        <div class="col-md-6">
+                            <navcon-form navcon-data="vm" footer='' field-data="vm.userProfileFields" type="userprofile" form-manage="vm.formManage">
+                                <!--<div class="form-group row text-center">
+                                    <navcon-field field-key="ITARWarning" label-class="" field-class="col-md-12 IncreaseWidth"></navcon-field>
+                                </div>-->
+                                <div class="form-group row margin-top-20">
+                                    <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="img"></navcon-field>
+                                </div>
+                            </navcon-form>
+                            <navcon-form navcon-data="vm" footer='' field-data="vm.changePasswordFields" type="changePassword" form-manage="vm.formManage" ng-if="!vm.SSOStatus">
+                                <!--<div class="form-group row">
+                                    <navcon-button class="btn btn-primary left" icon="fa fa-key" text="Change Password" ng-click="vm.showPassword()"></navcon-button>
+                                </div>-->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" ng-click="vm.togglePanel('ChangePassword')">
+                                        <h4 class="panel-title collapsed">
+                                            <a data-toggle="collapse" href="">Change Password</a>
+                                        </h4>
+                                    </div>
+                                    <div class="panel-body collapse" id="ChangePassword">
+                                        <br />
+                                        <div class="form-group row">
+                                            <navcon-field label-class="col-md-5" field-class="col-md-4" field-key="OldPassword"></navcon-field>
+                                        </div>
+                                        <div class="form-group row">
+                                            <navcon-field label-class="col-md-5" field-class="col-md-4" field-key="NewPassword"></navcon-field>
+                                        </div>
+                                        <div class="form-group row">
+                                            <navcon-field label-class="col-md-5" field-class="col-md-4" field-key="ConfirmPassword"></navcon-field>
+                                        </div>
+                                        <div class="form-group row; text-center">
+                                            <label><b>Note:</b> Password must have minimum 8 and maximum 20 characters with at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character.</label>
+                                        </div>
+                                        <div class="form-group row; col-md-12 text-center">
+                                           <br />
+                                            <navcon-button class="btn btn-primary center" icon="fa fa-floppy-o" text="Change Password" ng-click="vm.formManage.save('changePassword')"></navcon-button>
+                                            <navcon-button class="btn btn-warning center" icon="fa fa-stop" text="Cancel" ng-click="vm.cancel('changePassword')"></navcon-button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </navcon-form>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="form-group row; col-md-12 text-center">
+                    <div class="form-group row">
+                        &nbsp;
+                    </div>
+                    <navcon-button class="btn btn-primary center" icon="fa fa-floppy-o" text="Update" ng-click="vm.formManage.save('userprofile')" ng-if="!vm.isUpdate" ng-disabled="!vm.itarwarning"></navcon-button>
+                    <navcon-button class="btn btn-warning center" icon="fa fa-stop" text="Cancel" ng-if="!vm.readOnly && !vm.isCancel" ng-click="vm.cancel('userprofile')"></navcon-button>
+                </div>-->
+            </div>
+        </navcon-portlet>
+    </div>
+</div>

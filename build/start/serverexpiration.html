@@ -1,0 +1,103 @@
+<style>
+    html {
+        /* IE10+ */
+        background-image: -ms-linear-gradient(bottom right, #D0D3D4 0%, #A2AAAD 38%, #D0D3D4 70%, #A2AAAD 100%);
+        /* Mozilla Firefox */
+        background-image: -moz-linear-gradient(bottom right, #D0D3D4 0%, #A2AAAD 38%, #D0D3D4 70%, #A2AAAD 100%);
+        /* Opera */
+        background-image: -o-linear-gradient(bottom right, #D0D3D4 0%, #A2AAAD 38%, #D0D3D4 70%, #A2AAAD 100%);
+        /* Webkit (Safari/Chrome 10) */
+        background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #D0D3D4), color-stop(38, #A2AAAD), color-stop(70, #D0D3D4), color-stop(100, #A2AAAD));
+        /* Webkit (Chrome 11+) */
+        background-image: -webkit-linear-gradient(bottom right, #D0D3D4 0%, #A2AAAD 38%, #D0D3D4 70%, #A2AAAD 100%);
+        /* W3C Markup */
+        background-image: linear-gradient(to top left, #D0D3D4 16%, #A2AAAD 38%, #D0D3D4 65%, #A2AAAD 100%);
+    }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    a {
+        color: #5a738e;
+        text-decoration: none;
+    }
+
+    #inner {
+        color: #73879c;
+        background: #f7f7f7;
+        font-family: "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.471;
+    }
+
+    button {
+        float: right;
+        background-color: #449d44;
+        border: none;
+        color: white;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    #footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+</style>
+<script>
+    function startnewSession() {
+        window.location.href = "/dashboard";
+    }
+</script>
+<div id="loginDiv">
+    <div class="page-logo col-md-2" style="padding:30px;">
+        <a>
+            <img src="/Content/layout/img/companylogo.png" alt="logo" class="logo-default" style="width:350px">
+        </a>
+
+    </div>
+    <!-- Begin page content -->
+    <div class="pageContainer" style="font-family: 'Open Sans', sans-serif; font-size: 16px;">
+        <div style="padding-top:10%;">
+
+            <div id="inner" style="width:570px;margin:0 auto;height:190px;">
+                <div style="background-color: #243649!important;padding:10px;color:#fff !important;">Session time out</div>
+
+                <p style="padding:15px;font-size:16px;">Your session has expired. Please click OK to start a new session. </p>
+                <hr />
+                <button type="button" onclick="startnewSession()">OK</button>
+            </div>
+
+        </div>
+
+
+        <div id="footer">
+            <div class="container text-center">
+                <p>
+                    &copy; <a href="#">NAVCON Aerospace. All rights reserved. </a>
+                    <a href="">Privacy policy</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+

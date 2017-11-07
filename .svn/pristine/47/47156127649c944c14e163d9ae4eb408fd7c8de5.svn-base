@@ -1,0 +1,66 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <navcon-portlet title="Sample Kendo Fields" navcon-data="vm" class="" icon="" type="kendofields" tools-disp="">
+            <div class="center" id="User">
+                <div class="form-group row">
+                    &nbsp;
+                </div>
+                <div class="well">
+                    <navcon-form navcon-data="vm" footer='' field-data="vm.kendofieldsFields" type="kendofields" form-manage="vm.formManage" ng-if="vm.kendofieldsFields!=undefined" read-only="vm.readOnly">
+                        <div class="form-group row">
+                            <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="BaseId"></navcon-kendofield>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="DepartmentId"></navcon-kendofield>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="ClockNumber"></navcon-field>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="UserName"></navcon-field>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="FirstName"></navcon-field>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="MiddleName"></navcon-field>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="LastName"></navcon-field>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="PhoneNumber"></navcon-field>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="Email"></navcon-field>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="ProjectUser"></navcon-kendofield>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="Roles"></navcon-kendofield>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="EDATrained"></navcon-field>
+                        </div>
+                        <div class="form-group row">
+                            <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="UserStatusId"></navcon-field>
+                        </div>
+                        <!--<div class="form-group row; col-md-12 text-center" ng-hide="vm.isITAR">
+                            <navcon-field field-key="ITARWarning" label-class="" field-class="col-md-12 IncreaseWidth"></navcon-field>
+                        </div>-->
+                    </navcon-form>
+                </div>
+                <div class="form-group row; col-md-12 text-center">
+                    <div class="form-group row">
+                        &nbsp;
+                    </div>
+                    <navcon-button class="btn btn-primary center" icon="fa fa-floppy-o" text="Save" ng-click="vm.formManage.save('Save')" ng-hide="vm.isSave"></navcon-button>
+                    <navcon-button class="btn btn-primary center" icon="fa fa-floppy-o" ng-if="!vm.readOnly && vm.rights.Edit" text="Update" ng-click="vm.formManage.save('Update')" ng-hide="vm.isUpdate"></navcon-button>
+                    <navcon-button class="btn btn-warning center" icon="fa fa-stop" text="Cancel" ng-if="!vm.readOnly" ng-click="vm.cancel()" ng-hide="vm.isCancel"></navcon-button>
+                </div>
+            </div>
+
+        </navcon-portlet>
+    </div>
+</div>

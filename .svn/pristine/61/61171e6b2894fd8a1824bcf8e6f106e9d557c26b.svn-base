@@ -1,0 +1,60 @@
+<navcon-portlet title="{{title}}" navcon-data="this" class="" icon="" type="mySpaceSummary_{{summaryId}}" tools-disp="" show-caption="true">
+    <div class="dashboard-widget-content summaryTemplate">
+        <ul class="list-unstyled timeline widget">
+            <li ng-repeat="noteData in data  | orderBy : '-NewsAnnouncementId'">
+                <div class="block {{'summaryRow_'+$index}}">
+                    <div>
+                        <div style="float:left; padding-right: 10px;" class="profile text-center" ng-hide="noteData.documents==null || noteData.documents==''">
+                            <div class="profile_pic">
+                                <!--<img src="Content/layout/img/avatar3.jpg" alt="..." class="summaryTemplate-image">-->
+                                <!--<img style='width:75%;height:45%' ng-src="{{noteData.ContentType + noteData.img}}" class='img img-rounded servimg summaryTemplate-image' alt='Summary'>-->
+                                <!--<img style="width: 170px; height: 110px;" ng-src="{{noteData.ContentType + noteData.img}}" class='img img-rounded servimg summaryTemplate-image' alt='Summary' ng-click="openImage(noteData.NewsTitle,noteData.CreateDate,noteData.UpdatedByName,noteData.Summary)">-->
+                                <!--<i class="fa fa-file-image-o" style="font-size:48px;color:black;cursor:pointer;padding:18px;" ng-click="openImage(noteData)"></i>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block_content">
+                        <h2 class="title"> <a ng-style="noteData.Important!=null && noteData.Important==true ? {'color':'red','font-style':'italic','font-weight':'bold'} : {}" ng-click="openImage(noteData)">{{noteData.NewsTitle}}</a> </h2>
+                        <div class="byline">
+                            <span>{{navcon.dateFromUTCToLocal(noteData.CreateDate)}}</span> by
+                            <a style="cursor:default;">{{noteData.UpdatedByName}}</a>
+
+                        </div>
+                        <!--<p class="excerpt" style="word-wrap: break-word;" navcon-readmore content="{{noteData.Summary}}" limit="500">
+                        </p>-->
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</navcon-portlet>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modalImg">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-title ng-binding" style="font-size :16px;font-weight :bold;width :25em;overflow: hidden;text-overflow :ellipsis;white-space :nowrap;">{{NewsTitle}}</div>
+            </div>
+            <div class="modal-body">
+                <div ng-if="documentId!=null && documentId!=''">
+                    <img id="imgModal" style="width: 100%; height: 100%;" ng-src="{{Img}}" />
+                </div>
+
+                <div class="block_content">
+                    <b class="title" style="font-size:1.4em">{{NewsTitle}}</b>
+                    <div class="byline">
+                        <span>{{navcon.dateFromUTCToLocal(CreateDate)}}</span> by
+                        <a style="cursor:default;">{{UpdatedByName}}</a>
+
+                    </div>
+                    <div ng-bind-html="Summary" style="padding-top:20px;font-size:15px;">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

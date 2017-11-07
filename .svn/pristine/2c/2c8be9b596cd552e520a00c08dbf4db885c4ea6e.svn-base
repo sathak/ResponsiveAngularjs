@@ -1,0 +1,834 @@
+<script type="html/template" id="input">
+    <label class="field-label  {{labelClass}}" ng-class="{ 'has-error': form[item.key].$touched && form[item.key].$invalid}" ng-hide="item.templateOptions.label == ''">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly && (item.templateOptions.hyperlink==undefined|| item.templateOptions.hyperlink=='no')" ng-bind="item.readOnlyText"></label>
+    <a class="field-label-readonly {{fieldClass}}" href="" ng-click="redirectURL(item.data)" data-hyperlink="yes" ng-if="readOnly && (item.templateOptions.hyperlink!=undefined && item.templateOptions.hyperlink=='yes')" target="_blank">{{item.data}}</a>
+
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <input name="{{item.key}}" focus-me="item.templateOptions.focus" placeholder="{{item.templateOptions.placeholder}}" class="form-control  {{item.templateOptions.customClass}}" compare-to="item.templateOptions.compareTo" type="text"
+               is-exist
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-model="item.data"
+               ng-paste="onPaste($event)"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled" spellcheck={{item.templateOptions.spellcheck}}>
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage && !item.setFocus">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareToMessage.length*7)+'px'}" ng-message="compareTo">{{item.templateOptions.compareToMessage || 'Mismatch...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invaid Date...'}}</div>
+            <div ng-style="{width: (item.templateOptions.isExistMessage.length*7)+'px'}" ng-message="isExist">{{item.templateOptions.isExistMessage || 'Already available...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="email">
+    <!--<form name="form" novalidate>
+        <div class="navcon-group" ng-class="{ 'has-error': form[item.key].$touched && form[item.key].$invalid }" ng-hide="item.hidden">-->
+    <label class="field-label  {{labelClass}}" ng-hide="item.templateOptions.label == ''">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <input name="{{item.key}}" focus-me="item.templateOptions.focus" placeholder="{{item.templateOptions.placeholder}}" class="form-control  {{item.templateOptions.customClass}}" type="email"
+               is-exist
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-model="item.data"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled">
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.emailMessage.length*7)+'px'}" ng-message="email">{{item.templateOptions.emailMessage || 'Mismatch...'}}</div>
+            <div ng-style="{width: (item.templateOptions.isExistMessage.length*7)+'px'}" ng-message="isExist">{{item.templateOptions.isExistMessage || 'Already available...'}}</div>
+        </div>
+    </div>
+    <!--</div>
+    </form>-->
+</script>
+
+<script type="html/template" id="password">
+    <label class="field-label  {{labelClass}}" ng-hide="item.templateOptions.label == ''">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly">
+        <input name="{{item.key}}" placeholder="{{item.templateOptions.placeholder}}" compare-to="item.templateOptions.compareTo" class="form-control  {{item.templateOptions.customClass}}" type="password"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-model="item.data"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-disabled="item.disabled">
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareToMessage.length*7)+'px'}" ng-message="compareTo">{{item.templateOptions.compareToMessage || 'Mismatch...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="colorpicker">
+    <label class="field-label  {{labelClass}}" ng-hide="item.templateOptions.label == ''">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <div class="field-group {{fieldClass}}">
+        <input name="{{item.key}}" placeholder="{{item.templateOptions.placeholder}}" class="colorpicker-input"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-model="item.data"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-disabled="true" style="width: 30% !important;border-radius: 0px !important" disabled>
+        <spectrum-colorpicker ng-model="item.data" options="colorpickerOptions" format="'hex'" on-show="colorpickerShow(color)" on-before-show="colorpickerBeforeShow(color)" on-move="colorpickerMove(color)">
+        </spectrum-colorpicker>
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="number">
+    <label class="field-label  {{labelClass}}" ng-hide="item.templateOptions.label == ''">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label {{fieldClass}}" ng-if="readOnly" style="text-align:left;font-weight:normal !important;" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <input name="{{item.key}}" placeholder="{{item.templateOptions.placeholder}}" compare-to="item.templateOptions.compareTo" class="form-control  {{item.templateOptions.customClass}}" type="number"
+               is-exist
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-model="item.data"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               min="{{item.templateOptions.min}}" ,
+               max="{{item.templateOptions.max}}"
+               ng-min="{{item.templateOptions.min}}"
+               ng-max="{{item.templateOptions.max}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-disabled="item.disabled">
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.minMessage.length*7)+'px'}" ng-message="min">{{item.templateOptions.minMessage || 'Invalid value...'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxMessage.length*7)+'px'}" ng-message="max">{{item.templateOptions.maxMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareToMessage.length*7)+'px'}" ng-message="compareTo">{{item.templateOptions.compareToMessage || 'Mismatch...'}}</div>
+            <div ng-style="{width: (item.templateOptions.isExistMessage.length*7)+'px'}" ng-message="isExist">{{item.templateOptions.isExistMessage || 'Already available...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="textarea">
+
+    <label class="field-label  {{labelClass}}" ng-style='{"width":(item.templateOptions.hideLabel?"0px":"none")}' ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <textarea focus-me="item.templateOptions.focus" name="{{item.key}}" ng-attr-placeholder="{{item.templateOptions.placeholder}}" class="form-control {{item.templateOptions.customClass}}" rows="{{item.rows}}" cols="{{item.cols}}"
+                  is-exist
+                  ng-style='{"width":(item.templateOptions.hideLabel?"100%":"none")}'
+                  ng-blur="onBlur($event)"
+                  ng-click="onClick()"
+                  ng-model="item.data"
+                  ng-required="item.templateOptions.required == 'yes'"
+                  ng-minlength="{{item.templateOptions.minlength}}"
+                  ng-maxlength="{{item.templateOptions.maxlength}}"
+                  ng-pattern="{{item.templateOptions.pattern}}"
+                  ng-class="item.disabled === true ? 'navcon-disable' : ''"
+                  ng-disabled="item.disabled" spellcheck={{item.templateOptions.spellcheck}}></textarea>
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.isExistMessage.length*7)+'px'}" ng-message="isExist">{{item.templateOptions.isExistMessage || 'Already available...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="autocomplete">
+    <label class="field-label  {{labelClass}}" ng-class="{ 'has-error': form[item.key].$touched && form[item.key].$invalid}" ng-hide="item.templateOptions.label == ''">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <!--<form name="form" novalidate>
+            <div class="navcon-group" ng-class="{ 'has-error': form[item.key].$touched && form[item.key].$invalid }" ng-hide="item.hidden">
+                <label class="control-label" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip" ng-hide="item.templateOptions.label == ''">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>-->
+        <input name="{{item.key}}" focus-me="item.templateOptions.focus" placeholder="{{item.templateOptions.placeholder}}" class="typeahead form-control  {{item.templateOptions.customClass}}" compare-to="item.templateOptions.compareTo" type="text"
+               ng-click="onClick()"
+               ng-model="item.data"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               spellcheck={{item.templateOptions.spellcheck}}>
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareToMessage.length*7)+'px'}" ng-message="compareTo">{{item.templateOptions.compareToMessage || 'Mismatch...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invaid Date...'}}</div>
+            <div ng-style="{width: (item.templateOptions.isExistMessage.length*7)+'px'}" ng-message="isExist">{{item.templateOptions.isExistMessage || 'Already available...'}}</div>
+        </div>
+    </div>
+    <!--</form>-->
+</script>
+
+<script type="html/template" id="checkbox">
+    <!--<form name="form" novalidate>
+        <div class="navcon-group control-checkbox" ng-class="{ 'has-error': form[item.key].$touched && form[item.key].$invalid }" ng-hide="item.hidden">-->
+    <label class="field-label  {{labelClass}}" ng-hide="item.templateOptions.hideLabel" id="lbl{{item.templateOptions.label}}">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <span class="field-checkbox-span {{fieldClass}}" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <input name="{{item.key}}" data-checkbox="icheckbox_flat-green" class="field-checkbox-input {{item.templateOptions.customClass}}" type="checkbox"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-model="item.data"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-disabled="item.disabled" check-required ng-if="!readOnly" />
+        <label ng-if="!readOnly" data-toggle="tooltip" class="field-checkbox-label" ng-show="item.templateOptions.suffixLabelHide">{{item.templateOptions.suffixLabel}}</label>
+        <label class="field-checkbox-label" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    </span>
+    <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched &&  item.showMessage">
+        <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="checkRequired">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+    </div>
+    <!--</div>
+    </form>-->
+</script>
+
+<script type="html/template" id="checkboxlist">
+    <div ng-repeat="grp in item.data" ng-if="item.listDisplay === undefined">
+        <div class="col-md-4" style="padding-top: 15px;">
+            <div class="" ng-show="grp[$parent.item.templateOptions.item.displayField || groupname]" style="font-size:large; color:#666666; padding-left: 20px; ">
+                {{grp[$parent.item.templateOptions.item.displayField || groupname]}}
+            </div>
+            <div class="row" ng-if="readOnly">
+                &nbsp;
+            </div>
+            <div class="navcon-radio-group" style="padding-left: 60px;">
+                <div class="field-checkbox-span" ng-repeat="itm in grp.data  | filter: checkboxlistFilter">
+                    <input name="checkbox_{{itm[$parent.item.templateOptions.item.dataField || id]}}"
+                           data-checkbox="icheckbox_flat-green"
+                           class="field-checkbox-input {{item.templateOptions.customClass}}" type="checkbox"
+                           ng-blur="onBlur($event)"
+                           ng-click="onClick()"
+                           ng-model="itm.value"
+                           ng-class="item.disabled === true ? 'navcon-disable' : ''"
+                           ng-disabled="item.disabled" check-required ng-if="!readOnly" />
+                    <!--<input class="field-checkbox-input" type="checkbox" data-checkbox="icheckbox_flat-green" ng-model="itm.value"
+                           name="checkbox_{{itm[$parent.item.templateOptions.item.dataField || id]}}" />-->
+
+                    <label class="navcon-radio control-label checkboxlist-label-suffix" ng-show="itm[$parent.item.templateOptions.item.displayField || EventName]">
+                        {{itm[$parent.item.templateOptions.item.displayField || EventName]}}
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix" style="padding-top: 25px;" ng-style="{display: ((($index + 1) % 3) === 0 ? 'block': 'none')}"></div>
+    </div>
+    <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched &&  item.showMessage">
+        <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="checkRequired">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+    </div>
+</script>
+
+<script type="html/template" id="groupcheckboxlist">
+    <div ng-repeat="itm in item.data  | filter: checkboxlistFilter" ng-if="item.listDisplay">
+        <div style="padding-top: 15px;">
+            <div ng-if="itm.ParentID == 0" style="font-size:large; color:#666666; padding-left: 20px; ">
+                {{itm[$parent.item.templateOptions.item.displayField || groupname]}}
+            </div>
+            <div class="navcon-radio-group row" style="padding-left: 60px;" ng-if="itm.ParentID != 0">
+                <div class="field-checkbox-span">
+                    <input name="checkbox_{{itm[$parent.item.templateOptions.item.dataField || id]}}"
+                           data-checkbox="icheckbox_flat-green"
+                           class="field-checkbox-input" type="checkbox"
+                           ng-blur="onBlur($event)"
+                           ng-click="onClick()"
+                           ng-model="itm.value"
+                           ng-class="item.disabled === true ? 'navcon-disable' : ''"
+                           ng-disabled="item.disabled" check-required ng-if="!readOnly" />
+                    &nbsp;&nbsp;
+                    <label class="navcon-radio control-label checkboxlist-label-suffix" ng-show="itm[$parent.item.templateOptions.item.displayField || EventName]">
+                        {{itm[$parent.item.templateOptions.item.displayField || EventName]}} <b>{{itm.BoldEventValue}}</b>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched &&  item.showMessage">
+        <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="checkRequired">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+    </div>
+</script>
+
+<script type="html/template" id="switch">
+    <div class="navcon-group" ng-hide="item.hidden">
+        <label class="navcon-checkbox control-label" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}</label>
+        <input bs-switch type="checkbox" switch-on-text="{{item.swithcOptions.onText}}" switch-off-text="{{item.swithcOptions.offText}}" switch-on-color="{{item.swithcOptions.onColor}}" switch-off-color="{{item.swithcOptions.offColor}}"
+               ng-model="item.data"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-disabled="item.disabled" />
+    </div>
+</script>
+
+<script type="html/template" id="radio">
+    <!--<div class="navcon-group" ng-hide="item.hidden">-->
+    <label class="field-label  {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-hide="itm.suffixLabel" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-radio-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <div class="navcon-radio-group" style="{{itm.style}}" ng-repeat="itm in item.templateOptions.items">
+            <label class="navcon-radio control-label radio-label" ng-hide="itm.suffixLabel">{{itm.label}}</label>
+            <input name="{{item.key}}" class="navcon-input-radio form-control {{$parent.item.customClass}}" type="radio"
+                   ng-model="$parent.item.data" name="{{$parent.item.group}}"
+                   ng-class="$parent.item.disabled === true ? 'navcon-disable' : ''"
+                   ng-click="$parent.radioClick($event,$parent.item)"
+                   ng-required="$parent.item.templateOptions.required == 'yes'"
+                   ng-disabled="$parent.item.disabled" ng-value="itm.value" ng-if="!readOnly" />
+            <label class="navcon-radio control-label radio-label-suffix" ng-show="itm.suffixLabel">{{itm.label}}</label>
+        </div>
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched &&  item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="label">
+    <label class="field-label  {{labelClass}} {{item.templateOptions.customClass}}" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip" ng-hide="item.hidden"
+           ng-disabled="item.disabled">{{item.templateOptions.label}}</label>
+</script>
+
+<script type="html/template" id="labeldata">
+    <label class="field-label  {{labelClass}}" ng-class="{ 'has-error': form[item.key].$touched && form[item.key].$invalid}" ng-hide="item.templateOptions.label == ''"
+           data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <div class="field-group {{fieldClass}}" ng-style="item.templateOptions.cellStyle">
+        <a href ng-click="labelDataClick(item)">
+            <label ng-style="item.templateOptions.fontStyle" class="data-label {{item.templateOptions.customClass}}" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip" ng-hide="item.hidden"
+                   ng-disabled="item.disabled" ng-bind-html="item.data"></label>
+        </a>
+    </div>
+
+</script>
+
+<script type="html/template" id="value">
+    <div class="navcon-value">
+        <input class="form-control {{fieldclass}}" type="text" ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-disabled="item.disabled" />
+    </div>
+</script>
+
+<script type="html/template" id="search">
+    <div class="navcon-group" ng-hide="item.hidden">
+        <span class="navcon-search">
+            <i class="fa fa-search"></i>
+        </span>
+        <input type="text" class="form-control" placeholder="Search...."
+               ng-model="item.data"
+               ng-disabled="item.disabled">
+    </div>
+</script>
+
+<script type="html/template" id="date">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <div class="field-date-div-group date date-picker" data-date-format="dd/mm/yyyy">
+            <span class="input-group field-date-span ">
+                <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+                       compare-date="item.templateOptions.compareDateTo"
+                       ng-model="item.data"
+                       ng-blur="onBlur($event)"
+                       ng-click="onClick()"
+                       ng-class="item.disabled === true ? 'navcon-disable' : ''"
+                       ng-required="item.templateOptions.required == 'yes'"
+                       ng-minlength="{{item.templateOptions.minlength}}"
+                       ng-maxlength="{{item.templateOptions.maxlength}}"
+                       ng-pattern="{{item.templateOptions.pattern}}"
+                       ng-disabled="item.disabled"
+                       style="width:128px !important;">
+                <button class="date-button btn default" type="button"
+                        ng-hide="item.disabled">
+                    <i class="fa fa-calendar"></i>
+                </button>
+            </span>
+        </div>
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="datetime">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">
+        {{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em>
+    </label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <div class="field-date-div-group date">
+            <span class="input-group field-date-span">
+                <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+                       compare-date="item.templateOptions.compareDateTo"
+                       ng-model="item.data"
+                       ng-blur="onBlur($event)"
+                       ng-click="onClick(this,$event)"
+                       ng-class="item.disabled === true ? 'navcon-disable' : ''"
+                       ng-required="item.templateOptions.required == 'yes'"
+                       ng-minlength="{{item.templateOptions.minlength}}"
+                       ng-maxlength="{{item.templateOptions.maxlength}}"
+                       ng-pattern="{{item.templateOptions.pattern}}"
+                       ng-disabled="item.disabled">
+                <button class="input-group-addon date-button btn default" type="button"
+                        ng-hide="item.disabled">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+            </span>
+        </div>
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="select">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <ui-select name="{{item.key}}" theme="select2" field-required="item.templateOptions.required"
+                   ng-blur="onBlur($event)"
+                   ng-click="dropdownClick(item.key,$event)"
+                   ng-change="onChange(item.key)"
+                   ng-model="item.data"
+                   ng-required="item.templateOptions.required == 'yes'"
+                   ng-disabled="item.disabled" on-select="dropdownSelect($item, item.selectOptions.items)">
+            <ui-select-match placeholder="{{item.templateOptions.placeholder}}"><span ng-bind-html="$select.selected[item.selectOptions.item.selectedField || item.selectOptions.item.displayField] || $select.search"></span></ui-select-match>
+            <ui-select-choices group-by="item.selectOptions.item.groupBy" repeat="itm in (item.selectOptions.filterItems || item.selectOptions.items) | filter: $select.search" refresh="selectRefreshResults($select)" refresh-delay="0">
+                <span ng-bind-html="itm[$parent.item.selectOptions.item.displayField || text] | highlight: ((item.selectOptions.customFilter !== undefined && item.selectOptions.customFilter) ? '' : $select.search)" ng-if="!$parent.item.selectOptions.isCustomFormat"></span>
+                <span ng-bind-html="$parent.getFormat(itm) | highlight: ((item.selectOptions.customFilter !== undefined && item.selectOptions.customFilter) ? '' : $select.search)" ng-if="$parent.item.selectOptions.isCustomFormat"></span>
+            </ui-select-choices>
+        </ui-select>
+        <div name="{{item.key}}" class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && form[item.key].$invalid && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="fieldRequired">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="multiselect">
+
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <ui-select multiple require-multiple name="{{item.key}}" theme="select2" field-required="item.templateOptions.required"
+                   ng-blur="onBlur($event)"
+                   ng-click="onClick(item.key)"
+                   ng-change="onChange(item.key)"
+                   ng-model="item.data"
+                   ng-required="item.templateOptions.required == 'yes'"
+                   ng-disabled="item.disabled" on-select="dropdownSelect($item, item.selectOptions.items)">
+            <ui-select-match placeholder="{{item.templateOptions.placeholder}}">{{$item[item.selectOptions.item.displayField]}};</ui-select-match>
+            <ui-select-choices group-by="item.selectOptions.item.groupBy" repeat="itm in item.selectOptions.items | filter: ($select.search || item.search)" refresh="selectRefreshResults($select)" refresh-delay="0">
+                <!--<div ng-style="{color: ((form[item.parentKey]['$modelValue'][item.parentKeyId]===itm[$parent.item.selectOptions.item.dataField || 'id']) ? '#FF4500': '#000')}"-->
+                <div ng-style="{'font-weight': multiSelectGroupBold($parent.item,itm)}" ng-bind-html="itm[$parent.item.selectOptions.item.displayField || text] | highlight: $select.search"></div>
+            </ui-select-choices>
+        </ui-select>
+        <div name="{{item.key}}" class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && form[item.key].$invalid && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="fieldRequired">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="multiselectcheckbox">
+
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <div name="{{item.key}}" ng-dropdown-multiselect="" options="item.selectOptions.items" ng-model="item.data" selected-model="item.data"
+             ng-if="item.selectOptions.items!=undefined" checkboxes="true" parent-list="item" extra-settings="$parent.$parent[$parent.item.selectOptions.customFormat]"></div>
+
+        <div name="{{item.key}}" class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && form[item.key].$invalid && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="fieldRequired">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="fileupload">
+    <navcon-portlet id="portletfileupload" title="{{item.templateOptions.label}}" class="box blue-hoki" icon="" tools-disp="C" show-caption="true">
+        <navcon-file-upload my-files="item.data" mode="items.mode" type="item.templateOptions.folderType" key-data="keyData" key-name="keyName" agree-text="item.templateOptions.agreeText" key-return="item.templateOptions.keyReturn" multiple-file="item.templateOptions.multipleFile" photo-changeable="item.ischangeable" file-size="item.templateOptions.fileSize" file-type="item.templateOptions.fileType" same-file="item.templateOptions.sameFile" show-only="item.templateOptions.showOnly"></navcon-file-upload>
+    </navcon-portlet>
+</script>
+
+<script type="html/template" id="photoupload">
+    <navcon-photo-upload my-image="item.data" mode="items.mode" type="item.templateOptions.folderType" key-data="keyData" key-name="keyName" agree-text="item.templateOptions.agreeText" key-return="item.templateOptions.keyReturn" photo-changeable="item.ischangeable" file-size="item.templateOptions.fileSize" file-type="item.templateOptions.fileType"></navcon-photo-upload>
+</script>
+
+<script type="html/template" id="tableeditor">
+    <navcon-table-editor navcon-data="navconData" table-read-only="item.readonly" settings="item.tableeditorSettings" data="item.data" show-add="item.templateOptions.showAdd" show-update="item.templateOptions.showUpdate" show-del="item.templateOptions.showDel" showover-allsave="item.templateOptions.showoverAllsave" show-itar="item.templateOptions.showItar" show-slno="item.templateOptions.showSlno" save-buttontext="item.templateOptions.SaveButtonText" ng-class="item.disabled === true ? 'disable-control' : ''"></navcon-table-editor>
+</script>
+
+<script type="html/template" id="rating">
+    <navcon-rating ng-rating="item.data" max-rating="item.ratingOptions.max" read-only="item.ratingOptions.readOnly"></navcon-rating>
+</script>
+
+<script type="html/template" id="listview">
+    <div class="navcon-group"
+    <div class="navcon-group" ng-hide="item.hidden">
+        <!--<label class="control-label" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}</label>-->
+        <ol class="navcon-select {{item.templateOptions.customClass}}"
+            ng-model="item.data"
+            ng-class="item.disabled === true ? 'navcon-disable' : ''"
+            ng-disabled="item.disabled">
+            <li ng-repeat="itm in item.selectOptions.items" ng-click="tabClick(item,itm)">
+                <label class="control-label {{itm.customClass}}" style="width: 100%; text-align: left; padding-left: 8px;" ng-hide="{{item.templateOptions.listtype.toUpperCase() !== 'LABEL'}}">
+                    {{itm[$parent.item.selectOptions.item.displayField || text]}}
+                </label>
+                <textarea class="{{itm.customClass}}" ng-attr-placeholder="{{itm.placeholder}}" rows="{{itm.rows}}" style="width: 100%;"
+                          ng-hide="{{item.templateOptions.listtype.toUpperCase() !== 'TEXT'}}">
+                    {{itm[$parent.item.selectOptions.item.displayField || text]}}
+                </textarea>
+            </li>
+        </ol>
+    </div>
+</script>
+
+<script type="html/template" id="tab">
+    <div class="navcon-group" ng-hide="item.hidden">
+        <label class="navcon-select control-label" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}</label>
+        <ul class="nav nav-pills nav-justified" style="background-color: #eee;"
+            ng-model="item.data"
+            ng-disabled="item.disabled">
+            <li ng-repeat="itm in item.selectOptions.items" ng-click="tabClick(item,itm)" ng-mouseover="tabMouseOver($event, item, itm)"
+                ng-class="{'active':item.data == itm[$parent.item.selectOptions.item.dataField || id]}">
+                <label class="{{itm.customClass}}" style="width: 98%; color: #000000; background-color: {{itm[$parent.item.selectOptions.item.color]}}"
+                       ng-hide="{{item.templateOptions.listtype.toUpperCase() !== 'LABEL'}}">
+                    {{itm[$parent.item.selectOptions.item.displayField || text]}}
+                </label>
+                <a class="{{itm.customClass}}" data-toggle="pill" href='javascript:;' style=" color #000000; background-color {{itm[$parent.item.selectOptions.item.color]}} "
+                   data-target="#{{itm[$parent.item.selectOptions.item.dataField || id]}}"
+                   ng-hide="{{item.templateOptions.listtype.toUpperCase() !== 'LINK'}}"
+                   ng-class="{'navcontabact':item.data == itm[$parent.item.selectOptions.item.dataField || id]}">
+                    {{itm[$parent.item.selectOptions.item.displayField || text]}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</script>
+
+<script type="text/ng-template" id="messages">
+    <div ng-message="required">Cannot be blank</div>
+    <div ng-message="minlength">Too short</div>
+    <div ng-message="maxlength">Too long</div>
+    <div ng-message="email">Invalid email</div>
+    <div ng-message="pattern">You did not enter the value in the correct format</div>
+    <div ng-message="password-characters">
+        Your password must consist of alphabetical or numeric characters.
+        It must also contain at least one special character, a number as well as an uppercase letter.
+    </div>
+</script>
+
+<!--Kendo Control Start-->
+<script type="html/template" id="kendodate">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+               compare-date="item.templateOptions.compareDateTo"
+               ng-model="item.data"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               style="width:128px;" field-required="item.templateOptions.required" />
+
+
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="kendodatetime">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+               compare-date="item.templateOptions.compareDateTo"
+               ng-model="item.data"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               style="width:128px;" field-required="item.templateOptions.required" />
+
+
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="kendocombobox">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+               compare-date="item.templateOptions.compareDateTo"
+               ng-model="item.data"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               style="width:128px !important;" field-required="item.templateOptions.required" />
+
+
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="kendonumerictextbox">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+               ng-model="item.data"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               style="width:128px !important;" field-required="item.templateOptions.required" />
+
+
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="kendomaskedtextbox">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+               ng-model="item.data"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               style="width:128px !important;" field-required="item.templateOptions.required" />
+
+
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="kendocolorpicker">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+               ng-model="item.data"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               style="width:128px !important;" field-required="item.templateOptions.required" />
+
+
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="kendotime">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+               compare-date="item.templateOptions.compareDateTo"
+               ng-model="item.data"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               style="width:128px !important;" field-required="item.templateOptions.required" />
+
+
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="kendoswitch">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+
+        <input name="{{item.key}}" type="text" class="form-control field-date-input" placeholder="{{item.templateOptions.placeholder}}"
+               compare-date="item.templateOptions.compareDateTo"
+               ng-model="item.data"
+               ng-blur="onBlur($event)"
+               ng-click="onClick()"
+               ng-class="item.disabled === true ? 'navcon-disable' : ''"
+               ng-required="item.templateOptions.required == 'yes'"
+               ng-minlength="{{item.templateOptions.minlength}}"
+               ng-maxlength="{{item.templateOptions.maxlength}}"
+               ng-pattern="{{item.templateOptions.pattern}}"
+               ng-disabled="item.disabled"
+               style="width:128px !important;" field-required="item.templateOptions.required" />
+
+
+        <div class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.compareDateMessage.length*7)+'px'}" ng-message="compareDate">{{item.templateOptions.compareDateMessage || 'Invalid date...'}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="html/template" id="kendoselect">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div class="field-group {{fieldClass}}" ng-show="!readOnly" data-original-title="{{item.templateOptions.tooltip}}" data-placement="top" data-toggle="tooltip">
+        <select name="{{item.key}}" ng-blur="onBlur($event)"
+                ng-click="onClick(item.key)"
+                ng-model="item.data"
+                ng-required="item.templateOptions.required == 'yes'" field-required="item.templateOptions.required"></select>
+        <div name="{{item.key}}" class="error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && form[item.key].$invalid && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="fieldRequired">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+
+        </div>
+    </div>
+
+</script>
+
+<script type="html/template" id="kendomultiselect">
+    <label class="field-label {{labelClass}}" ng-hide="item.templateOptions.hideLabel">{{item.templateOptions.label}}<em ng-show="item.templateOptions.required == 'yes'">*</em></label>
+    <label class="field-label-readonly {{fieldClass}}" ng-if="readOnly" ng-bind="item.readOnlyText"></label>
+    <div name="{{item.key}}" ng-show="!readOnly" >
+        <select name="{{item.key}}" ng-blur="onBlur($event)" field-required="item.templateOptions.required"
+                ng-click="onClick(item.key)"
+                ng-model="item.data"
+                ng-required="item.templateOptions.required == 'yes'" ></select>
+        <div name="{{item.key}}" class="kmultiselect error-messages error-margin" ng-messages="form[item.key].$error" ng-if="form[item.key].$touched && form[item.key].$invalid && item.showMessage">
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="required">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+            <div ng-style="{width: (item.templateOptions.minlengthMessage.length*7)+'px'}" ng-message="minlength">{{item.templateOptions.minlengthMessage || 'It\'s too short'}} </div>
+            <div ng-style="{width: (item.templateOptions.maxlengthMessage.length*7)+'px'}" ng-message="maxlength">{{item.templateOptions.maxlengthMessage || 'It\'s too long'}}</div>
+            <div ng-style="{width: (item.templateOptions.patternMessage.length*7)+'px'}" ng-message="pattern">{{item.templateOptions.patternMessage || 'Invalid value...'}}</div>
+            <div ng-style="{width: (item.templateOptions.requiredMessage.length*7)+'px'}" ng-message="fieldRequired">{{item.templateOptions.requiredMessage || 'Shouldn\'t be empty...'}}</div>
+
+        </div>
+    </div>
+
+</script>
+<!--Kendo Control End-->

@@ -1,0 +1,31 @@
+﻿(function () {
+    'use strict';
+
+    angular
+        .module('app.usermanagement')
+        .controller('usermanagement', usermanagement);
+
+    function usermanagement($scope, dataservice, logger, $compile, $timeout, $location, pageConfig, $rootScope, menuSettings) {
+        var vm = this;
+      //  activate();
+        vm.readOnly = false;
+
+        if (pageConfig === undefined || pageConfig.fields === undefined) {
+            $location.url('/');
+            return false;
+        }
+        vm.rights = navcon.getUserRights(menuSettings, "padministration", "usermanagement");
+        vm.formManage = {};
+        //  vm.rights = navcon.getUserRights(menuSettings, "padministration", "kendofields");
+        /*Settings*/
+        vm.pageConfig = pageConfig;
+        vm.kendofieldsFields = angular.copy(vm.pageConfig.fields.kendofieldsFields);
+        //vm.kendofieldsTable = angular.copy(vm.pageConfig.tables.kendofieldsTable);
+        defaultData(vm.pageConfig.data);
+        function defaultData(data) {
+            navcon.save.loadListDefaultData(data, vm.kendofieldsFields);
+            navcon.kendo.loadListDefaultData(data, vm.kendofieldsFields);
+        }
+        
+    }
+})();
