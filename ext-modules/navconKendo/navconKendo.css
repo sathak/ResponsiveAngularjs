@@ -174,7 +174,7 @@ body {
 /*Scheduler*/
 
 /*Treeview*/
-.gridcell .treeview-checkbox {
+td[role=gridcell] .treeview-checkbox {
     text-align: center;
     vertical-align: middle;
     margin-left: 30px !important;

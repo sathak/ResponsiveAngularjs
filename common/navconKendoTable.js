@@ -240,7 +240,7 @@
                     oTable.setOptions({
                         filterable: {//CELL FILTERING OPTIONS
                             mode: "row",
-                            extra: false, //the filter menu allows the user to input a second criterion.
+                            extra: (settings.filterable.extra !== undefined ? settings.filterable.extra : false), //the filter menu allows the user to input a second criterion.
                             operators: {
                                 string: {
                                     eq: "Equal to",

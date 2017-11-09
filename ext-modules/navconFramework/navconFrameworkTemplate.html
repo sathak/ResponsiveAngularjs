@@ -22,13 +22,7 @@
         <div class="nav toggle">
             <a id="menu_toggle"><i class="fa fa-bars" style="color:#000;"></i></a>
         </div>
-        <!-- Toggle -->
-        <!--<div class="breadcrumbdiv">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href=""><i style="color:#73879C;font-size:16px" class="{{currentMainmenuicon}}"></i>{{currentMainmenu}}</a></li>
-                <li class="breadcrumb-item"><a href="">{{currentSubmenu}}</a></li>
-            </ol>
-        </div>-->
+       
         <div class="appTitle">
             <h3 style="color:#4f5390;letter-spacing:5px;">RMS</h3>
         </div>
@@ -130,7 +124,7 @@
     </div>
 </navcon-modal>
 
-<!--<navcon-modal navcon-data="this" title="About" icon="fa fa-info-circle" footer='' id="aboutUs" size="navcon-modal-md">-->
+
 <div id="aboutUs" class="modal fade">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -204,9 +198,9 @@
                     <div class="menu_section active">
                         <ul style="" class="nav side-menu" id="Mainmenu">
                             <li id="mainMenuId_{{menu.id}}" class="{{$index==0?'active':''}}" ng-cloak ng-repeat="menu in menus">
-                                <a ng-cloak ng-click="menuClick($event)"><i class="{{menu.IconClass}}"></i> <div style="display:inline-block;">{{menu.text}}</div><span class="{{$index===0?'fa fa-chevron-down' :'fa fa-chevron-right'}}"></span></a>
+                                <a ng-cloak ng-click="menuClick($event)"><i class="{{menu.IconClass}}"></i> <div style="display:inline-block;">{{menu.text}}</div><span class="{{$index===0?'fa fa-chevron-circle-down' :'fa fa-chevron-circle-right'}}"></span></a>
                                 <ul style="display:{{$index==0?'block':'none'}}" class="nav child_menu">
-                                    <li id="mainMenuSubId_{{submenu.id}}" class="{{$index==0 && $parent.$index==0?'current-page':''}}" ng-repeat="submenu in menu.children" ng-if="submenu.MenuType!=2"><a ng-click="submenuClick($event,menu,submenu)" href="{{submenu.ConfigName}}">{{submenu.text}} </a></li>
+                                    <li id="mainMenuSubId_{{submenu.id}}" class="{{menu.MenuCode=='phome'?'current-page':''}}" ng-repeat="submenu in menu.children" ng-if="submenu.MenuType!=2"><a ng-click="submenuClick($event,menu,submenu)" href="{{submenu.ConfigName}}">{{submenu.text}} </a></li>
                                 </ul>
                             </li>
                         </ul>

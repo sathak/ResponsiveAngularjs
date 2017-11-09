@@ -1,63 +1,57 @@
 ﻿
-
 <div class="row">
     <div class="col-md-12">
+
         <navcon-portlet title="Role Management" navcon-data="vm" class="" icon="" type="rolemanagement" tools-disp="">
             <!--<navcon-kendo-table table-settings="vm.roleManagementTable" navcon-data="vm" type="rolemanagement" fields="vm.roleManagementFields"></navcon-kendo-table>
             <br /><br />-->
             <navcon-kendo-schedule calendar-setting="vm.planYearCalender" navcon-data="vm" type="Plan" fields="vm.roleManagementFields"></navcon-kendo-schedule>
 
-            <!--<navcon-table table-settings="vm.roleManagementTable" type="rolemanagement" navcon-data="vm" css-class="rowPointer"></navcon-table>
-            <navcon-button class="btn btn-primary center" icon="fa fa-plus" text="Add New Role" ng-if="vm.rights.Add" ng-click="vm.showHide('Role','add')"></navcon-button>
-            <div class="form-group row">
-                &nbsp;
-            </div>
-            <div class="pull-right statusdiv" style="display: block;" ng-if="vm.readOnly">
-                <ul class="nav navbar-right panel_toolbox" style="margin-top: 0px !important;">
-                    <li data-toggle="tooltip" title="Edit" data-original-title="Edit" ng-if="vm.rights.Edit && !vm.isEdit">
-                        <a class="collapse-link" ng-click="vm.edit();">
-                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li data-toggle="tooltip" title="History" data-original-title="History" ng-if="vm.showHistory">
-                        <a class="close-link" ng-click="HistoryChanges()"><i class="fa fa-history"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse center" id="Role">
-                <div class="form-group row">
-                    &nbsp;
-                </div>
-                <div class="well">
-                    <navcon-form navcon-data="vm" footer='' field-data="vm.roleManagementFields" type="rolemanagement" form-manage="vm.formManage" ng-if="vm.roleManagementFields!=undefined" read-only="vm.readOnly">
-                        <div class="form-group row">
-                            <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="RoleName"></navcon-field>
-                        </div>
-                        <div class="form-group row" ng-hide="vm.isSave">
-                            <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="AddExistingSystemRole"></navcon-field>
-                        </div>
-                        <div class="form-group row" ng-if="vm.showExistingRoles">
-                            <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="ExistingSystemRoleId"></navcon-field>
-                        </div>
-                        <div class="form-group row">
-                            <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="RoleStatus"></navcon-field>
-                        </div>
-                        <div class="form-group row">
-                            <navcon-field label-class="col-md-3" field-class="col-md-6" field-key="Remarks"></navcon-field>
-                        </div>
-                    </navcon-form>
-                </div>
-                <div class="form-group row; col-md-12 text-center">
-                    <div class="form-group row">
-                        &nbsp;
-                    </div>
-                    <navcon-button class="btn btn-danger center" icon="fa fa-trash" text="Delete" ng-if="!vm.readOnly && vm.rights.Delete" ng-click="vm.delete()" ng-hide="vm.isDelete"></navcon-button>
-                    <navcon-button class="btn btn-primary center" icon="fa fa-floppy-o" text="Save" ng-click="vm.formManage.save('Save')" ng-hide="vm.isSave" ng-disabled="!itarwarning"></navcon-button>
-                    <navcon-button class="btn btn-primary center" icon="fa fa-floppy-o" ng-if="!vm.readOnly && vm.rights.Edit" text="Update" ng-click="vm.formManage.save('Update')" ng-hide="vm.isUpdate" ng-disabled="!itarwarning"></navcon-button>                    
-                    <navcon-button class="btn btn-warning center" icon="fa fa-stop" text="Cancel" ng-if="!vm.readOnly" ng-click="vm.cancel()" ng-hide="vm.isCancel"></navcon-button>
-                </div>
-            </div>-->
         </navcon-portlet>
+
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a showtab="" href="" data-toggle="tab" val-attr="section1">1 – General Information <i class="fa fa-check green" aria-hidden="true" ng-if="vm.PageSavedStatus.Tab1"></i></a>
+            </li>
+            <li>
+                <a showtab="" href="" data-toggle="tab" val-attr="section2">2 - Occurrence <i class="fa fa-check green" aria-hidden="true" ng-if="vm.PageSavedStatus.Tab2"></i></a>
+            </li>
+            <li>
+                <a showtab="" href="" data-toggle="tab" val-attr="section3">3 – Causal Factors : Personal Injury <i class="fa fa-check green" aria-hidden="true" ng-if="vm.PageSavedStatus.Tab3"></i></a>
+            </li>
+            <!--<li>
+                <a showtab="" href="" data-toggle="tab" val-attr="section4">4 – Causal Factors : Maintenance Human Factors <i class="fa fa-check green" aria-hidden="true" ng-if="vm.PageSavedStatus.Tab4"></i></a>
+            </li>
+            <li>
+                <a showtab="" href="" data-toggle="tab" val-attr="section4a">5 – Contributing Factors Checklist <i class="fa fa-check green" aria-hidden="true" ng-if="vm.PageSavedStatus.Tab5"></i></a>
+            </li>
+            <li>
+                <a showtab="" href="" data-toggle="tab" val-attr="section5">6 – Error Prevention Strategies <i class="fa fa-check green" aria-hidden="true" ng-if="vm.PageSavedStatus.Tab6"></i></a>
+            </li>-->
+
+        </ul>
+        <div class="well tab-content">
+            <div id="section1" class="tab-pane active">
+                aaaa
+            </div>
+            <div id="section2" class="tab-pane">
+                bbb
+            </div>
+            <div id="section3" class="tab-pane">
+                ccccc
+            </div>
+            <div id="section4" class="tab-pane">
+                ddddd
+            </div>
+            <div id="section4a" class="tab-pane">
+                eeee
+            </div>
+            <div id="section5" class="tab-pane">
+                fffff
+            </div>
+
+        </div>
+
     </div>
 </div>
 

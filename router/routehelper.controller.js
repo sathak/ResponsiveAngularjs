@@ -132,10 +132,12 @@
                 $('#Mainmenu li a div').removeClass('hideMenudetail');
                 $('#Mainmenu li a span').removeClass('hideMenudetail');
                 $('#Mainmenu li.active ul').removeClass('hideMenudetail');
-              
+                if (window.matchMedia('(max-width: 768px)').matches) {
+                    $("#menu_toggle").trigger("click");
+                }
             })
             $(document).on("click", function (e) {
-                if ($($(e.target).parents("ul[id='Mainmenu']")).length <1) {
+                if ($($(e.target).parents("ul[id='Mainmenu']")).length < 1) {
                     if (window.matchMedia('(max-width: 768px)').matches) {
                         if (!$(".page-sidebar").hasClass("hideMenu")) {
                             $(".page-sidebar").addClass("hideMenu");
@@ -143,7 +145,7 @@
                         }
                     }
                 }
-               
+
             });
         }
 

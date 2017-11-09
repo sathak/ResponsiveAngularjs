@@ -1165,6 +1165,10 @@ body {
 div.well {
     background: linear-gradient(to right, rgb(224, 224, 224), rgb(242, 242, 242), rgb(219, 219, 219), rgb(234, 234, 234)) !important;
 }
+
+.k-grid-header .k-icon.k-i-more-vertical {
+    color: #FFF;
+}
 /*************End Kendo grid css ***********/
 
 /************* Kendo calander css ***********/
@@ -1175,4 +1179,9 @@ div.k-widget.k-calendar .k-header {
 .k-widget.k-calendar .k-nav-fast, .k-widget.k-calendar .k-nav-prev, .k-widget.k-calendar .k-nav-next {
     color: #fff !important;
 }
+
+.k-calendar .k-nav-fast.k-state-hover, .k-calendar .k-nav-prev.k-state-hover, .k-calendar .k-nav-next.k-state-hover {
+    color: #2e2e2e !important;
+}
+
 /************* End Kendo calander css ***********/

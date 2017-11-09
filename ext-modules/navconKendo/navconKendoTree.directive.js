@@ -18,15 +18,12 @@ function ($timeout) {
             return navcon.Menuroute.getTemplateUrl("navconKendoTree");
         },
         link: function (scope, el, attrs) {
-            //var objEl = $(el);
-
-            //if (scope.isExpand === undefined) {
-            //    scope.isExpand = false;
-            //}
-            //scope.typeText = 'Collapsed'
+            if (scope.treeSettings.columns.length !== 0 && scope.treeSettings.data.length === 0) {
+                navcon.kendo.tree.setting(el, scope.treeSettings, scope);
+            }
 
             scope.$watch('treeSettings.data', function (newValue, oldValue) {
-                if (newValue !== undefined && (newValue !== oldValue)){// || newValue.length === 0)) {
+                if (newValue !== undefined && (newValue !== oldValue)) {
                     if (scope.treeSettings.columns.length !== 0) {
                         navcon.kendo.tree.setting(el, scope.treeSettings, scope);
                     }

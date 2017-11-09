@@ -4,11 +4,11 @@
     angular
         .module('app.rolemanagement')
         .controller('rolemanagement', rolemanagement);
-
     /* @ngInject */
     function rolemanagement($scope, dataservice, logger, $compile, $timeout, $location, pageConfig, $rootScope, menuSettings) {
         var vm = this;
-        
+        $('.nav-tabs').scrollingTabs();
+       
         if (pageConfig === undefined || pageConfig.fields === undefined) {
             $location.url('/');
             return false;
@@ -34,6 +34,13 @@
         defaultData(vm.pageConfig.data);
 
         activate();
+        $(".nav-tabs a").click(function (e) {
+            e.preventDefault();
+            $(".tab-pane").removeClass("active");
+
+            var tabName = $(e.currentTarget).attr('val-attr');
+            $("#" + tabName).addClass("active");
+        });
 
         /*Variable Declaration*/
         vm.primaryKey = "RoleId";
@@ -45,7 +52,17 @@
         vm.readOnly = false;
         vm.formManage = {};
         vm.showHistory = false;
+        function setScrolltab() {
+            setTimeout(function () {
+                $(".scrtabs-tabs-fixed-container").width($(".scrtabs-tabs-fixed-container").width() - 20);
+                $(".scrtabs-tabs-movable-container").width($(".scrtabs-tabs-movable-container").width() + 50);
+            }, 2000)
+        }
+        setScrolltab();
 
+        $(window).on("resize", function () {
+            setScrolltab();
+        });
         /*Cancel*/
         vm.cancel = function (type) {
             if (type === 'RoleDeleteModal') {
@@ -65,7 +82,7 @@
                     vm.showHistory = false;
                 else
                     vm.showHistory = true;
-                
+
                 if (vm.RoleId === 0)
                     $('#Role').removeClass('in');
             }

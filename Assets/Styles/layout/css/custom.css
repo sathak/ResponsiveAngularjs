@@ -666,6 +666,10 @@ a {
     margin-top: -5px;
 }
 
+.current-page:before {
+    border-left: 5px solid #f3d80f !important;
+}
+
 .nav.child_menu > li:before {
     left: 23px;
     margin-top: 10px;
@@ -6575,5 +6579,94 @@ table.dataTable tbody tr.even.selected {
 
     #pagewrapper {
         margin-top: 0px !important;
+    }
+}
+
+
+ul.rtabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 32px;
+    border-bottom: 1px solid #333;
+    width: 100%;
+}
+
+    ul.rtabs li {
+        float: left;
+        margin: 0;
+        cursor: pointer;
+        padding: 0px 21px;
+        height: 31px;
+        line-height: 31px;
+        border-top: 1px solid #333;
+        border-left: 1px solid #333;
+        border-bottom: 1px solid #333;
+        background-color: #666;
+        color: #ccc;
+        overflow: hidden;
+        position: relative;
+    }
+
+.rtab_last {
+    border-right: 1px solid #333;
+}
+
+ul.rtabs li:hover {
+    background-color: #ccc;
+    color: #333;
+}
+
+ul.rtabs li.active {
+    background-color: #fff;
+    color: #333;
+    border-bottom: 1px solid #fff;
+    display: block;
+}
+
+.rtab_container {
+    border: 1px solid #333;
+    border-top: none;
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #fff;
+    overflow: auto;
+}
+
+.rtab_content {
+    padding: 20px;
+    display: none;
+}
+
+.rtab_drawer_heading {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .rtabs {
+        display: none;
+    }
+
+    .rtab_drawer_heading {
+        background-color: #ccc;
+        color: #fff;
+        border-top: 1px solid #333;
+        margin: 0;
+        padding: 5px 20px;
+        display: block;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .d_active {
+        background-color: #666;
+        color: #fff;
     }
 }

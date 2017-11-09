@@ -98,7 +98,8 @@ var cssFiles = [
     './Assets/Styles/ui-select/select2.css',
     './Assets/Styles/kendo/kendo.common.min.css',
     './Assets/Styles/kendo/kendo.default.min.css',
-    './ext-modules/navconKendo/navconKendo.css'
+    './ext-modules/navconKendo/navconKendo.css',
+     './Assets/Styles/bootstraptabs/bootstrap.scrolling-tabs.css'
 ];
 
 gulp.task('build-css', ['clean'], function() {
@@ -227,7 +228,8 @@ var assetFiles = [
     './Assets/Scripts/kendo/kendo.all.min.js',
     './Assets/Scripts/kendo/kendo.customView.js',
     './Assets/Scripts/kendo/kendo.timezones.min.js',
-    './Assets/Scripts/kendo/pako_deflate.min.js'
+    './Assets/Scripts/kendo/pako_deflate.min.js',
+     './Assets/Scripts/bootstraptabs/bootstrap.scrolling-tabs'
 
 ];
 

@@ -25,7 +25,44 @@
 
         /*Page Config Common Varriable Assign */
         navcon.getPageConfig(vm, vm.pageConfig);
+        // tabbed content
+        // http://www.entheosweb.com/tutorials/css/tabs.asp
+        $(".rtab_content").hide();
+        $(".rtab_content:first").show();
 
+        /* if in tab mode */
+        $("ul.rtabs li").click(function () {
+
+            $(".rtab_content").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+
+            $("ul.rtabs li").removeClass("active");
+            $(this).addClass("active");
+
+            $(".rtab_drawer_heading").removeClass("d_active");
+            $(".rtab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+
+        });
+        /* if in drawer mode */
+        $(".rtab_drawer_heading").click(function () {
+
+            $(".rtab_content").hide();
+            var d_activeTab = $(this).attr("rel");
+            $("#" + d_activeTab).fadeIn();
+
+            $(".rtab_drawer_heading").removeClass("d_active");
+            $(this).addClass("d_active");
+
+            $("ul.rtabs li").removeClass("active");
+            $("ul.rtabs li[rel^='" + d_activeTab + "']").addClass("active");
+        });
+
+
+        /* Extra class "tab_last" 
+           to add border to right side
+           of last tab */
+        $('ul.rtabs li').last().addClass("rtab_last");
         /*Variable Declaration*/
         vm.primaryKey = "Id";
         var type = "userManagement";
@@ -87,6 +124,7 @@
 
         vm.addNew = function (type, mode) {
             $timeout(function () {
+                vm.UserId = 0;
                 vm.selecteduser = true;
                 vm.isSave = false;
                 vm.isUpdate = true;
@@ -212,8 +250,10 @@
                 else
                     vm.showHistory = true;
 
-                if (vm.UserId === 0)
+                if (vm.UserId === 0) {
+                    vm.selecteduser = false;
                     $('#User').removeClass('in');
+                }
             }
 
             $scope.isHistory = false;
