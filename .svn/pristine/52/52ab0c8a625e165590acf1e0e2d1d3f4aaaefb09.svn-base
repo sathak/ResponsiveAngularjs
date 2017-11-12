@@ -1,7 +1,0 @@
-<div>
-    <script type="text/html" id="Rating-editor">
-    </script>
-
-    <div class="kendotemplateInclude" ng-transclude="">
-    </div>
-</div>
