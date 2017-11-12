@@ -1,3 +1,0 @@
-<navcon-portlet title="{{title}}" navcon-data="this" class="" icon="" type="mySpaceReport" tools-disp="">
-    <navcon-report navcon-data="navconData" report-id="reportdiv2" report-source="report.source" report-title="report.title" page="yes"></navcon-report>
-</navcon-portlet>

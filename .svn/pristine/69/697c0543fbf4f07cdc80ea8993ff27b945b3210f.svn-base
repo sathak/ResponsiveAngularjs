@@ -1,7 +1,0 @@
-﻿<div class="row">
-    <div class="col-md-12">
-        <navcon-portlet title="" navcon-data="vm" class="" icon="" type="" tools-disp="">
-            <navcon-dashboard navcon-data="vm" page-config="pageConfig"></navcon-dashboard>
-        </navcon-portlet>
-    </div>
-</div>
