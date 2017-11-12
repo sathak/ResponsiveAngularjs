@@ -1,0 +1,117 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortActionsTrackerFields": [
+    ]
+  },
+  "tables": {
+    "sortActionsTrackerTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+       
+      ],
+      "dateFields": [ 7, 8 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "SORT Ref # ",
+          "data": "SORTRefNo",
+          "width": "20%"
+        },
+        {
+          "title": "Action Ref #",
+          "data": "actionrefno",
+          "width": "30%"
+        },
+        {
+          "title": "Meeting Ref #",
+          "data": "MeetingRefNo",
+          "width": "15%"
+        },
+        {
+          "title": "Action Details",
+          "data": "ActionDetails",
+          "width": "25%"
+        },
+        {
+          "title": "Owner",
+          "data": "Owner",
+          "width": "15%"
+        },
+        {
+          "title": "Start Date",
+          "data": "startdate",
+          "width": "15%"
+        },
+        {
+          "title": "Due Date",
+          "data": "duedate",
+          "width": "15%"
+        },
+        {
+          "title": "Completion Date",
+          "data": "ClosingDate",
+          "width": "15%"
+        },
+        {
+          "title": "Status",
+          "data": "Status",
+          "width": "15%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

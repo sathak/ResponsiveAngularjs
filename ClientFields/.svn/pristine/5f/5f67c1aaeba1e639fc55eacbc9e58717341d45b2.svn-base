@@ -1,0 +1,139 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "SORT",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA Management",
+      "url": "edamanagement"
+    }
+  ],
+  "fields": {
+    "edaManagementFields": [
+      {
+        "key": "generalinformation",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "occurrence",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "cfpersonalinjury",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "cfmaintenancehumanfactors",
+        "type": "page",
+        "data": ""
+      }
+    ]
+  },
+  "tables": {
+    "edaTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        
+
+      ],
+      "dateFields": [ 7 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "SORTEDAInvestigationId",
+          "data": "SORTEDAInvestigationId",
+          "width": "0%",
+          "visible": false
+        },
+        {
+          "title": "SORTId",
+          "data": "SORTId",
+          "width": "0%",
+          "visible": false
+        },
+        {
+          "title": "EDA Ref #",
+          "data": "EDARefNo",
+          "width": "10%"
+        },
+        {
+          "title": "SORT Ref #",
+          "data": "SORTRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "SORT Title",
+          "data": "SORTTitle",
+          "width": "30%"
+        },
+        {
+          "title": "Assigned By",
+          "data": "AssignedByName",
+          "width": "25%"
+        },
+        {
+          "title": "Assigned To",
+          "data": "AssignedToName",
+          "width": "25%"
+        },
+        {
+          "title": "Target Date",
+          "data": "TargetDate",
+          "width": "15%"
+        },
+        {
+          "title": "Status",
+          "data": "EDAStatusName",
+          "width": "15%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

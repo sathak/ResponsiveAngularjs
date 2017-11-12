@@ -1,0 +1,121 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Quarantine",
+      "url": "quarantine"
+    }
+  ],
+  "fields": {
+    "quarantineFields": [
+      {
+        "key": "QuarantineId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "QuarantineCreateRemarks",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "Enter Remarks..",
+          "required": "yes",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "QuarantineEndRemarks",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "Enter Remarks..",
+          "required": "yes",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "quarantineTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 1, 2 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl. No.",
+          "data": null,
+          "width": "10px",
+          "serialNoColumn": 0
+        },
+        {
+          "title": "Start Time",
+          "data": "QuarantineCreateDate",
+          "time": true
+        },
+        {
+          "title": "End Time",
+          "data": "QuarantineEndDate",
+          "time": true
+        },
+        {
+          "title": "Start By",
+          "data": "QuarantineCreatedBy"
+        },
+        {
+          "title": "End By",
+          "data": "QuarantineEndBy"
+        },
+        {
+          "title": "Start Remarks",
+          "data": "QuarantineCreateRemarks"
+        },
+        {
+          "title": "End Remarks",
+          "data": "QuarantineEndRemarks"
+        }
+      ]
+    }
+  }
+}

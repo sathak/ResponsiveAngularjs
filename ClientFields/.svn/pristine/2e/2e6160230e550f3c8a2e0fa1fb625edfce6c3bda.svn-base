@@ -1,0 +1,84 @@
+{
+  "notification": {
+    "type": ""
+  },
+  "breadcrumbs": [
+    {
+      "class": "icon-calendar",
+      "title": "Notifications",
+      "url": "notifications/0"
+    }
+  ],
+  "fields": {
+    "notificationsFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "notificationsTable": {
+      "order": [
+        [
+          3,
+          "desc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ 0 ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Select",
+          "data": "function(node){return navcon.loadTableData(node,'','checkbox');}",
+          "field": "",
+          "width": "5px",
+          "fieldType": "checkbox"
+        },
+        {
+          "title": "Page Name",
+          "data": "PageKey",
+          "width": "20%"
+        },
+        {
+          "title": "Notification",
+          "data": "Remarks"
+        },
+        {
+          "title": "Date",
+          "data": "LastUpdateDate",
+          "time": true,
+          "width": "20%"
+        }
+      ]
+    }
+  }
+}

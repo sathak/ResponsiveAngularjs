@@ -1,0 +1,94 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "FORM",
+      "url": "mrr"
+    }
+  ],
+  "fields": {
+
+  },
+  "tables": {
+
+    "CausesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 5,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [ ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "#",
+          "data": "",
+          "field": "",
+          "width": "100px"
+        },
+        {
+          "title": "Cause Ref No #",
+          "data": "CauseRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle"
+        },
+        {
+          "title": "Consequence",
+          "data": "ConsequenceDescription",
+          "width": "15%"
+        },
+        {
+          "title": "Controls",
+          "data": "ControlName",
+          "width": "20%"
+        },
+        {
+          "title": "Linked MRP's",
+          "data": "",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "",
+          "width": "5%"
+        }
+      ]
+    }
+
+  },
+  "tableEditor": {
+
+  }
+}

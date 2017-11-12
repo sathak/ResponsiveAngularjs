@@ -1,0 +1,34 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Risk Aggregation",
+      "url": "riskaggregation"
+    }
+  ],
+  "fields": {
+    "riskAggregationFields": [
+      {
+        "key": "summaryhazardstate",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "summaryaccidentstate",
+        "type": "page",
+        "data": ""
+      }
+    ]
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+
+  }
+}

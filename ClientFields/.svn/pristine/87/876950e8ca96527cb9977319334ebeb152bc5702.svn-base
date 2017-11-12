@@ -1,0 +1,822 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "causeanalysisHazardField": [
+      {
+        "key": "HazardId",
+        "type": "autocomplete",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Link To Hazard :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Link To Hazard is required."
+        },
+        "selectOptions": {
+          "isCustomFormat": true,
+          "customFormat": "LinkHazardCustomFormat",
+          "item": {
+            "selected": { },
+            "displayField": "HazardName",
+            "dataField": "id",
+            "defaultField": "Hazard"
+          },
+          "items": [
+          ]
+        }
+      }
+    ],
+    "CauseAnalysisHazardFields": [
+      {
+        "key": "HazardId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CauseAnalysisHazardId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CauseAnalysisId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": 0
+      }
+    ],
+    "causeanalysisFields": [
+      {
+        "key": "HazardId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CreatedBy",
+        "type": "label",
+        "data": 0
+      },
+
+      {
+        "key": "CauseDetailId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CauseAnalysisId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CauseAnalysisHazard",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "InitialProbabilityId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Probability :",
+          "placeholder": "Select a Probability",
+          "required": "yes",
+          "requiredMessage": "Initial(Pre) Probability is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProbabilityName",
+            "dataField": "ProbabilityId",
+            "defaultField": "Probability"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "InitialRiskClassId",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Risk Class / Accident State  :",
+          "required": false
+        }
+      },
+      {
+        "key": "RiskClass",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Risk Class / Accident State  :",
+          "required": false
+        }
+      },
+      {
+        "key": "InitialSeverityId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Severity :",
+          "placeholder": "Select a Severity",
+          "required": "yes",
+          "requiredMessage": "Initial(Pre) Severity is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "SeverityName",
+            "dataField": "SeverityId",
+            "defaultField": "Severity"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "TargetProbabilityId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Target Probability :",
+          "placeholder": "Select a Probability",
+          "required": "yes",
+          "requiredMessage": "Target Probability is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProbabilityName",
+            "dataField": "ProbabilityId",
+            "defaultField": "Probability"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "PreventiveControls",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Preventive Controls :",
+          "required": false
+        }
+      },
+      {
+        "key": "PreventiveControlsRemarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Preventive Controls Remarks :",
+          "placeholder": "Please provide Preventive Controls Remarks",
+          "required": "no",
+          "requiredMessage": "Preventive Controls Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "RecoveryControls",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Recovery Controls :",
+          "required": false
+        }
+      },
+      {
+        "key": "RecoveryControlsRemarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Recovery Controls Remarks :",
+          "placeholder": "Please provide Recovery Controls Remarks",
+          "required": "no",
+          "requiredMessage": "Recovery Controls Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "FinalProbabilityId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Probability :",
+          "placeholder": "Select a Probability",
+          "required": "no",
+          "requiredMessage": "Final (Post) Probability is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProbabilityName",
+            "dataField": "ProbabilityId",
+            "defaultField": "Probability"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "FinalRiskClassId",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Risk Class / Accident State  :",
+          "required": false
+        }
+      },
+      {
+        "key": "RiskClass",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Risk Class / Accident State  :",
+          "required": false
+        }
+      },
+      {
+        "key": "FinalSeverityId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Severity :",
+          "placeholder": "Select a Severity",
+          "required": "no",
+          "requiredMessage": "Final (Post) Severity is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "SeverityName",
+            "dataField": "SeverityId",
+            "defaultField": "Severity"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "CauseAnalysisReferences",
+        "type": "tableeditor",
+        "disabled": false,
+        "data": [ ],
+        "templateOptions": {
+          "settings": "ReferencestableEditor",
+          "label": "Cause Reference",
+          "key": "CauseAnalysisReferenceId"
+        }
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "attachmentid",
+          "agreeText": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "ITARWarningattachments",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ITARWarningMitigation",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "CauseAnalysisPreventiveControl",
+        "type": "table",
+        "data": [ ],
+        "title": "Preventive Control",
+        "name": "causePreventiveControlsdynamicGrid",
+        "id": "CauseAnalysisControlId",
+        "displayfield": "",
+        "field": "",
+        "label": "Preventive Controls",
+        "primaryKey": "ControlId",
+        "tableDataField": "CauseAnalysisPreventiveControl",
+        "checkedField": "",
+        "InsertFields": [
+          {
+            "field": "ControlRefNo",
+            "label": "Control RefNo#"
+          },
+          {
+            "field": "ControlTitle",
+            "label": "Control Title"
+          },
+          {
+            "field": "StatusName",
+            "label": "Status"
+          }
+        ]
+      },
+      {
+        "key": "CauseAnalysisRecoveryControl",
+        "type": "table",
+        "data": [ ],
+        "title": "Recovery Control",
+        "name": "causeRecoveryControlsdynamicGrid",
+        "id": "CauseAnalysisControlId",
+        "displayfield": "",
+        "field": "",
+        "label": "Recovery Controls",
+        "primaryKey": "ControlId",
+        "tableDataField": "CauseAnalysisRecoveryControl",
+        "checkedField": "",
+         "InsertFields": [
+          {
+            "field": "ControlRefNo",
+            "label": "Control RefNo#"
+          },
+          {
+            "field": "ControlTitle",
+            "label": "Control Title"
+          },
+          {
+            "field": "StatusName",
+            "label": "Status"
+          }
+        ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+          "label": ""
+        }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+          "label": ""
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      }
+    ]
+  },
+  "tables": {
+    "causePreventiveControlsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 5,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [ ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Select",
+          "data": "function(node){return navcon.loadTableData(node,'','checkbox');}",
+          "field": "",
+          "width": "100px"
+        },
+        {
+          "title": "Control RefNo #",
+          "data": "ControlRefNo",
+          "width": "10%",
+          "className": "all"
+        },
+        {
+          "title": "Control Title",
+          "data": "ControlTitle",
+          "width": "20%",
+          "className": "desktop"
+        },
+        {
+          "title": "Description",
+          "data": "ControlDescription",
+          "width": "40%"
+        },
+        {
+          "title": "Change To",
+          "data": "ChangeTo",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "StatusName",
+          "width": "5%"
+        },
+        {
+          "title": "color",
+          "data": "ColorCode",
+          "width": "0%",
+          "visible": false
+        }
+      ]
+    },
+    "CauseAnalysisPreventiveControl": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 5,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "buttons": [ ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "CauseAnalysisControlId",
+          "data": "CauseAnalysisControlId",
+          "visible": false
+        },
+        {
+          "title": "CauseAnalysisId",
+          "data": "CauseAnalysisId",
+          "field": "",
+          "width": "100px",
+          "visible": false
+        },
+        {
+          "title": "ControlId",
+          "data": "ControlId",
+          "field": "",
+          "width": "100px",
+          "visible": false
+        },
+        {
+          "title": "Control RefNo #",
+          "data": "ControlRefNo",
+          "width": "10%",
+          "className": "all"
+        },
+        {
+          "title": "Control Title",
+          "data": "ControlTitle",
+          "width": "20%",
+          "className": "desktop"
+        },
+
+        {
+          "title": "Status",
+          "data": "StatusName",
+          "width": "5%"
+        },
+        {
+          "title": "color",
+          "data": "ColorCode",
+          "width": "0%",
+          "visible": false
+        },
+        {
+          "title": "Delete",
+          "data": null,
+          "defaultContent": "<a class='btn btndelete' href='javascript:;'><i class='fa fa-trash-o'></i></a>",
+          "width": "5%"
+        }
+      ]
+    },
+    "CauseAnalysisRecoveryControl": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 5,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "buttons": [ ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "CauseAnalysisControlId",
+          "data": "CauseAnalysisControlId",
+          "visible": false
+        },
+        {
+          "title": "CauseAnalysisId",
+          "data": "CauseAnalysisId",
+          "field": "",
+          "width": "100px",
+          "visible": false
+        },
+        {
+          "title": "ControlId",
+          "data": "ControlId",
+          "field": "",
+          "width": "100px",
+          "visible": false
+        },
+        {
+          "title": "Control RefNo #",
+          "data": "ControlRefNo",
+          "width": "10%",
+          "className": "all"
+        },
+        {
+          "title": "Control Title",
+          "data": "ControlTitle",
+          "width": "20%",
+          "className": "desktop"
+        },
+
+        {
+          "title": "Status",
+          "data": "StatusName",
+          "width": "5%"
+        },
+        {
+          "title": "color",
+          "data": "ColorCode",
+          "width": "0%",
+          "visible": false
+        },
+        {
+          "title": "Delete",
+          "data": null,
+          "defaultContent": "<a class='btn btndelete' href='javascript:;'><i class='fa fa-trash-o'></i></a>",
+          "width": "5%"
+        }
+      ]
+    },
+    "causeRecoveryControlsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 5,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "dom": "Bfrtip",
+      "colReorder": true,
+      "buttons": [
+        "colvis"
+      ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Select",
+          "data": "function(node){return navcon.loadTableData(node,'','checkbox');}",
+          "field": "",
+          "width": "100px"
+        },
+        {
+          "title": "Control RefNo #",
+          "data": "ControlRefNo",
+          "width": "10%",
+          "className": "all"
+        },
+        {
+          "title": "Control Title",
+          "data": "ControlTitle",
+          "width": "20%",
+          "className": "desktop"
+        },
+        {
+          "title": "Description",
+          "data": "ControlDescription",
+          "width": "40%"
+        },
+        {
+          "title": "Change To",
+          "data": "ChangeTo",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "StatusName",
+          "width": "5%"
+        },
+        {
+          "title": "color",
+          "data": "ColorCode",
+          "width": "0%",
+          "visible": false
+        }
+      ]
+    }
+
+  },
+  "tableEditor": {
+    "ReferencestableEditor": {
+      "fields": [
+        {
+          "key": "ReferenceDescription",
+          "type": "input",
+          "data": "",
+          "name": "Reference Name",
+          "class": "col-md-4",
+          "templateOptions": {
+            "label": "Full Name :",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "References is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ReferenceLink",
+          "type": "input",
+          "data": "",
+          "name": "Reference Link",
+          "class": "col-md-6",
+          "templateOptions": {
+            "label": "Full Name :",
+            "placeholder": "Paste the hyperlink from BMS",
+            "required": "no",
+            "requiredMessage": "References is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "CauseAnalysisReferenceId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "CauseAnalysisId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [
+
+      ]
+    }
+  }
+}

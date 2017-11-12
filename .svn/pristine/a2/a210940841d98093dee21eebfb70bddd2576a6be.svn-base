@@ -1,0 +1,754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{014A6742-7416-468D-86E6-A421E8F9EC12}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BAE</RootNamespace>
+    <AssemblyName>BAE</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1.291.2731477-rc\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1.291.2731477-rc\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1.291.2731477-rc\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1.291.2731477-rc\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1.291.2731477-rc\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1.291.2731477-rc\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1.291.2731477-rc\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1.291.2731477-rc\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=3.1.9.463, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\structuremap.3.1.9.463\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=3.1.9.463, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\structuremap.3.1.9.463\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.15\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.15\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\404\404.html" />
+    <Content Include="app\changepassword\changepassword.controller.js" />
+    <Content Include="app\changepassword\changepassword.html" />
+    <Content Include="app\dashboard\dashboard.directive.js" />
+    <Content Include="app\dashboard\dashboardTemplate.html" />
+    <Content Include="app\dashboard\directives\mycount.directive.js" />
+    <Content Include="app\dashboard\directives\mycountTemplate.html" />
+    <Content Include="app\dashboard\directives\myreport.directive.js" />
+    <Content Include="app\dashboard\directives\myreportTemplate.html" />
+    <Content Include="app\dashboard\directives\myriskmatrix.directive.js" />
+    <Content Include="app\dashboard\directives\myriskmatrixTemplate.html" />
+    <Content Include="app\dashboard\directives\mysummary.directive.js" />
+    <Content Include="app\dashboard\directives\mysummaryTemplate.html" />
+    <Content Include="app\delete\delete.directives.js" />
+    <Content Include="app\delete\delete.html" />
+    <Content Include="app\login\directives\login.directive.js" />
+    <Content Include="app\login\directives\loginTemplate.html" />
+    <Content Include="app\login\login.controller.js" />
+    <Content Include="app\login\login.html" />
+    <Content Include="app\multiselect\multiselectcheckbox.js" />
+    <Content Include="app\news\news.controller.js" />
+    <Content Include="app\news\news.html" />
+    <Content Include="app\photo\appInfo.controller.js" />
+    <Content Include="app\photo\egFiles.controller.js" />
+    <Content Include="app\photo\egPhotoUploader.controller.js" />
+    <Content Include="app\photo\egPhotoUploader.html" />
+    <Content Include="app\photo\egUpload.controller.js" />
+    <Content Include="app\photo\photoManager.controller.js" />
+    <Content Include="app\photo\photoManagerClient.controller.js" />
+    <Content Include="app\photo\photos.contoller.js" />
+    <Content Include="app\photo\photos.controller.js" />
+    <Content Include="app\photo\photos.html" />
+    <Content Include="app\rolemanagement\rolemanagement.controller.js" />
+    <Content Include="app\rolemanagement\rolemanagement.html" />
+    <Content Include="app\tiles\tiles.controller.js" />
+    <Content Include="app\tiles\tiles.html" />
+    <Content Include="app\useraccessrights\useraccessrights.controller.js" />
+    <Content Include="app\useraccessrights\useraccessrights.html" />
+    <Content Include="app\userimport\userimport.controller.js" />
+    <Content Include="app\userimport\userimport.html" />
+    <Content Include="app\usermanagement\usermanagement.controller.js" />
+    <Content Include="app\usermanagement\usermanagement.html" />
+    <Content Include="app\userprofile\userprofile.controller.js" />
+    <Content Include="app\userprofile\userprofile.html" />
+    <Content Include="app\widgets\navconChart\navconChart.css" />
+    <Content Include="app\widgets\navconChart\navconChart.directive.js" />
+    <Content Include="app\widgets\navconChart\navconChartTemplate.html" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\images\ajaxLoader.gif" />
+    <Content Include="Assets\images\companylogo.png" />
+    <Content Include="Assets\images\company_logowhite.png" />
+    <Content Include="Assets\images\portlet-collapse-icon.png" />
+    <Content Include="Assets\images\remove-icon-small_white.png" />
+    <Content Include="Assets\images\sidebar_toggler_icon_darkblue.png" />
+    <Content Include="Assets\Scripts\angular-block-ui\angular-block-ui.min.js" />
+    <Content Include="Assets\Scripts\angular-bootstrap-switch\angular-bootstrap-switch.js" />
+    <Content Include="Assets\Scripts\angular-loading\angular-loading-overlay-spinjs.js" />
+    <Content Include="Assets\Scripts\angular-loading\angular-loading-overlay.js" />
+    <Content Include="Assets\Scripts\angular-message\angular-messages.js" />
+    <Content Include="Assets\Scripts\angular-resource\angular-resource.js" />
+    <Content Include="Assets\Scripts\angular-resource\angular-resource.min.js" />
+    <Content Include="Assets\Scripts\angular-sanitize\angular-sanitize.js" />
+    <Content Include="Assets\Scripts\angularjs\plugins\extras.angular.plus\ngplus-overlay.js" />
+    <Content Include="Assets\Scripts\angularjs\plugins\ocLazyLoad.min.js" />
+    <Content Include="Assets\Scripts\angularjs\plugins\ui-select\dist\select.css" />
+    <Content Include="Assets\Scripts\angularjs\plugins\ui-select\dist\select.js" />
+    <Content Include="Assets\Scripts\angularjs\plugins\ui-select\dist\select.min.css" />
+    <Content Include="Assets\Scripts\angularjs\plugins\ui-select\dist\select.min.js" />
+    <Content Include="Assets\Scripts\authentication\angular-local-storage.min.js" />
+    <Content Include="Assets\Scripts\authentication\loading-bar.min.js" />
+    <Content Include="Assets\Scripts\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="Assets\Scripts\bootstrap-datepaginator\daterangepicker.js" />
+    <Content Include="Assets\Scripts\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Assets\Scripts\bootstrap-dialog\bootstrap-dialog.min.js" />
+    <Content Include="Assets\Scripts\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js" />
+    <Content Include="Assets\Scripts\bootstrap-modal\js\bootstrap-modal.js" />
+    <Content Include="Assets\Scripts\bootstrap-modal\js\bootstrap-modalmanager.js" />
+    <Content Include="Assets\Scripts\clockface\js\clockface.js" />
+    <Content Include="Assets\Scripts\flow\dist\ng-flow-standalone.js" />
+    <Content Include="Assets\Scripts\flow\dist\ng-flow-standalone.min.js" />
+    <Content Include="Assets\Scripts\idle\angular-idle.js" />
+    <Content Include="Assets\Scripts\idle\angular-timer-all.min.js" />
+    <Content Include="Assets\Scripts\jquery-multi-select\js\jquery.multi-select.js" />
+    <Content Include="Assets\Scripts\jquery-slimscroll\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Assets\Scripts\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Assets\Scripts\kendo\kendo.all.min.js" />
+    <Content Include="Assets\Scripts\kendo\kendo.timezones.min.js" />
+    <Content Include="Assets\Scripts\kendo\kendo.customView.js" />
+    <Content Include="Assets\Scripts\layout\scripts\layout.js" />
+    <Content Include="Assets\Scripts\others\angular-animate.min.js" />
+    <Content Include="Assets\Scripts\others\angular-cookies.js" />
+    <Content Include="Assets\Scripts\others\angular-gridster.min.js" />
+    <Content Include="Assets\Scripts\others\angular-timer-all.min.js" />
+    <Content Include="Assets\Scripts\others\components-dropdowns.js" />
+    <Content Include="Assets\Scripts\others\components-pickers.js" />
+    <Content Include="Assets\Scripts\others\jquery-migrate.min.js" />
+    <Content Include="Assets\Scripts\others\jquery.blockui.min.js" />
+    <Content Include="Assets\Scripts\others\jquery.cokie.min.js" />
+    <Content Include="Assets\Scripts\others\metronic.js" />
+    <Content Include="Assets\Scripts\others\ngStorage.min.js" />
+    <Content Include="Assets\Scripts\owl-carousel\js\application.js" />
+    <Content Include="Assets\Scripts\owl-carousel\js\bootstrap-collapse.js" />
+    <Content Include="Assets\Scripts\owl-carousel\js\bootstrap-tab.js" />
+    <Content Include="Assets\Scripts\owl-carousel\js\bootstrap-transition.js" />
+    <Content Include="Assets\Scripts\owl-carousel\js\google-code-prettify\prettify.css" />
+    <Content Include="Assets\Scripts\owl-carousel\js\google-code-prettify\prettify.js" />
+    <Content Include="Assets\Scripts\owl-carousel\owl.carousel.js" />
+    <Content Include="Assets\Scripts\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Assets\Scripts\select2\select2.min.js" />
+    <Content Include="Assets\Scripts\signalr\jquery.signalR-2.1.2.js" />
+    <Content Include="Assets\Scripts\spectrum-colorpicker\angular-spectrum-colorpicker.min.js" />
+    <Content Include="Assets\Scripts\spectrum-colorpicker\spectrum.js" />
+    <Content Include="Assets\Scripts\toastr\toastr.js" />
+    <Content Include="Assets\Scripts\toastr\toastr.min.js" />
+    <Content Include="Assets\Scripts\typeahead\typeahead.js" />
+    <Content Include="Assets\Scripts\uniform\jquery.uniform.min.js" />
+    <Content Include="Assets\Styles\angular-block-ui\angular-block-ui.min.css" />
+    <Content Include="Assets\Styles\angular-block-ui\angular-block-ui.tmpl.html" />
+    <Content Include="Assets\Styles\bootstrap-colorpicker\css\colorpicker.css" />
+    <Content Include="Assets\Styles\bootstrap-colorpicker\img\alpha.png" />
+    <Content Include="Assets\Styles\bootstrap-colorpicker\img\hue.png" />
+    <Content Include="Assets\Styles\bootstrap-colorpicker\img\saturation.png" />
+    <Content Include="Assets\Styles\bootstrap-datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Assets\Styles\bootstrap-daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="Assets\Styles\bootstrap-datetimepicker\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Assets\Styles\bootstrap-dialog\bootstrap-dialog.min.css" />
+    <Content Include="Assets\Styles\bootstrap-modal\css\bootstrap-modal-bs3patch.css" />
+    <Content Include="Assets\Styles\bootstrap-modal\css\bootstrap-modal.css" />
+    <Content Include="Assets\Styles\bootstrap-switch\css\bootstrap-switch.min.css" />
+    <Content Include="Assets\Styles\bootstrap-timepicker\css\bootstrap-timepicker.min.css" />
+    <Content Include="Assets\Styles\clockface\css\clockface.css" />
+    <Content Include="Assets\Styles\datatables\media\css\jquery.dataTables.min_new.css" />
+    <Content Include="Assets\Styles\jquery-multi-select\css\multi-select.css" />
+    <Content Include="Assets\Styles\jquery-slimscroll\jquery.mCustomScrollbar.css" />
+    <Content Include="Assets\Styles\jstree\dist\themes\default\32px.png" />
+    <Content Include="Assets\Styles\jstree\dist\themes\default\32px_line.png" />
+    <Content Include="Assets\Styles\jstree\dist\themes\default\32px_original.png" />
+    <Content Include="Assets\Styles\jstree\dist\themes\default\40px.png" />
+    <Content Include="Assets\Styles\jstree\dist\themes\default\style.css" />
+    <Content Include="Assets\Styles\jstree\dist\themes\default\style.min.css" />
+    <Content Include="Assets\Styles\jstree\dist\themes\default\throbber.gif" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\LICENSE.txt" />
+    <Content Include="Assets\Styles\kendo\fonts\glyphs\KendoUIGlyphs.svg" />
+    <Content Include="Assets\Styles\kendo\fonts\glyphs\WebComponentsIcons.svg" />
+    <Content Include="Assets\Styles\kendo\kendo.bootstrap.min.css" />
+    <Content Include="Assets\Styles\kendo\kendo.bootstrap.mobile.min.css" />
+    <Content Include="Assets\Styles\kendo\kendo.common.min.css" />
+    <Content Include="Assets\Styles\kendo\kendo.default.min.css" />
+    <Content Include="Assets\Styles\kendo\kendo.mobile.all.min.css" />
+    <Content Include="Assets\Styles\kendo\kendo.rtl.min.css" />
+    <Content Include="Assets\Styles\kendo\kendo.silver.min.css" />
+    <Content Include="Assets\Styles\layout\css\custom.css" />
+    <Content Include="Assets\Styles\layout\css\layout.css" />
+    <Content Include="Assets\Styles\layout\css\themes\darkblue.css" />
+    <Content Include="Assets\Styles\layout\img\404.jpg" />
+    <Content Include="Assets\Styles\layout\img\Default.png" />
+    <Content Include="Assets\Styles\others\angular-gridster.min.css" />
+    <Content Include="Assets\Styles\others\bootstrap.css" />
+    <Content Include="Assets\Styles\others\components.css" />
+    <Content Include="Assets\Styles\others\font-awesome.min.css" />
+    <Content Include="Assets\Styles\others\images\ajaxLoader.gif" />
+    <Content Include="Assets\Styles\others\images\attachment.png" />
+    <Content Include="Assets\Styles\others\images\bookmark_icon.ico" />
+    <Content Include="Assets\Styles\others\images\busy.gif" />
+    <Content Include="Assets\Styles\others\images\compare.png" />
+    <Content Include="Assets\Styles\others\images\default.jpg" />
+    <Content Include="Assets\Styles\others\images\drivenIcon.png" />
+    <Content Include="Assets\Styles\others\images\employee-andy.png" />
+    <Content Include="Assets\Styles\others\images\employee-april.png" />
+    <Content Include="Assets\Styles\others\images\employee-don.png" />
+    <Content Include="Assets\Styles\others\images\employee-kathy.png" />
+    <Content Include="Assets\Styles\others\images\employee-tom.png" />
+    <Content Include="Assets\Styles\others\images\employee.png" />
+    <Content Include="Assets\Styles\others\images\favourite.png" />
+    <Content Include="Assets\Styles\others\images\Flight1.png" />
+    <Content Include="Assets\Styles\others\images\Flight2.png" />
+    <Content Include="Assets\Styles\others\images\guide-icon.png" />
+    <Content Include="Assets\Styles\others\images\inventory-icon.png" />
+    <Content Include="Assets\Styles\others\images\kayak-icon-flat.png" />
+    <Content Include="Assets\Styles\others\images\portlet-collapse-icon-white.png" />
+    <Content Include="Assets\Styles\others\images\portlet-collapse-icon.png" />
+    <Content Include="Assets\Styles\others\images\portlet-config-icon-white.png" />
+    <Content Include="Assets\Styles\others\images\portlet-config-icon.png" />
+    <Content Include="Assets\Styles\others\images\portlet-expand-icon-white.png" />
+    <Content Include="Assets\Styles\others\images\portlet-expand-icon.png" />
+    <Content Include="Assets\Styles\others\images\portlet-reload-icon-white.png" />
+    <Content Include="Assets\Styles\others\images\portlet-reload-icon.png" />
+    <Content Include="Assets\Styles\others\images\portlet-remove-icon-white.png" />
+    <Content Include="Assets\Styles\others\images\portlet-remove-icon.png" />
+    <Content Include="Assets\Styles\others\images\print.png" />
+    <Content Include="Assets\Styles\others\images\printer_and_fax_w.png" />
+    <Content Include="Assets\Styles\others\images\raft-icon.png" />
+    <Content Include="Assets\Styles\others\images\remove-icon-small.png" />
+    <Content Include="Assets\Styles\others\images\remove-icon-small_white.png" />
+    <Content Include="Assets\Styles\others\images\report-preview.png" />
+    <Content Include="Assets\Styles\others\images\river1.png" />
+    <Content Include="Assets\Styles\others\images\river2.png" />
+    <Content Include="Assets\Styles\others\images\river3.png" />
+    <Content Include="Assets\Styles\others\images\river4.png" />
+    <Content Include="Assets\Styles\others\images\star1.png" />
+    <Content Include="Assets\Styles\others\images\star2.png" />
+    <Content Include="Assets\Styles\others\images\star3.png" />
+    <Content Include="Assets\Styles\others\images\therm-icon.png" />
+    <Content Include="Assets\Styles\others\images\vest-icon.png" />
+    <Content Include="Assets\Styles\others\layout\css\custom.css" />
+    <Content Include="Assets\Styles\others\layout\css\layout.css" />
+    <Content Include="Assets\Styles\others\layout\css\themes\blue.css" />
+    <Content Include="Assets\Styles\others\layout\css\themes\darkblue.css" />
+    <Content Include="Assets\Styles\others\layout\css\themes\default.css" />
+    <Content Include="Assets\Styles\others\layout\css\themes\grey.css" />
+    <Content Include="Assets\Styles\others\layout\css\themes\light.css" />
+    <Content Include="Assets\Styles\others\layout\css\themes\light2.css" />
+    <Content Include="Assets\Styles\others\layout\img\102_Alikhan.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\110_Pierre.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\116_Ansari.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\121_Chan.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\220_Musab.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\404.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\ajax-loading.gif" />
+    <Content Include="Assets\Styles\others\layout\img\ajax-modal-loading.gif" />
+    <Content Include="Assets\Styles\others\layout\img\arrow-down.png" />
+    <Content Include="Assets\Styles\others\layout\img\avatar.png" />
+    <Content Include="Assets\Styles\others\layout\img\avatar1.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar10.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar11.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar1_small.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar2.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar3.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar3_small.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar4.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar5.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar6.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar7.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar8.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\avatar9.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\BAE logo white.png" />
+    <Content Include="Assets\Styles\others\layout\img\BAE _logowhite.png" />
+    <Content Include="Assets\Styles\others\layout\img\BAElogo.png" />
+    <Content Include="Assets\Styles\others\layout\img\BAE_Logo.png" />
+    <Content Include="Assets\Styles\others\layout\img\Default.png" />
+    <Content Include="Assets\Styles\others\layout\img\Flight1.png" />
+    <Content Include="Assets\Styles\others\layout\img\Flight2.png" />
+    <Content Include="Assets\Styles\others\layout\img\green.png" />
+    <Content Include="Assets\Styles\others\layout\img\hor-menu-red-arrow.png" />
+    <Content Include="Assets\Styles\others\layout\img\icon-color-close.png" />
+    <Content Include="Assets\Styles\others\layout\img\icon-color.png" />
+    <Content Include="Assets\Styles\others\layout\img\icon-img-down.png" />
+    <Content Include="Assets\Styles\others\layout\img\icon-img-up.png" />
+    <Content Include="Assets\Styles\others\layout\img\inbox-nav-arrow-blue.png" />
+    <Content Include="Assets\Styles\others\layout\img\loading-spinner-blue.gif" />
+    <Content Include="Assets\Styles\others\layout\img\loading-spinner-default.gif" />
+    <Content Include="Assets\Styles\others\layout\img\loading-spinner-grey.gif" />
+    <Content Include="Assets\Styles\others\layout\img\loading.gif" />
+    <Content Include="Assets\Styles\others\layout\img\logo-big-white.png" />
+    <Content Include="Assets\Styles\others\layout\img\logo-big.png" />
+    <Content Include="Assets\Styles\others\layout\img\logo-invert.png" />
+    <Content Include="Assets\Styles\others\layout\img\logo.png" />
+    <Content Include="Assets\Styles\others\layout\img\logo1.png" />
+    <Content Include="Assets\Styles\others\layout\img\logo_blue.png" />
+    <Content Include="Assets\Styles\others\layout\img\logo_green.png" />
+    <Content Include="Assets\Styles\others\layout\img\menu-toggler.png" />
+    <Content Include="Assets\Styles\others\layout\img\photo1.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\photo2.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\photo3.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\portlet-collapse-icon.png" />
+    <Content Include="Assets\Styles\others\layout\img\portlet-expand-icon.png" />
+    <Content Include="Assets\Styles\others\layout\img\remove-icon-small.png" />
+    <Content Include="Assets\Styles\others\layout\img\Report1.png" />
+    <Content Include="Assets\Styles\others\layout\img\Report3.png" />
+    <Content Include="Assets\Styles\others\layout\img\Report4.png" />
+    <Content Include="Assets\Styles\others\layout\img\Report6.png" />
+    <Content Include="Assets\Styles\others\layout\img\Report7.png" />
+    <Content Include="Assets\Styles\others\layout\img\sahul.JPG" />
+    <Content Include="Assets\Styles\others\layout\img\search_icon_light.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar-menu-arrow-reverse.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar-menu-arrow-right.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar-menu-arrow.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_arrow_icon_light.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_arrow_icon_light_rtl.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_inline_toggler_icon_blue.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_inline_toggler_icon_darkblue.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_inline_toggler_icon_default.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_inline_toggler_icon_grey.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_inline_toggler_icon_light.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_inline_toggler_icon_light2.jpg" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_toggler_icon_blue.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_toggler_icon_darkblue.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_toggler_icon_default.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_toggler_icon_grey.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_toggler_icon_light.png" />
+    <Content Include="Assets\Styles\others\layout\img\sidebar_toggler_icon_light2.png" />
+    <Content Include="Assets\Styles\others\navcon-style.css" />
+    <Content Include="Assets\Styles\others\plugins.css" />
+    <Content Include="Assets\Styles\owl-carousel\AjaxLoader.gif" />
+    <Content Include="Assets\Styles\owl-carousel\grabbing.png" />
+    <Content Include="Assets\Styles\owl-carousel\owl.carousel.css" />
+    <Content Include="Assets\Styles\owl-carousel\owl.theme.css" />
+    <Content Include="Assets\Styles\owl-carousel\owl.transitions.css" />
+    <Content Include="Assets\Styles\select2\select2-bootstrap.css" />
+    <Content Include="Assets\Styles\select2\select2.css" />
+    <Content Include="Assets\Styles\simple-line-icons\fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="Assets\Styles\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Assets\Styles\simple-line-icons\simple-line-icons.min.css" />
+    <Content Include="Assets\Styles\spectrum-colorpicker\spectrum.css" />
+    <Content Include="Assets\Styles\toastr\toastr.css" />
+    <Content Include="Assets\Styles\toastr\toastr.min.css" />
+    <Content Include="Assets\Styles\typeahead\typeahead.css" />
+    <Content Include="Assets\Styles\ui-select\select.css" />
+    <Content Include="Assets\Styles\ui-select\select2.css" />
+    <Content Include="Assets\Styles\ui-select\select2_new.css" />
+    <Content Include="Assets\Styles\ui-select\selectize.default.css" />
+    <Content Include="common\modules.js" />
+    <Content Include="common\navconKendo.js" />
+    <Content Include="common\navconKendoSchedule.js" />
+    <Content Include="common\navconKendoTree.js" />
+    <Content Include="common\navconKendoTable.js" />
+    <Content Include="common\navconMenuroute.js" />
+    <Content Include="core\chartdata.js" />
+    <Content Include="common\navcon.js" />
+    <Content Include="common\navconAlert.js" />
+    <Content Include="common\navconPage.js" />
+    <Content Include="common\navconPageAPI.js" />
+    <Content Include="core\config.controller.js" />
+    <Content Include="core\core.module.js" />
+    <Content Include="exception\exception-handler.provider.js" />
+    <Content Include="exception\exception.controller.js" />
+    <Content Include="exception\exception.module.js" />
+    <Content Include="ext-modules\navconFramework\navconFramework.controller.js" />
+    <Content Include="ext-modules\navconFramework\navconFramework.css" />
+    <Content Include="ext-modules\navconFramework\navconFramework.directive.js" />
+    <Content Include="ext-modules\navconFramework\navconFrameworkTemplate.html" />
+    <Content Include="ext-modules\navconFramework\navconUserProfile\navconUserProfile.directive.js" />
+    <Content Include="ext-modules\navconFramework\navconUserProfile\navconUserProfileSmall.directive.js" />
+    <Content Include="ext-modules\navconFramework\navconUserProfile\navconUserProfileSmallTemplate.html" />
+    <Content Include="ext-modules\navconFramework\navconUserProfile\navconUserProfileTemplate.html" />
+    <Content Include="ext-modules\navconKendo\navconKendo.css" />
+    <Content Include="ext-modules\navconKendo\navconKendoField.css" />
+    <Content Include="ext-modules\navconKendo\navconKendoField.directive.js" />
+    <Content Include="ext-modules\navconKendo\navconKendoSchedule.directive.js" />
+    <Content Include="ext-modules\navconKendo\navconKendoSchedule.html" />
+    <Content Include="ext-modules\navconKendo\navconKendoTree.html" />
+    <Content Include="ext-modules\navconKendo\navconKendoTree.directive.js" />
+    <Content Include="ext-modules\navconKendo\navconKendoTable.directive.js" />
+    <Content Include="ext-modules\navconKendo\navconKendoTable.html" />
+    <Content Include="ext-modules\navconKendo\navconKendoTemplate.directive.js" />
+    <Content Include="ext-modules\navconKendo\navconKendoTemplate.html" />
+    <Content Include="ext-modules\navconMenu\navconMenu.controller.js" />
+    <Content Include="ext-modules\navconMenu\navconMenu.directive.js" />
+    <Content Include="ext-modules\navconMenu\navconMenuGroup.directive.js" />
+    <Content Include="ext-modules\navconMenu\navconMenuItem.directive.js" />
+    <Content Include="ext-modules\navconPopover\navconPopover.directive.js" />
+    <Content Include="ext-modules\navconPopover\navconReadmore.directive.js" />
+    <Content Include="ext-modules\navconReport\navconReportTemplate.html" />
+    <Content Include="gulpfile.js" />
+    <Content Include="index.html" />
+    <Content Include="logger\logger.controller.js" />
+    <Content Include="logger\logger.js" />
+    <Content Include="logger\logger.module.js" />
+    <Content Include="Logout.aspx" />
+    <Content Include="router\routehelper.controller.js" />
+    <Content Include="router\router.module.js" />
+    <Content Include="ext-modules\navconCalendar\navconCalendar.directive.js" />
+    <Content Include="ext-modules\navconCalendar\navconOrgchart.directive.js" />
+    <Content Include="ext-modules\navconDashboard\navconDashboard.css" />
+    <Content Include="ext-modules\navconDashboard\navconDashboardTemplate.html" />
+    <Content Include="ext-modules\navconDashboard\navconWidgetBodyTemplate.html" />
+    <Content Include="ext-modules\navconDelete\navconDelete.directive.js" />
+    <Content Include="ext-modules\navconDelete\navconDeleteTemplate.html" />
+    <Content Include="ext-modules\navconDropdown\navconDropdown.directive.js" />
+    <Content Include="ext-modules\navconEvaluation\navconEvaluation.css" />
+    <Content Include="ext-modules\navconEvaluation\navconEvaluation.directive.js" />
+    <Content Include="ext-modules\navconEvaluation\navconEvaluationTemplate.html" />
+    <Content Include="ext-modules\navconFChart\navconFChart.directive.js" />
+    <Content Include="ext-modules\navconField\navconField.css" />
+    <Content Include="ext-modules\navconField\navconField.directive.js" />
+    <Content Include="ext-modules\navconField\navconFieldMessagesTemplate.html" />
+    <Content Include="ext-modules\navconField\navconValidation.directive.js" />
+    <Content Include="ext-modules\navconForm\navconForm.directive.js" />
+    <Content Include="ext-modules\navconForm\navconFormTemplate.html" />
+    <Content Include="ext-modules\navconMenu\navconMenu.css" />
+    <Content Include="ext-modules\navconMenu\navconMenuGroupTemplate.html" />
+    <Content Include="ext-modules\navconMenu\navconMenuItemTemplate.html" />
+    <Content Include="ext-modules\navconMenu\navconMenuTemplate.html" />
+    <Content Include="ext-modules\navconModal\navconModal.directive.js" />
+    <Content Include="ext-modules\navconModal\navconModalTemplate.html" />
+    <Content Include="ext-modules\navconPagebar\navconPagebar.directive.js" />
+    <Content Include="ext-modules\navconPagebar\navconPagebarTemplate.html" />
+    <Content Include="ext-modules\navconPortlet\navconPortlet.directive.js" />
+    <Content Include="ext-modules\navconPortlet\navconPortletTemplate.html" />
+    <Content Include="ext-modules\navconRating\navconRating.directive.js" />
+    <Content Include="ext-modules\navconRating\navconRatingTemplate.html" />
+    <Content Include="ext-modules\navconReport\navconReport.directive.js" />
+    <Content Include="ext-modules\navconTableEditor\navconTableEditor.directive.js" />
+    <Content Include="ext-modules\navconTableEditor\navconTableEditorTemplate.html" />
+    <Content Include="ext-modules\navconTable\navconTable.css" />
+    <Content Include="ext-modules\navconTable\navconTable.directive.js" />
+    <Content Include="ext-modules\navconTable\navconTableTemplate.html" />
+    <Content Include="ext-modules\navconTree\navconTree.directive.js" />
+    <Content Include="ext-modules\navconTree\navconTreeTemplate.html" />
+    <Content Include="ext-modules\navconUpload\navconFileUploadTemplate.html" />
+    <Content Include="ext-modules\navconUpload\navconMultipleUploadTemplate.html" />
+    <Content Include="ext-modules\navconUpload\navconPhotoUploadTemplate.html" />
+    <Content Include="ext-modules\navconUpload\navconUpload.css" />
+    <Content Include="ext-modules\navconUpload\navconUpload.directive.js" />
+    <Content Include="Global.asax" />
+    <Content Include="services\auth.Service.js" />
+    <Content Include="services\authInterceptor.Service.js" />
+    <Content Include="services\data.Service.js" />
+    <Content Include="services\loadingOverlay.Service.js" />
+    <Content Include="services\signalRHubProxy.Service.js" />
+    <Content Include="start\angular-block-ui.tmpl.html" />
+    <Content Include="start\app.js" />
+    <Content Include="start\devindex.html" />
+    <Content Include="start\index.html" />
+    <Content Include="start\navconFieldTemplate.html" />
+    <Content Include="start\serverexpiration.html" />
+    <Content Include="start\settings.js" />
+    <Content Include="ViewsStatic\ReportForm.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsStatic\ReportForm.aspx.cs">
+      <DependentUpon>ReportForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewsStatic\ReportForm.aspx.designer.cs">
+      <DependentUpon>ReportForm.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\fonts\59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Assets\fonts\cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\fonts\Gnaw Hard.otf" />
+    <Content Include="Assets\fonts\K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Assets\fonts\Lato-Regular.ttf" />
+    <Content Include="Assets\fonts\loginBold.otf" />
+    <Content Include="Assets\fonts\loginlight.otf" />
+    <Content Include="Assets\fonts\loginRegular.otf" />
+    <Content Include="Assets\fonts\LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Assets\fonts\RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Assets\fonts\u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Assets\fonts\xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Assets\Scripts\angular-resource\angular-resource.min.js.map" />
+    <Content Include="Assets\Scripts\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="Assets\Scripts\angularjs\plugins\extras.angular.plus\bower.json" />
+    <Content Include="Assets\Scripts\bootstrap-colorpicker\less\colorpicker.less" />
+    <Content Include="Assets\Scripts\others\angular-animate.min.js.map" />
+    <Content Include="Assets\Scripts\toastr\toastr.min.js.map" />
+    <Content Include="Assets\Styles\jquery-slimscroll\slimScroll.jquery.json" />
+    <Content Include="Assets\Styles\others\bootstrap.css.map" />
+    <Content Include="Assets\Styles\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Assets\Styles\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Assets\Styles\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSans.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\DejaVu\DejaVuSerif.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\glyphs\KendoUIGlyphs.eot" />
+    <Content Include="Assets\Styles\kendo\fonts\glyphs\KendoUIGlyphs.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\glyphs\KendoUIGlyphs.woff" />
+    <Content Include="Assets\Styles\kendo\fonts\glyphs\WebComponentsIcons.eot" />
+    <Content Include="Assets\Styles\kendo\fonts\glyphs\WebComponentsIcons.ttf" />
+    <Content Include="Assets\Styles\kendo\fonts\glyphs\WebComponentsIcons.woff" />
+    <None Include="Properties\PublishProfiles\SafeTal-Publish.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\Styles\images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>39337</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59337/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for userprofile\userprofile.controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">userprofile/</a> userprofile.controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.34% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>42/134</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/84</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.58% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/133</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">﻿(function() {
+    'use strict';
+&nbsp;
+    angular
+        .module('app.userprofile')
+        .controller('userprofile', userprofile);
+&nbsp;
+    /* @ngInject */
+    function userprofile($scope, dataservice, logger, $compile, $timeout, $location, authService, pageConfig, $rootScope, menuSettings, ngAuthSettings) {
+        var vm = this;
+        var type = "userProfile";
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (pageConfig === undefined || pageConfig.fields === undefined) {
+<span class="cstat-no" title="statement not covered" >            $location.url('/');</span>
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+&nbsp;
+&nbsp;
+&nbsp;
+        function settings() {
+            /*Variables Declaration and Assign */
+           // vm.userId = authService.authentication.userId;
+            vm.userName = authService.authentication.userName;
+            vm.SSOStatus = ngAuthSettings.SSO;
+            vm.primaryKey = "Id";
+            vm.readOnly = true;
+            vm.formManage = {};
+            //vm.rights = navcon.getUserRights(menuSettings, "padministration", "userprofile");
+&nbsp;
+            /*Page configuration*/
+            vm.pageConfig = pageConfig;
+            vm.userProfileFields = angular.copy(vm.pageConfig.fields.userProfileFields);
+            vm.changePasswordFields = angular.copy(vm.pageConfig.fields.changePasswordFields);
+        }
+&nbsp;
+&nbsp;
+        vm.cancel = <span class="fstat-no" title="function not covered" >function(type) {</span>
+<span class="cstat-no" title="statement not covered" >            if (type === 'userprofile') {</span>
+<span class="cstat-no" title="statement not covered" >                clearFields();</span>
+<span class="cstat-no" title="statement not covered" >                getUserById();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                vm.enableFields(false);</span>
+<span class="cstat-no" title="statement not covered" >                vm.isUpdate = true;</span>
+<span class="cstat-no" title="statement not covered" >                vm.readOnly = true;</span>
+            } else <span class="cstat-no" title="statement not covered" >if (type === 'changePassword') {</span>
+<span class="cstat-no" title="statement not covered" >                $('#' + 'ChangePassword').toggleClass('in');</span>
+<span class="cstat-no" title="statement not covered" >                $('#' + 'ChangePassword').parent('.panel').find('.panel-heading .panel-title:first').addClass('collapsed');</span>
+<span class="cstat-no" title="statement not covered" >                $('#ChangePassword').removeClass('in');</span>
+            }
+        };
+&nbsp;
+        /*Edit*/
+        vm.edit = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            vm.enableFields(true);</span>
+<span class="cstat-no" title="statement not covered" >            vm.isEdit = true;</span>
+<span class="cstat-no" title="statement not covered" >            vm.isUpdate = false;</span>
+<span class="cstat-no" title="statement not covered" >            vm.isCancel = false;</span>
+        };
+&nbsp;
+        vm.save = <span class="fstat-no" title="function not covered" >function(type, callback) {</span>
+<span class="cstat-no" title="statement not covered" >            vm.mode = "Update";</span>
+<span class="cstat-no" title="statement not covered" >            if (type === 'userprofile') {</span>
+<span class="cstat-no" title="statement not covered" >                if (vm.formManage.formValid(vm.userProfileFields)) {</span>
+<span class="cstat-no" title="statement not covered" >                    navcon.save.saveOption(vm, dataservice, vm.mode, type, vm.userProfileTable, vm.userProfileFields, vm.selectedRow, vm.primaryKey, "", "", "", true, "", <span class="fstat-no" title="function not covered" >function(data) {</span></span>
+                        //if (callback !== undefined)
+                        //    callback(data === undefined ? false : true);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (data !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >                            clearFields();</span>
+<span class="cstat-no" title="statement not covered" >                            getUserById();</span>
+<span class="cstat-no" title="statement not covered" >                            logger.success("Entries are updated successfully...");</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        vm.readOnly = true;</span>
+<span class="cstat-no" title="statement not covered" >                        vm.isEdit = false;</span>
+<span class="cstat-no" title="statement not covered" >                        vm.isUpdate = true;</span>
+<span class="cstat-no" title="statement not covered" >                        vm.isCancel = false;</span>
+                    });
+                }
+            } else <span class="cstat-no" title="statement not covered" >if (type === 'changePassword') {</span>
+<span class="cstat-no" title="statement not covered" >                if (vm.formManage.formValid(vm.changePasswordFields)) {</span>
+<span class="cstat-no" title="statement not covered" >                    var userIdIndex = navcon.getItemIndexByProperty(vm.changePasswordFields, "Id");</span>
+<span class="cstat-no" title="statement not covered" >                    var userNameIndex = navcon.getItemIndexByProperty(vm.changePasswordFields, "UserName");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    vm.changePasswordFields[userIdIndex].data = parseInt(vm.userId);</span>
+<span class="cstat-no" title="statement not covered" >                    vm.changePasswordFields[userNameIndex].data = vm.userName;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    navcon.save.saveOption(vm, dataservice, vm.mode, type, "", vm.changePasswordFields, vm.changePasswordFields.selectedRow, vm.primaryKey, vm.displayKey, 0, false, false, "", <span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        if (data !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >                            clearPasswordFields();</span>
+<span class="cstat-no" title="statement not covered" >                            logger.success("Password changed successfully...");</span>
+<span class="cstat-no" title="statement not covered" >                            $('#' + 'ChangePassword').toggleClass('in');</span>
+<span class="cstat-no" title="statement not covered" >                            $('#' + 'ChangePassword').parent('.panel').find('.panel-heading .panel-title:first').addClass('collapsed');</span>
+<span class="cstat-no" title="statement not covered" >                            $('#ChangePassword').removeClass('in');</span>
+                        }
+                        //else {
+                        //    logger.warning("Old Password is incorrect.")
+                        //}
+                    });
+                }
+            }
+        };
+&nbsp;
+        vm.showPassword = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            clearPasswordFields();</span>
+<span class="cstat-no" title="statement not covered" >            vm.showHide('ChangePassword');</span>
+        }
+&nbsp;
+        vm.showHide = <span class="fstat-no" title="function not covered" >function(id, mode) {</span>
+<span class="cstat-no" title="statement not covered" >            if (!$('#' + id).hasClass('in')) {</span>
+<span class="cstat-no" title="statement not covered" >                $('#' + id).toggleClass('in');</span>
+            }
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function clearFields() {</span>
+<span class="cstat-no" title="statement not covered" >            navcon.clearFieldsData(vm.userProfileFields);</span>
+            //userImageIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "UserImage");
+            //vm.userProfileFields[userImageIndex].data = "";
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function clearPasswordFields() {</span>
+<span class="cstat-no" title="statement not covered" >            navcon.clearFieldsData(vm.changePasswordFields);</span>
+        }
+&nbsp;
+        vm.enableFields = <span class="fstat-no" title="function not covered" >function(isEnabled) {</span>
+<span class="cstat-no" title="statement not covered" >            vm.readOnly = !isEnabled;</span>
+        }
+&nbsp;
+        vm.togglePanel = <span class="fstat-no" title="function not covered" >function(id) {</span>
+<span class="cstat-no" title="statement not covered" >            $('#' + id).toggleClass('in');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if ($('#' + id).hasClass('in')) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                $('#' + id).parent('.panel').find('.panel-heading .panel-title:first').removeClass('collapsed');</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                $('#' + id).parent('.panel').find('.panel-heading .panel-title:first').addClass('collapsed');</span>
+            }
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function getUserById() {</span>
+<span class="cstat-no" title="statement not covered" >            clearFields();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var dataUser = getServerData('userProfileId').then(<span class="fstat-no" title="function not covered" >function(dataUser) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (dataUser !== undefined &amp;&amp; dataUser !== null) {</span>
+<span class="cstat-no" title="statement not covered" >                    navcon.updateFieldsData(vm.userProfileFields, dataUser, vm, false, vm.navconData);</span>
+<span class="cstat-no" title="statement not covered" >                    vm.isEdit = false;</span>
+<span class="cstat-no" title="statement not covered" >                    vm.isUpdate = true;</span>
+<span class="cstat-no" title="statement not covered" >                    vm.isCancel = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    var IdIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "Id");</span>
+<span class="cstat-no" title="statement not covered" >                    var documentIdIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "documentId");</span>
+<span class="cstat-no" title="statement not covered" >                    if (dataUser.documentId === undefined || dataUser.documentId === null || dataUser.documentId === "")</span>
+<span class="cstat-no" title="statement not covered" >                        vm.userProfileFields[documentIdIndex].data = vm.userProfileFields[IdIndex].data;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if (dataUser.documents !== undefined &amp;&amp; dataUser.documents !== null &amp;&amp; dataUser.documents.DocumentName !== undefined &amp;&amp; dataUser.documents.DocumentName !== null) {</span>
+<span class="cstat-no" title="statement not covered" >                        var documentNameIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "DocumentName");</span>
+<span class="cstat-no" title="statement not covered" >                        vm.userProfileFields[documentNameIndex].data = dataUser.documents.DocumentName;</span>
+                    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if (dataUser.img !== undefined &amp;&amp; dataUser.img !== null &amp;&amp; dataUser.img !== "") {</span>
+                        //var userImageIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "img");
+                        //vm.userProfileFields[userImageIndex].data = dataUser.img;
+<span class="cstat-no" title="statement not covered" >                        $rootScope.userProfileImage = dataUser.img;</span>
+                    }
+                }
+            });
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function getServerData(type, rowId) {</span>
+<span class="cstat-no" title="statement not covered" >            return dataservice.getServerData(type, rowId).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                return data;</span>
+            });
+        };
+&nbsp;
+        function activate() {
+            settings();
+            defaultData(vm.pageConfig.data);
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (ngAuthSettings.unitTest === undefined || !ngAuthSettings)
+<span class="cstat-no" title="statement not covered" >                getUserById();</span>
+            watchAttributes();
+        };
+&nbsp;
+        function defaultData(data) {
+            navcon.save.loadListDefaultData(data, vm.userProfileFields);
+        }
+&nbsp;
+        function watchAttributes() {
+            var userImageIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "img");
+            $scope.$watch("vm.userProfileFields[" + userImageIndex + "].templateOptions.keyReturn", function(newValue, oldValue) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (newValue !== undefined &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >newValue !== oldValue)</span> {
+<span class="cstat-no" title="statement not covered" >                    if (newValue.error !== undefined &amp;&amp; newValue.error.length &gt; 0) {} else <span class="cstat-no" title="statement not covered" >if (newValue.removed !== undefined) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var IdIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "Id");</span>
+<span class="cstat-no" title="statement not covered" >                        var documentIdIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "documentId");</span>
+<span class="cstat-no" title="statement not covered" >                        vm.userProfileFields[documentIdIndex].data = vm.userProfileFields[IdIndex].data;</span>
+<span class="cstat-no" title="statement not covered" >                        $rootScope.userProfileImage = "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";</span>
+                    } else <span class="cstat-no" title="statement not covered" >if (newValue.uploaded !== undefined &amp;&amp; newValue.uploaded.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                        $timeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var dataUser = getServerData('userProfileId').then(<span class="fstat-no" title="function not covered" >function(dataUser) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                if (dataUser !== undefined &amp;&amp; dataUser !== null) {</span>
+<span class="cstat-no" title="statement not covered" >                                    navcon.updateFieldsData(vm.userProfileFields, dataUser, vm, false, vm.navconData);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                    var IdIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "Id");</span>
+<span class="cstat-no" title="statement not covered" >                                    var documentIdIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "documentId");</span>
+<span class="cstat-no" title="statement not covered" >                                    if (dataUser.documentId === undefined || dataUser.documentId === null || dataUser.documentId === "")</span>
+<span class="cstat-no" title="statement not covered" >                                        vm.userProfileFields[documentIdIndex].data = vm.userProfileFields[IdIndex].data;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                    if (dataUser.documents !== undefined &amp;&amp; dataUser.documents !== null &amp;&amp; dataUser.documents.DocumentName !== undefined &amp;&amp; dataUser.documents.DocumentName !== null) {</span>
+<span class="cstat-no" title="statement not covered" >                                        var documentNameIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "DocumentName");</span>
+<span class="cstat-no" title="statement not covered" >                                        vm.userProfileFields[documentNameIndex].data = dataUser.documents.DocumentName;</span>
+                                    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                    if (dataUser.img !== undefined &amp;&amp; dataUser.img !== null &amp;&amp; dataUser.img !== "") {</span>
+                                        //var userImageIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "img");
+                                        //vm.userProfileFields[userImageIndex].data = dataUser.img;
+<span class="cstat-no" title="statement not covered" >                                        $rootScope.userProfileImage = dataUser.img;</span>
+                                    }
+                                }
+                            });
+                        });
+                    }
+                }
+            });
+&nbsp;
+            var ITARWarningIndex = navcon.getItemIndexByProperty(vm.userProfileFields, "ITARWarning");
+            $scope.$watch("vm.userProfileFields[" + ITARWarningIndex + "].data", function(newValue, oldValue) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (newValue) {
+<span class="cstat-no" title="statement not covered" >                    vm.itarwarning = newValue;</span>
+                } else {
+                    vm.itarwarning = false;
+                }
+            }, true);
+        }
+&nbsp;
+        activate();
+    }
+})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Nov 12 2017 13:33:46 GMT+0400 (Arabian Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

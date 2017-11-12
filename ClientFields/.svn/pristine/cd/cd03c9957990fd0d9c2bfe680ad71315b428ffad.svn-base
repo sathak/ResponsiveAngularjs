@@ -1,0 +1,370 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "PSMM Maturity",
+      "url": "psmmmaturity"
+    }
+  ],
+  "fields": {
+    "psmmMaturityFields": [
+      {
+        "key": "PSMMMaturityId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "RefNumber",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "PSMMStatusId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select Project",
+          "required": "yes",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "pmcProjects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Year",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Year :",
+          "placeholder": "Select Year",
+          "required": "yes",
+          "requiredMessage": "Year is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Year",
+            "dataField": "YearId",
+            "defaultField": "maturityYears"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "PSMMEvaluationTypeId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Evaluation Type :",
+          "placeholder": "Select Evaluation Type",
+          "required": "yes",
+          "requiredMessage": "Evaluation Type is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EvaluationTypeName",
+            "dataField": "PSMMEvaluationTypeId",
+            "defaultField": "maturityEvaluationType"
+          },
+          "items": [
+
+          ]
+        }
+      },    
+      {
+        "key": "PSMMEvaluationForId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Evaluation For :",
+          "placeholder": "Select Evaluation For",
+          "required": "yes",
+          "requiredMessage": "Evaluation For is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EvaluationFor",
+            "dataField": "PSMMEvaluationForId",
+            "defaultField": "maturityEvaluationFor"
+          },
+          "items": [
+
+          ]
+        }
+      },      
+      {
+        "key": "CompiledBy",
+        "type": "labeldata",
+        "data": "1",
+        "templateOptions": {
+          "label": "Compiled By :",
+          "required": false
+        }
+      },
+      {
+        "key": "AuthorizedById",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Authorized By :",
+          "placeholder": "Select Authorized By",
+          "required": "yes",
+          "requiredMessage": "Authorized By is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AuthorizedBy",
+            "dataField": "AuthorizedById",
+            "defaultField": "maturityAuthors"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Reference",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "250",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ManagerName",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Responsible Manager :",
+          "required": false
+        }
+      },
+      {
+        "key": "Statement",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Responsible Manager Statement :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "PSMMSubjects",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "EvalSummaryStatus",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "EvalLeadingIndicatorsStatus",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "NoOfOpenCauses",
+        "type": "labeldata",
+        "data": "10",
+        "templateOptions": {
+          "label": "No of Open Causes :",
+          "required": false
+        }
+      },
+      {
+        "key": "TotalNoOfCauses",
+        "type": "labeldata",
+        "data": "160",
+        "templateOptions": {
+          "label": "Total No of Causes :",
+          "required": false
+        }
+      },
+      {
+        "key": "NoOfManagedCauses",
+        "type": "labeldata",
+        "data": "50",
+        "templateOptions": {
+          "label": "No of Managed Causes :",
+          "required": false
+        }
+      },
+      {
+        "key": "NoOfAcceptablySafeCauses",
+        "type": "labeldata",
+        "data": "60",
+        "templateOptions": {
+          "label": "No of Acceptably Safe Causes :",
+          "required": false
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      }, 
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "psmmMaturityTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        
+      ],
+      "dateFields": [ 4, 5 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Ref #",
+          "data": "RefNumber",
+          "width": "10%"
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName",
+          "width": "15%"
+        },
+        {
+          "title": "Title",
+          "data": "Title",
+          "width": "30%"
+        },
+        {
+          "title": "Evaluation For",
+          "data": "EvaluationFor",
+          "width": "15%"
+        },
+        {
+          "title": "Submission Date",
+          "data": "CompilingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Authorization Date",
+          "data": "AuthorizingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "Status",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

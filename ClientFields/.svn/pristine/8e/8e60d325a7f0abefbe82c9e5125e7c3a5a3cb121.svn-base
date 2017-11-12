@@ -1,0 +1,146 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-key",
+      "title": "Security",
+      "url": "useraccessrights"
+    }
+  ],
+  "fields": {
+    "userAccessRightsFields": [
+      {
+        "key": "RoleId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Role :",
+          "placeholder": "Select Role..",
+          "required": "yes",
+          "requiredMessage": "Role is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "RoleName",
+            "dataField": "RoleId",
+            "defaultField": "Roles"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "RightsDetails",
+        "type": "tree",
+        "data": "",
+        "refkey": "RightsId",
+        "name": "userAccessRights",
+        "templateOptions": {
+
+        }
+      },
+      {
+        "key": "RightsId",
+        "type": "lable",
+        "data": "0"
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "trees": {
+    "userAccessRightsTree": {
+      "core": {
+        "treeType": "userAccessRights",
+        "check_callback": true,
+        "data": [ ]
+      },
+      "plugins": [ "grid", "types", "search" ],
+      "grid": {
+        "columns": [
+          {
+            "width": 450,
+            "header": "Menu - Sub Menu"
+          },
+          {
+            "header": "<div style='text-align:center;'>Add</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Add",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Edit</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Edit",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Delete</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Delete",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>View</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "View",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Print</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "PRINT",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Approve</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Approve",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Deny All</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Deny",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "RightsDetailsId",
+            "width": "0px",
+            "value": "RightsDetailsId"
+          },
+          {
+            "header": "RightsId",
+            "width": "0px",
+            "value": "RightsId"
+          },
+          {
+            "header": "id",
+            "width": "0px",
+            "value": "id"
+          }
+        ]
+      }
+    }
+  }
+}

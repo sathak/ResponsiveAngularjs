@@ -1,0 +1,309 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "User Management",
+      "url": "usermanagement"
+    }
+  ],
+  "fields": {
+    "userManagementFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0 
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "User Name :",
+          "placeholder": "Enter User name..",
+          "required": "yes",
+          "requiredMessage": "User name is required.",
+          "minlength": 7,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 7 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "isExistData": "userManagementTableData",
+          "isExistMessage": "User Name already exists.."
+        }
+      },
+      {
+        "key": "FirstName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "First Name :",
+          "placeholder": "Enter First name..",
+          "required": "yes",
+          "requiredMessage": "First name is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed"
+        }
+      },
+      {
+        "key": "LastName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Last Name :",
+          "placeholder": "Enter Last name..",
+          "required": "no",
+          "requiredMessage": "Last name is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed"
+        }
+      },
+      {
+        "key": "PhoneNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Mobile Number :",
+          "placeholder": "Enter Phone Number..",
+          "required": "no",
+          "requiredMessage": "Phone Number is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed"
+        }
+      },
+      {
+        "key": "Email",
+        "type": "email",
+        "data": "",
+        "templateOptions": {
+          "label": "E-mail :",
+          "placeholder": "Enter E-mail..",
+          "required": "yes",
+          "requiredMessage": "E-mail is required.",
+          "minlength": 7,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 7 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "emailMessage": "Invalid email"
+        }
+      },
+      {
+        "key": "Roles",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "Id",
+        "altkey": "RoleId",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Roles :",
+          "placeholder": "Select Role..",
+          "required": "yes",
+          "requiredMessage": "Role is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "RoleName",
+            "dataField": "RoleId",
+            "defaultField": "Roles"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "ProjectUser",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "Id",
+        "altkey": "ProjectUserId",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Projects :",
+          "placeholder": "Select Project..",
+          "required": "yes",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Projects"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "UserStatusId",
+        "type": "radio",
+        "group": "personal",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Active"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "Inactive"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "UserStatusName",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "passwordResetFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": "0"
+      },
+
+      {
+        "key": "NewPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "New Password :",
+          "placeholder": "Enter password..",
+          "required": "yes",
+          "requiredMessage": "Password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ConfirmPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "compareTo": "Password",
+          "compareBy": "!=",
+          "compareToMessage": "Password mismatched.",
+          "customClass": "text-primary",
+          "label": "Confirm Password :",
+          "placeholder": "Enter confirm password..",
+          "required": "yes",
+          "requiredMessage": "Confirm password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ]
+  },
+  "tables": {
+    "userManagementTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Id",
+          "data": "Id",
+          "visible": false
+        },
+        {
+          "title": "User Name",
+          "data": "UserName"
+        },
+        {
+          "title": "E-mail",
+          "data": "Email",
+          "width": "30%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreateDate",
+          "width": "15%"
+        },
+        {
+          "title": "Status",
+          "data": "UserStatusName",
+          "width": "10%"
+        }
+      ]
+    }
+  }
+}

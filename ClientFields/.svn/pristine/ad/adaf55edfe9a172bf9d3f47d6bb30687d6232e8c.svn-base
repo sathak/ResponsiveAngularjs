@@ -1,0 +1,149 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Programme Configuration",
+      "url": "programmeconfiguration"
+    }
+  ],
+  "fields": {
+    "programmeConfigurationFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0 
+      },
+      {
+        "key": "ProgrammeTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Programme Title :",
+          "placeholder": "Enter Programme Title..",
+          "required": "yes",
+          "requiredMessage": "Programme Title is required.",
+          "minlength": 7,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 7 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "isExistData": "programmeConfigurationTableData",
+          "isExistMessage": "Programme Title already exists.."
+        }
+      },
+      {
+        "key": "ProgrammeCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Programme Code :",
+          "placeholder": "Enter Programme Code..",
+          "required": "yes",
+          "requiredMessage": "Programme Code is required.",
+          "minlength": 7,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 7 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed"
+        }
+      },
+      {
+        "key": "Projects",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "Id",
+        "altkey": "ProjectId",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Projects :",
+          "placeholder": "Select Project..",
+          "required": "yes",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+          ]
+        }
+      },      
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]    
+  },
+  "tables": {
+    "programmeConfigurationTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Id",
+          "data": "Id",
+          "visible": false
+        },
+        {
+          "title": "Programme Title",
+          "data": "ProgrammeTitle",
+          "width": "20%"
+        },
+        {
+          "title": "Programme Code",
+          "data": "ProgrammeCode",
+          "width": "10%"
+        },
+        {
+          "title": "Projects",
+          "data": "Projects",
+          "width": "70%"
+        }
+      ]
+    }
+  }
+}

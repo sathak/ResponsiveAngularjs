@@ -1,0 +1,374 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Control Management",
+      "url": "controlmanagement"
+    }
+  ],
+  "fields": {
+    "controlFilterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ControlRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Ref No is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ControlTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Control Title :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Cause Title is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "status",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Status is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "StatusName",
+            "dataField": "ControlStatusId",
+            "defaultField": "controlstatustype"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ProjectUse",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project Use :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project Use is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "ProjectUse"
+          },
+          "items": []
+        }
+      }
+    ],
+    "controlManagementFields": [
+
+    ],
+     "controlHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+       {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+
+  "tables": {
+    "controlManagementTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            3,
+            4,
+            5,
+            6
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "ControlId",
+          "data": "ControlId",
+          "visible": false
+        },
+        {
+          "title": "Control Ref #",
+          "data": "ControlRefNo",
+          "width": "12%"
+        },
+        {
+          "title": "Control Title",
+          "data": "ControlTitle",
+          "width": "25%",
+          "sType": "string"
+        },
+        {
+          "title": "Project Name",
+          "data": "ProjectName",
+          "width": "11%",
+          "sType": "string"
+        },
+         {
+          "title": "Location",
+          "data": "LocationName",
+          "width": "12%"
+        },
+        {
+          "title": "Project Use",
+          "data": "ProjectUseName",
+          "width": "12%"
+        },
+       
+        {
+          "title": "Manager/Owner",
+          "data": "OwnerOrManager",
+          "width": "10%"
+        },
+        {
+          "title": "Linked Cause",
+          "data": "LinkedCauseCount",
+          "width": "8%"
+        },
+        {
+          "title": "Control Status",
+          "data": "StatusName",
+          "width": "10%"
+        },
+        {
+          "title": "color",
+          "data": "ColorCode",
+          "width": "0%",
+          "visible": false
+        }
+      ]
+    },
+
+    "LinkedCauseTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [3],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+           
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+        "columns": [
+        {
+          "title": "CauseDetailId",
+          "data": "CauseDetailId",
+          "visible": false
+        },
+        {
+          "title": "Cause Id",
+          "data": "CauseRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle",
+          "width": "30%",
+          "sType": "string"
+        },
+        {
+          "title": "Date of Observation",
+          "data": "DateAndTimeOfObservation",
+          "width": "5%"
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "StatusName",
+          "width": "5%"
+        },
+        {
+          "title": "color",
+          "data": "ColorCode",
+          "visible": false
+        }
+      ]
+    }
+  },
+
+  "tableEditor": {
+
+  }
+}

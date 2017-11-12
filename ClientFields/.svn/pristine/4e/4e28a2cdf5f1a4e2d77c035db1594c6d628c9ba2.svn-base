@@ -1,0 +1,517 @@
+{
+  "breadcrumbs": [
+  
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortPage1Fields": [
+      {
+        "key": "reportedby",
+        "type": "select",
+        "save": false,
+        "data": "",
+        "templateOptions": {
+          "label": "Reported by :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Reported by",
+          "tooltip": "Search by clock number or users Names"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ReportedBy",
+            "dataField": "ReportedID",
+            "defaultField": "ReportedDetails"
+          },
+          "items": [
+            {
+              "ReportedID": 0,
+              "ReportedBy": "Self"
+            },
+            {
+              "ReportedID": 1,
+              "ReportedBy": "John Smith"
+            },
+            {
+              "ReportedID": 2,
+              "ReportedBy": "John"
+            }
+          ]
+        }
+      },
+      {
+        "key": "anonymous",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Anonymous",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Anonymous",
+          "suffixLabelHide": true,
+          "tooltip": "Select if you want to hide your identity. More information will be required"
+        }
+      },
+
+      {
+        "key": "confidential",
+        "name": "Confidential",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Confidential :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": true,
+          "tooltip": "Select if you want the report to be confidential"
+        }
+      },
+      {
+        "key": "fullname",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "templateOptions": {
+          "label": "Name :",
+          "placeholder": "Name",
+          "required": "no",
+          "requiredMessage": "Enter your Name.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px",
+        }
+      },
+      {
+        "key": "email",
+        "type": "email",
+        "data": "",
+        "disabled": true,
+        "templateOptions": {
+          "label": "Email ID :",
+          "placeholder": "Email",
+          "required": "no",
+          "requiredMessage": "Enter your Email ID.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Email ID already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "phone",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "templateOptions": {
+          "label": "Phone Number :",
+          "placeholder": "Phone Number",
+          "required": "no",
+          "requiredMessage": "Phone Number required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 10,
+          "maxlengthMessage": "Maximum 10 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Phone Number already exists..",
+          "customClass": "margin-top:100px",
+          "pattern": "^[0-9]*$",
+          "patternMessage": "Numbers only allowed."
+        }
+      },
+
+      {
+        "key": "clockno",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "templateOptions": {
+          "label": "Clock # :",
+          "placeholder": "Clock #",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "",
+          "maxlength": 20,
+          "maxlengthMessage": "",
+          "isExistData": "",
+          "isExistMessage": ""
+        }
+      },
+
+      {
+        "key": "reporttitle",
+        "type": "input",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "tooltip": "Give a Title for the occurrence"
+        }
+      },
+      {
+        "key": "datetimepicker1",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Date & Time of Occurance :",
+          "placeholder": "Select Date & time",
+          "required": "yes",
+          "requiredMessage": "Date & Time of Occurance is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": ">=",
+          "compareDateMessage": "Date & Time of Occurance should not be a future date.",
+          "tooltip": "Select a Date and Time"
+        }
+      },
+      {
+        "key": "baseordepartment",
+        "type": "select",
+        "save": false,
+        "data": "",
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Location is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayField",
+            "dataField": "DepartmentID",
+            "defaultField": "DepartmentName",
+            "selectedField": "DisplayField",
+            "groupBy": "Department"
+          },
+          "items": [
+           
+
+          ]
+        }
+      },
+      {
+        "key": "typeofoperation",
+        "type": "select",
+        "save": false,
+        "data": "",
+        "templateOptions": {
+          "label": "Type of Operation :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Type of Operation is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "TypeOfOperation",
+            "dataField": "TypeOfOperationID",
+            "defaultField": "TypeOfOperationDetails"
+          },
+          "items": [
+            {
+              "TypeOfOperationID": 0,
+              "TypeOfOperation": "Flight"
+            },
+            {
+              "TypeOfOperationID": 1,
+              "TypeOfOperation": "Maintenance"
+            },
+            {
+              "TypeOfOperationID": 2,
+              "TypeOfOperation": "Supply/Logistics"
+            }
+          ]
+        }
+      },
+      {
+        "key": "productsaffected",
+        "type": "multiselect",
+        "save": true,
+        "data": "",
+        "refkey": "EmpInfoId",
+        "altkey": "ProductsAffected",
+        "templateOptions": {
+          "label": "Products Affected :",
+          "placeholder": "Select Products Affected..",
+          "required": "yes",
+          "tooltip": "Select Products Affected.."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProductsAffected",
+            "dataField": "ProductsAffectedId",
+            "defaultField": "ProductsAffectedDetails",
+            //"groupBy": "Group",
+            "addNew": "no"
+          },
+          "items": [
+            {
+              "ProductsAffectedId": 0,
+              "ProductsAffected": "Typhoon MK"
+         
+            },
+            {
+              "ProductsAffectedId": 1,
+              "ProductsAffected": "PC21"
+         
+            },
+            {
+              "ProductsAffectedId": 2,
+              "ProductsAffected": "Tornado"
+         
+            },
+            {
+              "ProductsAffectedId": 3,
+              "ProductsAffected": "Cirrus"
+       
+            },
+            {
+              "ProductsAffectedId": 4,
+              "ProductsAffected": "Hawk MK"
+           
+            },
+            {
+              "ProductsAffectedId": 4,
+              "ProductsAffected": "Ground Support Equipment"
+           
+            },
+            {
+              "ProductsAffectedId": 5,
+              "ProductsAffected": "Other"
+              //"Group": "Three"
+            }
+          ]
+        }
+      },
+      {
+        "key": "otherproducts",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Other Products :",
+          "placeholder": "Other Products (Ex:product1,product2,..)",
+          "required": "yes",
+          "requiredMessage": "Other Products is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Other Products already exists..",
+          "customClass": "margin-top:100px",
+          "tooltip": "Specify Other Products(Ex:product1,product2,..)"
+        }
+      },
+      {
+        "key": "productserialno",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Product Serial No. :",
+          "placeholder": "Product Serial No.",
+          "required": "no",
+          "requiredMessage": "Product Serial No. is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Product Serial No. already exists.."
+        }
+      },
+      {
+        "key": "lblinjurypersonal",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Injury to Personnel :",
+          "required": false
+        }
+      },
+      {
+        "key": "personnel",
+        "type": "radio",
+        "group": "personal",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Injury to Personnel :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": "no",
+              "label": "No"
+            },
+            {
+              "suffixLabel": true,
+              "value": "unknown",
+              "label": "Unknown"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+
+      {
+        "key": "occurrencedetails",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurrence Details :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "lbldamagetoequipment",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Damage to Equipment :",
+          "required": false
+        }
+      },
+      {
+        "key": "damagetoequipment",
+        "type": "radio",
+        "group": "Equipment",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Damage to Equipment :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": "no",
+              "label": "No"
+            },
+            {
+              "suffixLabel": true,
+              "value": "unknown",
+              "label": "Unknown"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "lbldamagetoenvironment",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Damage to Environment :",
+          "required": false
+        }
+      },
+      {
+        "key": "damagetoenvironment",
+        "type": "radio",
+        "group": "Environment",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Damage to Environment :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": "no",
+              "label": "No"
+            },
+            {
+              "suffixLabel": true,
+              "value": "unknown",
+              "label": "Unknown"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "deleterecord",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Reason for Deletion :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "itarwarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+
+  }
+}

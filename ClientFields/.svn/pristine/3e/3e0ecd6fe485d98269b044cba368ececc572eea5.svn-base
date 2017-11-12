@@ -1,0 +1,332 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "User Management",
+      "url": "usermanagement"
+    }
+  ],
+  "fields": {
+    "userManagementFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "customClass": "text-primary",
+          "label": "User Name",
+          "placeholder": "Enter user name..",
+          "required": "yes",
+          "requiredMessage": "User name required.",
+          "minlength": 8,
+          "maxlength": 40,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlengthMessage": "Maximun 40 characters only allowed",
+          "isExistData": "userManagementTableData",
+          "isExistMessage": "User Name already exists.."
+        }
+      },
+      {
+        "key": "Email",
+        "type": "email",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "E-mail",
+          "placeholder": "Enter e-mail..",
+          "required": "yes",
+          "requiredMessage": "E-mail required.",
+          "minlength": 7,
+          "maxlength": 40,
+          "minlengthMessage": "Minimum 7 characters required.",
+          "maxlengthMessage": "Maximun 40 characters only allowed",
+          "emailMessage": "Invalid email"
+        }
+      },
+      {
+        "key": "Roles",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "Roles",
+        "altkey": "RoleId",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "User Roles",
+          "placeholder": "Select user role..",
+          "required": "yes",
+          "requiredMessage": "User role required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "text",
+            "dataField": "RoleId",
+            "defaultField": "userGroup"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "SecurityQuestionId",
+        "type": "select",
+        "data": {
+          "text": "None",
+          "id": "1"
+        },
+        "templateOptions": {
+
+          "customClass": "text-primary",
+          "label": "Security Question",
+          "placeholder": "Select security question..",
+          "required": "no",
+          "requiredMessage": "Security question required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required."
+
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "text",
+            "dataField": "id",
+            "defaultField": "securityQuestion"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "SecurityAnswer",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Answer",
+          "placeholder": "Enter answer..",
+          "required": "yes",
+          "requiredMessage": "Answer required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required."
+        }
+      },
+      {
+        "key": "Password",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Password",
+          "placeholder": "Enter password..",
+          "required": "yes",
+          "requiredMessage": "Password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ConfirmPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "compareTo": "Password",
+          "compareBy": "!=",
+          "compareToMessage": "Password mismatched.",
+          "customClass": "text-primary",
+          "label": "Confirm Password",
+          "placeholder": "Enter confirm password..",
+          "required": "yes",
+          "requiredMessage": "Confirm password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "UserStatus",
+        "type": "switch",
+        "data": true,
+        "swithcOptions": {
+          "onText": "Active",
+          "offText": "Inactive",
+          "onColor": "success",
+          "offColor": "danger"
+        },
+        "templateOptions": {
+          "label": "Status",
+          "required": "no"
+        }
+      },
+      {
+        "key": "UserStatusName",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "modified",
+        "type": "label",
+        "alternateType": "LastUpdated",
+        "save": false,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "required": "no",
+          "customClass": "text-primary"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ],
+    "passwordResetFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": "0"
+      },
+
+      {
+        "key": "NewPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "New Password",
+          "placeholder": "Enter password..",
+          "required": "yes",
+          "requiredMessage": "Password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ConfirmPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "compareTo": "Password",
+          "compareBy": "!=",
+          "compareToMessage": "Password mismatched.",
+          "customClass": "text-primary",
+          "label": "Confirm Password",
+          "placeholder": "Enter confirm password..",
+          "required": "yes",
+          "requiredMessage": "Confirm password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ]
+  },
+  "tables": {
+    "userManagementTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 2 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ 4, 5, 6, 7 ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ 4, 5, 6, 7 ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": { },
+      "columns": [
+
+        {
+          "title": "User Name",
+          "data": "UserName"
+        },
+        {
+          "title": "E-mail",
+          "data": "Email",
+          "width": "20%"
+        },
+        {
+          "title": "Create On",
+          "data": "CreateOn",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "UserStatusName",
+          "width": "80px"
+        },
+        {
+          "title": "View",
+          "data": null,
+          "defaultContent": "<a class='view btn default btn-xs default' href='javascript:;'><i class='fa fa-eye'></i> View </a>",
+          "width": "60px"
+        },
+        {
+          "title": "Edit",
+          "data": null,
+          "defaultContent": "<a class='edit btn default btn-xs' href='javascript:;'><i class='fa fa-edit'></i> Edit </a>",
+          "width": "60px"
+        },
+        {
+          "title": "Delete",
+          "data": null,
+          "defaultContent": "<a class='delete btn default btn-xs default' href='javascript:;'><i class='fa fa-trash-o'></i> Delete </a>",
+          "width": "60px"
+        }
+        //{
+        //  "title": "Password",
+        //  "data": "passwordreset",
+        //  "defaultContent": "<a class='btn default btn-xs default' href='javascript:;'><i class='fa fa-key'></i> Reset </a>",
+        //  "width": "60px"
+        //}
+      ]
+    }
+  }
+}

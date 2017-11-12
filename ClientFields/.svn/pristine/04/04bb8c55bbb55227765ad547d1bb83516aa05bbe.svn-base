@@ -1,0 +1,220 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Action Log",
+      "url": "actionlog"
+    }
+  ],
+  "fields": {
+    "actionLogFields": [
+      {
+        "key": "ID",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "LevelType",
+        "type": "select",
+        "save": true,
+        "data": {
+          "id": "2",
+          "Level": "ERROR"
+        },
+        "templateOptions": {
+          "label": "Level Type :",
+          "placeholder": "Select Level Type",
+          "required": "no",
+          "requiredMessage": "Level Type is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "Level",
+            "dataField": "id",
+            "defaultField": "LevelType"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "IPAddress",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "IP Address",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "DateFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "From :",
+          "placeholder": "Select Date",
+          "required": "no",
+          "requiredMessage": "From Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "tooltip": "Select a Date"
+        }
+      },
+      {
+        "key": "DateTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "To :",
+          "placeholder": "Select Date",
+          "required": "no",
+          "requiredMessage": "To Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "tooltip": "Select a Date"
+        }
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "User Name",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "MenuName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "Menu Name",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "ClientErrorNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "Client Error No",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "Source",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "Source",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "IsServerSide",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Server Side :",
+          "required": false
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "actionLogTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 1 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Id",
+          "data": "Id",
+          "visible": false
+        },
+        {
+          "title": "Date",
+          "data": "Date",
+          "time": true
+        },
+        {
+          "title": "Level",
+          "data": "Level"
+        },
+        {
+          "title": "IP Address",
+          "data": "IPAddress"
+        },
+        {
+          "title": "Menu Name",
+          "data": "MenuName",
+          "width": "50px"
+        },
+        {
+          "title": "Message",
+          "data": "Message"
+        },
+        {
+          "title": "Client Error No",
+          "data": "ClientErrorNo"
+        },
+        {
+          "title": "Source",
+          "data": "Source"
+        }
+      ]
+    }
+  }
+}

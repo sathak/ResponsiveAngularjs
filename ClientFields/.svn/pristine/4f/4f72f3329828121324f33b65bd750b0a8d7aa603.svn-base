@@ -1,0 +1,83 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Hazard Report",
+      "url": "hazardreport"
+    }
+  ],
+  "fields": {
+
+  },
+
+  "tables": {
+    "hazardreportTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "#",
+          "data": "SeqId",
+          "width": "1%"
+        },
+        {
+          "title": "ReportName",
+          "data": "ReportName",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+
+  "tableEditor": {
+
+  }
+}

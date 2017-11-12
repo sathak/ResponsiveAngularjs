@@ -1,0 +1,121 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortFields": [
+      {
+        "key": "page1",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page2",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page3",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page2Info",
+        "type": "page",
+        "data": ""
+      }
+    ]
+
+  },
+  "tables": {
+    "sortTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        
+      ],
+      "dateFields": [1,3],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [0,3,5]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },     
+      "columns": [
+      
+        {
+          "title": "Ref#",
+          "data": "SORTRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Date Of Occurance",
+          "data": "DateTimeOfOccurance",
+          "width": "200px",
+		  "time":true
+        },
+        {
+          "title": "Title",
+          "data": "ReportTitle"
+        },
+        {
+          "title": "Submitted On",
+          "data": "LastUpdateDate",
+          "width": "80px"
+        },
+        {
+          "title": "Location",
+          "data": "BaseName",
+          "width": "300px"
+        },
+        {
+          "title": "Status",
+          "data": "SORTstatusName",
+          "width": "120px"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

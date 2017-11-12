@@ -1,0 +1,108 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "referenceFields": [
+    ]
+  },
+  "tables": {
+    "referenceTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "Ref No",
+          "data": "RefNo",
+          "width": "5%"
+        },
+        {
+          "title": "Reference Title",
+          "data": "ReferenceTitle",
+          "width": "50%"
+        },
+        {
+          "title": "Originator",
+          "data": "OrginatorName",
+          "width": "10%"
+        },
+        {
+          "title": "Validity",
+          "data": "Validity",
+          "width": "10%"
+        },
+        {
+          "title": "Link/Attachments",
+          "data": "LinkAttachments",
+          "width": "10%"
+        },
+
+        {
+          "title": "Status",
+          "data": "ReferenceStatusName",
+          "width": "5%"
+        },
+        {
+          "title": "ColorCode",
+          "data": "ColorCode",
+          "visible": false
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

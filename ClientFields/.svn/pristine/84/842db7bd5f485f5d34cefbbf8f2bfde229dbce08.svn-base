@@ -1,0 +1,269 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "edaOccurrenceFields": [
+      {
+        "key": "EDAOccurrenceID",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTEDAInvestigationId",
+        "type": "label",
+        "data": 0
+      },      
+      {
+        "key": "OperationsProcessEvent",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "1. Operations Process Event",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "1. Operations Process Event",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SORTEDAOccurrenceEventStatus",
+        "type": "checkboxlist",
+        "data": [ ],
+        "refkey": "EDAOccurrenceID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }        
+      },
+      {
+        "key": "PlatformDamageEvent",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "2. Platform Damage Event - Recovery Time",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "2. Platform Damage Event - Recovery Time",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "PlatformDamageEventData",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Enter Platform Damage Event",
+          "required": "no",
+          "requiredMessage": "Platform Damage Event - Recovery Time is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "PersonalInjuryEvent",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "3. Personal Injury Event - Days Lost",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "3. Personal Injury Event - Days Lost",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "PersonalInjuryEventData",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Enter Personal Injury Event",
+          "required": "no",
+          "requiredMessage": "Personal Injury Event is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ReworkRecoveryTime",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "4. Rework � Recovery Time",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "4. Rework - Recovery Time",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "ReworkRecoveryTimeData",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Enter Rework",
+          "required": "no",
+          "requiredMessage": "Rework is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "EnvironmentalImpact",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "5. Environmental Impact",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "5. Environmental Impact",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "EquipmentAssetDamage",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "6. Equipment/Asset Damage",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "6. Equipment/Asset Damage",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "CustomerAssetDamage",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "7. Customer Asset Damage",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "7. Customer Asset Damage",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "OtherEvent",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "8. Other Event (Explain Below)",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "8. Other Event (Explain Below)",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "DescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe The Incident/Degradation/Failure (E.G. Could Not Pressurize) That Caused The Occurrence :",
+          "required": false
+        }
+      },
+      {
+        "key": "Page1OccurrenceDetails",
+        "type": "labeldata",
+        "data": "(Page1 occurrence details)",
+        "templateOptions": {
+          "label": "",
+          "required": false
+        }
+      },      
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": []
+      }
+    ]
+
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+
+  }
+}

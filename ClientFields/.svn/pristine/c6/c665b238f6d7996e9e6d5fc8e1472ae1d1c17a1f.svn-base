@@ -1,0 +1,152 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Hazard Import",
+      "url": "hazardimport"
+    }
+  ],
+  "fields": {
+    "hazardImportFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select Project..",
+          "required": "yes",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseId",
+            "dataField": "ProjectId",
+            "defaultField": "Projects"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "BaseId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select Location..",
+          "required": "yes",
+          "requiredMessage": "Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": ""
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Upload File",
+          "required": "yes",
+          "key": "attachmentid",
+          "agreeText": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "folderType": "",
+          "fileType": [ "xlsx", "xls", "xlsm" ],
+          "multipleFile": false,
+          "fileSize": 5120
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "hazardImportTable": {
+      "buttons": [
+        "print"
+      ],
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl. No.",
+          "data": "SlNo",
+          "width": "10px"
+        },
+        {
+          "title": "Legacy ID",
+          "data": "legaecyID"
+        },
+        {
+          "title": "Title",
+          "data": "Title",
+          "width": "20%"
+        },
+        {
+          "title": "Message",
+          "data": "Message",
+          "width": "20%"
+        },
+        {
+          "title": "Sheet Name",
+          "data": "SheetName"
+        },
+        {
+          "title": "File Name",
+          "data": "ExcelFileName"
+        },
+        {
+          "title": "Successfully Processed",
+          "data": "SuccessfullyProcessed",
+          "width": "10px"
+        }
+      ]
+    }
+  }
+}
+ 

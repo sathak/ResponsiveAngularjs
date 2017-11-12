@@ -1,0 +1,224 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Control Management",
+      "url": "controlmanagement"
+    }
+  ],
+  "fields": {
+    "controlFilterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ControlRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Ref No is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ControlTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Control Title :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Cause Title is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "status",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Status is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "StatusName",
+            "dataField": "ControlStatusId",
+            "defaultField": "causestatustype"
+          },
+          "items": [
+
+          ]
+        }
+      }
+    ],
+    "controlManagementFields": [
+
+    ]
+  },
+
+  "tables": {
+    "controlManagementTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 3, 4, 5 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            3,
+            4,
+            5,
+            6
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "ControlId",
+          "data": "ControlId",
+          "visible": false
+        },
+        {
+          "title": "Control Ref #",
+          "data": "ControlRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Control Title",
+          "data": "ControlTitle",
+          "width": "20%"
+        },
+        {
+          "title": "Meeting Date",
+          "data": "MeetingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Start Date",
+          "data": "StartDate",
+          "width": "10%"
+        },
+        {
+          "title": "End Date",
+          "data": "TargetDate",
+          "width": "10%"
+        },
+        {
+          "title": "Control Status",
+          "data": "StatusName",
+          "width": "10%"
+        },
+        {
+          "title": "Manager/Owner",
+          "data": "OwnerOrManager",
+          "width": "15%"
+        },
+        {
+          "title": "color",
+          "data": "ColorCode",
+          "width": "0%",
+          "visible": false
+        }
+      ]
+    }
+  },
+
+  "tableEditor": {
+
+  }
+}

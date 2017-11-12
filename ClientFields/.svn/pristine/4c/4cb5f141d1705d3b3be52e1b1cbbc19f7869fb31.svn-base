@@ -1,0 +1,302 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortActionsTrackerFields": [
+      {
+        "key": "typeofaction",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Action Type :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Action Type is required",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "TypeofAction",
+            "dataField": "TypeofActionID",
+            "defaultField": "TypeofActionDetails"
+          },
+          "items": [
+            {
+              "TypeofActionID": 0,
+              "TypeofAction": "SAG"
+            },
+            {
+              "TypeofActionID": 1,
+              "TypeofAction": "Investigation"
+            }
+          ]
+        }
+      },
+      {
+        "key": "actionpriority",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Action Priority :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Type of Action is required",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ActionPriority",
+            "dataField": "ActionPriorityID",
+            "defaultField": "ActionPriorityDetails"
+          },
+          "items": [
+            {
+              "ActionPriorityID": 0,
+              "ActionPriority": "Urgent Action"
+            },
+            {
+              "ActionPriorityID": 1,
+              "ActionPriority": "Routine Action"
+            }
+          ]
+        }
+      },
+      {
+        "key": "sortrefno",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "SORT Ref No. :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "SORT Ref No. is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "SORT Ref # already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "owner",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Owner :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Owner is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Owner already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "meetingrefno",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Meeting Ref No. :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Meeting Ref No. is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Meeting Ref No. already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "meetinghyperlink",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Meeting Hyperlink :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Meeting Hyperlink is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Meeting Hyperlink already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "startdate",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Start Date :",
+          "placeholder": "Start Date",
+          "required": "yes",
+          "requiredMessage": "Start Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": ">=",
+          "compareDateMessage": "Start Date should not be a future date.",
+          "tooltip": ""
+        }
+      },
+      {
+        "key": "duedate",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Due Date  :",
+          "placeholder": "Due Date",
+          "required": "yes",
+          "requiredMessage": "Due Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": "<=",
+          "compareDateMessage": "Due Date should be a future date.",
+          "tooltip": ""
+        }
+      },
+      {
+        "key": "status",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Status is required",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "TypeofAction",
+            "dataField": "TypeofActionID",
+            "defaultField": "TypeofActionDetails"
+          },
+          "items": [
+            {
+              "TypeofActionID": 0,
+              "TypeofAction": "Open"
+            },
+            {
+              "TypeofActionID": 1,
+              "TypeofAction": "In Progress"
+            },
+            {
+              "TypeofActionID": 0,
+              "TypeofAction": "Closed"
+            }
+          ]
+        }
+      },
+      {
+        "key": "closingdate",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Closing Date :",
+          "placeholder": "Closing Date",
+          "required": "false",
+          "requiredMessage": "Closing Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": "",
+          "compareDateMessage": ".",
+          "tooltip": ""
+        }
+      },
+      {
+        "key": "actiondetails",
+        "type": "textarea",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Action Details :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Action Details  is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Action Details already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "remarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Remarks is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Remarks already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "itarwarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+ 
+  },
+  "tableEditor": {
+
+  }
+}

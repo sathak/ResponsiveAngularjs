@@ -1,0 +1,118 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortActionsTrackerFields": [
+    ]
+  },
+  "tables": {
+    "sortActionsTrackerTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 7, 8 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+
+        {
+          "title": "SORT Ref # ",
+          "data": "SortRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Action Ref #",
+          "data": "ActionRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Meeting Ref #",
+          "data": "MeetingRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Action Details",
+          "data": "ActionDetails",
+          "width": "30%"
+        },
+        {
+          "title": "Owner",
+          "data": "OwnerName",
+          "width": "10%"
+        },
+        {
+          "title": "Start Date",
+          "data": "StartDate",
+          "width": "10%"
+        },
+        {
+          "title": "Due Date",
+          "data": "DueDate",
+          "width": "10%"
+        },
+        {
+          "title": "Completion Date",
+          "data": "ClosingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Action Status",
+          "data": "ActionStatusName",
+          "width": "5%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

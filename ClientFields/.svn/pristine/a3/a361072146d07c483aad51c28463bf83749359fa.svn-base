@@ -1,0 +1,237 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "referencepageFields": [
+      {
+        "key": "ReferenceId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "Project",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Project"
+          },
+          "items": [
+
+          ]
+        }
+      },
+
+      {
+        "key": "ReferenceNo",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Reference No :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter your Reference No."
+
+        }
+      },
+      {
+        "key": "ReferenceTitle",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "readonly": true,
+        "templateOptions": {
+          "label": "Reference Title :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Reference Title is required."
+        }
+      },
+      {
+        "key": "Validity",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "readonly": true,
+        "templateOptions": {
+          "label": "Validity :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Validity is required."
+        }
+      },
+      {
+        "key": "Owner",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Owner :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Owner is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "RoleName",
+            "dataField": "RoleId",
+            "defaultField": "Role"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OwnerRefNo",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "readonly": true,
+        "templateOptions": {
+          "label": "Owner Ref No :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Owner Ref No is required."
+        }
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "attachmentid",
+          "agreeText": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "Please provide Remarks",
+          "required": "no",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+
+      {
+        "key": "ReferenceLink",
+        "type": "tableeditor",
+        "data": [ ],
+        "templateOptions": {
+          "settings": "AddLinkTableEditor",
+          "key": "LinkId"
+
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+    "AddLinkTableEditor": {
+      "fields": [
+        {
+          "key": "AddLink",
+          "name": "Link",
+          "type": "input",
+          "data": "",
+          "class": "col-md-10",
+          "templateOptions": {
+            "placeholder": "",
+            "required": "yes",
+            "requiredMessage": "Link is required.",
+            "isExistData": "",
+            "isExistMessage": "Link already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ReferenceId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "LinkId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    }
+  }
+}

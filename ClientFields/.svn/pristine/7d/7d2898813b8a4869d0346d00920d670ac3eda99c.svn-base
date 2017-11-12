@@ -1,0 +1,338 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "PSMM Configuration",
+      "url": "psmmconfiguration"
+    }
+  ],
+  "fields": {
+    "psmmConfigurationFields": [
+      {
+        "key": "Project",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select Project",
+          "required": "no",
+          "requiredMessage": "Project required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectID",
+            "defaultField": "ProjectDetails"
+          },
+          "items": [
+            {
+              "ProjectID": "1",
+              "ProjectName": "Project A"
+            },
+            {
+              "ProjectID": "2",
+              "ProjectName": "Project B"
+            },
+            {
+              "ProjectID": "3",
+              "ProjectName": "Project C"
+            }
+          ]
+        }
+      },
+      {
+        "key": "EvaluationFor",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Evaluation For :",
+          "placeholder": "Select Evaluation For",
+          "required": "no",
+          "requiredMessage": "Evaluation For required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EvaluationForName",
+            "dataField": "EvaluationForID",
+            "defaultField": "EvaluationForDetails"
+          },
+          "items": [
+            {
+              "EvaluationForID": "1",
+              "EvaluationForName": "Q1 (Jan - Mar)"
+            },
+            {
+              "EvaluationForID": "2",
+              "EvaluationForName": "Q2 (Apr - Jun)"
+            },
+            {
+              "EvaluationForID": "3",
+              "EvaluationForName": "Q3 (Jul - Sep)"
+            },
+            {
+              "EvaluationForID": "4",
+              "EvaluationForName": "Q4 (Oct - Dec)"
+            },
+            {
+              "EvaluationForID": "5",
+              "EvaluationForName": "General"
+            }
+          ]
+        }
+      },
+      {
+        "key": "Year",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Year :",
+          "placeholder": "Select Year",
+          "required": "no",
+          "requiredMessage": "Year required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Year",
+            "dataField": "YearID",
+            "defaultField": "YearDetails"
+          },
+          "items": [
+            {
+              "YearID": "1",
+              "Year": "2015"
+            },
+            {
+              "YearID": "2",
+              "Year": "2016"
+            }
+          ]
+        }
+      },
+      {
+        "key": "CompiledBy",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Compiled By :",
+          "placeholder": "Select Compiled By",
+          "required": "no",
+          "requiredMessage": "Compiled By required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "CompiledByName",
+            "dataField": "CompiledByID",
+            "defaultField": "CompiledByDetails"
+          },
+          "items": [
+            {
+              "CompiledByID": "1",
+              "CompiledByName": "Name 1"
+            },
+            {
+              "CompiledByID": "2",
+              "CompiledByName": "Name 2"
+            },
+            {
+              "CompiledByID": "3",
+              "CompiledByName": "Name 3"
+            }
+          ]
+        }
+      },
+      {
+        "key": "AuthorizedBy",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Authorized By :",
+          "placeholder": "Select Authorized By",
+          "required": "no",
+          "requiredMessage": "Authorized By required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AuthorizedByName",
+            "dataField": "AuthorizedByID",
+            "defaultField": "AuthorizedByDetails"
+          },
+          "items": [
+            {
+              "AuthorizedByID": "1",
+              "AuthorizedByName": "Name 1"
+            },
+            {
+              "AuthorizedByID": "2",
+              "AuthorizedByName": "Name 2"
+            },
+            {
+              "AuthorizedByID": "3",
+              "AuthorizedByName": "Name 3"
+            }
+          ]
+        }
+      },
+      {
+        "key": "RespManagerName",
+        "type": "labeldata",
+        "data": "John Smith",
+        "templateOptions": {
+          "label": "Responsible Manager :",
+          "required": false
+        }
+      },
+      {
+        "key": "RespManagerStatement",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Responsible Manager Statement :",
+          "placeholder": "Enter Responsible Manager Statement",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "Enter Remarks",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      }
+    ]
+  },
+  "tables": {
+    "psmmConfigurationTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        {
+          "RefNo": "Ref 1",
+          "Project": "Project A",
+          "Title": "Project Compliance Evaluation Title for Project A",
+          "EvaluationFor": "Q1",
+          "CompilingDate": "29 March 2016",
+          "AuthorizingDate": "30 March 2016",
+          "StatusName": "Authorized"
+        },
+        {
+          "RefNo": "Ref 2",
+          "Project": "Project B",
+          "Title": "Project Compliance Evaluation Title for Project B",
+          "EvaluationFor": "Q1",
+          "CompilingDate": "30 March 2016",
+          "AuthorizingDate": "-",
+          "StatusName": "Submitted"
+        },
+        {
+          "RefNo": "Ref 3",
+          "Project": "Project C",
+          "Title": "Project Compliance Evaluation Title for Project C",
+          "EvaluationFor": "Q1",
+          "CompilingDate": "31 March 2016",
+          "AuthorizingDate": "-",
+          "StatusName": "Submitted"
+        }
+      ],
+      "dateFields": [ 4, 5 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Ref #",
+          "data": "RefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Project",
+          "data": "Project",
+          "width": "15%"
+        },
+        {
+          "title": "Title",
+          "data": "Title",
+          "width": "30%"
+        },
+        {
+          "title": "Evaluation For",
+          "data": "EvaluationFor",
+          "width": "15%"
+        },
+        {
+          "title": "Compiling Date",
+          "data": "CompilingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Authorizing Date",
+          "data": "AuthorizingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "StatusName",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

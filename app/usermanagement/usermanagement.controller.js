@@ -20,6 +20,23 @@
         /*Settings*/
         vm.pageConfig = pageConfig;
         vm.selecteduser = false;
+        /*Report Configuration */
+        vm.report = {};
+        //vm.report.title = "List of SORT";
+        //vm.rportId = 19;
+        //vm.report.source = "";
+        vm.print = function () {
+            vm.report = {};
+            vm.report.title = "List of Causes";
+            vm.rportId = 1;
+            vm.report.export = "true";
+            vm.report.source = "";
+
+            navcon.callPrint(vm.report, vm.rportId, function () {
+            });
+
+        }
+
         //vm.userManagementFields = angular.copy(vm.pageConfig.fields.userManagementFields);
         //vm.userManagementTable = angular.copy(vm.pageConfig.tables.userManagementTable);
 

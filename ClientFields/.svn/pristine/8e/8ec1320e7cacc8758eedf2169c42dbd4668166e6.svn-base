@@ -1,0 +1,308 @@
+{  
+   "breadcrumbs":[  
+      {  
+         "class":"fa fa-home",
+         "title":"Home",
+         "url":"Home"
+      },
+      {  
+         "class":"fa fa-edit",
+         "title":"Risk Aggregation",
+         "url":"riskaggregation"
+      }
+   ],
+   "fields":{  
+      "riskAggregationFields":[  
+         {  
+            "key":"summaryhazardstate",
+            "type":"page",
+            "data":""
+         },
+         {  
+            "key":"summaryaccidentstate",
+            "type":"page",
+            "data":""
+         }
+      ],
+      "hazardFilterFields":[  
+         {  
+            "key":"projects",
+            "type":"multiselectcheckbox",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Project :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Project is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"ProjectName",
+                  "dataField":"ProjectId",
+                  "defaultField":"projects"
+               },
+               "items":[  
+
+               ]
+            }
+         }
+       /*{  
+            "key":"bases",
+            "type":"multiselectcheckbox",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Location :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Location is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"BaseName",
+                  "dataField":"BaseId",
+                  "defaultField":"locations"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"HazardRefNo",
+            "type":"input",
+            "data":"",
+            "templateOptions":{  
+               "label":"Ref No :",
+               "placeholder":"",
+               "required":"no",
+               "requiredMessage":"Ref No is required.",
+               "maxlength":500,
+               "hideLabel":false,
+               "maxlengthMessage":"Maximum 500 characters only allowed."
+            }
+         },
+         {  
+            "key":"HazardTitle",
+            "type":"input",
+            "data":"",
+            "templateOptions":{  
+               "label":"Hazard Title :",
+               "placeholder":"",
+               "required":"no",
+               "requiredMessage":"Cause Title is required.",
+               "maxlength":500,
+               "hideLabel":false,
+               "maxlengthMessage":"Maximum 500 characters only allowed."
+            }
+         },
+         {  
+            "key":"Owner",
+            "type":"multiselectcheckbox",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Owner :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Status is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"StatusName",
+                  "dataField":"ControlStatusId",
+                  "defaultField":"causestatustype"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"Source",
+            "type":"multiselectcheckbox",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Source :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Source is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"DisplayText",
+                  "dataField":"CommonConfigId",
+                  "defaultField":"sources"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"status",
+            "type":"multiselectcheckbox",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Status :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Status is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"StatusName",
+                  "dataField":"ControlStatusId",
+                  "defaultField":"causestatustype"
+               },
+               "items":[  
+
+               ]
+            }
+         }*/
+      ]
+	 /* ,
+      "accidentFilterFields":[  
+         {  
+            "key":"projects",
+            "type":"multiselectcheckbox",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Project :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Project is required."
+            }
+			
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"ProjectName",
+                  "dataField":"ProjectId",
+                  "defaultField":"projects"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"bases",
+            "type":"multiselectcheckbox",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Location :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Location is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"BaseName",
+                  "dataField":"BaseId",
+                  "defaultField":"locations"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"ControlRefNo",
+            "type":"input",
+            "data":"",
+            "templateOptions":{  
+               "label":"Ref No :",
+               "placeholder":"",
+               "required":"no",
+               "requiredMessage":"Ref No is required.",
+               "maxlength":500,
+               "hideLabel":false,
+               "maxlengthMessage":"Maximum 500 characters only allowed."
+            }
+         },
+         {  
+            "key":"ControlTitle",
+            "type":"input",
+            "data":"",
+            "templateOptions":{  
+               "label":"Accident Title :",
+               "placeholder":"",
+               "required":"no",
+               "requiredMessage":"Cause Title is required.",
+               "maxlength":500,
+               "hideLabel":false,
+               "maxlengthMessage":"Maximum 500 characters only allowed."
+            }
+         },
+         {  
+            "key":"status",
+            "type":"multiselectcheckbox",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Status :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Status is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"StatusName",
+                  "dataField":"ControlStatusId",
+                  "defaultField":"causestatustype"
+               },
+               "items":[  
+
+               ]
+            }
+         }
+      ] */
+   }
+ 
+  
+}

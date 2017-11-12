@@ -1,0 +1,737 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortfindingsFields": [
+      {
+        "key": "SORTFindingsId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "SAGMeetingRef",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SAG Meeting Ref # :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "SAG Meeting Ref is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SAGMeetingDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "SAG Meeting Date :",
+          "placeholder": "Select Date",
+          "required": "no",
+          "requiredMessage": "SAG Meeting Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": ">=",
+          "compareDateMessage": "Target Date should not be a future date.",
+          "tooltip": "Select a Date"
+        }
+      },
+      {
+        "key": "SAGHyperlink",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SAG Hyperlink :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "SAG Hyperlink is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "OtherOperatorsInformed",
+        "type": "radio",
+        "group": "OtherOperatorsInformed",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Other Operators Informed :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "Other Operators Informed is required."
+        }
+      },
+      {
+        "key": "FeedbackProvided",
+        "type": "radio",
+        "group": "FeedbackProvided",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Feedback Provided :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "Feedback Provided is required."
+        }
+      },
+      {
+        "key": "FeedbackDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Feedback Date :",
+          "placeholder": "Select Date",
+          "required": "no",
+          "requiredMessage": "Feedback Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "tooltip": "Select a Date"
+        }
+      },
+      {
+        "key": "EDARefNo",
+        "type": "labeldata",
+        "data": "KFAB/SAG28/1",
+        "templateOptions": {
+          "label": "EDA Ref No :",
+          "href": true,
+          "required": false
+        }
+      },
+      {
+        "key": "EDAStatus",
+        "type": "labeldata",
+        "data": "Inprogress",
+        "templateOptions": {
+          "label": "EDA Status :",
+          "required": false
+        }
+      },
+      {
+        "key": "EDAConclusions",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "EDA Conclusion :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "EDA Conclusion is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 200,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTRelatedOccurrencesId",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [],
+        "refkey": "SORTId",
+        "altkey": "SORTRelatedOccurrencesId",
+        "templateOptions": {
+          "label": "Related Occurrences :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "SORTRefNo",
+            "dataField": "SORTId",
+            "defaultField": "SORTRelatedOccurrences"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "tbledEdaInvestigation",
+        "type": "tableeditor",
+        "disabled": false,
+        "data": [],
+        "templateOptions": {
+          "settings": "EdaInvestigationtableEditor",
+          "showAdd": false,
+          "showDel": false
+        }
+      },
+      {
+        "key": "ITARWarningEDA",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "EDAConclution",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "EDA Conclusion :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "EDA Conclusion is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 1000,
+          "maxlengthMessage": "Maximum 1000 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+	  {
+        "key": "EDAConclution",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "EDA Conclusion :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "EDA Conclusion is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 1000,
+          "maxlengthMessage": "Maximum 1000 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+          "label": ""
+        }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+          "label": ""
+        }
+      }
+    ],    
+    "AdditonalInformationFields": [
+      {
+        "key": "SORTFindingsId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "SORTRelatedOccurrence",
+        "type": "multiselect",
+        "save": true,
+        "data": [],
+        "refkey": "SORTFindingsId",
+        "altkey": "SORTRelatedOccurrencesId",
+        "templateOptions": {
+          "label": "Related Occurrences :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "SORTRefNo",
+            "dataField": "RelatedSORTId",
+            "defaultField": "SORTRelatedOccurrences"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+          "label": ""
+        }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+          "label": ""
+        }
+      },
+      {
+        "key": "OtherOperatorsInformed",
+        "type": "radio",
+        "group": "OtherOperatorsInformed",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Other Operators Informed :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "Other Operators Informed is required."
+        }
+      },
+      {
+        "key": "FeedbackProvided",
+        "type": "radio",
+        "group": "FeedbackProvided",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Feedback Provided :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value":0,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "Feedback Provided is required."
+        }
+      },
+	  {
+        "key": "FeedbackDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Feedback Date :",
+          "placeholder": "Select Date",
+          "required": "no",
+          "requiredMessage": "Feedback Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "tooltip": "Select a Date"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "sagTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [],
+      "dateFields": [
+        4,
+        5,
+        6
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Action Ref #",
+          "data": "ActionRefNo",
+          "width": "150px%"
+        },
+        {
+          "title": "Meeting Ref #",
+          "data": "MeetingRefNo",
+          "width": "120px"
+        },
+        {
+          "title": "Action Details",
+          "data": "ActionDetails"
+        },
+        {
+          "title": "Owner",
+          "data": "OwnerName",
+          "width": "120px"
+        },
+        {
+          "title": "Start Date",
+          "data": "StartDate",
+          "width": "100px"
+        },
+        {
+          "title": "Target Date",
+          "data": "DueDate",
+          "width": "100px"
+        },
+        {
+          "title": "Completion Date",
+          "data": "ClosingDate",
+          "width": "120px"
+        },
+        {
+          "title": "Status",
+          "data": "ActionStatus",
+          "width": "120px"
+        }
+      ]
+    },
+    "InvestigationTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [],
+      "dateFields": [
+        4,
+        5,
+        6
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Action Ref #",
+          "data": "ActionRefNo",
+          "width": "150px%"
+        },
+        {
+          "title": "Meeting Ref #",
+          "data": "MeetingRefNo",
+          "width": "120px"
+        },
+        {
+          "title": "Action Details",
+          "data": "ActionDetails"
+        },
+        {
+          "title": "Owner",
+          "data": "OwnerName",
+          "width": "120px"
+        },
+        {
+          "title": "Start Date",
+          "data": "StartDate",
+          "width": "100px"
+        },
+        {
+          "title": "Target Date",
+          "data": "DueDate",
+          "width": "100px"
+        },
+        {
+          "title": "Completion Date",
+          "data": "ClosingDate",
+          "width": "120px"
+        },
+        {
+          "title": "Status",
+          "data": "ActionStatus",
+          "width": "120px"
+        }
+      ]
+    },
+    "HazardTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [],
+      "dateFields": [],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            0,
+            3
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "#",
+          "data": "FormIndicator",
+          "width": "5%"
+        },
+        {
+          "title": "Cause Ref.No",
+          "data": "CauseRefNo",
+          "width": "14%"
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle",
+          "width": "80%"
+        },
+        {
+          "title": "Status",
+          "data": "CauseStatus",
+          "width": "14%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+    "EdaInvestigationtableEditor": {
+      "fields": [
+        {
+          "key": "ContributingFactors",
+          "type": "labeldata",
+          "name": "Contributing Factors",
+          "class": "col-md-3",
+          "data": "Individual - Mental / Behavioral -Decision making (Initiative)",
+          "templateOptions": {
+            "label": "Contributing Factors",
+            "required": false
+          }
+        },
+        {
+          "key": "Recommendations",
+          "type": "labeldata",
+          "name": "Recommendations",
+          "class": "col-md-3",
+          "data": "Individual - Mental / Behavioral -Decision making (Initiative)",
+          "templateOptions": {
+            "label": "Recommendations",
+            "required": false
+          }
+        },
+        {
+          "key": "Conclusions",
+          "type": "textarea",
+          "rows": "3",
+          "cols": "50",
+          "data": "",
+          "name": "Conclusions",
+          "class": "col-md-5 bottompadding",
+          "templateOptions": {
+            "label": "Conclusions",
+            "placeholder": "",
+            "required": "no",
+            "maxlength": 500,
+            "hideLabel": false,
+            "maxlengthMessage": "Maximum 500 characters only allowed."
+          }
+        }
+      ],
+      "data": []
+    }
+  }
+}

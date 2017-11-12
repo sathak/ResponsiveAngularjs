@@ -1,0 +1,235 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "FORM",
+      "url": "formConfiguration"
+    }
+  ],
+  "fields": {
+    "createProductFields":[
+      {
+        "key":"Project",
+        "type":"select",
+        "save":true,
+        "data":"",
+        "templateOptions":{
+          "label":"Project :",
+          "placeholder":"Project",
+          "required":"yes",
+          "requiredMessage":"Project is required."
+        },
+        "selectOptions":{
+          "item":{
+            "selected":{
+
+            },
+            "displayField":"ProjectName",
+            "dataField":"ProjectId",
+            "defaultField":"Project"
+          },
+          "items":[]
+        }
+      },
+      {
+        "key":"Base",
+        "type":"select",
+        "save":true,
+        "data":"",
+        "templateOptions":{
+          "label":"Base :",
+          "placeholder":"Base",
+          "required":"yes",
+          "requiredMessage":"Base is required."
+        },
+        "selectOptions":{
+          "item":{
+            "selected":{
+
+            },
+            "displayField":"BaseName",
+            "dataField":"BaseId",
+            "defaultField":"Base"
+          },
+          "items":[]
+        }
+      },
+      {
+        "key":"Title",
+        "type":"input",
+        "data":"",
+        "templateOptions":{
+          "label":"Title :",
+          "placeholder":"Title",
+          "required":"yes",
+          "requiredMessage":"MRP Title is required.",
+          "minlength":1,
+          "minlengthMessage":"Minimum 1 character required.",
+          "maxlength":200,
+          "maxlengthMessage":"Maximum 200 characters only allowed."
+        }
+      },
+      {
+        "key":"MRRRefNo",
+        "type":"input",
+        "data":"",
+        "templateOptions":{
+          "label":"MRR Ref No : ",
+          "placeholder":"MRR Ref No."
+        }
+      },
+      {
+        "key": "ProductPhoto",
+        "type": "photoupload",
+        "save": true,
+        "ischangeable": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Photo",
+          "required": "yes",
+          "minlength": 2,
+          "key": "ProductPhoto",
+          "folderType": "Forms"
+        }
+      },
+      {
+        "key":"ITARWarning",
+        "type":"checkbox",
+        "data":"",
+        "templateOptions":{
+          "label":"I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required":false,
+          "hideLabel":true,
+          "suffixLabel":"I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide":true,
+          "requiredMessage":"ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key":"ObjectState",
+        "type":"label",
+        "data":"0"
+      },
+      {
+        "key":"Status",
+        "type":"label",
+        "data":"0"
+      }
+    ],
+    "editProductFields":[
+      {
+        "key":"Project",
+        "type":"select",
+        "save":true,
+        "data":"",
+        "templateOptions":{
+          "label":"Project :",
+          "placeholder":"Project",
+          "required":"yes",
+          "requiredMessage":"MRP Title is required."
+        },
+        "selectOptions":{
+          "item":{
+            "selected":{
+
+            },
+            "displayField":"ProjectName",
+            "dataField":"ProjectId",
+            "defaultField":"Project"
+          },
+          "items":[]
+        }
+      },
+      {
+        "key":"Base",
+        "type":"select",
+        "save":true,
+        "data":"",
+        "templateOptions":{
+          "label":"Base :",
+          "placeholder":"Base",
+          "required":"yes",
+          "requiredMessage":"MRP Title is required."
+        },
+        "selectOptions":{
+          "item":{
+            "selected":{
+
+            },
+            "displayField":"BaseName",
+            "dataField":"BaseId",
+            "defaultField":"Base"
+          },
+          "items":[]
+        }
+      },
+      {
+        "key":"Title",
+        "type":"input",
+        "data":"",
+        "templateOptions":{
+          "label":"Title :",
+          "placeholder":"Title",
+          "required":"yes",
+          "requiredMessage":"MRP Title is required.",
+          "minlength":1,
+          "minlengthMessage":"Minimum 1 character required.",
+          "maxlength":200,
+          "maxlengthMessage":"Maximum 200 characters only allowed."
+        }
+      },
+      {
+        "key":"MRRRefNo",
+        "type":"input",
+        "data":"",
+        "templateOptions":{
+          "label":"MRR Ref No. : ",
+          "placeholder":"MRR Ref No."
+        }
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Product Image",
+          "required": "yes",
+          "key": "attachmentid",
+          "agreeText": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key":"ITARWarning",
+        "type":"checkbox",
+        "data":"",
+        "templateOptions":{
+          "label":"I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required":false,
+          "hideLabel":true,
+          "suffixLabel":"I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide":true,
+          "requiredMessage":"ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key":"ObjectState",
+        "type":"label",
+        "data":"0"
+      },
+      {
+        "key":"Status",
+        "type":"label",
+        "data":"0"
+      }
+    ]
+  },
+  "tables": {},
+  "tableEditor": {}
+}

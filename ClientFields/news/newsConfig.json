@@ -1,0 +1,167 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "News Annsouncements",
+      "url": "news"
+    }
+  ],
+  "fields": {
+    "newsFields": [
+      {
+        "key": "NewsId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "NewsTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Title :",
+          "placeholder": "Enter Title..",
+          "required": "yes",
+          "requiredMessage": "Title is required.",
+          "minlength": 7,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 7 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "isExistData": "newsTableData",
+          "isExistMessage": "Title already exists.."
+        }
+      },
+      {
+        "key": "StartDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Start Date :",
+          "placeholder": "Enter Start Date..",
+          "required": "yes",
+          "requiredMessage": "Start Date is required.",
+          "compareDateToday": true,
+          "compareDateBy": "<",
+          "compareDateMessage": "Start Date should be in past."
+        }
+      },
+      {
+        "key": "EndDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "End Date :",
+          "placeholder": "Enter End Date..",
+          "required": "yes",
+          "requiredMessage": "End Date is required.",
+          "compareDateToday": true,
+          "compareDateBy": "<",
+          "compareDateMessage": "End Date should be in past."
+        }
+      },
+      {
+        "key": "Publish",
+        "type": "radio",
+        "group": "personal",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Active"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "Inactive"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "Comments",
+        "name": "Remarks",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "30",
+        "data": "",
+        "templateOptions": {
+          "label": "Comments :",
+          "placeholder": "Enter comments..",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "newsTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 2,3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "News Id",
+          "data": "NewsId",
+          "visible": false
+        },
+        {
+          "title": "Title",
+          "data": "Title"
+        },
+        {
+          "title": "Start Date",
+          "data": "StartDate",
+          "width": "10%"
+        },
+        {
+          "title": "End Date",
+          "data": "EndDate",
+          "width": "10%"
+        },
+        {
+          "title": "Publish",
+          "data": "RoleStatusName",
+          "width": "10%"
+        }
+      ]
+    }
+  }
+}

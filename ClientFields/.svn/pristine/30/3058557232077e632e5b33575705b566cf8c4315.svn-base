@@ -1,0 +1,168 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-Role",
+      "title": "Role Management",
+      "url": "rolemanagement"
+    }
+  ],
+  "fields": {
+    "roleManagementFields": [
+      {
+        "key": "RoleId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "RoleName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "Role Name",
+          "placeholder": "Enter Role Name..",
+          "required": "yes",
+          "requiredMessage": "Role Name required.",
+          "minlength": 3,
+          "minlengthMessage": "Minimum 3 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "roleManagementTableData",
+          "isExistMessage": "Role Name already exists.."
+        }
+      },
+      {
+        "key": "RoleStatus",
+        "type": "radio",
+        "group": "personal",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Active"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "Inactive"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "Remarks",
+        "name": "Remarks",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "30",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks",
+          "placeholder": "Enter remarks..",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "RoleStatusName",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "NoOfUsers",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "roleManagementTable": {
+      "order": [ ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Role Id",
+          "data": "RoleId",
+          "visible": false
+        },
+        {
+          "title": "Role Name",
+          "data": "RoleName"
+        },
+        {
+          "title": "No.of Users",
+          "data": "NoOfUsers",
+          "width": "10%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedOn",
+          "width": "10%"
+        },
+        {
+          "title": "Remarks",
+          "data": "Remarks",
+          "width": "30%"
+        },
+        {
+          "title": "Status",
+          "data": "RoleStatusName",
+          "width": "8%"
+        }
+      ]
+    }
+  }
+}

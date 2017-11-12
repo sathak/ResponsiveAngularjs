@@ -1,0 +1,13 @@
+<div class="kendoTree"></div>
+
+<script id="treeview-template" type="text/kendo-ui-template">
+    <div class="layout-row">
+        <div class="item-styling">#: item.text #</div>
+        <div class="item-styling">#: item.dept #</div>
+        <div class="item-styling">#: item.owner #</div>
+    </div>
+</script>
+
+<script id="treeview-checkbox-template" type="text/x-kendo-template">
+    <input ng-model="item" class="treeview-checkbox" type="checkbox" />#:data.Add#
+</script>

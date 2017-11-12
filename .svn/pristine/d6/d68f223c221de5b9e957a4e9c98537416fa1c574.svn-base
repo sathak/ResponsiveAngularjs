@@ -1,0 +1,8 @@
+<div class="margin-bottom-10">
+    <div class="kendoTab" type="{{type}}">
+        <ul></ul>
+        <div class="kendotab_container margin-bottom-10">
+            <ng-transclude></ng-transclude>
+        </div>
+    </div>
+</div>

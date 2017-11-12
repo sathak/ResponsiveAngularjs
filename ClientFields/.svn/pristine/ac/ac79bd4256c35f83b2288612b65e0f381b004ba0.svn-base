@@ -1,0 +1,409 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "FORM",
+      "url": "mrr"
+    }
+  ],
+  "fields": {
+    "causesSubmitFields": [
+      {
+        "key": "CauseAnalysisId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "Notes",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "tooltip": "Notes",
+          "label": "Notes",
+          "placeholder": "",
+          "requiredMessage": "Notes is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "required": "yes",
+          "maxlength": 1000,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 1000 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": "yes",
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "focFilterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "CauseRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Ref No is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "CauseTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Cause Title :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Cause Title is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "source",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Source :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Source is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "sources"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "status",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Status is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "StatusTypeName",
+            "dataField": "CauseStatusTypeId",
+            "defaultField": "causestatustype" 
+          },
+          "items": [
+
+          ]
+        }
+      }
+    ]
+  },
+  "tables": {
+    "CausesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          15,
+          20,
+          -1
+        ],
+        [
+          5,
+          15,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 5,
+      "data": [
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [3,4,5]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [],
+      "autoWidth": false,
+      "columns": [
+
+        {
+          "title": "Cause Ref No #",
+          "data": "CauseRefNo",
+          "width": "15%"
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle"
+        },
+        {
+          "title": "Consequence",
+          "data": "ConsequenceDescription",
+          "width": "15%"
+        },
+        {
+          "title": "Controls",
+          "data": "ControlName",
+          "width": "20%"
+        },
+        {
+          "title": "Linked MRP's",
+          "data": "LinkedMRPs",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "AcceptanceStatus",
+          "width": "5%"
+        }
+      ]
+    },
+    "LinkedMrpsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          15,
+          20,
+          -1
+        ],
+        [
+          5,
+          15,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 5,
+      "data": [
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": []
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "buttons": [],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "MRP Ref No",
+          "data": "MRPRefNo",
+          "width": "25%"
+        },
+        {
+          "title": "MRP Title",
+          "data": "MRPTitle",
+          "width": "25%"
+        },
+        {
+          "title": "MRR Title",
+          "data": "MRRTitle",
+          "width": "25%"
+        },
+        {
+          "title": "MRR Ref No",
+          "data": "MRRRefNo",
+          "width": "25%"
+        }
+      ]
+    },
+    "ControlDetailsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          15,
+          20,
+          -1
+        ],
+        [
+          5,
+          15,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 5,
+      "data": [
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            0,
+            3,
+            4
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "buttons": [
+      ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Cause Ref No #",
+          "data": "ControlRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Control Title",
+          "data": "ControlTitle",
+          "width": "30%"
+        },
+        {
+          "title": "Description",
+          "data": "ControlDescription",
+          "width": "40%"
+        },
+        {
+          "title": "Type",
+          "data": "ControlType",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "ControlStatus",
+          "width": "10%"
+        },
+        {
+          "title": "ControlId",
+          "data": "ControlId",
+          "visible": false
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+  }
+}

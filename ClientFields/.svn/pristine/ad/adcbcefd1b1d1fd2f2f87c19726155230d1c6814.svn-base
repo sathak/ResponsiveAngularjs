@@ -1,0 +1,667 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "User Management",
+      "url": "usermanagement"
+    }
+  ],
+  "fields": {
+    "filterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [
+
+        ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [
+
+        ],
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Location ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "department",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [
+
+        ],
+        "templateOptions": {
+          "label": "Department :",
+          "placeholder": "Department ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "department"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "fullname",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Full Name :"
+        }
+      },
+      {
+        "key": "role",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [
+
+        ],
+        "templateOptions": {
+          "label": "Role :",
+          "placeholder": "Role ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "rolename",
+            "dataField": "roleId",
+            "defaultField": "role"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "userStatus",
+        "type": "radio",
+        "group": "personal",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "Active"
+            },
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Inactive"
+            },
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "edaTrained",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "EDA Trained :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": false
+        }
+      },
+    ],
+    "userManagementFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ClockNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Clock Number :",
+          "placeholder": "Enter Clock Number..",
+          "required": "yes",
+          "requiredMessage": "Clock Number is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "isExistData": "userManagementTableData",
+          "isExistMessage": "Clock Number already exists.."
+        }
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "User Name :",
+          "placeholder": "Enter User Name..",
+          "required": "yes",
+          "requiredMessage": "User Name is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "isExistData": "userManagementTableData",
+          "isExistMessage": "User Name already exists."
+        }
+      },
+      {
+        "key": "FirstName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "First Name :",
+          "placeholder": "Enter First Name..",
+          "required": "yes",
+          "requiredMessage": "First Name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "MiddleName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Middle Name :",
+          "placeholder": "Enter Middle Name..",
+          "required": "no",
+          "requiredMessage": "Middle Name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "LastName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Last Name :",
+          "placeholder": "Enter Last Name..",
+          "required": "no",
+          "requiredMessage": "Last Name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "FullName",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "PhoneNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Mobile Number :",
+          "placeholder": "Enter Mobile Number..",
+          "required": "no",
+          "requiredMessage": "Mobile Number is required.",
+          "minlength": 10,
+          "maxlength": 20,
+          "minlengthMessage": "Minimum 10 characters required.",
+          "maxlengthMessage": "Maximun 20 characters only allowed",
+          "pattern": "^[0-9 +-]*$",
+          "patternMessage": "Invalid Mobile Number.",
+          "isExistData": "userManagementTableData",
+          "isExistMessage": "Mobile Number already exists."
+        }
+      },
+      {
+        "key": "Email",
+        "type": "email",
+        "data": "",
+        "templateOptions": {
+          "label": "E-mail :",
+          "placeholder": "Enter E-mail..",
+          "required": "no",
+          "requiredMessage": "E-mail is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "emailMessage": "Invalid E-mail",
+          "pattern": "function(){return navcon.getEmailPattern();}",
+          "isExistData": "userManagementTableData",
+          "isExistMessage": "Email already exists."
+        }
+      },
+      {
+        "key": "Roles",
+        "type": "multiselect",
+        "save": true,
+        "data": [
+
+        ],
+        "refkey": "Id",
+        "altkey": "RoleId",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Roles :",
+          "placeholder": "Select Role..",
+          "required": "yes",
+          "requiredMessage": "Role is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "RoleName",
+            "dataField": "RoleId",
+            "defaultField": "Roles"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ProjectUser",
+        "type": "multiselect",
+        "save": true,
+        "data": [
+
+        ],
+        "refkey": "Id",
+        "altkey": "ProjectUserId",
+        "group": {
+          "key": "BaseId",
+          "field": "BaseId",
+          "object": "BaseProjects",
+          "color": "#FF4500"
+        },
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Projects :",
+          "placeholder": "Select Project..",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "BaseId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Work Location :",
+          "placeholder": "Select Work Location..",
+          "required": "yes",
+          "requiredMessage": "Work Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "Locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "DepartmentId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Department :",
+          "placeholder": "Select Department..",
+          "required": "yes",
+          "requiredMessage": "Department is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectUseName",
+            "dataField": "ProjectUseId",
+            "defaultField": "Department"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "LocationDepartment",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "EDATrained",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "EDA Trained :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": false,
+          "requiredMessage": "EDA Trained is required."
+        }
+      },
+      {
+        "key": "UserStatusId",
+        "type": "radio",
+        "group": "personal",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Active"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "Inactive"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "UserStatusName",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [
+
+        ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [
+
+        ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "userManagementHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rationale :",
+          "placeholder": "Insert Rationale Why Decision Is Made",
+          "required": "yes",
+          "requiredMessage": "Rationale is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ],
+    "passwordResetFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "NewPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "New Password :",
+          "placeholder": "Enter password..",
+          "required": "yes",
+          "requiredMessage": "Password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ConfirmPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "compareTo": "Password",
+          "compareBy": "!=",
+          "compareToMessage": "Password mismatched.",
+          "customClass": "text-primary",
+          "label": "Confirm Password :",
+          "placeholder": "Enter confirm password..",
+          "required": "yes",
+          "requiredMessage": "Confirm password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+
+        }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+
+        }
+      }
+    ]
+  },
+  "tables": {
+    "userManagementTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          15,
+          20,
+          -1
+        ],
+        [
+          5,
+          15,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Id",
+          "data": "Id",
+          "visible": false
+        },
+        {
+          "title": "Clock Number",
+          "data": "ClockNumber",
+          "width": "10%"
+        },
+        {
+          "title": "User Name",
+          "data": "UserName",
+          "width": "15%"
+        },
+        {
+          "title": "Full Name",
+          "data": "FullName",
+          "width": "20%"
+        },
+        {
+          "title": "E-mail",
+          "data": "Email",
+          "width": "15%"
+        },
+        {
+          "title": "Location/Department",
+          "data": "LocationDepartment",
+          "width": "15%"
+        },
+        {
+          "title": "Status",
+          "data": "UserStatusName",
+          "width": "10%"
+        }
+      ]
+    }
+  }
+}

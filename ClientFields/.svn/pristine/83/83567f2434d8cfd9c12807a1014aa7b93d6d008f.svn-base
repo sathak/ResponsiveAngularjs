@@ -1,0 +1,598 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Hazard",
+      "url": "hazard"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Risk Aggregation",
+      "url": "riskaggregation"
+    }
+  ],
+  "fields": {
+    "summaryHazardStateFields": [
+      {
+        "key": "fieldConfig",
+        "type": "label",
+        "data": "",
+        "save": false,
+        "title": "Summary Hazard State Details",
+        "primaryKey": "HazardId",
+        "displayKey": "HazardName"
+      },
+      {
+        "key": "HazardId",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "CauseAnalysisId",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+
+      },
+      {
+        "key": "HazardCode",
+        "type": "input",
+        "data": "0",
+        "save": false,
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Hazard ID",
+          "hideLabel": false,
+          "placeholder": "Select Segments.."
+        }
+      },
+      {
+        "key": "HazardName",
+        "type": "input",
+        "data": "",
+        "save": false,
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Hazard Title",
+          "hideLabel": false,
+          "placeholder": "Select Hazard Title.."
+        }
+      },
+      {
+        "key": "CausesDetails",
+        "type": "tableeditor",
+        "disabled": false,
+        "save": false,
+        "data": [ ],
+        "templateOptions": {
+          "settings": "causesTableEditor",
+          "showAdd": false,
+          "showUpdate": false,
+          "showDel": false,
+          "showItar": true
+        }
+      },
+      {
+        "key": "DrivingCauseList",
+        "type": "tableeditor",
+        "disabled": false,
+        "data": [ ],
+        "save": true,
+        "templateOptions": {
+          "settings": "causesListTable",
+          "key": "CauseAnalysisId",
+          "showAdd": false,
+          "showDel": false,
+          "showUpdate": false,
+          "showoverAllsave": true
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "summaryHazardStateTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 10, 20, -1 ],
+        [ 5, 10, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Hazard ID",
+          "data": "HazardID",
+          "width": "10%"
+        },
+        {
+          "title": "Hazard Title",
+          "data": "HazardName"
+        },
+        {
+          "title": "Linked Causes",
+          "data": "LinkedCauses",
+          "width": "8%"
+        },
+        {
+          "title": "Pre-Mit Probability",
+          "data": "PreMitigationProbability",
+          "width": "10%"
+        },
+        {
+          "title": "Post-Mit Probability",
+          "data": "PostMitigationProbability",
+          "width": "10%"
+        },
+        {
+          "title": "Pre-Mit Severity",
+          "data": "PreMitigationSeverity",
+          "width": "10%"
+        },
+        {
+          "title": "Post-Mit Severity",
+          "data": "PostMitigationSeverity",
+          "width": "10%"
+        },
+        {
+          "title": "Accident State / Risk Class",
+          "data": "RiskClass",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "HazardStatusName",
+          "width": "8%"
+        }
+      ]
+    },
+    "contributingCausesTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 10, 20, -1 ],
+        [ 5, 10, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Cause ID",
+          "data": "CauseID",
+          "width": "15%"
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle"
+        },
+        {
+          "title": "Linked Hazards",
+          "data": "LinkedHazards",
+          "width": "8%"
+        },
+        {
+          "title": "Pre-Mit Probability",
+          "data": "PreMitigationProbabilityName",
+          "width": "10%"
+        },
+        {
+          "title": "Post-Mit Probability",
+          "data": "PostMitigationProbabilityName",
+          "width": "10%"
+        },
+        {
+          "title": "Severity",
+          "data": "PostMitigationSeverityName",
+          "width": "10%"
+        },
+        {
+          "title": "Accident State / Risk Class",
+          "data": "RiskClassName",
+          "width": "8%"
+        },
+        {
+          "title": "Status",
+          "data": "CauseStatusName",
+          "width": "8%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+    "causesListTable": {
+      "fields": [
+        {
+          "key": "CauseID",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-2",
+          "name": "Cause ID",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "CauseTitle",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-2",
+          "name": "Cause Title",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+
+        {
+          "key": "PreMitigationProbabilityName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Pre-Mit Probability",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "PostMitigationProbabilityName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Post-Mit Probability",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "PreMitigationSeverityName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Pre-Mit Severity",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "PostMitigationSeverityName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Post-Mit Severity",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "RiskClassName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Accident ID / Risk Class",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "DrivingCauseId",
+          "type": "select",
+          "data": "",
+          "save": true,
+          "class": "col-md-1",
+          "name": "Driving Cause",
+          "templateOptions": {
+            "label": "Driving Cause",
+            "hideLabel": false,
+            "placeholder": "Select DrivingCause.."
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "DrivingCause",
+              "dataField": "DrivingCauseId",
+              "defaultField": "AllDrivingCauses"
+            },
+            "items": [
+
+            ]
+          }
+        },
+        {
+          "key": "CauseStatusName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Status",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+
+        {
+          "key": "CauseAnalysisId",
+          "type": "label",
+          "data": "0",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ],
+      "templateOptions": {
+        "primaryKey": "CauseAnalysisId",
+        "displayKey": "CauseTitle",
+        "type": "causedrivingUpdate"
+      }
+    },
+    "causesTableEditor": {
+      "fields": [
+        {
+          "key": "PreMitigationProbabilityId",
+          "type": "select",
+          "data": "",
+          "save": true,
+          "class": "col-md-2",
+          "name": "Pre-Mit Probability",
+          "templateOptions": {
+            "label": "Pre-Mit Probability",
+            "hideLabel": false,
+            "placeholder": "Select Pre-Mit Probability..",
+            "required": "yes",
+            "requiredMessage": "Active Failures is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "ProbabilityName",
+              "dataField": "ProbabilityId",
+              "defaultField": "Probability"
+            },
+            "items": [ ]
+          }
+        },
+        {
+          "key": "PreMitigationSeverityId",
+          "type": "select",
+          "data": "",
+          "save": true,
+          "class": "col-md-1",
+          "name": "Pre-Mit Severity",
+          "templateOptions": {
+            "label": "Pre-Mit Severity",
+            "hideLabel": false,
+            "placeholder": "Select Pre-Mit Severity..",
+            "required": "yes",
+            "requiredMessage": "Active Failures is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "SeverityName",
+              "dataField": "SeverityId",
+              "defaultField": "Severity"
+            },
+            "items": [ ]
+          }
+        },
+        {
+          "key": "PostMitigationProbabilityId",
+          "type": "select",
+          "data": "",
+          "save": true,
+          "class": "col-md-2",
+          "name": "Post-Mit Probability",
+          "templateOptions": {
+            "label": "Post-Mit Probability",
+            "hideLabel": false,
+            "placeholder": "Select Post-Mit Probability..",
+            "required": "yes",
+            "requiredMessage": "Active Failures is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "ProbabilityName",
+              "dataField": "ProbabilityId",
+              "defaultField": "Probability"
+            },
+            "items": [ ]
+          }
+        },
+        {
+          "key": "PostMitigationSeverityId",
+          "type": "select",
+          "data": "",
+          "save": true,
+
+          "class": "col-md-1",
+          "name": "Post-Mit Severity",
+          "templateOptions": {
+            "label": "Post-Mit Severity",
+            "hideLabel": false,
+            "placeholder": "Select Post-Mit Severity..",
+            "required": "yes",
+            "requiredMessage": "Active Failures is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "SeverityName",
+              "dataField": "SeverityId",
+              "defaultField": "Severity"
+            },
+            "items": [ ]
+          }
+        },
+        {
+          "key": "RiskClassId",
+          "type": "label",
+          "data": 0,
+          "class": "col-md-0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "RiskClass",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Accident ID / Risk Class",
+          "templateOptions": {
+            "label": "Accident ID / Risk Class"
+          }
+        },
+        {
+          "key": "Notes",
+          "type": "textarea",
+          "rows": "2",
+          "data": "",
+          "save": true,
+          "class": "col-md-3",
+          "name": "Notes",
+          "templateOptions": {
+            "label": "Notes",
+            "placeholder": "Enter Notes..",
+            "required": "yes",
+            "requiredMessage": "Active Failures is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "History",
+          "type": "label",
+          "data": [ ],
+          "templateOptions": {
+            "label": ""
+          }
+
+        },
+        {
+          "key": "HazardId",
+          "type": "label",
+          "data": "0",
+          "class": "col-md-0",
+          "templateOptions": {
+            "label": "",
+            "required": "yes"
+          }
+        }
+
+      ],
+      "data": [ ],
+      "templateOptions": {
+        "primaryKey": "CauseAnalysisId",
+        "displayKey": "CauseTitle",
+        "type": "causesByHazard"
+      }
+    }
+  }
+}

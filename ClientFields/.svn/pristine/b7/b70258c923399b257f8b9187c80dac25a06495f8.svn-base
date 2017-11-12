@@ -1,0 +1,122 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Project Maturity Configuration",
+      "url": "pmcleadingindicatorscalculation"
+    }
+  ],
+  "fields": {
+    "pmcLeadingIndicatorsCalculationFields": [
+      {
+        "key": "PSMMMaturityTemplateId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PSMMLeadingIndicatorsCalculationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PSMMMaturityLeadingIndicatorsCalculation",
+        "type": "input",
+        "data": [ ]
+      }, 
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "pmcTemplatesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        
+      ],
+      "dateFields": [ 4 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "TemplateID",
+          "data": "PSMMMaturityTemplateId",
+          "width": "0%",
+          "visible": false
+        },
+        {
+          "title": "Sl.No",
+          "data": null,
+          "width": "10%"
+        },
+        {
+          "title": "Template",
+          "data": "TemplateTitle",
+          "width": "30%"
+        },
+        {
+          "title": "Projects Assigned",
+          "data": "ProjectAssigned",
+          "width": "30%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedOn",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

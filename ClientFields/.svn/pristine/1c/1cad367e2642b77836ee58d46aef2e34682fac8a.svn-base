@@ -1,0 +1,74 @@
+{
+  "fields": {
+    "sortPage2Fields": [
+      {
+        "key": "SortPage2Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "OccuranceTypeId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Occurance Type :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Occurance type is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "OccuranceTypeName",
+            "dataField": "OccuranceTypeId",
+            "defaultField": "OccuranceType"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "TypeOfFlightOccurence",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "refkey": "SortPage2Id",
+        "altkey": "SortPage2OccuranceId",
+        "templateOptions": {
+          "label": "Type of Flight Occurrence:",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Type of flight occurrence is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightOccuranceTypeName",
+            "dataField": "FlightOccuranceTypeId",
+            "defaultField": "TypeofflightOccurence"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+
+  }
+}

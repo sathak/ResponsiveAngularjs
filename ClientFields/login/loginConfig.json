@@ -1,0 +1,161 @@
+{
+  "fields": {
+    "loginFields": [
+      {
+        "key": "userid",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "User ID",
+          "placeholder": "",
+          "required": "true",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "username",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "User Name..",
+          "required": "true",
+          "minlength": 2,
+          "focus": true
+        }
+      },
+      {
+        "key": "userpassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Password..",
+          "required": "true",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "answer",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Answer",
+          "placeholder": "Answer..",
+          "required": "true",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "password",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Password",
+          "placeholder": "Password..",
+          "required": "true",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "confirm",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Confirm Password",
+          "placeholder": "Confirm Password..",
+          "required": "true",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "User Name",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "User name required.",
+          "minlength": 0
+        }
+      },
+      {
+        "key": "SecurityQuestion",
+        "type": "input",
+        "data": "",
+        "readonly": true,
+        "templateOptions": {
+          "label": "Security Question",
+          "required": "no",
+          "requiredMessage": "Security question required."
+        }
+      },
+      {
+        "key": "SecurityAnswer",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Answer",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Answer required.",
+          "minlength": 0
+        }
+      },
+      {
+        "key": "NewPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Password",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^[a-zA-Z0-9@.-]*$",
+          "patternMessage": "Alphabets, numbers and some special characters only allowed."
+        }
+      },
+      {
+        "key": "ConfirmPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "compareTo": "NewPassword",
+          "compareBy": "!=",
+          "compareToMessage": "Password mismatched.",
+          "customClass": "text-primary",
+          "label": "Confirm Password",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Confirm password required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^[a-zA-Z0-9@.-]*$",
+          "patternMessage": "Alphabets, numbers and some special characters only allowed."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ]
+  }
+}

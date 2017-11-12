@@ -1,0 +1,606 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "edaContributingFactorsChecklistFields": [
+      {
+        "key": "EDACFChecklistID",
+        "type": "label",
+        "data": 0
+      },     
+      {
+        "key": "SORTEDAInvestigationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTEDACausalAndContributingEvents",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          }
+        }
+      },
+      {
+        "key": "SecAIndividualTeamFactors1",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "refkey": "EDACFChecklistID",
+        "group": [ 1, 4],
+        "listDisplay": true,
+        "save": false,
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecAIndividualTeamFactors2",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "refkey": "EDACFChecklistID",
+        "group": [2],
+        "listDisplay": true,
+        "save": false,
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecAIndividualTeamFactors3",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "refkey": "EDACFChecklistID",
+        "group": [ 3 ],
+        "listDisplay": true,
+        "save": false,
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },      
+      {
+        "key": "SecADescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe Specifically How The Selected Factor(S) Contributed To The Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionA",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecBIndividualCompetence",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 5 ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecBDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe specifically how the selected Individual Competence factor(s) contributed to the error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionB",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecCInformationFactors",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 6 ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecCDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe specifically how the selected Information Factor(s) Contributed to the Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionC",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecDJobTask",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 7 ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecDDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe Specifically How The Selected Job / Task Factor(S) Contributed To The Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionD",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecEEnvironmentalFactors",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 8 ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },     
+      {
+        "key": "SecEDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe Specifically How The Selected Environmental Factor(S) Contributed To The Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionE",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecFOrganisationalFactors",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 9 ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecFDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe Specifically How The Selected Factors Affecting Organisational Factors Contributed To The Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionF",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecGPlatformEquipmentTools1",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 10 ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecGPlatformEquipmentTools2",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 11 ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecGPlatformEquipmentTools3",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 12],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecGDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe Specifically How The Selected Environmental / Facilities Factor(S) Contributed To The Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionG",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecHFacilityWorkplace",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [ 13 ],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecHDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe Specifically How The Selected Organisational Factor(S) Contributed To The Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionH",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecILeadershipSupervision",
+        "type": "groupcheckboxlist",
+        "data": [ ],
+        "group": [14],
+        "listDisplay": true,
+        "refkey": "EDACFChecklistID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "OperationsProcessEventList"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SecIDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe Specifically How The Selected Leadership / Supervision Factor(S) Contributed To The Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionI",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SecJDescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe Specifically How The Selected Other Factor(s) Contributed To The Error :",
+          "required": false
+        }
+      },
+      {
+        "key": "DescriptionJ",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "itarwarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": []
+      }, {
+        "key": "PageSavedStatus",
+        "type": "label",
+        "data": []
+      }
+    ]
+
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+
+  }
+}

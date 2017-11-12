@@ -1,0 +1,317 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "SORT",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "My EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+  "filterFields": [
+  
+	{
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Occ. Location :",
+          "placeholder": "Occurance Location ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "SORTRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "SORT Ref No :",
+          "placeholder": "Ref no."
+        }
+      },
+	  {
+        "key": "EDARefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "EDA Ref No :",
+          "placeholder": "Ref no."
+        }
+      },
+      {
+        "key": "ReportTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title :",
+          "placeholder": "Report Title.."
+        }
+      },
+      {
+        "key": "EDAstatus",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ..."
+          
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+              "displayField": "Name",
+            "dataField": "EDAStatusId",
+            "defaultField": "EDAstatus"
+          },
+          "items": []
+        }
+      },
+	  {
+        "key": "OccuranceFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurance From:",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": "Control Expiry Date is required."
+        }
+      },
+	  {
+        "key": "OccuranceTo",
+        "type": "date",
+        "data": "",		
+        "templateOptions": {
+		"label": "To:",
+          "placeholder": "To..",
+          "required": "no"
+        }
+      },	 
+	  {
+        "key": "TypeOfOperationId",
+        "type": "multiselectcheckbox",
+        "data": [],
+        "templateOptions": {
+          "label": "Type of Opr. :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "TypeOfOperation"
+          },
+          "items": [ ]
+        }
+      },
+	  {
+        "key": "AssignedById",
+        "type": "multiselectcheckbox",        
+        "data": [],
+        "templateOptions": {
+          "label": "Assigned By:",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "UserList"
+          },
+          "items": [
+
+          ]
+        }
+      },
+	  {
+        "key": "AssignedFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Assigned From:",
+          "placeholder": "From.."
+        }
+      },
+	  {
+        "key": "AssignedTo",
+        "type": "date",
+        "data": "",		
+        "templateOptions": {
+		"label": "To:",
+          "placeholder": "To..",
+          "required": "no"
+        }
+      }
+  ],
+    "edaFields": [
+      {
+        "key": "generalinformation",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "occurrence",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "cfpersonalinjury",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "cfmaintenancehumanfactors",
+        "type": "page",
+        "data": ""
+      }
+    ],
+    "edaHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "edaTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        
+      ],
+      "dateFields": [ 5 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "SORTEDAInvestigationId",
+          "data": "SORTEDAInvestigationId",
+          "width": "0%",
+          "visible": false
+        },
+        {
+          "title": "EDA Ref #",
+          "data": "EDARefNo",
+          "width": "10%"
+        },
+        {
+          "title": "SORT Ref #",
+          "data": "SORTRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "SORT Title",
+          "data": "SORTTitle",
+          "width": "30%"
+        },
+        {
+          "title": "Assigned By",
+          "data": "AssignedByName",
+          "width": "25%"
+        },
+        {
+          "title": "Target Date",
+          "data": "TargetDate",
+          "width": "15%"
+        },
+        {
+          "title": "Status",
+          "data": "EDAStatusName",
+          "width": "15%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

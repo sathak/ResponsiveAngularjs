@@ -1,0 +1,348 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortFilterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [],
+        "templateOptions": {
+          "label": "Occ. Location :",
+          "placeholder": "Occurance Location ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "SORTRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "Ref no."
+        }
+      },
+      {
+        "key": "ReportTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title :",
+          "placeholder": "Report Title.."
+        }
+      },
+      {
+        "key": "SORTstatus",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [],
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "SORTstatusName",
+            "dataField": "SORTstatusId",
+            "defaultField": "SORTstatus"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "OccuranceFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurance From:",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": "Control Expiry Date is required."
+        }
+      },
+      {
+        "key": "OccuranceTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "To:",
+          "placeholder": "To..",
+          "required": "no"
+        }
+      },
+      {
+        "key": "SubmittedFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Reported From:",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "SubmittedTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "To:",
+          "placeholder": "To..",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "ReportedById",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Reported by :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "ReportedByName",
+            "dataField": "ReportedById",
+            "defaultField": "SORTReportedBy"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "TypeOfOperationId",
+        "type": "multiselectcheckbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Type of Opr. :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "TypeOfOperation"
+          },
+          "items": []
+        }
+      },
+	  {
+        "key": "SIL",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [],
+        "templateOptions": {
+          "label": "Assinged SIL :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "SILName",
+            "dataField": "SILId"
+          },
+          "items": [
+		  {"SILId":1,"SILName":"SIL 1"},
+		  {"SILId":2,"SILName":"SIL 2"},
+		  {"SILId":3,"SILName":"Pending"},
+		  {"SILId":4,"SILName":"Not Assigned"},
+		  {"SILId":5,"SILName":"Assigned"}]
+        }
+      },
+      {
+        "key": "ClosedDateFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Closing From:",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "ClosedDateTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "To:",
+          "placeholder": "To..",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "EDA",
+        "type": "radio",
+        "group": "eda",
+        "data": "-1",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Has EDA :",
+          "items": [
+		   {
+              "suffixLabel": true,
+              "value": 2,
+              "label": "ALL"
+            },
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "EDA is required."
+        }
+      }
+    ],
+    "sortmgmtFields": [
+      {
+        "key": "page1",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page2",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page3",
+        "type": "page",
+        "data": ""
+      }
+    ]
+  },
+  "tables": {
+    "sortmgmtTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [],
+      "dateFields": [
+        4
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": []
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "SORTId",
+          "data": "SORTId",
+          "width": "10%",
+          "visible": false
+        },
+        {
+          "title": "Ref#",
+          "data": "SORTRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Originator Clock #",
+          "data": "ClockNo",
+          "width": "5%"
+        },
+        {
+          "title": "Title",
+          "data": "ReportTitle",
+          "width": "40%"
+        },
+        {
+          "title": "Submitted On",
+          "data": "LastUpdateDate",
+          "width": "5%"
+        },
+        {
+          "title": "Assigned SIL",
+          "data": "AssingedSIL",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "SORTstatusName",
+          "width": "5%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {}
+}

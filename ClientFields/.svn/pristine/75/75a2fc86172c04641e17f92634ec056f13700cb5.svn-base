@@ -1,0 +1,111 @@
+{
+  "breadcrumbs": [
+    //{
+    //  "class": "fa fa-home",
+    //  "title": "Home",
+    //  "url": "dashboard"
+    //},
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+   
+  },
+  "tables": {
+    "occuranceTable": {
+      "order": [
+        [ 0, "asc" ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ 3, 4 ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [
+        {
+          "extend": "pdfHtml5",
+          "text": "Print",
+          "download": "open",
+          "orientation": "portrait",
+          "className": "fa fa-print",
+          "pageSize": "A4",
+          "title": "Safety Occurance Report Transmittal (SORT)",
+          "exportOptions": {
+            "columns": [ 0, 1, 2 ]
+          },
+          "message": "Date",
+          "customize": "function(doc) {console.log(doc);doc.content[1].text = navcon.getCurrentDate('DD/MM/YYYY HH:MM');}"
+        }
+      ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "ID",
+          "data": "id",
+          "width": "0%"
+
+        },
+        {
+          "title": "Ref#",
+          "data": "refNo",
+          "width": "5%",
+          "className": "all"
+        },
+        {
+          "title": "Date of Occurance",
+          "data": "DOC",
+          "width": "15%",
+          "className": "all"
+        },
+        {
+          "title": "Title",
+          "data": "title",
+          "width": "40%",
+          "className": "desktop"
+        },
+        {
+          "title": "Submitted On",
+          "data": "SubmittedOn",
+          "width": "10%"
+        },
+        {
+          "title": "Location",
+          "data": "dept",
+          "width": "20%"
+        },
+        {
+          "title": "Status",
+          "data": "status",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+   
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Bulletin Management",
+      "url": "news"
+    }
+  ],
+  "fields": {
+    "newsFields": [
+      {
+        "key": "fieldConfig",
+        "type": "label",
+        "data": "",
+        "save": false,
+        "title": "News Announcement",
+        "primaryKey": "NewsAnnouncementId",
+        "displayKey": "NewsTitle"
+      },
+      {
+        "key": "NewsAnnouncementId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "NewsTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Title :",
+          "placeholder": "Enter Title..",
+          "required": "yes",
+          "requiredMessage": "Title is required."
+        }
+      },
+      {
+        "key": "EffectiveDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Effective Date :",
+          "placeholder": "dd/mm/yyyy",
+          "required": "yes",
+          "requiredMessage": "Effective Date is required.",
+          "compareDateToday": true,
+          "compareDateBy": "<",
+          "compareDateMessage": "Effective Date should be in past."
+        }
+      },
+      {
+        "key": "ExpiryDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Expiry Date :",
+          "placeholder": "dd/mm/yyyy",
+          "required": "yes",
+          "requiredMessage": "Expiry Date is required.",
+          "compareDateToday": true,
+          "compareDateBy": "<",
+          "compareDateMessage": "Expiry Date should be in past."
+        }
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [],
+        "templateOptions": {
+          "label": "Attachment",
+          "required": "yes",
+          "key": "attachmentid",
+          "folderType": "NewsAnnouncements",
+		      "agreeText": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "multipleFile": false,
+          "fileType": [
+            "jpeg",
+            "jpg",
+            "png"
+          ]
+        }
+      },
+      {
+        "key": "IsPublish",
+        "type": "radio",
+        "group": "publish",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Publish :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "Yes"
+        }
+      },
+      {
+        "key": "Summary",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "30",
+        "data": "",
+        "templateOptions": {
+          "label": "Summary :",
+          "placeholder": "Enter Summary..",
+          "required": "no",
+          "maxlength": 1200,
+          "maxlengthMessage": "Maximum 1200 characters only allowed."
+        }
+      },
+      {
+        "key": "Comments",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "30",
+        "data": "",
+        "templateOptions": {
+          "label": "Comments :",
+          "placeholder": "Enter Comments..",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "newsTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 2,3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "News Id",
+          "data": "NewsAnnouncementId",
+          "visible": false
+        },
+        {
+          "title": "Title",
+          "data": "NewsTitle",
+          "width": "40%"
+        },
+        {
+          "title": "Start Date",
+          "data": "EffectiveDate",
+          "width": "80px"
+        },
+        {
+          "title": "End Date",
+          "data": "ExpiryDate",
+          "width": "80px"
+        },
+        {
+          "title": "Publish",
+          "data": "IsPublish",
+          "width": "50px"
+        },
+        {
+          "title": "Summary",
+          "data": "Summary"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortmgmtFields": [
+      {
+        "key": "page1",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page2",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page3",
+        "type": "page",
+        "data": ""
+      }
+    ]
+
+  },
+  "tables": {
+    "sortmgmtTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+      ],
+      "dateFields": [ 4 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "SORTId",
+          "data": "SORTId",
+          "width": "10%",
+          "visible": false
+        },
+        {
+          "title": "Ref#",
+          "data": "SORTRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Originator Clock #",
+          "data": "ClockNo",
+          "width": "5%"
+        },
+        {
+          "title": "Title",
+          "data": "ReportTitle",
+          "width": "40%"
+        },
+        {
+          "title": "Submitted On",
+          "data": "LastUpdateDate",
+          "width": "5%"
+        },
+        {
+          "title": "Assigned SIL",
+          "data": "AssingedSIL",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "SORTstatusName",
+          "width": "5%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

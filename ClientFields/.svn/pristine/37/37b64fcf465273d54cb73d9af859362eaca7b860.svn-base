@@ -1,0 +1,218 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-book",
+      "title": "Master Configuration",
+      "url": "masterconfiguration"
+    }
+  ],
+  "fields": {
+    "masterFields": [
+      {
+        "key": "ConfigType",
+        "type": "select",
+        "data": [],
+        "templateOptions": {
+          "label": "Type",
+          "placeholder": "Select type...",
+          "required": "yes",
+          "requiredMessage": "Type required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "ConfigType",
+            "defaultField": "ConfigType"
+          },
+          "items": [
+            {
+              "ConfigType": "Type 1",
+              "DisplayText": "Type 1"
+            },
+            {
+              "ConfigType": "Type 2",
+              "DisplayText": "Type 2"
+            },
+            {
+              "ConfigType": "Type 3",
+              "DisplayText": "Type 3"
+            }
+          ]
+        }
+      }
+    ],
+    "masterConfigurationFields": [
+      {
+        "key": "CommonConfigId",
+        "type": "label",
+        "data": "0",
+        "primarykey": true,
+        "datatype": "integer"
+      },
+	  {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ConfigType",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "DisplayType",
+        "type": "input",
+        "data": "",
+        "readonly": true,
+		"disabled":true,
+        "templateOptions": {
+          "label": "Type",
+          "required": "yes",
+          "requiredMessage": "Type required."
+        }
+      },
+      {
+        "key": "ParentId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Parent Type",
+          "placeholder": "Select parent type...",
+          "required": "no",
+          "requiredMessage": "Parent type required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "ParentDropdown"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "DisplayText",
+        "name": "displaytext",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Title",
+          "focus": false,
+          "placeholder": "Enter title..",
+          "required": "yes",
+          "requiredMessage": "Title required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed.",
+          "pattern": "^[a-zA-Z0-9 -]*$",
+          "patternMessage": "Alphabets and numbers only allowed.",
+          "isExistData": "masterConfigurationTableData",
+          "isExistMessage": "Title already exists.."
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description",
+          "placeholder": "Enter description..",
+          "required": "no",
+          "requiredMessage": "Description required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ]
+  },
+  "tables": {
+    "masterConfigurationTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          15,
+          20,
+          -1
+        ],
+        [
+          5,
+          15,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+           
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            
+          ]
+        }
+      ],
+      "filterBar": {
+
+      },
+      "autoWidth": {
+
+      },
+      "columns": [
+        {
+          "title": "Title",
+          "data": "DisplayText",
+          "width": "30%"
+        },
+        {
+          "title": "Parent Type",
+          "data": "ParentName",
+          "width": "30%"
+        },
+        {
+          "title": "Description",
+          "data": "Description",
+          "width": "30%"
+        }
+      ]
+    }
+  }
+}

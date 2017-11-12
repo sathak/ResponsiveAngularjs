@@ -1,0 +1,194 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+
+    "sortclosingFields": [
+      {
+        "key": "ClosingDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Closing Date :",
+          "placeholder": "Select Date",
+          "required": "yes",
+          "requiredMessage": "Closing Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": ">=",
+          "compareDateMessage": "Target Date should not be a future date.",
+          "tooltip": "Select a Date"
+        }
+      },
+      {
+        "key": "ReasonForClosure",
+        "type": "multiselect",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Reason For Closure :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Reason For Closure is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "text",
+            "dataField": "id",
+            "defaultField": "reportedby"
+          },
+          "items": [
+            {
+              "id": 0,
+              "text": "Investigation Completed"
+            },
+            {
+              "id": 1,
+              "text": "Transferred to HM"
+            },
+            {
+              "id": 2,
+              "text": "Transferred to Quality"
+            },
+            {
+              "id": 3,
+              "text": "Transferred to SHE"
+            },
+            {
+              "id": 4,
+              "text": "Repeated SORT Report"
+            }
+          ]
+        }
+      },
+      {
+        "key": "SheRef",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SHE Ref # :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "SHE Ref is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "QualityRef",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "QUALITY Ref # :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "QUALITY Ref is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SAGMeetingRef",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SAG  Meeting Ref # :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "SAG  Meeting Ref  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px",
+        }
+      },
+      {
+        "key": "SAGMinuteshyperlink",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SAG  Minutes hyperlink :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "SAG  Minutes hyperlink  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px",
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+
+    ]
+
+  },
+  "tables": {
+
+
+  },
+  "tableEditor": {
+
+  }
+}

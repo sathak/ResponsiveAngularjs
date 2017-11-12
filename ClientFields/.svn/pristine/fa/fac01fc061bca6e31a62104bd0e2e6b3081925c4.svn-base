@@ -1,0 +1,163 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "icon-user",
+      "title": "My Profile",
+      "url": "userprofile"
+    }
+  ],
+  "fields": {
+    "userProfileFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "documentId",
+        "type": "label",
+        "data": 0,
+        "save": false
+      },
+      {
+        "key": "DocumentName",
+        "type": "label",
+        "data": 0,
+        "save": false
+      },
+      {
+        "key": "img",
+        "type": "photoupload",
+        "save": true,
+        "ischangeable": true,
+        "readonly": true,
+        "data": [],
+        "templateOptions": {
+          "label": "Id",
+          "required": "no",
+          "minlength": 2,
+          "key": "documentId",
+          "keyName": "DocumentName",
+          "folderType": "users",
+          "agreeText": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "fileType": [
+            "jpeg",
+            "jpg",
+            "png",
+            "gif"
+          ]
+        }
+      },
+      {
+        "key": "ClockNumber",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Clock Number :",
+          "placeholder": "",
+          "required": "no"
+        }
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "User Name :",
+          "placeholder": "",
+          "required": "no"
+        }
+      },
+      {
+        "key": "FirstName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "First Name :",
+          "placeholder": "Enter First name..",
+          "required": "yes",
+          "requiredMessage": "First name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "LastName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Last Name :",
+          "placeholder": "Enter Last name..",
+          "required": "no",
+          "requiredMessage": "Last name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "PhoneNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Mobile Number :",
+          "placeholder": "Enter Mobile Number..",
+          "required": "no",
+          "requiredMessage": "Mobile Number is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "Email",
+        "type": "email",
+        "data": "",
+        "templateOptions": {
+          "label": "E-mail :",
+          "placeholder": "Enter E-mail..",
+          "required": "no",
+          "requiredMessage": "E-mail is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "emailMessage": "Invalid email"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ]
+  }
+}

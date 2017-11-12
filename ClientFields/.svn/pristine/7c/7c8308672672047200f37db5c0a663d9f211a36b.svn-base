@@ -1,0 +1,223 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Hazard",
+      "url": "hazard"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Risk Aggregation",
+      "url": "riskaggregation"
+    }
+  ],
+  "fields": {
+    "summaryAccidentStateFields": [
+      {
+        "key": "ContributingHazards",
+        "type": "tableeditor",
+        "data": [ ],
+        "disabled": true,
+        "templateOptions": {
+          "settings": "ContributingHazardsTableEditor",
+          "showAdd": false,
+          "showDel": false
+        }
+      }
+    ]
+  },
+  "tables": {
+    "summaryAccidentStateTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Accident ID",
+          "data": "AccidentId",
+          "width": "5%"
+        },
+        {
+          "title": "Accident Title",
+          "data": "AccidentTilte",
+          "width": "20%"
+        },
+        {
+          "title": "Risk Class",
+          "data": "RiskClassName",
+          "width": "10%"
+        },
+        {
+          "title": "Target Risk Class",
+          "data": "TargetRiskClassName",
+          "width": "25%"
+        },
+        {
+          "title": "Linked Hazards",
+          "data": "LinkedHazards",
+          "width": "5%"
+        },
+        {
+          "title": "Current Probability",
+          "data": "CurrentProbability",
+          "width": "10%"
+        },
+        {
+          "title": "Current Severity",
+          "data": "CurrentSeverity",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "Status",
+          "width": "5%"
+        }
+      ]
+    },
+    "contributingHazardsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "SI #",
+          "data": null,
+          "width": "10%"
+        },
+        {
+          "title": "Hazard ID",
+          "data": "HazardId",
+          "width": "10%"
+        },
+        {
+          "title": "Hazard Title",
+          "data": "HazardName",
+          "width": "30%"
+        },
+        {
+          "title": "Linked Causes",
+          "data": "LinkedCauses",
+          "width": "15%"
+        },
+        {
+          "title": "Pre-Mit Probability",
+          "data": "PreMitigationProbability",
+          "width": "25%"
+        },
+        {
+          "title": "Post-Mit Probability",
+          "data": "PostMitigationProbability",
+          "width": "25%"
+        },
+        {
+          "title": "Pre-Mit Severity",
+          "data": "PreMitigationSeverity",
+          "width": "15%"
+        },
+        {
+          "title": "Post-Mit Severity",
+          "data": "PostMitigationSeverity",
+          "width": "15%"
+        },
+        {
+          "title": "Accident ID / Risk Class",
+          "data": "AccidentId",
+          "width": "15%"
+        },
+        {
+          "title": "Status",
+          "data": "HazardStatusName",
+          "width": "15%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

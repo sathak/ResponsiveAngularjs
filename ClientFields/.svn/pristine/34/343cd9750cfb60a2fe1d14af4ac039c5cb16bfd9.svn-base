@@ -1,0 +1,318 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "edaGeneralInformationFields": [
+      {
+        "key": "EDAGeneralID",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTEDAInvestigationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "EDARefNo",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "EDA Reference No :",
+          "required": false
+        }
+      },
+      {
+        "key": "SORTRefNo",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "SORT Ref # :",
+          "required": false
+        }
+      },
+      {
+        "key": "BaseLocation",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Base Location :",
+          "required": false
+        }
+      },
+      {
+        "key": "LeadInvestigator",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Lead Investigator :",
+          "required": false
+        }
+      },
+      {
+        "key": "PlatformEquipmentType",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Platform / Equipment Type :",
+          "required": false
+        }
+      },
+      {
+        "key": "LeadInvestigatorTelContactNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Tel Contact No :",
+          "placeholder": "Enter Tel Contact No",
+          "required": "no",
+          "requiredMessage": "Tel Contact No is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ProductSerialNo",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Product Serial No :",
+          "required": false
+        }
+      },
+      {
+        "key": "SecondInvestigator",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "2nd Investigator :",
+          "required": false
+        }
+      },
+      {
+        "key": "PlatformZone",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Platform Zone :",
+          "required": false
+        }
+      },
+      {
+        "key": "SecondInvestigatorTelContactNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Tel Contact No :",
+          "placeholder": "Enter Tel Contact No",
+          "required": "no",
+          "requiredMessage": "Tel Contact No is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "EngineType",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Engine Type :",
+          "required": false
+        }
+      },
+      {
+        "key": "EDAStatus",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "EDA Status :",
+          "required": false
+        }
+      },
+      {
+        "key": "EngineSerNo",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Engine Ser No :",
+          "required": false
+        }
+      },
+      {
+        "key": "EventDateTime",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Date & TIme Of Event :",
+          "required": false
+        }
+      },
+      {
+        "key": "OperationType",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Type Of Operation :",
+          "required": false
+        }
+      },
+      {
+        "key": "ShiftDetails",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Shift Details :",
+          "placeholder": "Enter Shift Details",
+          "required": "no",
+          "requiredMessage": "Shift Details is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ElapsedStartTime",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Elapsed Time Since Start Of Shift :",
+          "placeholder": "Enter Elapsed Time Since Start Of Shift ",
+          "required": "no",
+          "requiredMessage": "Elapsed Time Since Start Of Shift is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "ElapsedEndTime",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Time Until End Of Shift  :",
+          "placeholder": "Enter Time Until End Of Shift ",
+          "required": "no",
+          "requiredMessage": "Time Until End Of Shift is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "DateInvestigatedFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Date Investigated (From):",
+          "placeholder": "Select Date Investigated",
+          "required": "yes",
+          "requiredMessage": "Date Investigated is required.",
+          "minlength": 2,
+          "compareDateToday": true,
+          "compareDateBy": ">",
+          "compareDateMessage": "Date Investigated should not be future date."
+        }
+      },
+      {
+        "key": "DateInvestigatedTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Date Investigated (To):",
+          "placeholder": "Select Date Investigated",
+          "required": "yes",
+          "requiredMessage": "Date Investigated is required.",
+          "minlength": 2,
+          "compareDateTo": "DateInvestigatedFrom",
+          "compareDateBy": "<",
+          "compareDateMessage": "To date should be lesser than From date."
+        }
+      },
+      {
+        "key": "ManagerRemarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "readonly": true,
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "no",
+
+          "hideLabel": false,
+
+        }
+      },
+      {
+        "key": "AdditionalInfo",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Additional Information :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": []
+      }
+    ]
+  },
+  "tables": {
+  },
+  "tableEditor": {
+  }
+}

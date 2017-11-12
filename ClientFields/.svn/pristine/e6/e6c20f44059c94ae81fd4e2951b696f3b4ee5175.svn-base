@@ -1,0 +1,227 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Project Compliance Configuration",
+      "url": "pccrequirements"
+    }
+  ],
+  "fields": {
+    "pccRequirementsFields": [
+      {
+        "key": "PSMMQuestionId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CommonConfigId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "Master",
+        "type": "label",
+        "data": true
+      },
+      {
+        "key": "QuestionCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "ID No :",
+          "readyonly": true,
+          "placeholder": "Enter ID No",
+          "required": "no",
+          "requiredMessage": "ID No is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "QuestionTitle",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Question Title :",
+          "placeholder": "Enter Question Title",
+          "required": "yes",
+          "requiredMessage": "Question Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Question Title already exists.."
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter Description",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "RequirementTitle",
+        "type": "labeldata",
+        "data": "Safety Accountability and Responsibility",
+        "templateOptions": {
+          "label": "Requirement :",
+          "required": false
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "pccRequirementsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 15,
+      "data": [
+
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Requirement ID",
+          "data": "RequirementID",
+          "visible": false
+        },
+        {
+          "title": "Sl.No",
+          "data": null,
+          "width": "10%"
+        },
+        {
+          "title": "Requirement",
+          "data": "RequirementTitle",
+          "width": "50%"
+        }
+      ]
+    },
+    "pccQuestionsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "columns": [
+        
+        {
+          "title": "Sl.No",
+          "data": null,
+          "width": "10%"
+        },
+        {
+          "title": "Question",
+          "data": "QuestionTitle",
+          "width": "50%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

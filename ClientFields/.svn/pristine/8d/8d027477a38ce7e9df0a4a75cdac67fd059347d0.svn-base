@@ -1,0 +1,199 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Project Maturity Configuration",
+      "url": "pmcleadingindicatorscalculation"
+    }
+  ],
+  "fields": {
+    "pmcLeadingIndicatorsCalculationFields": [
+      {
+        "key": "PSMMMaturityTemplateId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PSMMLeadingIndicatorsCalculationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PSMMMaturityLeadingIndicatorsCalculation",
+        "type": "htmltable",
+        "data": [],
+        "primarykey": "",
+        "section": "",
+        "subsection": "IndicatorTitle",
+        "columns": [
+          "Change",
+          "CompetenceAndTraining",
+          "SafetyAccountabilityAndResponsibility",
+          "CompetenceAndTraining",
+          "SafetyRequirements",
+          "ProductSafetyManagementSystem",
+          "SuppliersManagement",
+          "ProductSafetyHazardManagement",
+          "SafetyAssurance",
+          "DemonstratingProductSafety",
+          "ConfigurationControl",
+          "Change",
+          "ContingencyArrangements",
+          "Investigation",
+          "SafetyPromotion",
+          "ContinuousImprovement"
+        ],
+        "labelcolumns": [
+          "Change",
+          "CompetenceAndTraining",
+          "SafetyAccountabilityAndResponsibility",
+          "CompetenceAndTraining",
+          "SafetyRequirements",
+          "ProductSafetyManagementSystem",
+          "SuppliersManagement",
+          "ProductSafetyHazardManagement",
+          "SafetyAssurance",
+          "DemonstratingProductSafety",
+          "ConfigurationControl",
+          "Change",
+          "ContingencyArrangements",
+          "Investigation",
+          "SafetyPromotion",
+          "ContinuousImprovement"
+        ]
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "pmcLeadingIndicatorsCalculationHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "pmcTemplatesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+      ],
+      "dateFields": [
+        3
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+            0
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl.No",
+          "data": null,
+          "width": "10px",
+          "serialNoColumn": 0
+        },
+        {
+          "title": "Template",
+          "data": "TemplateTitle"
+        },
+        {
+          "title": "Projects Assigned",
+          "data": "ProjectAssigned",
+          "width": "40%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedOn",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+  }
+}

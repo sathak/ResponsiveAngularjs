@@ -1,0 +1,202 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-key",
+      "title": "Security",
+      "url": "useraccessrights"
+    }
+  ],
+  "fields": {
+    "userAccessRightsFields": [
+      {
+        "key": "RoleId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Role :",
+          "placeholder": "Select Role..",
+          "required": "yes",
+          "requiredMessage": "Role is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "RoleName",
+            "dataField": "RoleId",
+            "defaultField": "Roles"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "RightsDetails",
+        "type": "tree",
+        "data": "",
+        "refkey": "RightsId",
+        "name": "userAccessRights",
+        "templateOptions": {
+
+        },
+        "scopevariable": "rightsForm",
+        "treevariable": "userAccessRightsTree",        
+        "columns": [
+          "Add",
+          "Edit",
+          "Delete",
+          "View",
+          "Print",
+          "Approve",
+          "Deny"
+        ],
+        "labelcolumns": [ "Add", "Edit", "Delete", "View", "Print", "Approve", "Deny All" ]
+      },
+      {
+        "key": "RightsId",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "userAccessRightsHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rationale :",
+          "placeholder": "Insert Rationale Why Decision Is Made",
+          "required": "yes",
+          "requiredMessage": "Rationale is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "trees": {
+    "userAccessRightsTree": {
+      "core": {
+        "treeType": "userAccessRights",
+        "check_callback": true,
+        "data": [ ]
+      },
+      "plugins": [ "grid", "types", "search" ],
+      "grid": {
+        "columns": [
+          {
+            "width": 450,
+            "header": "Menu - Sub Menu"
+          },
+          {
+            "header": "<div style='text-align:center;'>Add</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Add",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Edit</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Edit",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Delete</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Delete",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>View</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "View",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Print</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "PRINT",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Approve</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Approve",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "<div style='text-align:center;'>Deny All</div>",
+            "width": 100,
+            "value": "function(node){return navcon.loadData(node,this);}",
+            "field": "Deny",
+            "fieldType": "checkbox"
+          },
+          {
+            "header": "RightsDetailsId",
+            "width": "0px",
+            "value": "RightsDetailsId"
+          },
+          {
+            "header": "RightsId",
+            "width": "0px",
+            "value": "RightsId"
+          },
+          {
+            "header": "id",
+            "width": "0px",
+            "value": "id"
+          }
+        ]
+      }
+    }
+  }
+}

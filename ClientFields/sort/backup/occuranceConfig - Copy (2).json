@@ -1,0 +1,2522 @@
+{
+  "breadcrumbs": [
+    //{
+    //  "class": "fa fa-home",
+    //  "title": "Home",
+    //  "url": "dashboard"
+    //},
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortPage1Fields": [
+      {
+        "key": "ReportedBy",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Reported by :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Reported by"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ReportedBy",
+            "dataField": "ReportedID",
+            "defaultField": "ReportedDetails",
+            "addNew": "yes"
+          },
+          "items": [
+            {
+              "ReportedID": 0,
+              "ReportedBy": "Self"
+            },
+            {
+              "ReportedID": 1,
+              "ReportedBy": "John Smith"
+            },
+            {
+              "ReportedID": 2,
+              "ReportedBy": "John"
+            }
+          ]
+        }
+      },
+      {
+        "key": "Anonymous",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Anonymous",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Anonymous",
+          "suffixLabelHide": true
+        }
+      },
+
+      {
+        "key": "Confidential",
+        "name": "Confidential",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Confidential :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "ContactDetails",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Contact details :",
+          "placeholder": "Contact Details",
+          "required": "yes",
+          "requiredMessage": "Contact Details required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Contact details already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ClockNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Clock #:",
+          "placeholder": "Clock #",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "",
+          "maxlength": 20,
+          "maxlengthMessage": "",
+          "isExistData": "",
+          "isExistMessage": ""
+        }
+      },
+      {
+        "key": "ReportTitle",
+        "type": "input",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title:",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "datetimepicker1",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Date & time of occurance :",
+          "placeholder": "Select Date & time",
+          "required": "no",
+          "requiredMessage": "Date & time of occurance required."
+        }
+      },
+      {
+        "key": "BaseOrDepartment",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Base/Department :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Base / Department"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseOrDepartment",
+            "dataField": "BaseOrDepartmentID",
+            "defaultField": "BaseOrDepartmentDetails",
+            "groupBy": "Department"
+          },
+          "items": [
+            {
+              "BaseOrDepartmentID": "0",
+              "BaseOrDepartment": "Flight Safety",
+              "Department": "Al Shaheen"
+            },
+            {
+              "BaseOrDepartmentID": "1",
+              "BaseOrDepartment": "Maintenance",
+              "Department": "Al Shaheen"
+            },
+            {
+              "BaseOrDepartmentID": "2",
+              "BaseOrDepartment": "Air Operations",
+              "Department": "Al Shaheen"
+            },
+            {
+              "BaseOrDepartmentID": "3",
+              "BaseOrDepartment": "Administration",
+              "Department": "Al Shaheen"
+            },
+            {
+              "BaseOrDepartmentID": "4",
+              "BaseOrDepartment": "Flight Safety",
+              "Department": "Jubail"
+            },
+            {
+              "BaseOrDepartmentID": "5",
+              "BaseOrDepartment": "Maintenance",
+              "Department": "Jubail"
+            },
+            {
+              "BaseOrDepartmentID": "6",
+              "BaseOrDepartment": "Air Operations",
+              "Department": "Jubail"
+            },
+            {
+              "BaseOrDepartmentID": "7",
+              "BaseOrDepartment": "Administration",
+              "Department": "Purchase"
+            },
+            {
+              "BaseOrDepartmentID": "8",
+              "BaseOrDepartment": "Flight Safety",
+              "Department": "Dhahran"
+            },
+            {
+              "BaseOrDepartmentID": "9",
+              "BaseOrDepartment": "Maintenance",
+              "Department": "Dhahran"
+            },
+            {
+              "BaseOrDepartmentID": "10",
+              "BaseOrDepartment": "Air Operations",
+              "Department": "Dhahran"
+            },
+            {
+              "BaseOrDepartmentID": "11",
+              "BaseOrDepartment": "Administration",
+              "Department": "Dhahran"
+            },
+            {
+              "BaseOrDepartmentID": "12",
+              "BaseOrDepartment": "Other",
+              "Department": "Other Bases"
+            }
+
+          ]
+        }
+      },
+      {
+        "key": "TypeOfOperation",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Type of operation :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Type of operation"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "TypeOfOperation",
+            "dataField": "TypeOfOperationID",
+            "defaultField": "TypeOfOperationDetails"
+          },
+          "items": [
+            {
+              "TypeOfOperationID": 0,
+              "TypeOfOperation": "Flight"
+            },
+            {
+              "TypeOfOperationID": 1,
+              "TypeOfOperation": "Maintenance"
+            },
+            {
+              "TypeOfOperationID": 2,
+              "TypeOfOperation": "Supply/Logistics"
+            }
+          ]
+        }
+      },
+      {
+        "key": "ProductsAffected",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "EmpInfoId",
+        "altkey": "ProductsAffected",
+        "templateOptions": {
+          "label": "Products Affected",
+          "placeholder": "Select Products Affected.."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProductsAffected",
+            "dataField": "ProductsAffectedId",
+            "defaultField": "ProductsAffectedDetails",
+            //"groupBy": "Group",
+            "addNew": "yes"
+          },
+          "items": [
+            {
+              "ProductsAffectedId": 0,
+              "ProductsAffected": "Typhoon MK"
+              //"Group": "One"
+            },
+            {
+              "ProductsAffectedId": 1,
+              "ProductsAffected": "PC21"
+              //"Group": "One"
+            },
+            {
+              "ProductsAffectedId": 2,
+              "ProductsAffected": "Tornado"
+              //"Group": "One"
+            },
+            {
+              "ProductsAffectedId": 3,
+              "ProductsAffected": "Cirrus"
+              //"Group": "Two"
+            },
+            {
+              "ProductsAffectedId": 4,
+              "ProductsAffected": "Hawk MK"
+              //"Group": "Two"
+            },
+            {
+              "ProductsAffectedId": 4,
+              "ProductsAffected": "Ground Support Equipment"
+              //"Group": "Three"
+            },
+            {
+              "ProductsAffectedId": 5,
+              "ProductsAffected": "Other1"
+              //"Group": "Three"
+            }
+          ]
+        }
+      },
+      {
+        "key": "ProductSerialNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Product serial no. :",
+          "placeholder": "Product serial no.",
+          "required": "no",
+          "requiredMessage": "Product serial no.  required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Product serial no. already exists.."
+        }
+      },
+      {
+        "key": "lblInjuryPersonal",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Injury to personnel:",
+          "required": false
+        }
+      },
+      {
+        "key": "Personnel1",
+        "type": "radio",
+        "group": "personal",
+        "data": "yes",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Injury to personnel:",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "value1": "yes",
+          "value2": "no",
+          "label1": "Yes",
+          "label2": "No",
+          "required": "yes"
+        }
+      },
+      {
+        "key": "Personnel2",
+        "type": "radio",
+        "group": "personal",
+        "data": false,
+        "disabled": "",
+        "templateOptions": {
+          "label": "No",
+          "hideLabel": true,
+          "suffixLabel": "No",
+          "suffixLabelHide": true
+
+        }
+      },
+
+      {
+        "key": "OccurrenceDetails",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurrence Details:",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "lblDamageToEquipment",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Damage To Equipment:",
+          "required": false
+        }
+      },
+      {
+        "key": "DamageToEquipment1",
+        "type": "radio",
+        "group": "Equipment",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Damage To Equipment:",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "value1": "yes",
+          "value2": "no",
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "DamageToEquipment2",
+        "type": "radio",
+        "group": "Equipment",
+        "data": false,
+        "disabled": "",
+        "templateOptions": {
+          "label": "No",
+          "hideLabel": true,
+          "suffixLabel": "No",
+          "suffixLabelHide": true
+
+        }
+      },
+      {
+        "key": "lblDamageToEnvironment",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Damage To Environment:",
+          "required": false
+        }
+      },
+      {
+        "key": "DamageToEnvironment1",
+        "type": "radio",
+        "group": "Environment",
+        "data": "yes",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Damage To Environment:",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "value1": "yes",
+          "value2": "no",
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "DamageToEnvironment2",
+        "type": "radio",
+        "group": "Environment",
+        "data": false,
+        "disabled": "",
+        "templateOptions": {
+          "label": "No",
+          "hideLabel": true,
+          "suffixLabel": "No",
+          "suffixLabelHide": true
+
+        }
+      },
+      {
+        "key": "ITARwarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "ITAR warning disclaimer",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "ITAR warning disclaimer",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ],
+    "sortPage2Fields": [
+      {
+        "key": "OccuranceType",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Occurance Type :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Occurance type is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "OccuranceType",
+            "dataField": "OccuranceTypeID",
+            "defaultField": "OccuranceTypeDetails"
+          },
+          "items": [
+            {
+              "OccuranceTypeID": 0,
+              "OccuranceType": "Select"
+            },
+            {
+              "OccuranceTypeID": 1,
+              "OccuranceType": "Ground"
+            },
+            {
+              "OccuranceTypeID": 2,
+              "OccuranceType": "Flying Operations"
+            },
+            {
+              "OccuranceTypeID": 3,
+              "OccuranceType": "Marine"
+            },
+            {
+              "OccuranceTypeID": 4,
+              "OccuranceType": "Land Vehicle"
+            }
+          ]
+        }
+      },
+      {
+        "key": "TypeOfFlightOccurence",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Type of Flight Occurrence:",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Type of flight occurrence is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "TypeOfFlightOccurence",
+            "dataField": "TypeOfFlightOccurenceID",
+            "defaultField": "TypeOfFlightOccurenceDetails"
+          },
+          "items": [
+            {
+              "TypeOfFlightOccurenceID": 0,
+              "TypeOfFlightOccurence": "Select"
+            },
+            {
+              "TypeOfFlightOccurenceID": 1,
+              "TypeOfFlightOccurence": "Air Proximity"
+            },
+            {
+              "TypeOfFlightOccurenceID": 2,
+              "TypeOfFlightOccurence": "Air Traffic Management"
+            },
+            {
+              "TypeOfFlightOccurenceID": 3,
+              "TypeOfFlightOccurence": "Bird Strike"
+            }
+          ]
+        }
+      },
+      {
+        "key": "LocBuildingNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Building No :",
+          "placeholder": "Enter Building No.",
+          "required": "yes",
+          "requiredMessage": "Building No. is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Building No. already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "LocDynamicNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Squadron No :",
+          "placeholder": "Enter Squadron No.",
+          "required": "yes",
+          "requiredMessage": "'Conditional based label' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "'Conditional based label' already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "LocArea",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Area :",
+          "placeholder": "Enter Area",
+          "required": "yes",
+          "requiredMessage": "Area is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Area already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "LocOther",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Other :",
+          "placeholder": "Enter Other",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "InjuriesOrganization",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Organization:",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Organization is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "InjuriesOrganization",
+            "dataField": "InjuriesOrganizationID",
+            "defaultField": "InjuriesOrganizationDetails"
+          },
+          "items": [
+            {
+              "InjuriesOrganizationID": 0,
+              "InjuriesOrganization": "BAE System"
+            },
+            {
+              "InjuriesOrganizationID": 1,
+              "InjuriesOrganization": "RSAF/RSNF"
+            },
+            {
+              "InjuriesOrganizationID": 2,
+              "InjuriesOrganization": "Sub-Contractor"
+            },
+            {
+              "InjuriesOrganizationID": 3,
+              "InjuriesOrganization": "Other"
+            }
+          ]
+        }
+      },
+      {
+        "key": "InjuriesFullName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Full Name :",
+          "placeholder": "Enter Full Name ",
+          "required": "yes",
+          "requiredMessage": "Full Name  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "InjuriesDescribe",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Extent of Injuries:",
+          "placeholder": "Describe any Injuries to personnel ",
+          "required": "yes",
+          "requiredMessage": "Extent of Injuries  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "LblEmergency",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Emergency Services Attended :",
+          "required": false
+        }
+      },
+      {
+        "key": "ChkAmbulance",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Ambulance",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Ambulance",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "ChkPolice",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Police",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Police",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "ChkFire",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Fire",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Fire",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "RdFirstAidApplied",
+        "type": "radio",
+        "group": "FirstAidApplied",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "First Aid Applied :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "DamageToEnv",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "DamageToEnvId",
+        "altkey": "DamageToEnv",
+        "templateOptions": {
+          "label": "Damage to Environment :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DamageToEnv",
+            "dataField": "DamageToEnvID",
+            "defaultField": "DamageToEnvDetails"
+          },
+          "items": [
+            {
+              "DamageToEnvID": 0,
+              "DamageToEnv": "Land"
+            },
+            {
+              "DamageToEnvID": 1,
+              "DamageToEnv": "Air"
+            },
+            {
+              "DamageToEnvID": 2,
+              "DamageToEnv": "Water"
+            },
+            {
+              "InjuriesOrganizationID": 3,
+              "InjuriesOrganization": "Waste"
+            },
+            {
+              "InjuriesOrganizationID": 4,
+              "InjuriesOrganization": "Disturbance"
+            }
+          ]
+        }
+      },
+      {
+        "key": "TxtArExtentofEnv",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Extent of Environmental Damage :",
+          "placeholder": "Describe any damage to Environment ",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "TxtArExtentofEqup",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Extent of Damage to Equipment :",
+          "placeholder": "Describe any damage to Equipment",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "TxtArImmContAction",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Immediate Containment Actions Carried Out :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "LblPersDeptInformed",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Personnel or Department Informed :",
+          "required": false
+        }
+      },
+      {
+        "key": "ChkLineManager",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Line Manager",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Line Manager",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "ChkProdSafetyMgr",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Product Safety Manager",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Product Safety Manager",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "ChkSHE",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "SHE",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "SHE",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "ChkQuality",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Quality",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Quality",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "ChkHOD",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "HOD",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "HOD",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "TxtWitFullName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Full Name :",
+          "placeholder": "Enter Full Name ",
+          "required": "yes",
+          "requiredMessage": "Full Name  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "TxtWitEmail",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Email :",
+          "placeholder": "Enter Email Address",
+          "required": "yes",
+          "requiredMessage": "Email  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "TxtWitPhoneNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Phone # :",
+          "placeholder": "Enter Phone #",
+          "required": "yes",
+          "requiredMessage": "Phone #  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "MulSelRelatedOccur",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "MulSelRelatedOccurId",
+        "altkey": "MulSelRelatedOccur",
+        "templateOptions": {
+          "label": "Related Occurrences :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "MulSelRelatedOccur",
+            "dataField": "MulSelRelatedOccurID",
+            "defaultField": "MulSelRelatedOccurDetails"
+          },
+          "items": [
+            {
+              "MulSelRelatedOccurID": 0,
+              "MulSelRelatedOccur": "REF001"
+            },
+            {
+              "MulSelRelatedOccurID": 1,
+              "MulSelRelatedOccur": "REF002"
+            },
+            {
+              "MulSelRelatedOccurID": 2,
+              "MulSelRelatedOccur": "REF003"
+            },
+            {
+              "MulSelRelatedOccurID": 3,
+              "MulSelRelatedOccur": "REF004"
+            }
+          ]
+        }
+      },
+      {
+        "key": "RdCustFormsRaised",
+        "type": "radio",
+        "group": "Customer",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Customer forms raised :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "TxtDefineRaisedCustFrm",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Define raised customer forms :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Define raised customer forms  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "FormDocumentId",
+        "type": "label",
+        "data": "0",
+        "datatype": "integer",
+        "templateOptions": {
+        }
+      },
+      {
+        "key": "FUAttachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "AttachmentId",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "ITARwarning",
+        "name": "ITARwarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "ITAR warning disclaimer",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "ITAR warning disclaimer",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+
+    ],
+    "sortAirProximityFields": [
+      {
+        "key": "selRoleDuringOccur",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Role During Occurrence :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "Role During Occurrence is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "RoleDuringOccur",
+            "dataField": "RoleDuringOccurID",
+            "defaultField": "RoleDuringOccurDetails"
+          },
+          "items": [
+            {
+              "RoleDuringOccurID": 0,
+              "RoleDuringOccur": "Pilot"
+            },
+            {
+              "RoleDuringOccurID": 1,
+              "RoleDuringOccur": "Co-pilot"
+            },
+            {
+              "RoleDuringOccurID": 2,
+              "RoleDuringOccur": "Crew"
+            }
+          ]
+        }
+      },
+      {
+        "key": "txtColourScheme",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Colour scheme & external lighting (strobes, HISLs, nav lights etc) :",
+          "placeholder": "Enter colour scheme & external lighting.",
+          "required": "yes",
+          "requiredMessage": "colour scheme & external lighting is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "colour scheme & external lighting already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtRadioCall",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Radio call sign :",
+          "placeholder": "Enter radio call sign",
+          "required": "yes",
+          "requiredMessage": "Radio call sign is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Radio call sign already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtInCommunication",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "In communication with :",
+          "placeholder": "Enter ",
+          "required": "yes",
+          "requiredMessage": "'In communication with' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "'In communication with' already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtTypeOfATC",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Type of ATC service :",
+          "placeholder": "Enter Type of ATC service ",
+          "required": "yes",
+          "requiredMessage": "'Type of ATC service' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "'Type of ATC service' already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtRTFrequency",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": " RT Frequency :",
+          "placeholder": "Enter RT Frequency",
+          "required": "yes",
+          "requiredMessage": "'RT Frequency' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "'RT Frequency' already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "rdSSRTransponder1",
+        "type": "radio",
+        "group": "SSRTransponder1",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "SSR Transponder 1 :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No",
+          "label3": "Not fitted"
+        }
+      },
+      {
+        "key": "rdSSRStatus1",
+        "type": "radio",
+        "group": "SSRStatus1",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No",
+          "label3": "Not fitted"
+        }
+      },
+      {
+        "key": "taSSRDetails1",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": " Details :",
+          "placeholder": "Enter details... ",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "rdSSRTransponder2",
+        "type": "radio",
+        "group": "SSRTransponder2",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "SSR Transponder 2 :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No",
+          "label3": "Not fitted"
+        }
+      },
+      {
+        "key": "rdSSRStatus2",
+        "type": "radio",
+        "group": "SSRStatus2",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No",
+          "label3": "Not fitted"
+        }
+      },
+      {
+        "key": "taSSRDetails2",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": " Details :",
+          "placeholder": "Enter details... ",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "selFlightClassification1",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Classification of flight :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "'Classification of flight' is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "selFlightClassification1",
+            "dataField": "selFlightClassification1ID",
+            "defaultField": "selFlightClassification1Details"
+          },
+          "items": [
+            {
+              "selFlightClassification1ID": 0,
+              "selFlightClassification1": "Scheduled"
+            },
+            {
+              "selFlightClassification1ID": 1,
+              "selFlightClassification1": "Non Scheduled Passenger"
+            },
+            {
+              "selFlightClassification1ID": 2,
+              "selFlightClassification1": "Scheduled Freight"
+            },
+            {
+              "selFlightClassification1ID": 3,
+              "selFlightClassification1": "Non Scheduled Freight"
+            }
+          ]
+        }
+      },
+      {
+        "key": "selFlightClassification2",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "'Classification of flight' is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightClassification2",
+            "dataField": "FlightClassification2ID",
+            "defaultField": "FlightClassification2Details"
+          },
+          "items": [
+            {
+              "FlightClassification2ID": 0,
+              "FlightClassification2": "Commercial"
+            },
+            {
+              "FlightClassification2ID": 1,
+              "FlightClassification2": "Executive"
+            },
+            {
+              "FlightClassification2ID": 2,
+              "FlightClassification2": "Club/Group"
+            },
+            {
+              "FlightClassification2ID": 3,
+              "FlightClassification2": "Private"
+            },
+            {
+              "FlightClassification2ID": 4,
+              "FlightClassification2": "Training"
+            },
+
+            {
+              "FlightClassification2ID": 5,
+              "FlightClassification2": "Gliding"
+            }
+          ]
+        }
+      },
+      {
+        "key": "selFlightClassification3",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "'Classification of flight' is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightClassification3",
+            "dataField": "FlightClassification3ID",
+            "defaultField": "FlightClassification3Details"
+          },
+          "items": [
+            {
+              "FlightClassification3ID": 0,
+              "FlightClassification3": "Training"
+            },
+            {
+              "FlightClassification3ID": 1,
+              "FlightClassification3": "Exercise"
+            },
+            {
+              "FlightClassification3ID": 2,
+              "FlightClassification3": "Operational"
+            },
+            {
+              "FlightClassification3ID": 3,
+              "FlightClassification3": "Private"
+            }
+          ]
+        }
+      },
+      {
+        "key": "rdFlightFormation",
+        "type": "radio",
+        "group": "FlightFormation",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Formation :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "selFlightRules",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Flight Rules at time of Airprox :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "'Flight Rules at time of Airprox :' is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightRules",
+            "dataField": "FlightRulesID",
+            "defaultField": "FlightRulesDetails"
+          },
+          "items": [
+            {
+              "FlightRulesID": 0,
+              "FlightRules": "IFR"
+            },
+            {
+              "FlightRulesID": 1,
+              "FlightRules": "VFR"
+            },
+            {
+              "FlightRulesID": 2,
+              "FlightRules": "SVFR"
+            },
+            {
+              "FlightRulesID": 3,
+              "FlightRules": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "key": "rdFlightCanp",
+        "type": "radio",
+        "group": "FlightCanp",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "CANP Filed :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "txtFlightLowFlying",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Low Flying Booking No. :",
+          "placeholder": "Enter low flying booking no.",
+          "required": "yes",
+          "requiredMessage": "Low Flying Booking No. is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Low Flying Booking No. already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtFlightPosition",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Low Flying Booking No. :",
+          "placeholder": "e.g. GIMLI, 56N30W, MID360/10",
+          "required": "yes",
+          "requiredMessage": "Low Flying Booking No. is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Low Flying Booking No. already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtFlightAircraftHeading",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Aircraft Heading :",
+          "placeholder": "Enter Aircraft Heading",
+          "required": "yes",
+          "requiredMessage": "Aircraft Heading is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Aircraft Heading already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "rdFlightAircraftHeading",
+        "type": "radio",
+        "group": "FlightAircraftHeading",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "",
+          "hideLabel": true,
+          "suffixLabel": true,
+          "label1": "True",
+          "label2": "Magnetic"
+        }
+      },
+      {
+        "key": "txtFlightAltimeter",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Altimeter setting :",
+          "placeholder": "Enter Altimeter setting ",
+          "required": "yes",
+          "requiredMessage": "Altimeter setting is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Altimeter setting already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "rdFlightAltimeter",
+        "type": "radio",
+        "group": "FlightAltimeter",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "",
+          "hideLabel": true,
+          "suffixLabel": true,
+          "label1": "Mbar",
+          "label2": "In Hg"
+        }
+      },
+      {
+        "key": "selFlightAltimeter",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "Flight Altimeter is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightAltimeter",
+            "dataField": "FlightAltimeterID",
+            "defaultField": "FlightAltimeterDetails"
+          },
+          "items": [
+            {
+              "FlightAltimeterID": 0,
+              "FlightAltimeter": "Standard"
+            },
+            {
+              "FlightAltimeterID": 1,
+              "FlightAltimeter": "RPS"
+            },
+            {
+              "FlightAltimeterID": 2,
+              "FlightAltimeter": "QNH"
+            },
+            {
+              "FlightAltimeterID": 3,
+              "FlightAltimeter": "QFE"
+            }
+          ]
+        }
+      },
+      {
+        "key": "selFlightAttitude1",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Aircraft Attitude  :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "Aircraft Attitude is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightAttitude1",
+            "dataField": "FlightAttitude1ID",
+            "defaultField": "FlightAttitude1Details"
+          },
+          "items": [
+            {
+              "FlightAttitude1ID": 0,
+              "FlightAttitude1": "Level"
+            },
+            {
+              "FlightAttitude1ID": 1,
+              "FlightAttitude1": "Climbing"
+            },
+            {
+              "FlightAttitude1ID": 2,
+              "FlightAttitude1": "Descending"
+            }
+          ]
+        }
+      },
+      {
+        "key": "selFlightAttitude2",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Aircraft Attitude  :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "Aircraft Attitude is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightAttitude2",
+            "dataField": "FlightAttitude2ID",
+            "defaultField": "FlightAttitude2Details"
+          },
+          "items": [
+            {
+              "FlightAttitude2ID": 0,
+              "FlightAttitude2": "Wings Level"
+            },
+            {
+              "FlightAttitude2ID": 1,
+              "FlightAttitude2": "Turning Right"
+            },
+            {
+              "FlightAttitude2ID": 2,
+              "FlightAttitude2": "Turning Left"
+            }
+          ]
+        }
+      },
+      {
+        "key": "selWeatherDistance",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Distance(ft). :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "Distance(ft). is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WeatherDistance",
+            "dataField": "WeatherDistanceID",
+            "defaultField": "WeatherDistanceDetails"
+          },
+          "items": [
+            {
+              "WeatherDistanceID": 0,
+              "WeatherDistance": "Above Cloud"
+            },
+            {
+              "WeatherDistanceID": 1,
+              "WeatherDistance": "Below Cloud"
+            },
+            {
+              "WeatherDistanceID": 2,
+              "WeatherDistance": "Above Fog"
+            },
+            {
+              "WeatherDistanceID": 3,
+              "WeatherDistance": "Below Fog"
+            },
+            {
+              "WeatherDistanceID": 4,
+              "WeatherDistance": "Above Haze"
+            },
+            {
+              "WeatherDistanceID": 5,
+              "WeatherDistance": "Below Haze"
+            }
+          ]
+        }
+      },
+      {
+        "key": "txtWeatherDistance",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Distance(ft). is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Distance(ft). already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "selWeatherHorizontally",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Distance Horizontally from cloud :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "Distance Horizontally from cloud is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WeatherHorizontally",
+            "dataField": "WeatherHorizontallyID",
+            "defaultField": "WeatherHorizontallyDetails"
+          },
+          "items": [
+            {
+              "WeatherHorizontallyID": 0,
+              "WeatherHorizontally": "Km"
+            },
+            {
+              "WeatherHorizontallyID": 1,
+              "WeatherHorizontally": "NM"
+            }
+          ]
+        }
+      },
+      {
+        "key": "txtWeatherHorizontally",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Distance Horizontally from cloud is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Distance Horizontally from cloud already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "selWeatherIn",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "In :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "In is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WeatherIn",
+            "dataField": "WeatherInID",
+            "defaultField": "WeatherInDetails"
+          },
+          "items": [
+            {
+              "WeatherInID": 0,
+              "WeatherIn": "Rain"
+            },
+            {
+              "WeatherInID": 1,
+              "WeatherIn": "Snow"
+            },
+            {
+              "WeatherInID": 2,
+              "WeatherIn": "Sleet"
+            },
+            {
+              "WeatherInID": 3,
+              "WeatherIn": "Fog"
+            },
+            {
+              "WeatherInID": 4,
+              "WeatherIn": "Haze"
+            },
+            {
+              "WeatherInID": 5,
+              "WeatherIn": "Cloud"
+            },
+            {
+              "WeatherInID": 6,
+              "WeatherIn": "Between layers"
+            }
+          ]
+        }
+      },
+      {
+        "key": "selWeatherFlying",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Flying :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "In is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WeatherFlying",
+            "dataField": "WeatherFlyingID",
+            "defaultField": "WeatherFlyingDetails"
+          },
+          "items": [
+            {
+              "WeatherFlyingID": 0,
+              "WeatherFlying": "Into Sun"
+            },
+            {
+              "WeatherFlyingID": 1,
+              "WeatherFlying": "Out of Sun"
+            }
+          ]
+        }
+      },
+      {
+        "key": "txtWeatherVisibility",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Flying Visibility(km) :",
+          "placeholder": "Enter flying visibility(km) :",
+          "required": "yes",
+          "requiredMessage": "Flying visibility(km) is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Flying visibility(km) already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "selWeatherTimeOfDay",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Time of Day :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "Time of Day is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WeatherTimeOfDay",
+            "dataField": "WeatherTimeOfDayID",
+            "defaultField": "WeatherTimeOfDayDetails"
+          },
+          "items": [
+            {
+              "WeatherTimeOfDayID": 0,
+              "WeatherTimeOfDay": "Day"
+            },
+            {
+              "WeatherTimeOfDayID": 1,
+              "WeatherTimeOfDay": "Night"
+            },
+            {
+              "WeatherTimeOfDayID": 2,
+              "WeatherTimeOfDay": "Twilight"
+            }
+          ]
+        }
+      },
+      {
+        "key": "taDescriptionType",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Type, high/low wing, number of engines :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "taDescriptionRadioCall",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Radio call-sign, registration :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "taDescriptionMarking",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Markings, colour, lighting :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "taDescriptionAircraft",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Aircraft attitude - other details :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "taDescriptionFirst",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "First sighting distance/radar/ TCAS/TAS contact :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "taDescriptionMinimum",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Minimum horizontal & vertical separation at time of Airprox :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "taDescriptionFormOf",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Form of avoiding action taken; if none, state reason :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "selDescriptionAssessment",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Assessment of risk of collision :",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "'Assessment of risk of collision' is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DescriptionAssessment",
+            "dataField": "DescriptionAssessmentID",
+            "defaultField": "DescriptionAssessmentDetails"
+          },
+          "items": [
+            {
+              "DescriptionAssessmentID": 0,
+              "DescriptionAssessment": "Low"
+            },
+            {
+              "DescriptionAssessmentID": 1,
+              "DescriptionAssessment": "Medium"
+            },
+            {
+              "DescriptionAssessmentID": 2,
+              "DescriptionAssessment": "High"
+            },
+            {
+              "DescriptionAssessmentID": 3,
+              "DescriptionAssessment": "Very High"
+            }
+          ]
+        }
+      },
+      {
+        "key": "taDescriptionOther",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Other relevant factors, i.e. workload, emergencies, vision from cockpit, etc. :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "selDescriptionAirborne",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Airborne collision avoidance system (e.g. TCAS):",
+          "placeholder": "select",
+          "required": "yes",
+          "requiredMessage": "'Airborne collision avoidance system' is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "selDescriptionAirborne",
+            "dataField": "selDescriptionAirborneID",
+            "defaultField": "selDescriptionAirborneDetails"
+          },
+          "items": [
+            {
+              "selDescriptionAirborneID": 0,
+              "selDescriptionAirborne": "Fitted"
+            },
+            {
+              "selDescriptionAirborneID": 1,
+              "selDescriptionAirborne": "Not Fitted"
+            }
+          ]
+        }
+      },
+      {
+        "key": "rdDescriptionTAInd",
+        "type": "radio",
+        "group": "DescriptionTAInd",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "TA Indicated :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "rdDescriptionRAInd",
+        "type": "radio",
+        "group": "DescriptionRAInd",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "RA Indicated :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "rdDescriptionRAFollow",
+        "type": "radio",
+        "group": "DescriptionRAFollow",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "RA Followed :",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "lblDescriptionHowDid",
+        "type": "label",
+        "alternateType": "",
+        "save": false,
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "How did you report the Airprox, or hear about the Airprox report :",
+          "required": "no"
+        }
+      },
+      {
+        "key": "rdDescriptionByRadio",
+        "type": "radio",
+        "group": "DescriptionByRadio",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "1.	By Radio",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "txtDescriptionByRadioTo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "To/From Whom",
+          "required": "yes",
+          "requiredMessage": "By Radio-To/From Whom is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "By Radio-To/From Whom already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtDescriptionByRadioFreq",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Frequency",
+          "required": "yes",
+          "requiredMessage": "By Radio-Freequency is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "By Radio-Frequency already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "rdDescriptionByPhone",
+        "type": "radio",
+        "group": "DescriptionByPhone",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "2.	By Phone",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "txtDescriptionByPhoneTo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "To/From Whom",
+          "required": "yes",
+          "requiredMessage": "By Phone-To/From Whom is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "By Phone-To/From Whom already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "FUAttachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "AttachmentId",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "ITARwarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "ITAR warning disclaimer",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "ITAR warning disclaimer",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "occuranceTable": {
+      "order": [
+        [ 0, "asc" ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ 3, 4 ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [
+        {
+          "extend": "pdfHtml5",
+          "text": "Print",
+          "download": "open",
+          "orientation": "portrait",
+          "className": "fa fa-print",
+          "pageSize": "A4",
+          "title": "Safety Occurance Report Transmittal (SORT)",
+          "exportOptions": {
+            "columns": [ 0, 1, 2 ]
+          },
+          "message": "Date",
+          "customize": "function(doc) {console.log(doc);doc.content[1].text = navcon.getCurrentDate('DD/MM/YYYY HH:MM');}"
+        }
+      ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "ID",
+          "data": "id",
+          "width": "0%"
+
+        },
+        {
+          "title": "Ref#",
+          "data": "refNo",
+          "width": "5%",
+          "className": "all"
+        },
+        {
+          "title": "Date of Occurance",
+          "data": "DOC",
+          "width": "15%",
+          "className": "all"
+        },
+        {
+          "title": "Title",
+          "data": "title",
+          "width": "40%",
+          "className": "desktop"
+        },
+        {
+          "title": "Submitted On",
+          "data": "SubmittedOn",
+          "width": "10%"
+        },
+        {
+          "title": "Base/Department",
+          "data": "dept",
+          "width": "20%"
+        },
+        {
+          "title": "Status",
+          "data": "status",
+          "width": "10%"
+        }
+      ]
+    },
+    "injuriesAssociatedTable": {
+      "order": [
+        [ 0, "asc" ]
+      ],
+      "lengthMenu": [
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [
+      ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl #",
+          "data": "SlNo",
+          "width": "5%",
+          "className": "all"
+        },
+        {
+          "title": "Organization",
+          "data": "Organization",
+          "width": "15%",
+          "className": "all"
+        },
+        {
+          "title": "Full Name",
+          "data": "Full Name",
+          "width": "50%",
+          "className": "desktop"
+        },
+        {
+          "title": "Extent of Injuries",
+          "data": "StatusName",
+          "width": "10%"
+        },
+        {
+          "title": "Delete",
+          "data": null,
+          "defaultContent": "<a class='delete btn default btn-xs default' href='javascript:;'><i class='fa fa-trash-o'></i> Delete </a>",
+          "width": "5%"
+        }
+      ]
+    },
+    "witnessesAssociatedTable": {
+      "order": [
+        [ 0, "asc" ]
+      ],
+      "lengthMenu": [
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [
+      ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl #",
+          "data": "SlNo",
+          "width": "5%",
+          "className": "all"
+        },
+        {
+          "title": "Full Name",
+          "data": "FullName",
+          "width": "60%",
+          "className": "all"
+        },
+        {
+          "title": "Email",
+          "data": "Email",
+          "width": "60%",
+          "className": "all"
+        },
+        {
+          "title": "Phone #",
+          "data": "PhoneNo",
+          "width": "60%",
+          "className": "desktop"
+        },
+        {
+          "title": "Delete",
+          "data": null,
+          "defaultContent": "<a class='delete btn default btn-xs default' href='javascript:;'><i class='fa fa-trash-o'></i> Delete </a>",
+          "width": "5%"
+        }
+      ]
+    }
+  }
+
+}

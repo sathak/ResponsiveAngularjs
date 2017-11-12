@@ -1,0 +1,619 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+
+    "sortfindingsFields": [
+      {
+        "key": "SAGMeetingRef",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SAG Meeting Ref # :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "SAG Meeting Ref is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SAGMeetingDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "SAG Meeting Date :",
+          "placeholder": "Select Date",
+          "required": "no",
+          "requiredMessage": "SAG Meeting Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": ">=",
+          "compareDateMessage": "Target Date should not be a future date.",
+          "tooltip": "Select a Date"
+        }
+      },
+      {
+        "key": "SAGHyperlink",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SAG Hyperlink :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "SAG Hyperlink is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "OtherOperatorsInformed",
+        "type": "radio",
+        "group": "OtherOperatorsInformed",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Other Operators Informed :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "Other Operators Informed is required."
+        }
+      },
+      {
+        "key": "FeedbackProvided",
+        "type": "radio",
+        "group": "FeedbackProvided",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Feedback Provided :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "Feedback Provided is required."
+        }
+      },
+      {
+        "key": "FeedbackDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Feedback Date :",
+          "placeholder": "Select Date",
+          "required": "no",
+          "requiredMessage": "Feedback Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "tooltip": "Select a Date"
+        }
+      },
+      {
+        "key": "EDARefNo",
+        "type": "labeldata",
+        "data": "KFAB/SAG28/1",
+        "templateOptions": {
+          "label": "EDA Ref No :",
+          "href": true,
+          "required": false
+        }
+      },
+      {
+        "key": "EDAStatus",
+        "type": "labeldata",
+        "data": "Inprogress",
+        "templateOptions": {
+          "label": "EDA Status :",
+          "required": false
+        }
+      },
+      {
+        "key": "EDAConclusion",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "EDA Conclusion :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "EDA Conclusion is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 200,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTRelatedOccurrences",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "SORTRelatedOccurrencesId",
+        "altkey": "SORTpage2Id",
+        "templateOptions": {
+          "label": "Related Occurrences :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "SORTName",
+            "dataField": "SORTId",
+            "defaultField": "RelatedOccurance"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "tbledEdaInvestigation",
+        "type": "tableeditor",
+        "disabled": false,
+        "data": [ ],
+        "templateOptions": {
+          "settings": "EdaInvestigationtableEditor",
+          "showAdd": false,
+          "showDel": false
+        }
+
+      },
+      {
+        "key": "ITARWarningEDA",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+
+    ]
+
+  },
+  "tables": {
+
+    "sagTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        {
+          "milestone": "Milestone",
+          "slno": "slno",
+          "sortrefno": "sortrefno",
+          "actionrefno": "actionrefno",
+          "meetingrefno": "meetingrefno",
+          "actiondetails": "actiondetails",
+          "owner": "owner",
+          "startdate": "startdate",
+          "duedate": "duedate",
+          "completiondate": "completiondate",
+          "status": "status"
+        },
+        {
+          "milestone": "Milestone",
+          "slno": "slno",
+          "sortrefno": "sortrefno",
+          "actionrefno": "actionrefno",
+          "meetingrefno": "meetingrefno",
+          "actiondetails": "actiondetails",
+          "owner": "owner",
+          "startdate": "startdate",
+          "duedate": "duedate",
+          "completiondate": "completiondate",
+          "status": "status"
+        }
+      ],
+      "dateFields": [ 2, 4 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+
+        {
+          "title": "Sl #",
+          "data": "slno",
+          "width": "10%"
+        },
+
+        {
+          "title": "Action Ref #",
+          "data": "actionrefno",
+          "width": "30%"
+        },
+        {
+          "title": "Meeting Ref #",
+          "data": "meetingrefno",
+          "width": "15%"
+        },
+        {
+          "title": "Action Details",
+          "data": "actiondetails",
+          "width": "25%"
+        },
+        {
+          "title": "Owner",
+          "data": "owner",
+          "width": "15%"
+        },
+        {
+          "title": "Start Date",
+          "data": "startdate",
+          "width": "5%"
+        },
+        {
+          "title": "Target Date",
+          "data": "duedate",
+          "width": "5%"
+        },
+        {
+          "title": "Completion Date",
+          "data": "completiondate",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "status",
+          "width": "5%"
+        }
+      ]
+    },
+    "InvestigationTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        {
+          "milestone": "Milestone",
+          "slno": "slno",
+          "sortrefno": "sortrefno",
+          "actionrefno": "actionrefno",
+          "meetingrefno": "meetingrefno",
+          "actiondetails": "actiondetails",
+          "owner": "owner",
+          "startdate": "startdate",
+          "duedate": "duedate",
+          "completiondate": "completiondate",
+          "status": "status"
+        },
+        {
+          "milestone": "Milestone",
+          "slno": "slno",
+          "sortrefno": "sortrefno",
+          "actionrefno": "actionrefno",
+          "meetingrefno": "meetingrefno",
+          "actiondetails": "actiondetails",
+          "owner": "owner",
+          "startdate": "startdate",
+          "duedate": "duedate",
+          "completiondate": "completiondate",
+          "status": "status"
+        }
+      ],
+      "dateFields": [ 2, 4 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+
+        {
+          "title": "Sl #",
+          "data": "slno",
+          "width": "10%"
+        },
+
+        {
+          "title": "Action Ref #",
+          "data": "actionrefno",
+          "width": "30%"
+        },
+        {
+          "title": "Meeting Ref #",
+          "data": "meetingrefno",
+          "width": "15%"
+        },
+        {
+          "title": "Action Details",
+          "data": "actiondetails",
+          "width": "25%"
+        },
+        {
+          "title": "Owner",
+          "data": "owner",
+          "width": "15%"
+        },
+        {
+          "title": "Start Date",
+          "data": "startdate",
+          "width": "5%"
+        },
+        {
+          "title": "Target Date",
+          "data": "duedate",
+          "width": "5%"
+        },
+        {
+          "title": "Completion Date",
+          "data": "completiondate",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "status",
+          "width": "5%"
+        }
+      ]
+    },
+    "HazardTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        {
+          "FormIndicator": 0,
+          "CauseId": "LOA5/Z02",
+          "CauseTitle": "Customer introducing capability/equipment in an non-configured manner.",
+          "Status": "Draft"
+        },
+        {
+          "FormIndicator": 1,
+          "CauseId": "LOA5/Z03",
+          "CauseTitle": "Lack of SQEP Maintenance resources in critical areas.",
+          "Status": "Managed"
+        },
+        {
+          "FormIndicator": 0,
+          "CauseId": "LOA5/Z02",
+          "CauseTitle": "KAAB – Cryogenics Trainees Competency & Training.",
+          "Status": "Open"
+        }
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+
+        {
+          "title": "#",
+          "data": "FormIndicator",
+          "width": "5%"
+        },
+
+        {
+          "title": "Cause Id",
+          "data": "CauseId",
+          "width": "10%"
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle",
+          "width": "80%"
+        },
+        {
+          "title": "Status",
+          "data": "Status",
+          "width": "5%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+    "EdaInvestigationtableEditor": {
+      "fields": [
+        {
+          "key": "ContributingFactors",
+          "type": "labeldata",
+          "name": "Contributing Factors",
+          "class": "col-md-3",
+          "data": "Individual - Mental / Behavioral -Decision making (Initiative)",
+          "templateOptions": {
+            "label": "Contributing Factors",
+            "required": false
+          }
+        },
+        {
+          "key": "Recommendations",
+          "type": "labeldata",
+          "name": "Recommendations",
+          "class": "col-md-3",
+          "data": "Individual - Mental / Behavioral -Decision making (Initiative)",
+          "templateOptions": {
+            "label": "Recommendations",
+            "required": false
+          }
+        },
+        {
+          "key": "Conclusions",
+          "type": "textarea",
+          "rows": "3",
+          "cols": "50",
+          "data": "",
+          "name": "Conclusions",
+          "class": "col-md-5 bottompadding",
+          "templateOptions": {
+            "label": "Conclusions",
+            "placeholder": "",
+            "required": "no",
+            "maxlength": 500,
+            "hideLabel": false,
+            "maxlengthMessage": "Maximum 500 characters only allowed."
+          }
+        }
+
+      ],
+      "data": [
+
+      ]
+    }
+  }
+}

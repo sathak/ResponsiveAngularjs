@@ -1,0 +1,557 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Dashboard Reports",
+      "url": "dashboardreports"
+    }
+  ],
+  "fields": {  
+  "filterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "MonthFrom",
+        "type": "select",
+        "save": true,
+        "data": 0,
+        "templateOptions": {
+          "label": "Duration From :",
+          "placeholder": "Month"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "Month",
+            "dataField": "MonthId",
+            "defaultField": "monthsTo"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "YearFrom",
+        "type": "select",
+        "save": true,
+        "data": 0,
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "Year"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "Year",
+            "dataField": "YearId",
+            "defaultField": "yearsTo"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "MonthTo",
+        "type": "select",
+        "save": true,
+        "data": 0,
+        "templateOptions": {
+          "label": "To :",
+          "placeholder": "Month"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "Month",
+            "dataField": "MonthId",
+            "defaultField": "monthsTo"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "YearTo",
+        "type": "select",
+        "save": true,
+        "data": 0,
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "Year"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "Year",
+            "dataField": "YearId",
+            "defaultField": "yearsTo"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "SubmissionFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Submission From :",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": "Control Expiry Date is required."
+        }
+      },
+      {
+        "key": "SubmissionTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "To :",
+          "placeholder": "To..",
+          "required": "no"
+        }
+      },
+      {
+        "key": "RefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "Ref no."
+        }
+      }
+      
+    ],
+    "dashboardReportsFields": [
+      {
+        "key": "DashboardId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "RefNumber",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "StatusId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PreviousComplianceId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CurrentComplianceId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PreviousMaturityId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CurrentMaturityId",
+        "type": "label",
+        "data": 0
+      },
+     {
+        "key": "DashboardCompliance",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "DashboardMaturity",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ComplianceReqQuestions",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "MaturitySubjectIndicators",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select Project",
+          "required": "yes",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ProjectName",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "required": false
+        }
+      },
+      {
+        "key": "EvaluationTypeId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Evaluation Type :",
+          "placeholder": "Select Evaluation Type",
+          "required": "yes",
+          "requiredMessage": "Evaluation Type is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EvaluationTypeName",
+            "dataField": "PSMMEvaluationTypeId",
+            "defaultField": "evaluationType"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "EvaluationTypeName",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Evaluation Type :",
+          "required": false
+        }
+      },
+      {
+        "key": "EvaluationForFromId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Compare :",
+          "placeholder": "Select Evaluation For From",
+          "required": "yes",
+          "requiredMessage": "Evaluation For From is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EvaluationFor",
+            "dataField": "PSMMEvaluationForId",
+            "defaultField": "evaluationForFrom"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "YearFrom",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "Year",
+          "required": "yes",
+          "requiredMessage": "Year is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Year",
+            "dataField": "YearId",
+            "defaultField": "yearsFrom"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "From",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Compare :",
+          "required": false
+        }
+      },
+      {
+        "key": "EvaluationForToId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "With :",
+          "placeholder": "Select Evaluation For To",
+          "required": "yes",
+          "requiredMessage": "Evaluation For To is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EvaluationFor",
+            "dataField": "PSMMEvaluationForId",
+            "defaultField": "evaluationForTo"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "YearTo",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "Year",
+          "required": "yes",
+          "requiredMessage": "Year is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Year",
+            "dataField": "YearId",
+            "defaultField": "yearsTo"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "To",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "With :",
+          "required": false
+        }
+      },
+
+      {
+        "key": "Success",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "Opportunities",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "Failures",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "Threats",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "SupportRequired",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "Legend",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Legend :",
+          "required": false
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+
+  "tables": {
+    "dashboardReportsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 4 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl.No",
+          "data": null,
+          "width": "20px",
+          "serialNoColumn": 0
+        },
+        {
+          "title": "Ref #",
+          "data": "RefNumber",
+          "width": "15%"
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName",
+          "width": "25%"
+        },
+        {
+          "title": "Period",
+          "data": "Period",
+          "width": "40%"
+        },
+        {
+          "title": "Submission Date",
+          "data": "SubmissionDate",
+          "width": "10%"
+        },
+        {
+          "title": "Submitted By",
+          "data": "SubmittedBy",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+
+  "tableEditor": {
+
+  }
+}

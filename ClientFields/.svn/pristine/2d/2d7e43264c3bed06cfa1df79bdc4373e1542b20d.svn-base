@@ -1,0 +1,878 @@
+{
+	"breadcrumbs": [
+
+		{
+			"class": "fa fa-home",
+			"title": "Home",
+			"url": "Home"
+		}, {
+			"class": "fa fa-edit",
+			"title": "SORT",
+			"url": "sort"
+		}
+	],
+	"fields": {
+
+		"causedetailsFields": [{
+				"key": "CauseDetailId",
+				"type": "label",
+				"data": 0
+			}, {
+				"key": "CauseStatusId",
+				"type": "label",
+				"data": null
+			}, {
+				"key": "CauseRefNo",
+				"type": "labeldata",
+				"data": null,
+				"templateOptions": {
+					"label": "Cause Ref No  :",
+					"required": false,
+					"href": false
+				}
+			}, {
+				"key": "ProjectId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Project :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Project is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "ProjectName",
+						"dataField": "ProjectId",
+						"defaultField": "AllProject"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "ProjectPhaseId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Project Phase :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Project Phase is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "ProjectPhaseName",
+						"dataField": "ProjectPhaseId",
+						"defaultField": "ProjectPhases"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "ProjectUseId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Project Use :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Project Use is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "ProjectUseName",
+						"dataField": "ProjectUseId",
+						"defaultField": "ProjectUse"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "UnitId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Unit :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Unit is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "UnitName",
+						"dataField": "UnitId",
+						"defaultField": "Unit"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "LocationId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Location :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Location is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "BaseName",
+						"dataField": "BaseId",
+						"defaultField": "Location"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "SourceId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Source  :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Source  is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "SourceName",
+						"dataField": "SourceId",
+						"defaultField": "Source"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "SourceOthers",
+				"type": "input",
+				"data": "",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Others :",
+					"placeholder": "",
+					"required": "no",
+					"requiredMessage": "Others is required.",
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "ProductAffectedOthers",
+				"type": "input",
+				"data": "",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Others :",
+					"placeholder": "",
+					"required": "no",
+					"requiredMessage": "Others product is required.",
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "SourceRefNo",
+				"type": "input",
+				"data": "",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Source Ref No :",
+					"placeholder": "",
+					"required": "no",
+					"requiredMessage": "Source Ref No is required.",
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "SystemId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "System :",
+					"placeholder": "Select ...",
+					"required": "no",
+					"requiredMessage": "System is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "SystemName",
+						"dataField": "SystemId",
+						"defaultField": "System"
+					},
+					"items": [
+
+
+					]
+				}
+			}, {
+				"key": "ProductAffectedId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Product Affected :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Products Affected is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "ProductName",
+						"dataField": "ProductId",
+						"defaultField": "ProductsAffected"
+					},
+					"items": [
+
+
+					]
+				}
+			}, {
+				"key": "DateAndTimeOfObservation",
+				"type": "date",
+				"data": "",
+				"templateOptions": {
+					"label": "Date of Observation :",
+					"placeholder": "Select Date",
+					"required": "yes",
+					"requiredMessage": "Date of Observation is required.",
+					"timeonly": false,
+					"format": "",
+					"hours24": true,
+					"tooltip": "Select a Date"
+				}
+			}, {
+				"key": "CauseTitle",
+				"type": "input",
+				"data": "",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Cause Title :",
+					"placeholder": "",
+					"required": "yes",
+					"requiredMessage": "Cause Title is required.",
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "CauseDescription",
+				"type": "textarea",
+				"data": "There is a likelihood of",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Cause Description :",
+					"placeholder": "",
+					"required": "yes",
+					"requiredMessage": "Cause Description is required.",
+					"minlength": 1,
+					"minlengthMessage": "Minimum 1 character required.",
+					"maxlength": 500,
+					"maxlengthMessage": "Maximum 500 characters only allowed.",
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "fuattachments",
+				"type": "fileupload",
+				"data": [],
+				"templateOptions": {
+					"label": "Attachments",
+					"required": "no",
+					"key": "attachmentid",
+					"agreeText": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+					"folderType": "Forms",
+					"fileSize": "102400",
+					"multipleFile": true
+				}
+			}, {
+				"key": "CreatedBy",
+				"type": "label",
+				"data": 0
+			}, {
+				"key": "Notes",
+				"type": "textarea",
+				"data": "",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Notes :",
+					"placeholder": "",
+					"required": "no",
+					"requiredMessage": "Notes is required.",
+					"minlength": 1,
+					"minlengthMessage": "Minimum 1 character required.",
+					"maxlength": 500,
+					"maxlengthMessage": "Maximum 500 characters only allowed.",
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "ITARWarning",
+				"type": "checkbox",
+				"data": "",
+				"templateOptions": {
+					"label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+					"required": false,
+					"hideLabel": true,
+					"suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+					"suffixLabelHide": true,
+					"requiredMessage": "ITAR warning disclaimer required"
+				}
+			}, {
+				"key": "CausesActiveFailures",
+				"type": "tableeditor",
+				"disabled": false,
+				"data": [],
+				"templateOptions": {
+					"settings": "ActiveFailurestableEditor",
+					"label": "Cause Active Failure",
+					"key": "CauseActiveFailureId"
+				}
+			}, {
+				"key": "CausesLatentConditions",
+				"type": "tableeditor",
+				"disabled": false,
+				"data": [],
+				"templateOptions": {
+					"settings": "LatentConditionstableEditor",
+					"label": "Cause Latent Conditions",
+					"key": "CauseLatentConditionId"
+				}
+			}, {
+				"key": "CausesReferences",
+				"type": "tableeditor",
+				"disabled": false,
+				"data": [],
+				"templateOptions": {
+					"settings": "ReferencestableEditor",
+					"label": "Cause Reference",
+					"key": "CauseDetailsReferencesId"
+				}
+			}, {
+				"key": "CausesConsequence",
+				"type": "tableeditor",
+				"disabled": false,
+				"data": [],
+				"templateOptions": {
+					"settings": "ConsequencetableEditor",
+					"label": "Cause Consequences",
+					"key": "CauseConsequencesId"
+				}
+			}, {
+				"key": "Consequences",
+				"type": "input",
+				"data": "",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Consequences :",
+					"placeholder": "",
+					"required": "no",
+					"requiredMessage": "Consequences is required.",
+
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "ObjectState",
+				"type": "label",
+				"data": "0"
+			}, {
+				"key": "Status",
+				"type": "label",
+				"data": "0"
+			}, {
+				"key": "History",
+				"type": "label",
+				"data": []
+			}, {
+				"key": "HistoryRemarks",
+				"type": "label",
+				"data": []
+			}
+
+		],
+		"causetransferFields": [{
+				"key": "CauseDetailId",
+				"type": "label",
+				"data": 0
+			},
+
+			{
+				"key": "CauseTransferTypeId",
+				"type": "label",
+				"data": 0
+			}, {
+				"key": "TransferTypeId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Type of Transfer :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Type of Transfer is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "TransferTypeName",
+						"dataField": "TransferTypeId",
+						"defaultField": "CauseTransferType"
+					},
+					"items": []
+				}
+			}, {
+				"key": "MeetingRefNo",
+				"type": "input",
+				"data": "",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Meeting Ref # :",
+					"placeholder": "",
+					"required": "yes",
+					"requiredMessage": "Meeting Ref is required.",
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "RefNo",
+				"type": "input",
+				"data": "",
+				"disabled": "",
+				"templateOptions": {
+					"label": "Ref # :",
+					"placeholder": "",
+					"required": "yes",
+					"requiredMessage": "Meeting Ref is required.",
+					"minlength": 1,
+					"minlengthMessage": "Minimum 1 character required.",
+					"maxlength": 20,
+					"maxlengthMessage": "Maximum 20 characters only allowed.",
+					"isExistData": "",
+					"isExistMessage": "Name already exists..",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "ProjectId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Project :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Project is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "ProjectName",
+						"dataField": "ProjectId",
+						"defaultField": "AllProject"
+					},
+					"items": []
+				}
+			}, {
+				"key": "LocationId",
+				"type": "select",
+				"save": true,
+				"data": "",
+				"templateOptions": {
+					"label": "Location :",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Location is required."
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "BaseName",
+						"dataField": "BaseId",
+						"defaultField": "CauseLocation"
+					},
+					"items": [
+
+					]
+				}
+			},
+
+			{
+				"key": "Remarks",
+				"type": "textarea",
+				"rows": "3",
+				"cols": "50",
+				"data": "",
+				"templateOptions": {
+					"label": "Remarks :",
+					"placeholder": "Please provide justification for the changes",
+					"required": "yes",
+					"requiredMessage": "Remarks is required.",
+					"maxlength": 500,
+					"hideLabel": false,
+					"maxlengthMessage": "Maximum 500 characters only allowed."
+				}
+			}, {
+				"key": "ITARWarning",
+				"type": "checkbox",
+				"data": "",
+				"templateOptions": {
+					"label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+					"required": false,
+					"hideLabel": true,
+					"suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+					"suffixLabelHide": true,
+					"requiredMessage": "ITAR warning disclaimer required"
+				}
+			}, {
+				"key": "ObjectState",
+				"type": "label",
+				"data": "0"
+			}, {
+				"key": "Status",
+				"type": "label",
+				"data": "0"
+			}
+
+		]
+
+
+	},
+	"tables": {
+
+
+	},
+	"tableEditor": {
+		"ActiveFailurestableEditor": {
+			"fields": [{
+				"key": "ActiveFailureDescription",
+				"type": "input",
+				"data": "",
+				"name": "Active Failure(s)",
+				"class": "col-md-4",
+				"templateOptions": {
+					"label": "Full Name :",
+					"placeholder": "Enter Active Failures ",
+					"required": "no",
+					"requiredMessage": "Active Failures is required.",
+					"isExistData": "",
+					"isExistMessage": "",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "ActiveFailureTypeId",
+				"name": "Type",
+				"type": "select",
+				"class": "col-md-4",
+				"data": [],
+				"templateOptions": {
+					"label": "Type:",
+					"placeholder": "Select ...",
+					"required": "no",
+					"requiredMessage": "ActiveFailureType is required"
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "ActiveFailureTypeName",
+						"dataField": "ActiveFailureTypeId",
+						"defaultField": "ActiveFailureType"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "ObjectState",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "CauseActiveFailureId",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "Status",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "CauseDetailId",
+				"type": "label",
+				"data": 0,
+				"templateOptions": {
+					"label": ""
+				}
+			}],
+			"data": [
+
+			]
+		},
+		"LatentConditionstableEditor": {
+			"fields": [{
+				"key": "LatentConditionDescription",
+				"type": "input",
+				"data": "",
+				"name": "Latent Condition(s)",
+				"class": "col-md-4",
+				"templateOptions": {
+					"label": "Full Name :",
+					"placeholder": "Enter Latent Conditions",
+					"required": "no",
+					"requiredMessage": "Latent Conditions is required.",
+					"isExistData": "",
+					"isExistMessage": "",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "LatentConditionTypeId",
+				"name": "Type",
+				"type": "select",
+				"class": "col-md-4",
+				"data": [],
+				"templateOptions": {
+					"label": "Type:",
+					"placeholder": "Select ...",
+					"required": "no",
+					"requiredMessage": "LatentConditionType is required"
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "LatentConditionTypeName",
+						"dataField": "LatentConditionTypeId",
+						"defaultField": "LatentConditionType"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "ObjectState",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "CauseLatentConditionId",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "Status",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "CauseDetailId",
+				"type": "label",
+				"data": 0,
+				"templateOptions": {
+					"label": ""
+				}
+			}],
+			"data": [
+
+			]
+		},
+		"ReferencestableEditor": {
+			"fields": [{
+					"key": "ReferenceDescription",
+					"type": "input",
+					"data": "",
+					"name": "Reference Name",
+					"class": "col-md-4",
+					"templateOptions": {
+						"label": "Full Name :",
+						"placeholder": "",
+						"required": "no",
+						"requiredMessage": "References is required.",
+						"isExistData": "",
+						"isExistMessage": "",
+						"customClass": "margin-top:100px"
+					}
+				}, {
+					"key": "ReferenceLink",
+					"type": "input",
+					"data": "",
+					"name": "Reference Link",
+					"class": "col-md-6",
+					"templateOptions": {
+						"label": "Full Name :",
+						"placeholder": "Paste the hyperlink from BMS",
+						"required": "no",
+						"requiredMessage": "References is required.",
+						"isExistData": "",
+						"isExistMessage": "",
+						"customClass": "margin-top:100px"
+					}
+				},
+
+				{
+					"key": "ObjectState",
+					"type": "label",
+					"data": "0",
+					"templateOptions": {
+						"label": ""
+					}
+				}, {
+					"key": "CauseDetailsReferencesId",
+					"type": "label",
+					"data": "0",
+					"templateOptions": {
+						"label": ""
+					}
+				}, {
+					"key": "Status",
+					"type": "label",
+					"data": "0",
+					"templateOptions": {
+						"label": ""
+					}
+				}, {
+					"key": "CauseDetailId",
+					"type": "label",
+					"data": 0,
+					"templateOptions": {
+						"label": ""
+					}
+				}
+			],
+			"data": [
+
+			]
+		},
+
+		"ConsequencetableEditor": {
+			"fields": [{
+				"key": "ConsequenceDescription",
+				"type": "input",
+				"data": "",
+				"name": "Consequence(s)",
+				"class": "col-md-4",
+				"templateOptions": {
+					"label": "Full Name :",
+					"placeholder": "Enter atleast one Consequence",
+					"required": "yes",
+					"requiredMessage": "Consequence is required.",
+					"isExistData": "",
+					"isExistMessage": "",
+					"customClass": "margin-top:100px"
+				}
+			}, {
+				"key": "ConsequenceTypeId",
+				"name": "Cause Type",
+				"type": "select",
+				"class": "col-md-2",
+				"data": [],
+				"templateOptions": {
+					"label": "Type:",
+					"placeholder": "Select ...",
+					"required": "yes",
+					"requiredMessage": "Cause Type is required"
+				},
+				"selectOptions": {
+					"item": {
+						"selected": {},
+						"displayField": "ConsequenceTypeName",
+						"dataField": "ConsequenceTypeId",
+						"defaultField": "ConsequencesType"
+					},
+					"items": [
+
+					]
+				}
+			}, {
+				"key": "WorstCredible",
+				"type": "radio",
+				"group": "Worst",
+				"name": "Most Likely & Worst Credible",
+				"class": "col-md-2",
+				"data": false,
+				"disabled": "",
+				"templateOptions": {
+					"label": "Worst Credible :",
+					"items": [{
+						"suffixLabel": "",
+						"value": true,
+						"label": ""
+					}],
+					"suffixLabelfalse": true,
+					"hideLabel": true,
+					"required": "no"
+				}
+			}, {
+				"key": "ObjectState",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "CauseConsequencesId",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "Status",
+				"type": "label",
+				"data": "0",
+				"templateOptions": {
+					"label": ""
+				}
+			}, {
+				"key": "CauseDetailId",
+				"type": "label",
+				"data": 0,
+				"templateOptions": {
+					"label": ""
+				}
+			}],
+			"data": [
+
+			]
+		}
+
+
+	}
+}

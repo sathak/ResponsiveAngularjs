@@ -1,0 +1,623 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+
+    "sortdecisionFields": [
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTDecisionsId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ProductSafety",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Product Safety",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Product Safety",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "SHE",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "SHE",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "SHE",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "Quality",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Quality",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Quality",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "SIL",
+        "type": "radio",
+        "group": "sil",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SIL :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "SIL1"
+            },
+            {
+              "suffixLabel": true,
+              "value": 2,
+              "label": "SIL2"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "SIL is required."
+        }
+      },
+      {
+        "key": "Sil1",
+        "type": "radio",
+        "group": "sil",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SIL :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "SIL1"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "SIL is required."
+        }
+      },
+      {
+        "key": "Sil2",
+        "type": "radio",
+        "group": "sil",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SIL :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "SIL2"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "SIL is required."
+        }
+      },
+      {
+        "key": "EmergencyManagementPlanResponseRequired",
+        "type": "radio",
+        "group": "EmergencyManagementPlan",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Does the Occurrence require Emergency Management Plan response? :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": "true",
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": "false",
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "SIL is required."
+        }
+      },
+      {
+        "key": "EmergencyManagementPlanResponseRequiredDesc",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+
+      {
+        "key": "eda",
+        "type": "radio",
+        "group": "eda",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "EDA :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 2,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "EDA is required."
+        }
+      },
+      {
+        "key": "LeadInvestigator",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Lead Investigator :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Lead Investigator is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "text",
+            "dataField": "id",
+            "defaultField": "reportedby"
+          },
+          "items": [
+            {
+              "id": 1,
+              "text": "Jade"
+            },
+            {
+              "id": 2,
+              "text": "John Smith"
+            },
+            {
+              "id": 3,
+              "text": "John"
+            }
+          ]
+        }
+      },
+      {
+        "key": "SecondInvestigator",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "2nd Investigator :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Lead Investigator is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "text",
+            "dataField": "id",
+            "defaultField": "reportedby"
+          },
+          "items": [
+            {
+              "id": 1,
+              "text": "Jade"
+            },
+            {
+              "id": 2,
+              "text": "John Smith"
+            },
+            {
+              "id": 3,
+              "text": "John"
+            }
+          ]
+        }
+      },
+      {
+        "key": "TargetDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Target Date :",
+          "placeholder": "Select Date",
+          "required": "yes",
+          "requiredMessage": "Target Date is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": ">=",
+          "compareDateMessage": "Target Date should not be a future date.",
+          "tooltip": "Select a Date"
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "InvestigativeAction",
+        "type": "radio",
+        "group": "InvestigativeAction",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Investigative Action :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": "no",
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "Investigative Action."
+        }
+      },
+      {
+        "key": "HazardLogEntry",
+        "type": "radio",
+        "group": "HazardLogEntry",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "tooltip": "",
+          "label": "Log Entry :",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "Log Entry is required.",
+          "item": {
+            "suffixLabel": true,
+            "value": "HazardLogEntry",
+            "label": "HazardLogEntryName",
+            "defaultField": "HazardLogEntryType"
+          }
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+
+    ]
+
+  },
+  "tables": {
+    "edatable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 2 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "EDA Ref No",
+          "data": "refno",
+          "width": "5%"
+        },
+        {
+          "title": "Assigned To",
+          "data": "assignedto",
+          "width": "20%"
+        },
+        {
+          "title": "Target Date",
+          "data": "targetdate",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "status",
+          "width": "5%"
+        }
+      ]
+    },
+    "InvestigationTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        {
+          "milestone": "Milestone",
+          "slno": "slno",
+          "sortrefno": "sortrefno",
+          "actionrefno": "actionrefno",
+          "meetingrefno": "meetingrefno",
+          "actiondetails": "actiondetails",
+          "owner": "owner",
+          "startdate": "startdate",
+          "duedate": "duedate",
+          "completiondate": "completiondate",
+          "status": "status"
+        },
+        {
+          "milestone": "Milestone",
+          "slno": "slno",
+          "sortrefno": "sortrefno",
+          "actionrefno": "actionrefno",
+          "meetingrefno": "meetingrefno",
+          "actiondetails": "actiondetails",
+          "owner": "owner",
+          "startdate": "startdate",
+          "duedate": "duedate",
+          "completiondate": "completiondate",
+          "status": "status"
+        }
+      ],
+      "dateFields": [ 2, 4 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+
+        {
+          "title": "Sl #",
+          "data": "slno",
+          "width": "10%"
+        },
+
+        {
+          "title": "Action Ref #",
+          "data": "actionrefno",
+          "width": "30%"
+        },
+        {
+          "title": "Meeting Ref #",
+          "data": "meetingrefno",
+          "width": "15%"
+        },
+        {
+          "title": "Action Details",
+          "data": "actiondetails",
+          "width": "25%"
+        },
+        {
+          "title": "Owner",
+          "data": "owner",
+          "width": "15%"
+        },
+        {
+          "title": "Start Date",
+          "data": "startdate",
+          "width": "5%"
+        },
+        {
+          "title": "Target Date",
+          "data": "duedate",
+          "width": "5%"
+        },
+        {
+          "title": "Completion Date",
+          "data": "completiondate",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "status",
+          "width": "5%"
+        }
+      ]
+    },
+    "decisionTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Name",
+          "data": "Name",
+          "width": "20%"
+        },
+        {
+          "title": "SIL",
+          "data": "SIL",
+          "width": "10%"
+        },
+        {
+          "title": "EDA",
+          "data": "EDA",
+          "width": "10%"
+        },
+        {
+          "title": "Transfer To",
+          "data": "TransferTo",
+          "width": "10%"
+        }
+      ]
+    }
+
+  },
+  "tableEditor": {
+
+  }
+}

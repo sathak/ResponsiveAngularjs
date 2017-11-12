@@ -1,0 +1,354 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "icon-user",
+      "title": "My Profile",
+      "url": "userprofile"
+    }
+  ],
+  "fields": {
+    "userProfileFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "documentId",
+        "type": "label",
+        "data": 0,
+        "save": false
+      },
+      {
+        "key": "DocumentName",
+        "type": "label",
+        "data": 0,
+        "save": false
+      },
+      {
+        "key": "img",
+        "type": "photoupload",
+        "save": true,
+        "ischangeable": true,
+        "readonly": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Id",
+          "required": "no",
+          "minlength": 2,
+          "key": "documentId",
+          "keyName": "DocumentName",
+          "folderType": "users",
+          "agreeText": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "fileType": [
+            "jpeg",
+            "jpg",
+            "png",
+            "gif"
+          ]
+        }
+      },
+      {
+        "key": "ClockNumber",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Clock Number :",
+          "placeholder": "",
+          "required": "no"
+        }
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "User Name :",
+          "placeholder": "",
+          "required": "no"
+        }
+      },
+      {
+        "key": "FirstName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "First Name :",
+          "placeholder": "Enter First name..",
+          "required": "yes",
+          "requiredMessage": "First name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "LastName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Last Name :",
+          "placeholder": "Enter Last name..",
+          "required": "no",
+          "requiredMessage": "Last name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "PhoneNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Mobile Number :",
+          "placeholder": "Enter Mobile Number..",
+          "required": "no",
+          "requiredMessage": "Mobile Number is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "Email",
+        "type": "email",
+        "data": "",
+        "templateOptions": {
+          "label": "E-mail :",
+          "placeholder": "Enter E-mail..",
+          "required": "no",
+          "requiredMessage": "E-mail is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "emailMessage": "Invalid email"
+        }
+      },
+      {
+        "key": "Roles",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "Id",
+        "altkey": "RoleId",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Roles :",
+          "placeholder": "Select Role..",
+          "required": "no",
+          "requiredMessage": "Role is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "RoleName",
+            "dataField": "RoleId",
+            "defaultField": "Roles"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "ProjectUser",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "Id",
+        "altkey": "ProjectUserId",
+        "group": {
+          "key": "BaseId",
+          "field": "BaseId",
+          "object": "BaseProjects"
+        },
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Projects :",
+          "placeholder": "Select Project..",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Projects"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "BaseId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Work Location :",
+          "placeholder": "Select Work Location..",
+          "required": "no",
+          "requiredMessage": "Work Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "Locations"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "DepartmentId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Department :",
+          "placeholder": "Select Department..",
+          "required": "no",
+          "requiredMessage": "Department is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectUseName",
+            "dataField": "ProjectUseId",
+            "defaultField": "Department"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ],
+    "changePasswordFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "templateOptions": {
+          "focus": false,
+          "customClass": "text-primary",
+          "label": "User Name",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 8,
+          "maxlength": 40
+        }
+      },
+      {
+        "key": "OldPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Old Password :",
+          "placeholder": "Enter Old Password..",
+          "required": "yes",
+          "requiredMessage": "Old Password is required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "NewPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "New Password :",
+          "placeholder": "Enter New Password..",
+          "required": "yes",
+          "requiredMessage": "New Password is required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}$",
+          "patternMessage": "Invalid Password"
+        }
+      },
+      {
+        "key": "ConfirmPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "compareTo": "NewPassword",
+          "compareBy": "!=",
+          "compareToMessage": "New Password and Confirm New Password are mismatched.",
+          "customClass": "text-primary",
+          "label": "Confirm New Password :",
+          "placeholder": "Enter Confirm Password..",
+          "required": "yes",
+          "requiredMessage": "Confirm New Password is required.",
+          "minlength": 8,
+          "minlengthMessage": "Minimum 8 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}$",
+          "patternMessage": "Invalid Password"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+
+        }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "filterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Occ. Location :",
+          "placeholder": "Occurance Location ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "SORTRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "SORT Ref No. :",
+          "placeholder": "Ref no."
+        }
+      },
+      {
+        "key": "ActionRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Action Ref No. :",
+          "placeholder": "Ref no."
+        }
+      },
+      {
+        "key": "ActionDetails",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title :",
+          "placeholder": "Report Title.."
+        }
+      },
+      {
+        "key": "ActionOwner",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Action Owner:",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "UserList"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "HasInvestigationReport",
+        "type": "radio",
+        "group": "eda",
+        "data": "-1",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Has Investigation Report :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 2,
+              "label": "ALL"
+            },
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            },
+            {
+              "suffixLabel": true,
+              "value": 3,
+              "label": "Not Applicable"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "EDA is required."
+        }
+      },
+      {
+        "key": "ReportTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title :",
+          "placeholder": "Report Title.."
+        }
+      },
+      {
+        "key": "Actionstatus",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "Name",
+            "dataField": "ActionstatusId",
+            "defaultField": "Actionstatus"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OccuranceFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurance From:",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": "Control Expiry Date is required."
+        }
+      },
+      {
+        "key": "OccuranceTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "To:",
+          "placeholder": "To..",
+          "required": "no"
+        }
+      },
+      {
+        "key": "TypeOfOperationId",
+        "type": "multiselectcheckbox",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Type of Opr. :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "TypeOfOperation"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "AssignedById",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Assigned By:",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "UserList"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "AssignedFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Assigned From:",
+          "placeholder": "From.."
+        }
+      },
+      {
+        "key": "AssignedTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "To:",
+          "placeholder": "To..",
+          "required": "no"
+        }
+      },
+      {
+        "key": "LeadInvestigator",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Lead Investigator:",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "UserList"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "SecondInvestigator",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "2nd Investigator:",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "UserList"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ClosedDateFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Closing From:",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "ClosedDateTo",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "To:",
+          "placeholder": "To..",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      }
+    ],
+    "sortActionsTrackerFields": [
+
+    ],
+     "actiontrackerHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "sortActionsTrackerTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [
+        5,
+        6,
+        7
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "SORT Ref No. ",
+          "data": "SortRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Action Ref No.",
+          "data": "ActionRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Meeting Ref No.",
+          "data": "MeetingRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Action Details",
+          "data": "ActionDetails",
+          "width": "30%"
+        },
+        {
+          "title": "Owner",
+          "data": "OwnerName",
+          "width": "10%"
+        },
+        {
+          "title": "Start Date",
+          "data": "StartDate",
+          "width": "10%"
+        },
+        {
+          "title": "Due Date",
+          "data": "DueDate",
+          "width": "10%"
+        },
+        {
+          "title": "Completion Date",
+          "data": "ClosingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Action Status",
+          "data": "ActionStatusName",
+          "width": "5%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

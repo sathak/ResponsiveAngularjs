@@ -1,0 +1,120 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "edaCFMaintenanceHumanFactorsFields": [
+      {
+        "key": "EDACausalFactorID",
+        "type": "label",
+        "data": 0
+      }, 
+      {
+        "key": "TypeID",
+        "type": "label",
+        "data": 4
+      },     
+      {
+        "key": "SORTEDAInvestigationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTEDACausalAndContributingEvents",
+        "type": "checkboxlist",
+        "data": [ ],
+        "refkey": "EDACausalFactorID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "MaintenanceHumanFactors"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "DescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe The Specific Maintenance Error (E.G. Auto Pressure Controller Installed In Wrong Location) :",
+          "required": false
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": []
+      }, {
+        "key": "PageSavedStatus",
+        "type": "label",
+        "data": []
+      }
+    ]
+
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+
+  }
+}

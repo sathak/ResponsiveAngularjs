@@ -1,0 +1,210 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Programme Configuration",
+      "url": "programmeconfiguration"
+    }
+  ],
+  "fields": {
+    "programmeFields": [
+      {
+        "key": "ProgrammeId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ProgrammeTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Programme Title :",
+          "placeholder": "Enter Programme Title..",
+          "required": "yes",
+          "requiredMessage": "Programme Title is required.",
+          "minlength": 1,
+          "maxlength": 1000,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 1000 characters only allowed",
+          "isExistData": "programmeTableData",
+          "isExistMessage": "Programme Title already exists.."
+        }
+      },
+      {
+        "key": "ProgrammeCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Programme Code :",
+          "placeholder": "Enter Programme Code..",
+          "required": "yes",
+          "requiredMessage": "Programme Code is required.",
+          "minlength": 1,
+          "maxlength": 1000,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 1000 characters only allowed",
+          "isExistData": "programmeTableData",
+          "isExistMessage": "Programme Code already exists.."
+        }
+      },
+      {
+        "key": "ProjectProgramme",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "ProgrammeId",
+        "altkey": "ProjectProgrammeId",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Projects :",
+          "placeholder": "Select Project..",
+          "required": "yes",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+          ]
+        }
+      },   
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "psmmProgrammeHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "programmeTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [  ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl.No",
+          "data": null,
+          "width": "10px",
+          "serialNoColumn": 0
+        },
+        {
+          "title": "Programme Title",
+          "data": "ProgrammeTitle",
+          "width": "20%"
+        },
+        {
+          "title": "Programme Code",
+          "data": "ProgrammeCode",
+          "width": "20%"
+        },
+        {
+          "title": "Linked Projects",
+          "data": "LinkedProjects",
+          "width": "60%"
+        }
+      ]
+    }
+  }
+}

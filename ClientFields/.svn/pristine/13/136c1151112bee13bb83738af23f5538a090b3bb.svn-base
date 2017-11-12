@@ -1,0 +1,268 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Dashboard Management",
+      "url": "dashboardmanagement"
+    }
+  ],
+  "fields": {
+    "dashboardmgmtFilterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "duration",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Duration :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Duration is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DurationName",
+            "dataField": "DurationId",
+            "defaultField": "Duration"
+          },
+          "items": [
+
+          ]
+        }
+      }
+    ],
+    "dashboardmgmtFields": [
+      {
+        "key": "RefNo",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Ref No is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Contacts",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Contacts :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Contacts is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "projects",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Month",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Month :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Month is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "MonthName",
+            "dataField": "MonthId",
+            "defaultField": "Month"
+          },
+          "items": [
+
+          ]
+        }
+      }
+    ]
+  },
+
+  "tables": {
+    "dashboardmanagementTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 3, 4, 5 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            3,
+            4,
+            5,
+            6
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "ManagmentId",
+          "data": "ManagmentId",
+          "visible": false
+        },
+        {
+          "title": "Sl #",
+          "data": "SlNo",
+          "width": "10%"
+        },
+        {
+          "title": "Ref #",
+          "data": "RefNo",
+          "width": "20%"
+        },
+        {
+          "title": "Project",
+          "data": "Project",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "Status",
+          "width": "10%"
+        },
+        {
+          "title": "Submitted On",
+          "data": "SubmittedOn",
+          "width": "10%"
+        },
+        {
+          "title": "Month",
+          "data": "Month",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+
+  "tableEditor": {
+
+  }
+}

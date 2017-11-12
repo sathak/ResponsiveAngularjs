@@ -1,0 +1,151 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <navcon-portlet title="Sample Kendo Fields" navcon-data="vm" class="" icon="" type="userManagement" tools-disp="P">
+            <div class="center" id="User">
+                <div class="form-group row margin-bottom-10">
+                    <navcon-kendo-table table-settings="vm.userManagementTable" navcon-data="vm" type="userManagement" fields="vm.userManagementFields"></navcon-kendo-table>
+                </div>
+                <div ng-if="vm.selecteduser">
+                    <div class="pull-right statusdiv" style="display: block;">
+                        <ul class="nav navbar-right panel_toolbox" style="margin-top: 0px !important;">
+                            <li data-toggle="tooltip" data-original-title="Edit">
+                                <a class="collapse-link" ng-click="vm.edit();">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <!--<li data-toggle="tooltip" title="Print" data-original-title="Print">
+                                <a class="close-link"><i class="fa fa-print" ng-click="print()"></i></a>
+                            </li>-->
+                        </ul>
+                    </div>
+
+                    <div class="well">
+                        <navcon-form navcon-data="vm" footer='' field-data="vm.userManagementFields" type="userManagement" form-manage="vm.formManage" ng-if="vm.userManagementFields!=undefined" read-only="vm.readOnly">
+                            <div class="form-group row">
+                                <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="BaseId"></navcon-kendofield>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="DepartmentId"></navcon-kendofield>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="ClockNumber"></navcon-field>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="UserName"></navcon-field>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="FirstName"></navcon-field>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="MiddleName"></navcon-field>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="LastName"></navcon-field>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-2 col-sm-6" field-key="DateAndTime"></navcon-kendofield>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-2 col-sm-6" field-key="DateAndTimeOfObservation"></navcon-kendofield>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="ProjectUser"></navcon-kendofield>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-kendofield label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="Roles"></navcon-kendofield>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="EDATrained"></navcon-field>
+                            </div>
+                            <div class="form-group row">
+                                <navcon-field label-class="col-md-3 col-sm-12" field-class="col-md-6 col-sm-12" field-key="UserStatusId"></navcon-field>
+                            </div>
+                            <!--<div class="form-group row; col-md-12 text-center" ng-hide="vm.isITAR">
+                                <navcon-field field-key="ITARWarning" label-class="" field-class="col-md-12 IncreaseWidth"></navcon-field>
+                            </div>-->
+                        </navcon-form>
+                    </div>
+                    <div class="form-group row; col-md-12 text-center" ng-if="!vm.readOnly">
+                        <div class="form-group row">
+                            &nbsp;
+                        </div>
+                        <navcon-button class="btn btn-primary center" icon="fa fa-floppy-o" text="Save" ng-click="vm.formManage.save('Save')" ng-hide="vm.isSave"></navcon-button>
+                        <navcon-button class="btn btn-primary center" icon="fa fa-floppy-o" ng-if="!vm.readOnly && vm.rights.Edit" text="Update" ng-click="vm.formManage.save('Update')" ng-hide="vm.isUpdate"></navcon-button>
+                        <navcon-button class="btn btn-warning center" icon="fa fa-stop" text="Cancel" ng-if="!vm.readOnly" ng-click="vm.cancel()" ng-hide="vm.isCancel"></navcon-button>
+                    </div>
+                </div>
+            </div>
+        </navcon-portlet>
+        <ul class="rtabs">
+            <li class="active" rel="tab1">Tab 1</li>
+            <li rel="tab2">Tab 2</li>
+            <li rel="tab3">Tab 3</li>
+            <li rel="tab4">Tab 4</li>
+        </ul>
+        <div class="rtab_container">
+            <h3 class="d_active rtab_drawer_heading" rel="tab1">Tab 1</h3>
+            <div id="tab1" class="rtab_content">
+                <h2>Tab 1 content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac metus augue.</p>
+            </div>
+            <!-- #tab1 -->
+            <h3 class="rtab_drawer_heading" rel="tab2">Tab 2</h3>
+            <div id="tab2" class="rtab_content">
+                <h2>Tab 2 content</h2>
+                <p>Nunc dui velit, scelerisque eu placerat volutpat, dapibus eu nisi. Vivamus eleifend vestibulum odio non vulputate.</p>
+            </div>
+            <!-- #tab2 -->
+            <h3 class="rtab_drawer_heading" rel="tab3">Tab 3</h3>
+            <div id="tab3" class="rtab_content">
+                <h2>Tab 3 content</h2>
+                <p>Nulla eleifend felis vitae velit tristique imperdiet. Etiam nec imperdiet elit. Pellentesque sem lorem, scelerisque sed facilisis sed, vestibulum sit amet eros.</p>
+            </div>
+            <!-- #tab3 -->
+            <h3 class="rtab_drawer_heading" rel="tab4">Tab 4</h3>
+            <div id="tab4" class="rtab_content">
+                <h2>Tab 4 content</h2>
+                <p>Integer ultrices lacus sit amet lorem viverra consequat. Vivamus lacinia interdum sapien non faucibus. Maecenas bibendum, lectus at ultrices viverra, elit magna egestas magna, a adipiscing mauris justo nec eros.</p>
+            </div>
+            <!-- #tab4 -->
+        </div>
+      
+</div>
+
+<navcon-modal navcon-data="vm" field-data="" title="User" icon="" id="UserDeleteModal" footer='Yes|No' size="navcon-modal-sm" overflow="hide">
+    <navcon-form navcon-data="vm" footer='' field-data="" type="UserDeleteModal" size="navcon-modal-xs">
+        <div>
+            <h2 style="text-align:center">Are you sure you want to delete this user?</h2>
+        </div>
+        <hr />
+        <button style="float:right;" type="button" class="btn btn-danger" ng-click="vm.closePopup('UserDeleteModal','No')">No</button>
+        <button style="float:right;" type="button" class="btn btn-success" ng-click="vm.closePopup('UserDeleteModal','Yes')">Yes</button>
+    </navcon-form>
+</navcon-modal>
+
+<!--History With Data-->
+<navcon-modal navcon-data="this" title="{{HistoryTitle}}" icon="fa fa-info-circle" id="review" footer="" size="navcon-modal-xs">
+    <navcon-form navcon-data="this" field-data="vm.userManagementHistoryFields" footer='' type="review" form-manage="formManage" ng-if="vm.userManagementHistoryFields!=undefined">
+        <div class="form-group row">
+            <navcon-history navcon-data="this" ng-if="isHistory"></navcon-history>
+        </div>
+        <div class="form-group row" ng-if="historyState=='Save'">
+            <navcon-field field-key="HistoryRemarks" label-class="col-md-2" field-class="col-md-8"></navcon-field>
+        </div>
+        <div class="form-grow row" style="padding:5px;" ng-if="historyState=='Save'">
+            <navcon-field field-key="ITARWarning" label-class="" field-class="col-md-push-1 col-md-10 IncreaseWidth"></navcon-field>
+        </div>
+        <br />
+        <div class="form-group row" style="text-align:right;" ng-if="historyState=='Save'">
+            <navcon-button icon="fa fa-floppy-o" class="btn btn-primary no-margin-left" text="Save" ng-click="saveChanges();" ng-disabled="!historyItarWarning"></navcon-button>
+            <navcon-button icon="fa fa-stop" class="btn btn-default no-margin-right" text="Cancel" ng-click="cancel('review');"></navcon-button>
+        </div>
+    </navcon-form>
+</navcon-modal>
+
+<!--History With No-Data-->
+<navcon-modal navcon-data="this" title="{{HistoryTitle}}" icon="fa fa-info-circle" id="notFound" footer="" size="navcon-modal-xs">
+    <div class="form-group row">
+        <h4>No Changes Found</h4>
+    </div>
+</navcon-modal>
+    <navcon-report export="false" class="hide" navcon-data="vm" report-id="PrintDiv1" report-source="vm.report.source" report-title="vm.report.title" report-setting="vm.report"></navcon-report>

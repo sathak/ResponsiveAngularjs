@@ -1,0 +1,338 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Project Maturity Configuration",
+      "url": "pmcleadingindicatorsstatus"
+    }
+  ],
+  "fields": {
+    "pmcLeadingIndicatorsStatusFields": [
+      {
+        "key": "PSMMMaturityTemplateId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PSMMLeadingIndicatorsStatusId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "StatusTitleOne",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Status Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "StatusTitleTwo",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Status Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "StatusTitleThree",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Status Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "RangeOneLeftNumber",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "RangeTwoLeftNumber",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "RangeThreeLeftNumber",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "RangeOneOperatorId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Operator",
+            "dataField": "PSMMMaturityOperatorId",
+            "defaultField": "pmcOperators"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "RangeTwoOperatorId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Required.",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Operator",
+            "dataField": "PSMMMaturityOperatorId",
+            "defaultField": "pmcOperators"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "RangeThreeOperatorId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Operator",
+            "dataField": "PSMMMaturityOperatorId",
+            "defaultField": "pmcOperators"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "RangeOneRightNumber",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "RangeTwoRightNumber",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "RangeThreeRightNumber",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "pmcTemplatesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ 0 ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl.No",
+          "data": null,
+          "width": "20px",
+          "serialNoColumn": 0
+        },
+        {
+          "title": "Template",
+          "data": "TemplateTitle"
+        },
+        {
+          "title": "Projects Assigned",
+          "data": "ProjectAssigned",
+          "width": "40%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedOn",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

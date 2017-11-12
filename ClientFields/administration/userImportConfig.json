@@ -1,0 +1,108 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "User Import",
+      "url": "userimport"
+    }
+  ],
+  "fields": {
+    "userImportFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Upload File",
+          "required": "yes",
+          "key": "attachmentid",
+          "agreeText": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "folderType": "",
+          "fileType": [ "xlsx", "xls" ],
+          "multipleFile": false
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "userImportTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ ],
+      "buttons": [
+        "excel"
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl. No.",
+          "data": "SlNo",
+          "width": "10px"
+        },
+        {
+          "title": "Legaecy ID",
+          "data": "legaecyID"
+        },
+        {
+          "title": "Title",
+          "data": "Title",
+          "width": "20%"
+        },
+        {
+          "title": "Message",
+          "data": "Message",
+          "width": "20%"
+        },
+        {
+          "title": "Sheet Name",
+          "data": "SheetName"
+        },
+        {
+          "title": "File Name",
+          "data": "ExcelFileName"
+        },
+        {
+          "title": "Successfully Processed",
+          "data": "SuccessfullyProcessed",
+          "width": "10px"
+        }
+      ]
+    }
+  }
+}

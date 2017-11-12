@@ -1,0 +1,363 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "PSMM Reports",
+      "url": "psmmreports"
+    }
+  ],
+  "fields": {
+    "psmmReportsFields": [
+      {
+        "key": "PSMMReportsId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select Project",
+          "required": "no",
+          "requiredMessage": "Project required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "pmcProjects"
+          },
+          "items": [
+            {
+              "ProjectID": "1",
+              "ProjectName": "Project A"
+            },
+            {
+              "ProjectID": "2",
+              "ProjectName": "Project B"
+            },
+            {
+              "ProjectID": "3",
+              "ProjectName": "Project C"
+            },
+            {
+              "ProjectID": "4",
+              "ProjectName": "Project D"
+            }
+          ]
+        }
+      },
+      {
+        "key": "Year",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Year :",
+          "placeholder": "Select Year",
+          "required": "no",
+          "requiredMessage": "Year required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Year",
+            "dataField": "YearId",
+            "defaultField": "ReportsYears"
+          },
+          "items": [
+            {
+              "YearID": "1",
+              "Year": "2015"
+            },
+            {
+              "YearID": "2",
+              "Year": "2016"
+            }
+          ]
+        }
+      },
+      {
+        "key": "EvaluationType",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Evaluation Type :",
+          "placeholder": "Select Evaluation Type",
+          "required": "no",
+          "requiredMessage": "Evaluation Type required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EvaluationType",
+            "dataField": "PSMMEvaluationTypeId",
+            "defaultField": "ReportsEvaluation"
+          },
+          "items": [
+            {
+              "EvaluationTypeID": "1",
+              "EvaluationTypeName": "Monthly"
+            },
+            {
+              "EvaluationTypeID": "2",
+              "EvaluationTypeName": "Quarterly"
+            },
+            {
+              "EvaluationTypeID": "3",
+              "EvaluationTypeName": "Bi-annually"
+            },
+            {
+              "EvaluationTypeID": "4",
+              "EvaluationTypeName": "Annually"
+            }
+          ]
+        }
+      },
+      {
+        "key": "ManagerName",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Responsible Manager :",
+          "required": false
+        }
+      },
+      {
+        "key": "Statement",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Responsible Manager Statement :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "PSMMRequirements",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "psmmReportsListTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        {
+          "ReportId": "1",
+          "SNo": "1",
+          "ReportName": "Project Compliance"
+        },
+        {
+          "ReportId": "2",
+          "SNo": "2",
+          "ReportName": "Programme Compliance Summary"
+        },
+        {
+          "ReportId": "3",
+          "SNo": "3",
+          "ReportName": "Project Compliance Scorecard"
+        },
+        {
+          "ReportId": "4",
+          "SNo": "4",
+          "ReportName": "Project Maturity"
+        },
+        {
+          "ReportId": "5",
+          "SNo": "5",
+          "ReportName": "Programme Maturity Summary"
+        },
+        {
+          "ReportId": "6",
+          "SNo": "6",
+          "ReportName": "Project Maturity Scorecard"
+        },
+        {
+          "ReportId": "7",
+          "SNo": "7",
+          "ReportName": "Product Safety Status"
+        }
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "ReportId",
+          "data": "ReportId",
+          "width": "0%",
+          "visible": false
+        },
+        {
+          "title": "S No",
+          "data": "SNo",
+          "width": "10%"
+        },
+        {
+          "title": "Report Name",
+          "data": "ReportName",
+          "width": "90%"
+        }
+      ]
+    },
+    "psmmReportsTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        {
+          "ProjectId": "1",
+          "YearId": "1",
+          "EvaluationTypeId": "1"
+        },
+        {
+          "ProjectId": "1",
+          "YearId": "1",
+          "EvaluationTypeId": "2"
+        },
+        {
+          "ProjectId": "2",
+          "YearId": "1",
+          "EvaluationTypeId": "3"
+        },
+        {
+          "ProjectId": "2",
+          "YearId": "2",
+          "EvaluationTypeId": "3"
+        }
+      ],
+      "dateFields": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Project",
+          "data": "ProjectId",
+          "width": "70%"
+        },
+        {
+          "title": "Year",
+          "data": "YearId",
+          "width": "10%"
+        },
+        {
+          "title": "Evaluation Type",
+          "data": "EvaluationTypeId",
+          "width": "20%"
+        }
+      ]
+    }
+  }
+}

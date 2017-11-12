@@ -1,0 +1,429 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Project Maturity Configuration",
+      "url": "pmctemplates"
+    }
+  ],
+  "fields": {
+    "pmcTemplatesFields": [
+      {
+        "key": "PSMMTemplateProjectsId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PSMMMaturityTemplateId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PSMMMaturityIndicatorId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "TemplateTitle",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Template Title :",
+          "placeholder": "Enter Template Title",
+          "required": "yes",
+          "requiredMessage": "Template Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 1000,
+          "maxlengthMessage": "Maximum 1000 characters only allowed."
+        }
+      },
+      {
+        "key": "PSMMMaturityTemplateProjects",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "PSMMMaturityTemplateId",
+        "altkey": "PSMMTemplateProjectsId",
+        "templateOptions": {
+          "label": "Projects Assigned :",
+          "placeholder": "Select",
+          "required": "yes",
+          "requiredMessage": "Projects Assigned is required",
+          "tooltip": "Projects Assigned"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "pmcProjects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "IndicatorTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Indicator Title :",
+          "placeholder": "Enter Indicator Title",
+          "required": "yes",
+          "requiredMessage": "Indicator Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 1000,
+          "maxlengthMessage": "Maximum 1000 characters only allowed."
+        }
+      },
+      {
+        "key": "PSMMMaturityIndicatorInputId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Input Type :",
+          "placeholder": "Select",
+          "required": "yes",
+          "requiredMessage": "Input Type is required",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "InputType",
+            "dataField": "PSMMMaturityIndicatorInputId",
+            "defaultField": "pmcInputTypes"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "IndicatorTarget",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Target :",
+          "placeholder": "Enter Target",
+          "required": "yes",
+          "requiredMessage": "Target is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "IndicatorTargetText",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "ConditionTitle",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Condition :",
+          "required": false
+        }
+      },
+      {
+        "key": "IndicatorStatus",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Indicator Status :",
+          "required": false
+        }
+      },
+      {
+        "key": "ConditionOneLeftNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "ConditionOneOperatorId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Select",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Operator",
+            "dataField": "PSMMMaturityOperatorId",
+            "defaultField": "pmcOperators"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ConditionOneRightNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "ConditionTwoLeftNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "ConditionTwoOperatorId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Select",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Operator",
+            "dataField": "PSMMMaturityOperatorId",
+            "defaultField": "pmcOperators"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ConditionTwoRightNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "ConditionThreeLeftNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "ConditionThreeOperatorId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Select",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "tooltip": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Operator",
+            "dataField": "PSMMMaturityOperatorId",
+            "defaultField": "pmcOperators"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ConditionThreeRightNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": " ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "patternMessage": "Number only allowed."
+        }
+      },
+      {
+        "key": "Active",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "PSMMMaturityTemplateIndicators",
+        "type": "input",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "pmcTemplatesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ 0 ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl.No",
+          "data": null,
+          "width": "10px",
+          "serialNoColumn": 0
+        },
+        {
+          "title": "Template",
+          "data": "TemplateTitle"
+        },
+        {
+          "title": "Projects Assigned",
+          "data": "ProjectAssigned",
+          "width": "30%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedOn",
+          "width": "10%"
+        }
+      ]
+    }
+
+  },
+  "tableEditor": {
+
+  }
+}

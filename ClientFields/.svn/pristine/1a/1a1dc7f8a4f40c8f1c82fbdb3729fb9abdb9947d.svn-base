@@ -1,0 +1,270 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "newControlFields": [
+      {
+        "key": "RefNo",
+        "type": "input",
+        "name": "Ref No",
+        "data": "",
+        "class": "col-md-2",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "Enter Ref No",
+          "required": "yes",
+          "requiredMessage": "Ref No  is required.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Contacts",
+        "type": "input",
+        "name": "Contacts",
+        "data": "",
+        "class": "col-md-2",
+        "templateOptions": {
+          "label": "Contacts :",
+          "placeholder": "Enter Contacts",
+          "required": "yes",
+          "requiredMessage": "Contacts is required.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Project is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Project"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Month",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Month:",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Month is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Month",
+            "dataField": "Month",
+            "defaultField": "Month"
+          },
+          "items": [
+
+          ]
+        }
+      }
+    ]
+
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+    "ReferencesTableEditor": {
+      "fields": [
+        {
+          "key": "Hyperlink",
+          "name": "Reference Hyperlink",
+          "type": "input",
+          "data": "",
+          "class": "col-md-10",
+          "templateOptions": {
+            "placeholder": "Link / References",
+            "required": "yes",
+            "requiredMessage": "Reference Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Reference Name already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ReferenceId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    },
+    "ChecklistTableEditor": {
+      "fields": [
+        {
+          "key": "CheckListDescription",
+          "name": "Checklist Name",
+          "type": "input",
+          "data": "",
+          "class": "col-md-10",
+          "templateOptions": {
+            "placeholder": "Checklist",
+            "required": "yes",
+            "requiredMessage": "Checklist Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Checklist Name already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ControlCheckListId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    },
+    "AuditTableEditor": {
+      "fields": [
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "AuditReferenceId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+
+          "key": "AuditReferenceNo",
+          "name": "Audit Reference No",
+          "type": "input",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Audit Reference No",
+            "required": "yes",
+            "requiredMessage": "Audit Reference No Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Audit Reference No already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "AuditDate",
+          "name": "Audit Date",
+          "type": "date",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Audit Date",
+            "required": "yes",
+            "requiredMessage": "Audit Date is required.",
+            "isExistData": "",
+            "isExistMessage": "Audit Date already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "Hyperlink",
+          "name": "Hyperlink",
+          "type": "input",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Hyperlink",
+            "required": "yes",
+            "requiredMessage": "Hyperlink is required.",
+            "isExistData": "",
+            "isExistMessage": "Hyperlink already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    }
+  }
+}

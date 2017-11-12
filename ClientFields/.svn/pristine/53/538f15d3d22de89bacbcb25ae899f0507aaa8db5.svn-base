@@ -1,0 +1,290 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortFields": [
+      {
+        "key": "page1",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page2",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page3",
+        "type": "page",
+        "data": ""
+      },
+      {
+        "key": "page2Info",
+        "type": "page",
+        "data": ""
+      }
+    ],
+	"sortFilterFields":[
+	{
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Occ. Location :",
+          "placeholder": "Occurance Location ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "SORTRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "Ref no."
+        }
+      },
+      {
+        "key": "ReportTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title :",
+          "placeholder": "Report Title.."
+        }
+      },
+      {
+        "key": "SORTstatus",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ..."
+          
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "SORTstatusName",
+            "dataField": "SORTStatusId",
+            "defaultField": "SORTstatus"
+          },
+          "items": []
+        }
+      },
+	  {
+        "key": "OccuranceFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurance From:",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": "Control Expiry Date is required."
+        }
+      },
+	  {
+        "key": "OccuranceTo",
+        "type": "date",
+        "data": "",		
+        "templateOptions": {
+		"label": "To:",
+          "placeholder": "To..",
+          "required": "no"
+        }
+      },
+	  {
+        "key": "SubmittedFrom",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Reported From:",
+          "placeholder": "From..",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+	  {
+        "key": "SubmittedTo",
+        "type": "date",
+        "data": "",		
+        "templateOptions": {
+          "label": "To:",
+          "placeholder": "To..",
+          "required": "no",
+          "requiredMessage": ""
+        }
+      },
+	  {
+        "key": "ReportedById",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [],
+        "templateOptions": {
+          "label": "Reported by :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+          "displayField": "ReportedByName",
+            "dataField": "ReportedById",
+            "defaultField": "SORTReportedBy"
+          },
+          "items": [
+
+          ]
+        }
+      },
+	  {
+        "key": "TypeOfOperationId",
+        "type": "multiselectcheckbox",
+        "data": [],
+        "templateOptions": {
+          "label": "Type of Opr. :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "TypeOfOperation"
+          },
+          "items": [ ]
+        }
+      }
+	]
+  },
+  "tables": {
+    "sortTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        
+      ],
+      "dateFields": [1,3],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [0,3,5]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },     
+      "columns": [
+      
+        {
+          "title": "Ref#",
+          "data": "SORTRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Date Of Occurance",
+          "data": "DateTimeOfOccurance",
+          "width": "200px",
+		  "time":true
+        },
+        {
+          "title": "Title",
+          "data": "ReportTitle"
+        },
+        {
+          "title": "Submitted On",
+          "data": "SubmittedDate",
+          "width": "80px"
+        },
+        {
+          "title": "Location",
+          "data": "BaseName",
+          "width": "300px"
+        },
+        {
+          "title": "Status",
+          "data": "SORTstatusName",
+          "width": "120px"
+        },
+        {
+          "title": "Customer Form",
+          "data": null,
+          "defaultContent": "<a class='btn btndelete' href='javascript:;'><i class='fa  fa-file-text'></i></a>",
+          "width": "2%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

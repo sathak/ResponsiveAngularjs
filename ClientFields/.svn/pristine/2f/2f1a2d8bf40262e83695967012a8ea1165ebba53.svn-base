@@ -1,0 +1,798 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Hazard",
+      "url": "hazard"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Risk Aggregation",
+      "url": "riskaggregation"
+    }
+  ],
+  "fields": {
+    "summaryHazardStateFields": [
+      {
+        "key": "fieldConfig",
+        "type": "label",
+        "data": "",
+        "save": false,
+        "title": "Summary Hazard State Details",
+        "primaryKey": "HazardId",
+        "displayKey": "HazardName"
+      },
+      {
+        "key": "HazardId",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "CauseAnalysisId",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HazardCode",
+        "type": "input",
+        "data": "0",
+        "oldData":"0",
+        "save": false,
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Hazard ID",
+          "hideLabel": false,
+          "placeholder": "Select Segments.."
+        }
+      },
+      {
+        "key": "HazardName",
+        "type": "input",
+        "data": "",
+        "save": false,
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Hazard Title",
+          "hideLabel": false,
+          "placeholder": "Select Hazard Title.."
+        }
+      },
+      {
+        "key": "CausesDetails",
+        "type": "tableeditor",
+        "disabled": false,
+        "save": false,
+        "data": [],
+        "templateOptions": {
+          "settings": "causesTableEditor",
+          "showAdd": false,
+          "showUpdate": false,
+          "showDel": false,
+          "showItar": true,
+          "showSlno":false
+        }
+      },
+      {
+        "key": "DrivingCauseList",
+        "type": "tableeditor",
+        "disabled": false,
+        "data": [],
+        "save": true,
+        "templateOptions": {
+          "settings": "causesListTable",
+          "key": "CauseAnalysisId",
+          "showAdd": false,
+          "showDel": false,
+          "showUpdate": false,
+          "showoverAllsave": true
+        }
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [],
+        "templateOptions": {
+          "label": ""
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "summaryHazardStateHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "Insert Rationale Why Decision Is Made",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ],
+    "summaryHazardStateChangeStatusFields": [
+      {
+        "key": "HazardClassificationStatusId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "HazardId",
+        "type": "label",
+        "data": 0,
+        "templateOptions": {
+          "label": ""
+        }
+      },
+      {
+        "key": "MeetingRefNo",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Meeting Ref No. :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Meeting Ref is required.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "HazardStatusId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Hazard Status :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Hazard Status is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "HazardStatusName",
+            "dataField": "HazardStatusId",
+            "defaultField": "HazardStatus"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "Insert Rationale Why Decision Is Made",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "summaryHazardStateTable": {
+      "order": [
+        [
+          1,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [],
+      "dateFields": [],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": []
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "<a> <i class='fa fa-bolt' aria-hidden='true'></i> </a>",
+          "data": "CauseChangeStatus",
+          "width": "2%",
+          "visible": false
+        },
+        {
+          "title": "Hazard ID",
+          "data": "HazardRefNo",
+          "width": "20%"
+        },
+        {
+          "title": "Hazard Title",
+          "data": "HazardName",
+          "width": "28%"
+        },
+        {
+          "title": "Hazard Status",
+          "data": "HazardStatusName",
+          "width": "5%"
+        },
+        {
+          "title": "Linked Causes",
+          "data": "LinkedCauses",
+          "width": "10%"
+        },
+        {
+          "title": "Probability",
+          "data": "PreMitigationProbability",
+          "width": "15%"
+        },
+        {
+          "title": "Severity",
+          "data": "PreMitigationSeverity",
+          "width": "15%"
+        },
+        {
+          "title": "Post-Mit<br/>Probability",
+          "data": "PostMitigationProbability",
+          "width": "5%",
+          "visible": false
+        },
+        {
+          "title": "Post-Mit<br/>Severity",
+          "data": "PostMitigationSeverity",
+          "width": "5%",
+          "visible": false
+        },
+        {
+          "title": "Risk Class",
+          "data": "RiskClass",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "HazardStatusName",
+          "width": "8%",
+          "visible": false
+        }
+      ]
+    },
+    "contributingCausesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [],
+      "dateFields": [],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": []
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Cause ID",
+          "data": "CauseID",
+          "width": "15%"
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle"
+        },
+        {
+          "title": "Linked Hazards",
+          "data": "LinkedHazards",
+          "width": "8%"
+        },
+        {
+          "title": "Pre-Mit Probability",
+          "data": "PreMitigationProbabilityName",
+          "width": "10%"
+        },
+        {
+          "title": "Post-Mit Probability",
+          "data": "PostMitigationProbabilityName",
+          "width": "10%"
+        },
+        {
+          "title": "Severity",
+          "data": "PostMitigationSeverityName",
+          "width": "10%"
+        },
+        {
+          "title": "Accident State / Risk Class",
+          "data": "RiskClassName",
+          "width": "8%"
+        },
+        {
+          "title": "Status",
+          "data": "CauseStatusName",
+          "width": "8%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+    "causesListTable": {
+      "fields": [
+        {
+          "key": "CauseID",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-2",
+          "name": "Cause Ref No.",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "CauseTitle",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-2",
+          "name": "Cause Title",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "PreMitigationProbabilityName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Pre-Mit Probability",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "PreMitigationSeverityName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Pre-Mit Severity",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "PostMitigationProbabilityName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Post-Mit Probability",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "PostMitigationSeverityName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Post-Mit Severity",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "RiskClassName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Risk Class",
+          "templateOptions": {
+            "label": "",
+            "cellStyle": {},
+            "fontStyle": {}
+          }
+        },
+        {
+          "key": "DrivingCauseId",
+          "type": "select",
+          "data": "",
+          "save": true,
+          "class": "col-md-1",
+          "name": "Driving Cause",
+          "templateOptions": {
+            "label": "Driving Cause",
+            "hideLabel": false,
+            "placeholder": "Select DrivingCause.."
+          },
+          "selectOptions": {
+            "item": {
+              "selected": {},
+              "displayField": "DrivingCause",
+              "dataField": "DrivingCauseId",
+              "defaultField": "AllDrivingCauses"
+            },
+            "items": [
+            ]
+          }
+        },
+        {
+          "key": "CauseStatusName",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "name": "Status",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "CauseAnalysisId",
+          "type": "label",
+          "data": "0",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "RiskBackground",
+          "type": "label",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "RiskColor",
+          "type": "label",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ColorCode",
+          "type": "label",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-1",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "HistoryRemarks",
+          "type": "label",
+          "data": [],
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "visible": false,
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [],
+      "templateOptions": {
+        "primaryKey": "CauseAnalysisId",
+        "displayKey": "CauseTitle",
+        "type": "causedrivingUpdate"
+      }
+    },
+    "causesTableEditor": {
+      "fields": [
+        {
+          "key": "PreMitigationProbabilityId",
+          "type": "select",
+          "data": "",
+          "save": true,
+          "class": "col-md-2",
+          "name": "Probability",
+          "templateOptions": {
+            "label": "Probability",
+            "hideLabel": false,
+            "placeholder": "Select Aggregate Probability..",
+            "required": "no",
+            "requiredMessage": "Aggregate Probability is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": {},
+              "displayField": "ProbabilityName",
+              "dataField": "ProbabilityId",
+              "defaultField": "Probability"
+            },
+            "items": []
+          }
+        },
+        {
+          "key": "PreMitigationSeverityId",
+          "type": "select",
+          "data": "",
+          "save": true,
+          "class": "col-md-2",
+          "name": "Severity",
+          "templateOptions": {
+            "label": "Severity",
+            "hideLabel": false,
+            "placeholder": "Select Aggregate Severity..",
+            "required": "no",
+            "requiredMessage": "Aggregate Severity is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": {},
+              "displayField": "SeverityName",
+              "dataField": "SeverityId",
+              "defaultField": "Severity"
+            },
+            "items": []
+          }
+        },
+        {
+          "key": "RiskClassId",
+          "type": "label",
+          "data": 0,
+          "class": "col-md-0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "RiskClass",
+          "type": "labeldata",
+          "data": "",
+          "save": false,
+          "disabled": true,
+          "readonly": true,
+          "class": "col-md-2",
+          "name": "Risk Class",
+          "templateOptions": {
+            "label": "Accident ID / Risk Class"
+          }
+        },
+        {
+          "key": "RiskClassBackgroundColor",
+          "type": "label",
+          "data": "",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "RiskClassColorCode",
+          "type": "label",
+          "data": "",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Notes",
+          "type": "textarea",
+          "rows": "2",
+          "data": "",
+          "save": true,
+          "class": "col-md-4",
+          "name": "Notes",
+          "templateOptions": {
+            "label": "Notes",
+            "placeholder": "Enter Notes..",
+            "required": "no",
+            "requiredMessage": "Active Failures is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "History",
+          "type": "label",
+          "data": [],
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "HistoryRemarks",
+          "type": "label",
+          "data": [],
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "HazardId",
+          "type": "label",
+          "data": "0",
+          "class": "col-md-0",
+          "templateOptions": {
+            "label": "",
+            "required": "yes"
+          }
+        }
+      ],
+      "data": [],
+      "templateOptions": {
+        "primaryKey": "CauseAnalysisId",
+        "displayKey": "CauseTitle",
+        "type": "causesByHazard"
+      }
+    }
+  }
+}

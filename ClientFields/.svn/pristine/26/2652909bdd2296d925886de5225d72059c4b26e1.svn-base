@@ -1,0 +1,1025 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "FORM",
+      "url": "mrr"
+    }
+  ],
+  "fields": {
+    "mrrFields": [
+      {
+        "key": "MRRId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "BaseId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "MRRRefNo",
+        "type": "label",
+        "data": "MRR05"
+      },
+      {
+        "key": "AircraftTypeId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "Title",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "MRR Title :",
+          "placeholder": "MRR Title",
+          "required": "yes",
+          "requiredMessage": "MRR Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "Aim",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Aim :",
+          "placeholder": "State the aim of the MRP, which risks are being identified (relating to …), and that all identified risks are to be “Acceptably Safe” in accordance with BAESKSA…",
+          "required": "yes",
+          "requiredMessage": "Aim is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "Crew",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Crew :",
+          "placeholder": "The crew are qualified in accordance with Stan/Eval Volume 1 and are medically fit. The aircrew are current IPs and/or students …",
+          "required": "yes",
+          "requiredMessage": "Crew is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "Aircraft",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "AirCraft :",
+          "placeholder": "The aircraft is airworthy for the purposes of the flight for which is has been tasked and authorised.",
+          "required": "yes",
+          "requiredMessage": "AirCraft is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "Environment",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Environment : ",
+          "placeholder": "Weather limits are in accordance with the RSAF Flying Order Book (FOB).",
+          "required": "yes",
+          "requiredMessage": "Environment is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "Mission",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Mission : ",
+          "placeholder": "The mission will be authorised in accordance with the RSAF FOB.",
+          "required": "yes",
+          "requiredMessage": "Mission is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "Others",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Others :",
+          "placeholder": "All rules and procedures will be adhered to",
+          "required": "No",
+          "requiredMessage": "Others is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "References",
+        "type": "multiselect",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "References :",
+          "placeholder": "Link / References",
+          "required": "No",
+          "requiredMessage": "References is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ReferencesName",
+            "dataField": "ReferencesId",
+            "defaultField": "References"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "MissionRiskProfile",
+        "type": "table",
+        "data": [ ],
+        "name": "mrp",
+        "tableDataField": "questionTable",
+        "id": "MemoEvalQnsId",
+        "save": false
+      },
+      {
+        "key": "Attachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "attachmentid",
+          "agreeText": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "mrpFields": [
+      {
+        "key": "MRPId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "MRRId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "MRPTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "MRP Title :",
+          "placeholder": "MRP Title",
+          "required": "yes",
+          "requiredMessage": "MRP Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "MRPRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "MRP Ref No :",
+          "placeholder": "MRP Ref No",
+          "required": "yes",
+          "requiredMessage": "Aim is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+         {
+        "key": "MissionTypeId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Mission :",
+          "placeholder": "Mission",
+          "required": "no"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "MissionName",
+            "dataField": "MissionId",
+            "defaultField": "Mission"
+          },
+          "items": [
+            {
+              "MissionName": "Training1",
+              "MissionId": "1"
+            },
+            {
+              "MissionName": "Training2",
+              "MissionId": "2"
+            }
+          ]
+        }
+      },
+      {
+        "key": "CoreRisks",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Core Risks :",
+          "hideLabel": false,
+          "suffixLabel": "Core Risks",
+          "suffixLabelHide": false,
+          "requiredMessage": "Core Risks required."
+        }
+      },
+
+      {
+        "key": "MRPCauseDetail",
+        "type": "table",
+        "name": "causes",
+        "save": true,
+        "data": [ ],
+        "title": "Causes",       
+        "id": "MRPCauseDetailId",
+        "field": "mrpFields",
+        "tableDataField": "MRPCausesTable",
+        "templateOptions": {
+          "label": ""
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "filterFields": [
+      {
+        "key": "Project",
+        "type": "multiselect",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Project"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Name",
+            "dataField": "Id",
+            "defaultField": "References"
+          },
+          "items": [
+            {
+              "Name": "All Projects",
+              "Id": "1"
+            },
+            {
+              "Name": "LOA1",
+              "Id": "2"
+            }
+          ]
+        }
+      },
+      {
+        "key": "Base",
+        "type": "multiselect",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Base :",
+          "placeholder": "Base"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Name",
+            "dataField": "Id",
+            "defaultField": "References"
+          },
+          "items": [
+            {
+              "Name": "Al Shaheen",
+              "Id": "1"
+            },
+            {
+              "Name": "Jubail",
+              "Id": "2"
+            },
+            {
+              "Name": "Dahran",
+              "Id": "3"
+            }
+          ]
+        }
+      },
+      {
+        "key": "A/CType",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "A/C Type :",
+          "placeholder": "A/C Type",
+          "required": "no"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Name",
+            "dataField": "Id",
+            "defaultField": "baseordepartment"
+          },
+          "items": [
+            {
+              "Name": "All A/C's",
+              "Id": "1"
+            },
+            {
+              "Name": "Typhoon",
+              "Id": "2"
+            },
+            {
+              "Name": "F-15",
+              "Id": "3"
+            },
+            {
+              "Name": "Eurofighter",
+              "Id": "4"
+            }
+          ]
+        }
+      },
+      {
+        "key": "MRRTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "MRR Title : ",
+          "placeholder": "MRR Title"
+        }
+      },
+      {
+        "key": "MRRRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "MRR Ref No. : ",
+          "placeholder": "MRR Ref No."
+        }
+      }
+    ]
+  },
+  "tables": {
+    "mrpTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 5,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [ ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Core Risks",
+          "data": "CoreRisks",
+          "width": "10%"
+        },
+        {
+          "title": "MRP RefNo #",
+          "data": "MRPRefN",
+          "width": "10%",
+          "className": "all"
+        },
+        {
+          "title": "MRP Title",
+          "data": "MRPTitle",
+          "width": "20%",
+          "className": "desktop"
+        },
+        {
+          "title": "Linked Causes",
+          "data": "Linkedcauses",
+          "width": "40%"
+        },
+        {
+          "title": "Created By",
+          "data": "CreatedBy",
+          "width": "5%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedBy",
+          "width": "5%"
+        }
+      ]
+    },
+    "CausesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 5,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [ ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "select",
+          "data": "function(node){return navcon.loadTableData(node,'','checkbox');}",
+          "field": "",
+          "width": "100px"
+        },
+        {
+          "title": "Cause Ref No #",
+          "data": "CauseRefNo",
+          "width": "10%"
+        },
+		{
+          "title": "CauseDetailId",
+          "data": "CauseDetailId",
+          "visible": false
+        },
+		{
+          "title": "CauseAnalysisId",
+          "data": "CauseAnalysisId",
+          "visible": false
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle"
+        },
+        {
+          "title": "Consequence",
+          "data": "ConsequenceDescription",
+          "width": "15%"
+        },
+        {
+          "title": "Controls",
+          "data": "ControlName",
+          "width": "20%"
+        },
+        {
+          "title": "Severity",
+          "data": "Severity",
+          "width": "10%"
+        },
+        {
+          "title": "Probability",
+          "data": "Probability",
+          "width": "10%"
+        },
+        {
+          "title": "Risk Class / Accident State",
+          "data": "RiskClass",
+          "width": "5%"
+        },
+        {
+          "title": "Acceptance Status",
+          "data": "AcceptanceStatus",
+          "width": "5%"
+        },
+        {
+          "title": "Acceptance Reference",
+          "data": "AcceptanceReference",
+          "width": "5%"
+        }
+      ]
+    },
+    "MRPCausesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 5,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [ ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Cause Ref No #",
+          "data": "CauseRefNo",
+          "width": "10%"
+        },
+		{
+          "title": "CauseDetailId",
+          "data": "CauseDetailId",
+          "visible": false
+        },
+		{
+          "title": "CauseAnalysisId",
+          "data": "CauseAnalysisId",
+          "visible": false
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle"
+        },
+        {
+          "title": "Consequence",
+          "data": "ConsequenceDescription",
+          "width": "15%"
+        },
+        {
+          "title": "Controls",
+          "data": "ControlName",
+          "width": "20%"
+        },
+        {
+          "title": "Severity",
+          "data": "Severity",
+          "width": "10%"
+        },
+        {
+          "title": "Probability",
+          "data": "Probability",
+          "width": "10%"
+        },
+        {
+          "title": "Risk Class / Accident State",
+          "data": "RiskClass",
+          "width": "5%"
+        },
+        {
+          "title": "Acceptance Status",
+          "data": "AcceptanceStatus",
+          "width": "5%"
+        },
+        {
+          "title": "Acceptance Reference",
+          "data": "AcceptanceReference",
+          "width": "5%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+    "ReferencesTableEditor": {
+      "fields": [
+        {
+          "key": "ReferenceDescription",
+          "name": "Reference Description",
+          "type": "input",
+          "data": "",
+          "class": "col-md-5",
+          "templateOptions": {
+            "placeholder": "Link / References",
+            "required": "yes",
+            "requiredMessage": "Reference Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Reference Name already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ReferenceId",
+          "name": "References",
+          "type": "select",
+          "data": "",
+          "class": "col-md-5",
+          "templateOptions": {
+            "placeholder": "Link / References",
+            "required": "yes",
+            "requiredMessage": "Reference is required.",
+            "isExistData": "",
+            "isExistMessage": "Reference Name already exists..",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "ReferenceTitle",
+              "dataField": "ReferenceId",
+              "defaultField": "Reference"
+            },
+            "items": [
+
+            ]
+          }
+        },
+        {
+          "key": "ControlReferenceId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    },
+    "ChecklistTableEditor": {
+      "fields": [
+        {
+          "key": "CheckListDescription",
+          "name": "Checklist Name",
+          "type": "input",
+          "data": "",
+          "class": "col-md-10",
+          "templateOptions": {
+            "placeholder": "Checklist",
+            "required": "yes",
+            "requiredMessage": "Checklist Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Checklist Name already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ControlCheckListId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    },
+    "AuditTableEditor": {
+      "fields": [
+        {
+          "key": "AuditReferenceNo",
+          "name": "Audit Reference No",
+          "type": "input",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Audit Reference No",
+            "required": "yes",
+            "requiredMessage": "Audit Reference No Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Audit Reference No already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "AuditDate",
+          "name": "Audit Date",
+          "type": "date",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Audit Date",
+            "required": "yes",
+            "requiredMessage": "Audit Date is required.",
+            "isExistData": "",
+            "isExistMessage": "Audit Date already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "Hyperlink",
+          "name": "Hyperlink",
+          "type": "input",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Hyperlink",
+            "required": "yes",
+            "requiredMessage": "Hyperlink is required.",
+            "isExistData": "",
+            "isExistMessage": "Hyperlink already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ControlAuditId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    }
+  },
+  "services": [
+    {
+      "base": "Al Shaheen",
+      "baseId": 1,
+      "collapseId": 1,
+      "aircrafts": [
+        {
+          "id": "1",
+          "title": "Eurofighter ",
+          "description": "",
+          "mrrrefno": "",
+          "img": "../images/assets/img/flight_icons/Eurofighter_aircraft.png",
+          "cnt": "2"
+
+        },
+        {
+          "id": "2",
+          "title": "Hawk Aircraft ",
+          "mrrrefno": "MRR0",
+
+          "description": "",
+          "img": "../images/assets/img/flight_icons/HawkAircraft.png",
+          "cnt": "2"
+        },
+        {
+          "id": "3",
+          "mrrrefno": "MRR0",
+          "title": "Typhoon  Aircraft ",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/TyphoonAircraft.png",
+          "cnt": "1"
+        },
+        {
+          "mrrrefno": "",
+          "id": "",
+          "title": "A320",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/A320.png",
+          "cnt": ""
+        },
+        {
+          "mrrrefno": "",
+          "id": "",
+          "title": "A330 Aircraft",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/A330_aircraft.png",
+          "cnt": ""
+        },
+        {
+          "id": "",
+          "mrrrefno": "",
+          "title": "A747 Aircraft",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/A747_aircraft.png",
+          "cnt": ""
+        },
+        {
+          "id": "",
+          "mrrrefno": "",
+          "title": "Black Hawk ",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/blackhawk.png",
+          "cnt": ""
+        }
+      ]
+    },
+    {
+      "base": "Al Shour",
+      "baseId": 2,
+      "collapseId": 2,
+      "aircrafts": [
+        {
+          "id": "1",
+          "title": "Eurofighter ",
+          "description": "",
+          "mrrrefno": "MRR1",
+          "img": "../images/assets/img/flight_icons/Eurofighter_aircraft.png",
+          "cnt": "2"
+
+        },
+        {
+          "id": "2",
+          "title": "Hawk Aircraft ",
+          "mrrrefno": "MRR0",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/HawkAircraft.png",
+          "cnt": "2"
+        },
+        {
+          "id": "3",
+          "mrrrefno": "MRR2",
+          "title": "Typhoon  Aircraft ",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/TyphoonAircraft.png",
+          "cnt": "1"
+        },
+        {
+          "mrrrefno": "MRR3",
+          "id": "4",
+          "title": "A320",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/A320.png",
+          "cnt": ""
+        },
+        {
+          "mrrrefno": "MRR4",
+          "id": "5",
+          "title": "A330 Aircraft",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/A330_aircraft.png",
+          "cnt": ""
+        },
+        {
+          "id": "6",
+          "mrrrefno": "MRR5",
+          "title": "A747 Aircraft",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/A747_aircraft.png",
+          "cnt": ""
+        },
+        {
+          "id": "7",
+          "mrrrefno": "MRR6",
+          "title": "Black Hawk ",
+          "description": "",
+          "img": "../images/assets/img/flight_icons/blackhawk.png",
+          "cnt": ""
+        }
+      ]
+    }
+  ]
+}

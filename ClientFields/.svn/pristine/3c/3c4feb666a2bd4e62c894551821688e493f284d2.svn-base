@@ -1,0 +1,704 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortPage1Fields": [
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTRefNo",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ReportedById",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Reported by :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Reported by is required.",
+          "tooltip": "Search by clock number or users Names"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "reportedby"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Anonymous",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "required": "no",
+          "hideLabel": true,
+          "suffixLabel": "Anonymous",
+          "suffixLabelfalse": "",
+          "suffixLabelHide": true,
+          "tooltip": "Select if you want to hide your identity. More information will be required"
+        },
+        "validate": false
+      },
+
+      {
+        "key": "Confidential",
+        "name": "Confidential",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Confidential :",
+          "required": "no",
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": true,
+          "tooltip": "Select if you do not want to be identified by the HOD Manager"
+        },
+        "validate": false
+      },
+      {
+        "key": "PersonName",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Name :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter your Name.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Email",
+        "type": "email",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Email ID :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Email ID is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Email ID already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "PhoneNo",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Phone Number :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Phone Number required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 10,
+          "maxlengthMessage": "Maximum 10 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Phone Number already exists..",
+          "customClass": "margin-top:100px",
+          "pattern": "^[0-9]*$",
+          "patternMessage": "Numbers only allowed."
+        }
+      },
+
+      {
+        "key": "ClockNo",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Clock # :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "",
+          "maxlength": 200,
+          "maxlengthMessage": "",
+          "isExistData": "",
+          "isExistMessage": ""
+        }
+      },
+
+      {
+        "key": "ReportTitle",
+        "type": "input",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Report Title is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "tooltip": "Give a title that briefly describes the occurrence",
+          "draftValidate": true
+        }
+      },
+      {
+        "key": "DateTimeOfOccurance",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Date & Time of Occurance :",
+          "placeholder": "Select Date & time",
+          "required": "yes",
+          "requiredMessage": "Date & Time of Occurance is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": ">=",
+          "compareDateMessage": "Date & Time of Occurance should be in past. ",
+          "tooltip": "Select a Date and Time"
+        }
+      },
+      {
+        "key": "PlaceOfWork",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Place Of Work:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "",
+          "maxlength": 200,
+          "maxlengthMessage": "",
+          "isExistData": "",
+          "isExistMessage": ""
+        }
+      },
+      {
+        "key": "BaseId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "TypeOfOperationId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Type of Operation :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Type of Operation is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectUseName",
+            "dataField": "ProjectUseId",
+            "defaultField": "typeofoperation"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "typesofOperationOthers",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Others:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Other is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Other already exists..",
+          "customClass": "margin-top:100px",
+          "tooltip": "Specify Other."
+        }
+      },
+      {
+        "key": "PhaseOfOperation",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Phase of Operation :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Phase of Operation is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "PhaseOfOperationName",
+            "dataField": "PhaseOfOperationId",
+            "defaultField": "PhaseOfOperation"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "Unit",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Unit :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Unit is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "UnitName",
+            "dataField": "UnitId",
+            "defaultField": "Unit"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OperatorExperienceUnit",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Experience Unit :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Operator Experience Unit is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "UnitName",
+            "dataField": "UnitId",
+            "defaultField": "SortUnit"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OperatorExperience",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Operator Experience On Type:",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Opearator Experience is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Opearator Experience already exists..",
+          "customClass": "margin-top:100px",
+          "tooltip": "Opearator Experience."
+        }
+      },
+      {
+        "key": "GrantOperatorExperience",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Grant Total Operator Experience :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Operator Experience is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Grant Total Operator Experience already exists..",
+          "customClass": "margin-top:100px",
+          "tooltip": "Operator Experience."
+        }
+      },
+      {
+        "key": "SORTWeatherCondition",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "refkey": "SORTId",
+        "altkey": "WeatherConditionId",
+        "templateOptions": {
+          "label": "Weather Conditions:",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Weather Condition is required.",
+          "tooltip": "Weather Conditions"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WeatherConditionName",
+            "dataField": "SORTWeatherId",
+            "defaultField": "WeatherConditions"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "OtherWeatherCondtion",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Others:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Other is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Other already exists..",
+          "customClass": "margin-top:100px",
+          "tooltip": "Specify Other."
+        }
+      },
+      {
+        "key": "ProductsAffected",
+        "type": "select",
+        "save": true,
+        "data": [ ],
+        "refkey": "SORTId",
+        "altkey": "SORTProductsAffectedId",
+        "templateOptions": {
+          "label": "Products Affected :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Products Affected is required.",
+          "tooltip": "What are the products that were affected"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProductName",
+            "dataField": "ProductId",
+            "defaultField": "productsaffected"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OtherProducts",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Other Products :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Other Products is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Other Products already exists..",
+          "customClass": "margin-top:100px",
+          "tooltip": "Specify Other Products(Ex:product1,product2,..)"
+        }
+      },
+      {
+        "key": "ProductSerialNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Product Serial No. :",
+          "tooltip": "Serial numbers of the products affected. If multiple products were affected, separate with coma( ,)",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Product Serial No. is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Product Serial No. already exists.."
+        }
+      },
+      {
+        "key": "lblinjurypersonal",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Injury to Personnel :",
+          "required": "no"
+        }
+      },
+      {
+        "key": "InjuryToPersonelId",
+        "type": "radio",
+        "group": "personal",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "tooltip": "Was anyone was injured?",
+          "label": "Injury to Personnel :",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "yes",
+          "item": {
+            "suffixLabel": true,
+            "value": "WeatherId",
+            "label": "WeatherName",
+            "defaultField": "InjuryToPersonel"
+          }
+        }
+      },
+
+      {
+        "key": "OccurrenceDetails",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "tooltip": "Describe what happened, provide as much information as you can.",
+          "label": "Occurrence Details :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Occurrence Details is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "lbldamagetoequipmentId",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Damage to Equipment :",
+          "required": "no"
+        }
+      },
+      {
+        "key": "DamageToEquipmentId",
+        "type": "radio",
+        "group": "Equipment",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "tooltip": "Was there damage to any equipment?",
+          "label": "Damage to Equipment :",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "yes",
+          "item": {
+            "suffixLabel": true,
+            "value": "WeatherId",
+            "label": "WeatherName",
+            "defaultField": "DamageToEquipment"
+          }
+        }
+      },
+      {
+        "key": "lbldamagetoenvironmentId",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Damage to Environment :",
+          "required": "no"
+        }
+      },
+      {
+        "key": "DamageToEnvironmentId",
+        "type": "radio",
+        "group": "Environment",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "tooltip": "Was there any damage to the environment?",
+          "label": "Damage to Environment :",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "yes",
+          "item": {
+            "suffixLabel": true,
+            "value": "WeatherId",
+            "label": "WeatherName",
+            "defaultField": "DamageToEnvironment"
+          }
+        }
+      },
+      {
+        "key": "deleterecord",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Reason for Deletion :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "OccuranceLocationId",
+        "name": "Occurrence Location",
+        "type": "select",
+        "data": "",
+        "class": "col-md-5",
+        "templateOptions": {
+          "label": "Occurrence Location",
+          "placeholder": "Occurrence Location",
+          "tooltip": "Select the Occurrence Location",
+          "required": "yes",
+          "requiredMessage": "Occurrence Location is required.",
+          "isExistData": "",
+          "isExistMessage": "Location already exists..",
+          "customClass": "margin-top:100px",
+          "draftValidate": true
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "OccuranceLocation"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "ProjectId",
+        "name": "Project",
+        "type": "select",
+        "data": "",
+        "class": "col-md-5",
+        "templateOptions": {
+          "label": "Project",
+          "placeholder": "Project",
+          "tooltip": "Select Project for the Occurrence",
+          "required": "yes",
+          "requiredMessage": "Project is required.",
+          "isExistData": "",
+          "isExistMessage": "Project already exists..",
+          "customClass": "margin-top:100px",
+          "draftValidate": true
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Project"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": "yes",
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "SortStatus",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      }
+    ]
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+
+  }
+}

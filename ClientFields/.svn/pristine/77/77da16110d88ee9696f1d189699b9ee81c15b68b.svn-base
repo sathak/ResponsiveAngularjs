@@ -1,0 +1,597 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "newControlFields": [
+      {
+        "key": "ControlId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CreatedBy",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ControlRefNo",
+        "type": "label",
+        "data": null
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Project is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Project"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ProjectUseId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project Use:",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Project Use is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectUseName",
+            "dataField": "ProjectUseId",
+            "defaultField": "ProjectUse"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "LocationId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Location:",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Location is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "Location"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ControlTitle",
+        "type": "input",
+        "name": "Control Title",
+        "data": "",
+        "class": "col-md-2",
+        "templateOptions": {
+          "label": "Control Title :",
+          "placeholder": "Enter Control Title",
+          "required": "yes",
+          "requiredMessage": "ControlTitle  is required.",
+
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ControlDescription",
+        "type": "textarea",
+        "name": "ControlDescription",
+        "data": "",
+        "class": "col-md-5",
+        "templateOptions": {
+          "label": "Control Description :",
+          "placeholder": "Enter Control Description ",
+          "required": "yes",
+          "requiredMessage": "Control Description  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ChangeToId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Change To :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Change To is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProductTypeName",
+            "dataField": "ProductTypeId",
+            "defaultField": "ChangeTo"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ControlValidityId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Control Validity :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Control Validity is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProductTypeName",
+            "dataField": "ProductTypeId",
+            "defaultField": "ControlValidity"
+          },
+          "items": [
+            {
+              "ControlValidityID": 1,
+              "ControlValidityName": "Life of the project"
+            },
+            {
+              "ControlValidityID": 2,
+              "ControlValidityName": "Specify Duration"
+            }
+          ]
+        }
+      },
+      {
+        "key": "ControlExpiryDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Control Expiry Date :",
+          "placeholder": "Enter Control Expiry Date..",
+          "required": "yes",
+          "requiredMessage": "Control Expiry Date is required.",
+          "compareDateToday": true,
+          "compareDateBy": "<",
+          "compareDateMessage": "Control Expiry Date should not be in past."
+        }
+      },
+      {
+        "key": "MeetingRefNo",
+        "type": "input",
+        "name": "Minutes Ref No",
+        "data": "",
+        "class": "col-md-2",
+        "templateOptions": {
+          "label": "Meeting Ref No :",
+          "placeholder": "Enter Meeting Ref No",
+          "required": "yes",
+          "requiredMessage": "Meeting Ref No is required.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "MeetingRefLink",
+        "type": "input",
+        "name": "Meeting Ref Link",
+        "data": "",
+        "class": "col-md-2",
+        "templateOptions": {
+          "label": "Minutes Ref Link :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Meeting Ref Link  is required.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "MeetingDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Meeting Date :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Meeting Date is required.",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "StartDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Start Date :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Start Date is required.",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "TargetDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Target Date :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Target Date is required.",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "Reference",
+        "type": "tableeditor",
+        "data": [ ],
+        "templateOptions": {
+          "settings": "ReferencesTableEditor",
+          "key": "ReferenceId"
+        }
+      },
+      {
+        "key": "ControlCheckLists",
+        "type": "tableeditor",
+        "data": [ ],
+        "templateOptions": {
+          "settings": "ChecklistTableEditor",
+          "key": "ControlCheckListId"
+
+        }
+      },
+      {
+        "key": "ControlAuditReference",
+        "type": "tableeditor",
+        "data": [ ],
+        "templateOptions": {
+          "settings": "AuditTableEditor",
+          "key": "AuditReferenceId"
+
+        }
+      },
+      {
+        "key": "OwnerOrManagerId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Owner Manager :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Owner Manager is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "OwnerManager"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ControlStatusId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Control Status :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Control Status is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "StatusName",
+            "dataField": "ControlStatusId",
+            "defaultField": "ControlStatus"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ImplementedDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Implemented Date :",
+          "placeholder": "Enter Implemented Date..",
+          "required": "yes",
+          "requiredMessage": "Implemented Date is required.",
+          "compareDateToday": true,
+          "compareDateBy": ">=",
+          "compareDateMessage": "Implemented Date should not be a future date."
+
+        }
+      },
+      {
+        "key": "ReviewPeriod",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Review Period :",
+          "tooltip": "Select Review Period",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Review Period is required.",
+          "customClass": "margin-top:100px",
+        }
+      },
+      {
+        "key": "Notes",
+        "type": "textarea",
+        "name": "Notes",
+        "data": "",
+        "class": "col-md-5",
+        "templateOptions": {
+          "label": "Notes :",
+          "placeholder": "Enter Notes",
+          "required": "no",
+          "requiredMessage": "Notes  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      }
+    ]
+
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+    "ReferencesTableEditor": {
+      "fields": [
+        {
+          "key": "Hyperlink",
+          "name": "Reference Hyperlink",
+          "type": "input",
+          "data": "",
+          "class": "col-md-10",
+          "templateOptions": {
+            "placeholder": "Link / References",
+            "required": "no",
+            "requiredMessage": "Reference Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Reference Name already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ReferenceId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    },
+    "ChecklistTableEditor": {
+      "fields": [
+        {
+          "key": "CheckListDescription",
+          "name": "Checklist Name",
+          "type": "input",
+          "data": "",
+          "class": "col-md-10",
+          "templateOptions": {
+            "placeholder": "Checklist",
+            "required": "no",
+            "requiredMessage": "Checklist Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Checklist Name already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ControlCheckListId",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    },
+    "AuditTableEditor": {
+      "fields": [
+        {
+          "key": "ControlId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "AuditReferenceId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+
+          "key": "AuditReferenceNo",
+          "name": "Audit Reference No",
+          "type": "input",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Audit Reference No",
+            "required": "no",
+            "requiredMessage": "Audit Reference No Name is required.",
+            "isExistData": "",
+            "isExistMessage": "Audit Reference No already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "AuditDate",
+          "name": "Audit Date",
+          "type": "date",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Audit Date",
+            "required": "no",
+            "requiredMessage": "Audit Date is required.",
+            "isExistData": "",
+            "isExistMessage": "Audit Date already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "Hyperlink",
+          "name": "Hyperlink",
+          "type": "input",
+          "data": "",
+          "class": "col-md-3",
+          "templateOptions": {
+            "placeholder": "Hyperlink",
+            "required": "no",
+            "requiredMessage": "Hyperlink is required.",
+            "isExistData": "",
+            "isExistMessage": "Hyperlink already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [ ]
+    }
+  }
+}

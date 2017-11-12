@@ -1,0 +1,212 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortedainvestigationFields": [
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTRefNo",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTTitle",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTEDAInvestigationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "LeadInvestigator",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Lead Investigator :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Lead Investigator is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "UserList"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "SecondInvestigator",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "2nd Investigator :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Lead Investigator is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "UserList"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "TargetDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Target Date :",
+          "placeholder": "Select Date",
+          "required": "yes",
+          "requiredMessage": "Target Date is required.",
+          "compareDateToday": true,
+          "compareDateBy": "<=",
+          "compareDateMessage": "Target Date should be a future date."
+        }
+
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "edatable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 2 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "EDA Ref No",
+          "data": "EDARefNo",
+          "width": "5%"
+        },
+        {
+          "title": "Assigned To",
+          "data": "AssignedTo",
+          "width": "20%"
+        },
+        {
+          "title": "Target Date",
+          "data": "TargetDate",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "Status",
+          "width": "5%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

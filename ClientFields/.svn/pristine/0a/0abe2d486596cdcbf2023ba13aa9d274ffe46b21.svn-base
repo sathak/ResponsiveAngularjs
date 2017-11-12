@@ -1,0 +1,288 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "PSMM Maturity",
+      "url": "psmmmaturity"
+    }
+  ],
+  "fields": {
+    "psmmMaturityFields": [
+      {
+        "key": "PSMMMaturityId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "RefNumber",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "PSMMStatusId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select Project",
+          "required": "no",
+          "requiredMessage": "Project required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "pmcProjects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "PSMMEvaluationForId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Evaluation For :",
+          "placeholder": "Select Evaluation For",
+          "required": "no",
+          "requiredMessage": "Evaluation For required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EvaluationFor",
+            "dataField": "PSMMEvaluationForId",
+            "defaultField": "maturityEvaluation"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Year",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Year :",
+          "placeholder": "Select Year",
+          "required": "no",
+          "requiredMessage": "Year required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Year",
+            "dataField": "YearId",
+            "defaultField": "maturityYears"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "CompiledBy",
+        "type": "labeldata",
+        "data": "1",
+        "templateOptions": {
+          "label": "Compiled By :",
+          "required": false
+        }
+      },
+      {
+        "key": "AuthorizedBy",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Authorized By :",
+          "placeholder": "Select Authorized By",
+          "required": "no",
+          "requiredMessage": "Authorized By required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AuthorizedBy",
+            "dataField": "AuthorizedById",
+            "defaultField": "maturityAuthors"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Reference",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "250",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ManagerName",
+        "type": "labeldata",
+        "data": "",
+        "templateOptions": {
+          "label": "Responsible Manager :",
+          "required": false
+        }
+      },
+      {
+        "key": "Statement",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Responsible Manager Statement :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "PSMMSubjects",
+        "type": "label",
+        "data": [ ]
+      },      
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "psmmMaturityTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+        
+      ],
+      "dateFields": [ 4, 5 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Ref #",
+          "data": "RefNumber",
+          "width": "10%"
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName",
+          "width": "15%"
+        },
+        {
+          "title": "Title",
+          "data": "Title",
+          "width": "30%"
+        },
+        {
+          "title": "Evaluation For",
+          "data": "EvaluationFor",
+          "width": "15%"
+        },
+        {
+          "title": "Compiling Date",
+          "data": "CompilingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Authorizing Date",
+          "data": "AuthorizingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Status",
+          "data": "Status",
+          "width": "10%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Role Management",
+      "url": "rolemanagement"
+    }
+  ],
+  "fields": {
+    "roleManagementFields": [
+      {
+        "key": "RoleId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "RoleName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Role Name :",
+          "placeholder": "Enter Role Name..",
+          "required": "yes",
+          "requiredMessage": "Role Name is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "isExistData": "roleManagementTableData",
+          "isExistMessage": "Role Name already exists.."
+        }
+      },
+      {
+        "key": "AllRights",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Enable All Data Rights :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": false,
+          "requiredMessage": "Enable All Rights is required."
+        }
+      },
+      {
+        "key": "AddExistingSystemRole",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Copy Rights From System Role :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": false,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "ExistingSystemRoleId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Role :",
+          "placeholder": "Select Role",
+          "required": "yes",
+          "requiredMessage": "Role is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "RoleName",
+            "dataField": "RoleId",
+            "defaultField": "SystemRoles"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "RoleStatus",
+        "type": "radio",
+        "group": "personal",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Active"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "Inactive"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "Remarks",
+        "name": "Remarks",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "30",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+           "placeholder": "Insert Rationale Why Decision Is Made",
+          "required": "no",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+      {
+        "key": "RoleStatusName",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "NoOfUsers",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "roleManagementHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+           "placeholder": "Insert Rationale Why Decision Is Made",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "roleManagementTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Role Id",
+          "data": "RoleId",
+          "visible": false
+        },
+        {
+          "title": "Role Name",
+          "data": "RoleName"
+        },
+        {
+          "title": "No.of Users",
+          "data": "NoOfUsers",
+          "width": "10%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedOn",
+          "width": "15%"
+        },
+        {
+          "title": "Remarks",
+          "data": "Remarks",
+          "width": "30%"
+        },
+        {
+          "title": "Status",
+          "data": "RoleStatusName",
+          "width": "10%"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,598 @@
+{  
+   "fields":{  
+      "equipmentFields":[  
+         {  
+            "key":"EquipmentManufacturerId",
+            "type":"select",           
+            "data":"",
+            "templateOptions":{  
+               "label":"Equipment Manufacturer:",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Equipment Manufacturer is required"
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"EquipmentManufacturerName",
+                  "dataField":"EquipmentManufacturerId",
+                  "defaultField":"EquipmentManufacturer",
+                  "addNew":"no"
+               },
+               "items":[ ]
+            }
+         },
+         {  
+            "key":"EquipmentTypeId",
+            "type":"select",
+            "save":true,
+            "data":"",
+            "templateOptions":{  
+               "label":"Equipment Type/ Model:",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Equipment Type/ Model is required"
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"EquipmentModelTypeName",
+                  "dataField":"EquipmentModelTypeId",
+                  "defaultField":"EquipmentModelType",
+                  "addNew":"yes",
+                  "groupBy":"Group"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"EquipmentPartNo",
+            "type":"input",
+            "data":"",
+            "disabled":false,
+            "templateOptions":{  
+               "label":"Equipment Part # :",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Enter Equipment Part No",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":20,
+               "maxlengthMessage":"Maximum 20 characters only allowed.",
+               "isExistData":"",
+               "isExistMessage":"Equipment Part No already exists..",
+               "customClass":"margin-top:100px glowing-border:focus glowing-border"
+            }
+         },
+         {  
+            "key":"StockNo",
+            "type":"input",
+            "data":"",
+            "disabled":false,
+            "templateOptions":{  
+               "label":"Stock Number :",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Enter Stock Number",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":20,
+               "maxlengthMessage":"Maximum 20 characters only allowed.",
+               "isExistData":"",
+               "isExistMessage":"Stock Number already exists..",
+               "customClass":"margin-top:100px glowing-border:focus glowing-border"
+            }
+         },
+         {  
+            "key":"EquipmentSystemCode",
+            "type":"input",
+            "data":"",
+            "disabled":false,
+            "templateOptions":{  
+               "label":"Equipment System Code:",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Equipment System Code is required",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":20,
+               "maxlengthMessage":"Maximum 20 characters only allowed.",
+               "isExistData":"",
+               "isExistMessage":"Name already exists..",
+               "customClass":"margin-top:100px"
+            }
+         },
+         {  
+            "key":"EquipmentUsageHours",
+            "type":"input",
+            "data":"",
+            "disabled":false,
+            "templateOptions":{  
+               "label":"Equipment Usage Hours :",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Equipment Usage Hours is required",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":20,
+               "maxlengthMessage":"Maximum 20 characters only allowed.",
+               "isExistData":"",
+               "isExistMessage":"Name already exists..",
+               "customClass":"margin-top:100px"
+            }
+         },
+         {  
+            "key":"UsageHoursUnit",
+            "type":"select",
+            "data":"",
+            "templateOptions":{  
+               "label":"Unit:",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Equipment Usage Hours Unit is required"
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"EquipmentModelTypeName",
+                  "dataField":"EquipmentModelTypeId",
+                  "defaultField":"EquipmentModelType",
+                  "addNew":"yes",
+                  "groupBy":"Group"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"HigherAssySystemCode",
+            "type":"input",
+            "data":"",
+            "templateOptions":{  
+               "label":"Higher Assy System Code :",
+               "placeholder":"",
+               "required":"no",
+               "requiredMessage":"Higher Assy System Code is required",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":20,
+               "maxlengthMessage":"Maximum 20 characters only allowed.",
+               "isExistData":"",
+               "isExistMessage":"Name already exists..",
+               "customClass":"margin-top:100px"
+            }
+         },
+         {  
+            "key":"SORTMaintenanceManuals",
+            "type":"input",
+            "data":"",
+            "refkey":"SortPage3Id",
+            "altkey":"MaintenanceManualId",
+            "templateOptions":{  
+               "label":"Maintenance Manual Reference :",
+               "placeholder":"",
+               "required":"No",
+               "requiredMessage":"Maintenance Manual Reference is required"
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"MaintenanceManual",
+                  "dataField":"MaintenanceManualRefId",
+                  "defaultField":"MaintenanceManualReference",
+                  "addNew":"yes"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"SORTOperationManuals",
+            "type":"input",
+            "data":"",
+            "refkey":"SortPage3Id",
+            "altkey":"OperationManualId",
+            "templateOptions":{  
+               "label":"Operating Manual Reference :",
+               "placeholder":"",
+               "required":"no",
+               "requiredMessage":"Operating Manual Reference is required"
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"OperationManual",
+                  "dataField":"OperationManualRefId",
+                  "defaultField":"OperatingManualReference",
+                  "addNew":"yes"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"SORTEquipmentFaults",
+            "type":"multiselect",
+            "save":true,
+            "data":"",
+            "refkey":"SortPage3Id",
+            "altkey":"EquipmentFaultId",
+            "templateOptions":{  
+               "label":"Equipment Fault :",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Equipment Fault is required"
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"EquipmentName",
+                  "dataField":"EquipmentId",
+                  "defaultField":"EquipmentFault",
+                  "addNew":"no"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"AssociatedEquipment",
+            "type":"input",
+            "data":"",
+            "templateOptions":{  
+               "label":"Associated Equipment Investigation Reference:",
+               "placeholder":"i.e Warranty MDR TQ  etc",
+               "required":"no",
+               "requiredMessage":"Associated Equipment Investigation Reference is required",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":20,
+               "maxlengthMessage":"Maximum 20 characters only allowed.",
+               "isExistData":"",
+               "isExistMessage":"Already exists..",
+               "customClass":"margin-top:100px"
+            }
+         },
+         {  
+            "key":"Locations",
+            "type":"radio",
+            "group":"TechEquInUse",
+            "data":"no",
+            "disabled":"",
+            "templateOptions":{  
+               "label":"Equipment in Use in Other Areas/Locations :",
+               "item":{  
+                  "suffixLabel":true,
+                  "defaultField":"EquipmentInUseOtherArea"
+               },
+               "items":[  
+
+               ],
+               "hideLabel":false,
+               "required":"yes"
+            }
+         },
+         {  
+            "key":"QuantityOfEquipInCurrent",
+            "type":"input",
+            "data":"",
+            "disabled":false,
+            "templateOptions":{  
+               "label":"Quantity of Equip in Current Use :",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Quantity of Equip in Current Use is required",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":20,
+               "maxlengthMessage":"Maximum 20 characters only allowed.",
+               "isExistData":"",
+               "isExistMessage":"Quantity of Equip in Current Use already exists..",
+               "customClass":"margin-top:100px"
+            }
+         },
+         {  
+            "key":"SORTEquipmentCurrentlyUses",
+            "type":"multiselect",
+            "data":"",
+            "refkey":"SortPage3Id",
+            "altkey":"EquipmentCurrentlyUseId",
+            "templateOptions":{  
+               "label":"Location of Equipment Currently in Use :",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Location of Equipment Currently in Use is required"
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"EquipmentName",
+                  "dataField":"EquipmentId",
+                  "defaultField":"EquipmentCurrentlyUse",
+                  "addNew":"yes"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"LastKnownUse",
+            "type":"input",
+            "data":"",
+            "disabled":false,
+            "templateOptions":{  
+               "label":"Last Known Use or User of Equipment :",
+               "placeholder":"",
+               "required":"yes",
+               "requiredMessage":"Last Known Use or User of Equipment is required",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":20,
+               "maxlengthMessage":"Maximum 20 characters only allowed.",
+               "isExistData":"",
+               "isExistMessage":"Last Known Use or User of Equipment already exists..",
+               "customClass":"margin-top:100px"
+            }
+         },
+         {  
+            "key":"DateTimeOfLastKnownUse",
+            "type":"datetime",
+            "data":"",
+            "templateOptions":{  
+               "label":"Date/Time of Last Known Use :",
+               "placeholder":"",
+               "required":"no",
+               "requiredMessage":"Date/Time of Last Known Use is required",
+               "timeonly":false,
+               "format":"",
+               "hours24":true,
+               "compareDateToday":true,
+               "compareDateBy":"",
+               "compareDateMessage":"Date/Time of Last Known Use should not be a future date."
+            }
+         },
+		 {
+        "key": "SORTLocationsOfOtherEquipments",
+        "type": "input",
+        "save": true,
+        "data": "",
+		"refkey": "SortPage3Id",
+		"altkey": "EquipmentFaultId", 
+        "templateOptions": {
+          "label": "Locations Of Other Equipments :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Locations Of Other Equipments "
+        }
+      },
+		   {
+        "key": "EquipmentService",
+        "type": "tableeditor",
+        "data": [ ],
+        "disabled": false,
+        "templateOptions": {
+          "settings": "EquipmentServiceTableEditor",
+          "label": "",
+		  "key":""
+        }
+      },
+      ]
+   },
+         "tableEditor":{  
+         "EquipmentServiceTableEditor":{  
+            "fields":[  
+               {  
+                  "key":"EquipmentServiceId",
+                  "type":"label",
+                  "data":0,
+                  "templateOptions":{  
+                     "label":""
+                  }
+               },
+               {  
+                  "key":"SORTpage3Id",
+                  "type":"label",
+                  "data":0,
+                  "templateOptions":{  
+                     "label":""
+                  }
+               },
+               {  
+                  "key":"ServiceCentre",
+                  "type":"input",
+                  "name":"Service Centre",
+                  "data":"",
+                  "class":"col-md-2",
+                  "templateOptions":{  
+                     "label":"Service Centre :",
+                     "placeholder":"Enter Service Centre",
+                     "required":"yes",
+                     "requiredMessage":"Service Centre  is required.",
+                     "minlength":1,
+                     "minlengthMessage":"Minimum 1 character required.",
+                     "maxlength":20,
+                     "maxlengthMessage":"Maximum 20 characters only allowed.",
+                     "isExistData":"",
+                     "isExistMessage":"",
+                     "customClass":"margin-top:100px"
+                  }
+               },
+               {  
+                  "key":"ServiceLocation",
+                  "type":"input",
+                  "name":"Service Location",
+                  "data":"",
+                  "class":"col-md-2",
+                  "templateOptions":{  
+                     "label":"Service Location :",
+                     "placeholder":"Enter Service Location",
+                     "required":"yes",
+                     "requiredMessage":"Service Location  is required.",
+                     "minlength":1,
+                     "minlengthMessage":"Minimum 1 character required.",
+                     "maxlength":20,
+                     "maxlengthMessage":"Maximum 20 characters only allowed.",
+                     "isExistData":"",
+                     "isExistMessage":"",
+                     "customClass":"margin-top:100px"
+                  }
+               },
+               {  
+                  "key":"ServiceType",
+                  "name":"Service Type",
+                  "type":"select",
+                  "class":"col-md-1",
+                  "data":[  
+
+                  ],
+                  "templateOptions":{  
+                     "label":"Service Type :",
+                     "placeholder":"Select ...",
+                     "required":"yes",
+                     "requiredMessage":"Service Type is required."
+                  },
+                  "selectOptions":{  
+                     "item":{  
+                        "selected":{  
+
+                        },
+                        "displayField":"ServiceTypeName",
+                        "dataField":"ServiceTypeId",
+                        "defaultField":"ServiceType"
+                     },
+                     "items":[  
+                        {  
+                           "ServiceTypeName":"Major",
+                           "ServiceTypeId":"1"
+                        },
+                        {  
+                           "ServiceTypeName":"Routine",
+                           "ServiceTypeId":"2"
+                        }
+                     ]
+                  }
+               },
+               {  
+                  "key":"EquipmentLastServiceDate",
+                  "type":"datetime",
+                  "data":"",
+                  "name":"Last Service Date",
+                  "class":"col-md-2",
+                  "templateOptions":{  
+                     "label":"Last Service Time:",
+                     "placeholder":"",
+                     "required":"no",
+                     "requiredMessage":"Equipment Last Service Date/Hours is required",
+                     "timeonly":false,
+                     "format":"",
+                     "hours24":true,
+                     "compareDateToday":true,
+                     "compareDateBy":"",
+                     "compareDateMessage":"Equipment Last Service Date/Hours should not be a future date."
+                  }
+               },
+               {  
+                  "key":"Unit",
+                  "name":"Unit",
+                  "type":"select",
+                  "class":"col-md-1",
+                  "data":[  
+
+                  ],
+                  "templateOptions":{  
+                     "label":"Unit:",
+                     "placeholder":"Select ...",
+                     "required":"yes",
+                     "requiredMessage":"Unit is required."
+                  },
+                  "selectOptions":{  
+                     "item":{  
+                        "selected":{  
+
+                        },
+                        "displayField":"UnitName",
+                        "dataField":"UnitId",
+                        "defaultField":"Unit"
+                     },
+                     "items":[  
+                        {  
+                           "UnitName":"Hrs",
+                           "UnitId":"1"
+                        },
+                        {  
+                           "UnitName":"Landings",
+                           "UnitId":"2"
+                        },
+                        {  
+                           "UnitName":"Cycles",
+                           "UnitId":"3"
+                        }
+                     ]
+                  }
+               },
+               {  
+                  "key":"EquipmentLastServiceTime",
+                  "type":"input",
+                  "data":"",
+                  "name":"Last Service Time",
+                  "class":"col-md-2",
+                  "disabled":false,
+                  "templateOptions":{  
+                     "label":"Last Service Time :",
+                     "placeholder":"",
+                     "required":"yes",
+                     "requiredMessage":"Equipment Last Service Time is required",
+                     "minlength":1,
+                     "minlengthMessage":"Minimum 1 character required.",
+                     "maxlength":20,
+                     "maxlengthMessage":"Maximum 20 characters only allowed.",
+                     "isExistData":"",
+                     "isExistMessage":"Equipment Last Service Time already exists..",
+                     "customClass":"margin-top:100px"
+                  }
+               },
+               {  
+                  "key":"ObjectState",
+                  "type":"label",
+                  "data":"0",
+                  "templateOptions":{  
+                     "label":""
+                  }
+               },
+               {  
+                  "key":"Status",
+                  "type":"label",
+                  "data":"0",
+                  "templateOptions":{  
+                     "label":""
+                  }
+               }
+            ],
+            "data":[  
+
+            ]
+         }
+      }
+
+}

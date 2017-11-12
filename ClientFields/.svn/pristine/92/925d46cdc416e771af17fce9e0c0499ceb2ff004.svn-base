@@ -1,0 +1,362 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Role Management",
+      "url": "rolemanagement"
+    }
+  ],
+  "fields": {
+    "notificationFields": [
+      {
+        "key": "NotificationId",
+        "type": "label",
+        "data": 0
+      },
+	  {
+        "key": "ModuleId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Module :",
+          "placeholder": "Select Module",
+          "required": "yes",
+          "requiredMessage": "Module is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "MenuName",
+            "dataField": "MenuId",
+            "defaultField": "Module"
+          },
+          "items": [
+
+          ]
+        }
+      },	  
+	  {
+        "key": "PageId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Page :",
+          "placeholder": "Select Page",
+          "required": "yes",
+          "requiredMessage": "Page is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "MenuName",
+            "dataField": "MenuId",
+            "defaultField": "Page",
+			"parentId": "ParentId"
+          },
+          "items": [
+
+          ]
+        }
+      },
+	   {
+        "key": "NFActionId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Action :",
+          "placeholder": "Select Action",
+          "required": "yes",
+          "requiredMessage": "Action is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "ActionId",
+            "defaultField": "Action"
+          },
+          "items": [
+
+          ]
+        }
+      },
+	   {
+        "key": "Type",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Type :",
+          "placeholder": "Select Type",
+          "required": "yes",
+          "requiredMessage": "Type is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "TypeName",
+            "dataField": "TypeName"
+          },
+          "items": [
+              {"TypeName":"ALERT"},
+			  {"TypeName":"EMAIL"},
+			  {"TypeName":"SMS"}
+          ]
+        }
+      },
+	  {
+        "key": "Task",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Task :",
+          "placeholder": "Select Task",
+          "required": "yes",
+          "requiredMessage": "Task is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "TaskName",
+            "dataField": "TaskName",
+           
+          },
+          "items": [
+			  {"TaskName":"IMMEDIATE"},
+			  {"TaskName":"SCHEDULE"}
+          ]
+        }
+      },
+	   {
+        "key": "NFRoles",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+		"refkey": "NotificationId",
+        "altkey": "NFRoleId",
+        "templateOptions": {
+          "label": "Roles :",
+          "placeholder": "Select Roles",
+          "required": "yes",
+          "requiredMessage": "Roles is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "RoleName",
+            "dataField": "RoleId",
+            "defaultField": "Roles"
+          },
+          "items": [
+
+          ]
+        }
+      },
+	  {
+        "key": "NFIncludedUsers",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+	    "refkey": "NotificationId",
+        "altkey": "NFIncludedId",
+        "templateOptions": {
+          "label": "Include Users :",
+          "placeholder": "Select Include Users",
+          "required": "No",
+          "requiredMessage": "IncludeUsers is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "Users"
+          },
+          "items": [
+
+          ]
+        }
+      },
+	  {
+        "key": "NFExcludedUsers",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+	    "refkey": "NotificationId",
+        "altkey": "NFExcludedId",
+        "templateOptions": {
+          "label": "Exclude Users :",
+          "placeholder": "Select Exclude Users",
+          "required": "No",
+          "requiredMessage": "Exclude Users is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "Users"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      
+      {
+        "key": "Originator",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Notify Originator :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": false,
+          "requiredMessage": "Notify Originator is required."
+        }
+      },
+	  {
+        "key": "Remarks",
+        "name": "Remarks",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "30",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "Enter remarks",
+          "required": "no",
+          "maxlength": 5000,
+          "maxlengthMessage": "Maximum 5000 characters only allowed."
+        }
+      },
+	  {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "notificationHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rationale :",
+           "placeholder": "Insert Rationale Why Decision Is Made",
+          "required": "yes",
+          "requiredMessage": "Rationale is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "notificationTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [  ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [0,3]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Type",
+          "data": "Type",
+		  "width": "120px"
+        },
+        {
+          "title": "Module",
+          "data": "Module",
+		  "width": "200px"
+        },
+        {
+          "title": "Page",
+          "data": "Page",
+          "width": "200px"
+        },        
+        {
+          "title": "Task",
+          "data": "Task",
+          "width": "200px"
+        },
+        {
+          "title": "Action",
+          "data": "Action"
+        }
+      ]
+    }
+  }
+}

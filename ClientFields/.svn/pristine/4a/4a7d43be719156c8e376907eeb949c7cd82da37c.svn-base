@@ -1,0 +1,594 @@
+{
+  "fields": {
+    "tireburstFields": [
+      {
+        "key": "SORTTyreBurstId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "OccurenceDate",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurence Date :",
+          "placeholder": "Occurence Date ",
+          "required": "no",
+          "requiredMessage": "Occurence Date is required.",
+          "timeonly": false,
+          "format": "",
+          "tooltip": "Occurence Date "
+        }
+      },
+      {
+        "key": "Airport",
+        "type": "input",
+        "data": "",
+       
+        
+        "templateOptions": {
+          "label": "Base/ Name of Airport :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Name of Airport.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name of Airport already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Squadron",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Squadron :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Squadron.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Squadron already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ParentUnit",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Parent Unit :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Parent Unit.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Parent Unit already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "PilotName",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Pilot's Name :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Pilot's Name.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Pilot's Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Rank",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Rank :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Rank.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Rank already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "MilitaryNo",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Military Number :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Military Number.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Military Number already exists.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AircraftTypeNo",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Aircraft Type & Number :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Aircraft Type & Number is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AircraftName",
+            "dataField": "Id",
+            "defaultField": "AircraftType"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "SORTTyreFailure",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "refkey": "SORTTyreBurstId",
+        "altkey": "EquipmentFaultId",
+        "data": [
+
+        ],
+        "templateOptions": {
+          "label": "Type of Failure :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "tooltip": "Type of Failure"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "TireFailureName",
+            "dataField": "TireFailureId",
+            "defaultField": "TypeOfTireFailure"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OtherFailureType",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Other Failure Type :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Other Failure Type.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Other Failure Type already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTBurstTyreLocation",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "refkey": "SORTTyreBurstId",
+        "altkey": "SORTBurstTyreLocationId",
+        "templateOptions": {
+          "label": "Location of Tire Burst :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "tooltip": "Location of Tire Burst."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "LocationName",
+            "dataField": "LocationId",
+            "defaultField": "TireBurstLocation",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "OtherBurstLocation",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Other Tire Burst Location :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Other Tire Burst Location.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Other Tire Burst Location already exists.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "RunwayType",
+        "type": "radio",
+        "save": true,
+        "data": [
+
+        ],
+        "templateOptions": {
+          "label": "Type of Runway :",
+          "placeholder": "",
+          "required": "no",
+          "tooltip": "Type of Runway.",
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "RunwayTypeName",
+            "dataField": "RunwayTypeId",
+            "defaultField": "TypeOfRunway",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "TaxiWayType",
+        "type": "radio",
+        "save": true,
+        "data": "no",
+        "templateOptions": {
+          "label": "Type of Taxiway :",
+          "required": "yes",
+          "tooltip": "Type of Taxiway.",
+          "item": {
+            "suffixLabel": true,
+            "value": "TaxiwayTypeName",
+            "label": "TaxiwayTypeId",
+            "defaultField": "TypeOfTaxiWay"
+          },
+          "items": [
+
+          ],
+          "hideLabel": false
+        }
+      },
+      {
+        "key": "RampType",
+        "type": "radio",
+        "save": true,
+        "data": "no",
+        "templateOptions": {
+          "label": "Type of Ramp :",
+          "placeholder": "",
+          "required": "no",
+          "tooltip": "Type of Ramp.",
+          "item": {
+            "suffixLabel": true,
+            "value": "RampTypeName",
+            "label": "RampTypeId",
+            "defaultField": "TypeOfRamp"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "SORTTireSurfaceCondition",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "refkey": "SORTTyreBurstId",
+        "altkey": "SORTTyreSurfaceId",
+        "templateOptions": {
+          "label": "Surface Condition :",
+          "placeholder": "select ...",
+          "required": "no",
+          "tooltip": "Surface Condition."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "SurfaceConditionName",
+            "dataField": "SurfaceConditionId",
+            "defaultField": "SurfaceCondition"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OutSideTemperature",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Outside Air Temperature (c) :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Outside Air Temperature.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Outside Air Temperature already exists.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AircraftWeight",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Approx. Aircraft All-up Weight :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Approx. Aircraft All-up Weight.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Approx. Aircraft All-up Weight already exists.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "TaxiLongPeriod",
+        "type": "radio",
+        "group": "TaxiLongPeriod",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "tooltip": "Is Long Period of Taxi?",
+          "label": "Long Period of Taxi? :",
+          "items": [
+
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "item": {
+            "suffixLabel": true,
+            "value": "TaxiLongPeriodId",
+            "label": "TaxiLongPeriodName",
+            "defaultField": "TaxiLongPeriod"
+          }
+        }
+      },
+      {
+        "key": "BreakExtensiveUse",
+        "type": "radio",
+        "group": "BreakExtensiveUse",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "tooltip": "Extensive Use of Brakes?",
+          "label": "Extensive Use of Brakes? :",
+          "items": [
+
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "item": {
+            "suffixLabel": true,
+            "value": "BreakeExtensiveUseId",
+            "label": "BreakExtensiveUseName",
+            "defaultField": "ExtensiveBreake"
+          }
+        }
+      },
+      {
+        "key": "HardTurns",
+        "type": "radio",
+        "group": "personal",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "tooltip": "Is Hard Turns before Tire burst?",
+          "label": "Hard Turns before Tire burst? :",
+          "items": [
+
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "item": {
+            "suffixLabel": true,
+            "value": "HardTurnsId",
+            "label": "HardTurnsName",
+            "defaultField": "HardTurns"
+          }
+        }
+      },
+      {
+        "key": "SORTWhichTyreBurst",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "refkey": "SORTTyreBurstId",
+        "altkey": "SORTWhichTyreId",
+        "templateOptions": {
+          "label": "Which Tire burst? :",
+          "placeholder": "select...",
+          "required": "no",
+          "tooltip": "Which Tire burst?"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "WhichTireBurstName",
+            "dataField": "WhichTireBurstId",
+            "defaultField": "WhichTire"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OtherTyreBurst",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Other Tire burst :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Other Tire burst.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Other Tire burst already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "BreakeCondition",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Condition of brakes before Incident :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Condition of brakes before Incident.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Condition of brakes before Incident already exists.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTTyreSuspectCause",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "refkey": "SORTTyreBurstId",
+        "altkey": "SORTTyreSuspectCauseId",
+        "templateOptions": {
+          "label": "Suspected cause of Tire Burst :",
+          "placeholder": "select...",
+          "required": "no",
+          "tooltip": "Suspected cause of Tire Burst."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "SuspectedCauseName",
+            "dataField": "SuspectedCauseId",
+            "defaultField": "SuspectedCause"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "OtherSuspectedCause",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "readonly": false,
+        "templateOptions": {
+          "label": "Other Suspected cause of Tire burst :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Enter Other Suspected cause of Tire burst.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Other Suspected cause of Tire burst already exists.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ExplanationOfBurst",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+       
+        
+        "templateOptions": {
+          "tooltip": "Explanation of how the tire burst.",
+          "label": "Explanation of how the tire burst :",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 1000,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 1000 characters only allowed."
+        }
+      }
+    ]
+  }
+}

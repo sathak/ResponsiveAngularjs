@@ -1,0 +1,166 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "edaSummaryFields": [
+      {
+        "key": "EDASummaryID",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTEDAInvestigationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "EDAStatus",
+        "type": "label",
+        "data": 3
+      },
+      {
+        "key": "EDAStatusCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Status :"
+        }
+      },
+      {
+        "key": "DescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Summary of Contributing Factors, Error, and Event :",
+          "required": false
+        }
+      },
+      {
+        "key": "SummaryDescription",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Summary :",
+          "placeholder": "Provide a brief summary of the event.",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "Enter remarks",
+          "required": "yes",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "RecommandLoggedBy",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Recommendations Logged By :",
+          "placeholder": "Recommendations Logged By",
+          "required": "no",
+          "requiredMessage": "Recommendations Logged By is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength":50,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "RecommandDate",
+        "type": "date",
+        "data": "",
+        "templateOptions": {
+          "label": "Recommendations Date :",
+          "placeholder": "Select",
+          "required": "yes",
+          "requiredMessage": "Recommendations Date is required.",
+          "minlength": 2
+        }
+      },
+      {
+        "key": "EDAAcknowledge",
+        "type": "label",
+        "data": "By approving this EDA, I confirm that I have reviewed this report and agree with the recommendations therein. I also confirm that the recommendations have been added to the SORT /  EDA tracking log and shall be completed in a timely manner."
+      },
+      {
+        "key": "ConfirmReview",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that I have reviewed this report and agree with the recommendations therein. I also confirm that the recommendations have been added to the SORT /  EDA tracking log and shall be completed in a timely manner.",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that I have reviewed this report and agree with the recommendations therein. I also confirm that the recommendations have been added to the SORT /  EDA tracking log and shall be completed in a timely manner.",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": []
+      },
+      {
+        "key": "PageSavedStatus",
+        "type": "label",
+        "data": []
+      }
+    ]
+  },
+  "tables": {
+  },
+  "tableEditor": {
+  }
+}

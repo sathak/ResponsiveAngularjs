@@ -1,0 +1,227 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "PSMM",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Project Compliance Configuration",
+      "url": "pcccompliancetemplates"
+    }
+  ],
+  "fields": {
+    "pccComplianceTemplatesFields": [
+      {
+        "key": "PSMMTemplateProjectsId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "PSMMComplianceTemplateId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "TemplateTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Template Title :",
+          "placeholder": "Enter Template Title",
+          "required": "no",
+          "requiredMessage": "Template Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "PSMMComplianceTemplateProjects",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "PSMMComplianceTemplateId",
+        "altkey": "PSMMTemplateProjectsId",
+        "templateOptions": {
+          "label": "Projects Assigned :",
+          "placeholder": "Select",
+          "required": "no",
+          "requiredMessage": "Projects Assigned is required",
+          "tooltip": "Projects Assigned"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "pccProjects"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "QuestionCode",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "AddQuestionCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "ID No :",
+          "readyonly": true,
+          "placeholder": "Enter ID No",
+          "required": "no",
+          "requiredMessage": "ID No is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "AddQuestionTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Question Title :",
+          "placeholder": "Enter Question Title",
+          "required": "no",
+          "requiredMessage": "Question Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "AddRemarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter Description",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },     
+      {
+        "key": "Active",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "PSMMComplianceTemplateQuestions",
+        "type": "input",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "pccComplianceTemplatesTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [ 4 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "PSMMComplianceTemplateId",
+          "data": "PSMMComplianceTemplateId",
+          "width": "0%",
+          "visible": false
+        },
+        {
+          "title": "S No",
+          "data": null,
+          "width": "5%"
+        },
+        {
+          "title": "Template",
+          "data": "TemplateName",
+          "width": "30%"
+        },
+        {
+          "title": "Projects Assigned",
+          "data": "Projects",
+          "width": "20%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedOn",
+          "width": "5%"
+        }
+      ]
+    }
+
+  },
+  "tableEditor": {
+
+  }
+}

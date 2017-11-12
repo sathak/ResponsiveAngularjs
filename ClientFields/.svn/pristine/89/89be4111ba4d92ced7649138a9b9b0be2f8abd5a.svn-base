@@ -1,0 +1,441 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortdecisionFields": [
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTDecisionsId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ProductSafety",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Product Safety",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Product Safety",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "SHE",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "SHE",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "SHE",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "Quality",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Quality",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Quality",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "SIL",
+        "type": "radio",
+        "group": "sil",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SIL :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "SIL1"
+            },
+            {
+              "suffixLabel": true,
+              "value": 2,
+              "label": "SIL2"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "SIL is required."
+        }
+      },
+      {
+        "key": "EmergencyManagementPlanResponseRequired",
+        "type": "radio",
+        "group": "EmergencyManagementPlan",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Emergency Management Plan required?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "SIL is required."
+        }
+      },
+      {
+        "key": "EmergencyManagementPlanResponseRequiredDesc",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "silRemarksITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "EDA",
+        "type": "radio",
+        "group": "eda",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "EDA :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "label": "Yes",
+              "value": true
+            },
+            {
+              "suffixLabel": true,
+              "label": "No",
+              "value": false
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "EDA is required."
+        }
+      },
+      {
+        "key": "InvestigationReport",
+        "type": "radio",
+        "group": "InvestigativeAction",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Investigative Action :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes",
+          "requiredMessage": "Investigative Action is required."
+        }
+      },
+      {
+        "key": "HazardLogEntry",
+        "type": "radio",
+        "group": "HazardLogEntry",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "tooltip": "",
+          "label": "Log Entry :",
+          "items": [],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "Log Entry is required.",
+          "item": {
+            "suffixLabel": true,
+            "value": "HazardLogEntry",
+            "label": "HazardLogEntryName",
+            "defaultField": "HazardLogEntryType"
+          }
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "sortHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "InvestigationTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+      ],
+      "dateFields": [
+        5,
+        6,
+        7
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "SORT Ref No.",
+          "data": "SORTRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Action Ref No.",
+          "data": "ActionRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Meeting Ref No.",
+          "data": "MeetingRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Action Details",
+          "data": "ActionDetails",
+          "width": "30%"
+        },
+        {
+          "title": "Owner",
+          "data": "OwnerName",
+          "width": "10%"
+        },
+        {
+          "title": "Start Date",
+          "data": "StartDate",
+          "width": "10%"
+        },
+        {
+          "title": "Due Date",
+          "data": "DueDate",
+          "width": "10%"
+        },
+        {
+          "title": "Completion Date",
+          "data": "ClosingDate",
+          "width": "10%"
+        },
+        {
+          "title": "Action Status",
+          "data": "ActionStatus",
+          "width": "5%"
+        }
+      ]
+    },
+    "decisionTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+      ],
+      "dateFields": [],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            1,2,3
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": false,
+        "info": false
+      },
+      "columns": [
+        {
+          "title": "Name",
+          "data": "UserName",
+          "width": "20%"
+        },
+        {
+          "title": "SIL",
+          "data": "SIL",
+          "width": "15%",
+          
+        },
+        {
+          "title": "EDA",
+          "data": "EDA",
+          "width": "15%"
+        },
+        {
+          "title": "Investigative",
+          "data": "InvestigationReport",
+          "width": "15%"
+        },
+        {
+          "title": "Department",
+          "data": "TransferedTo",
+          "width": "15%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+  }
+}

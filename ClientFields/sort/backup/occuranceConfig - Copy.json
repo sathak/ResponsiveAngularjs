@@ -1,0 +1,581 @@
+{
+  "breadcrumbs": [
+    //{
+    //  "class": "fa fa-home",
+    //  "title": "Home",
+    //  "url": "dashboard"
+    //},
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "sortPage1Fields": [
+      {
+        "key": "ReportedBy",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Reported by :*",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Reported by"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ReportedBy",
+            "dataField": "ReportedID",
+            "defaultField": "ReportedDetails",
+            "addNew": "yes"
+          },
+          "items": [
+            {
+              "ReportedID": 0,
+              "ReportedBy": "Self"
+            },
+            {
+              "ReportedID": 1,
+              "ReportedBy": "John Smith"
+            },
+            {
+              "ReportedID": 2,
+              "ReportedBy": "John"
+            }
+          ]
+        }
+      },
+      {
+        "key": "Anonymous",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Anonymous",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Anonymous",
+          "suffixLabelHide": true
+        }
+      },
+
+      {
+        "key": "Confidential",
+        "name": "Confidential",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Confidential :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": true
+        }
+      },
+      {
+        "key": "ContactDetails",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Contact details :",
+          "placeholder": "Contact Details",
+          "required": "yes",
+          "requiredMessage": "Contact Details required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Contact details already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ClockNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Clock #:",
+          "placeholder": "Clock #",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "",
+          "maxlength": 20,
+          "maxlengthMessage": "",
+          "isExistData": "",
+          "isExistMessage": ""
+        }
+      },
+      {
+        "key": "ReportTitle",
+        "type": "input",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Report Title:",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "datetimepicker1",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Date & time of occurance :",
+          "placeholder": "Select Date & time",
+          "required": "no",
+          "requiredMessage": "Date & time of occurance required."
+        }
+      },
+      {
+        "key": "BaseOrDepartment",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Base/Department :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Base / Department"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseOrDepartment",
+            "dataField": "BaseOrDepartmentID",
+            "defaultField": "BaseOrDepartmentDetails",
+            "groupBy": "Department"
+          },
+          "items": [
+            {
+              "BaseOrDepartmentID": "0",
+              "BaseOrDepartment": "Flight Safety",
+              "Department": "Al Shaheen"
+            },
+            {
+              "BaseOrDepartmentID": "1",
+              "BaseOrDepartment": "Maintenance",
+              "Department": "Al Shaheen"
+            },
+            {
+              "BaseOrDepartmentID": "2",
+              "BaseOrDepartment": "Air Operations",
+              "Department": "Al Shaheen"
+            },
+            {
+              "BaseOrDepartmentID": "3",
+              "BaseOrDepartment": "Administration",
+              "Department": "Al Shaheen"
+            },
+            {
+              "BaseOrDepartmentID": "4",
+              "BaseOrDepartment": "Flight Safety",
+              "Department": "Jubail"
+            },
+            {
+              "BaseOrDepartmentID": "5",
+              "BaseOrDepartment": "Maintenance",
+              "Department": "Jubail"
+            },
+            {
+              "BaseOrDepartmentID": "6",
+              "BaseOrDepartment": "Air Operations",
+              "Department": "Jubail"
+            },
+            {
+              "BaseOrDepartmentID": "7",
+              "BaseOrDepartment": "Administration",
+              "Department": "Purchase"
+            },
+            {
+              "BaseOrDepartmentID": "8",
+              "BaseOrDepartment": "Flight Safety",
+              "Department": "Dhahran"
+            },
+            {
+              "BaseOrDepartmentID": "9",
+              "BaseOrDepartment": "Maintenance",
+              "Department": "Dhahran"
+            },
+            {
+              "BaseOrDepartmentID": "10",
+              "BaseOrDepartment": "Air Operations",
+              "Department": "Dhahran"
+            },
+            {
+              "BaseOrDepartmentID": "11",
+              "BaseOrDepartment": "Administration",
+              "Department": "Dhahran"
+            },
+            {
+              "BaseOrDepartmentID": "12",
+              "BaseOrDepartment": "Other",
+              "Department": "Other Bases"
+            }
+
+          ]
+        }
+      },
+      {
+        "key": "TypeOfOperation",
+        "type": "select",
+        "save": false,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Type of operation :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Type of operation"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "TypeOfOperation",
+            "dataField": "TypeOfOperationID",
+            "defaultField": "TypeOfOperationDetails"
+          },
+          "items": [
+            {
+              "TypeOfOperationID": 0,
+              "TypeOfOperation": "Flight"
+            },
+            {
+              "TypeOfOperationID": 1,
+              "TypeOfOperation": "Maintenance"
+            },
+            {
+              "TypeOfOperationID": 2,
+              "TypeOfOperation": "Supply/Logistics"
+            }
+          ]
+        }
+      },
+      {
+        "key": "ProductsAffected",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "EmpInfoId",
+        "altkey": "ProductsAffected",
+        "templateOptions": {
+          "label": "Products Affected",
+          "placeholder": "Select Products Affected.."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProductsAffected",
+            "dataField": "ProductsAffectedId",
+            "defaultField": "ProductsAffectedDetails",
+            //"groupBy": "Group",
+            "addNew": "yes"
+          },
+          "items": [
+            {
+              "ProductsAffectedId": 0,
+              "ProductsAffected": "Typhoon MK"
+              //"Group": "One"
+            },
+            {
+              "ProductsAffectedId": 1,
+              "ProductsAffected": "PC21"
+              //"Group": "One"
+            },
+            {
+              "ProductsAffectedId": 2,
+              "ProductsAffected": "Tornado"
+              //"Group": "One"
+            },
+            {
+              "ProductsAffectedId": 3,
+              "ProductsAffected": "Cirrus"
+              //"Group": "Two"
+            },
+            {
+              "ProductsAffectedId": 4,
+              "ProductsAffected": "Hawk MK"
+              //"Group": "Two"
+            },
+            {
+              "ProductsAffectedId": 4,
+              "ProductsAffected": "Ground Support Equipment"
+              //"Group": "Three"
+            },
+            {
+              "ProductsAffectedId": 5,
+              "ProductsAffected": "Other1"
+              //"Group": "Three"
+            }
+          ]
+        }
+      },
+      {
+        "key": "ProductSerialNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Product serial no. :",
+          "placeholder": "Product serial no.",
+          "required": "no",
+          "requiredMessage": "Product serial no.  required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Product serial no. already exists.."
+        }
+      },
+      {
+        "key": "lblInjuryPersonal",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Injury to personnel:",
+          "required": false
+        }
+      },
+      {
+        "key": "Personnel1",
+        "type": "radio",
+        "group": "personal",
+        "data": "yes",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Injury to personnel:",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "value1": "yes",
+          "value2": "no",
+          "label1": "Yes",
+          "label2": "No",
+          "required": "yes"
+        }
+      },
+      {
+        "key": "Personnel2",
+        "type": "radio",
+        "group": "personal",
+        "data": false,
+        "disabled": "",
+        "templateOptions": {
+          "label": "No",
+          "hideLabel": true,
+          "suffixLabel": "No",
+          "suffixLabelHide": true
+
+        }
+      },
+
+      {
+        "key": "OccurrenceDetails",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurrence Details:",
+          "placeholder": "",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "lblDamageToEquipment",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Damage To Equipment:",
+          "required": false
+        }
+      },
+      {
+        "key": "DamageToEquipment1",
+        "type": "radio",
+        "group": "Equipment",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Damage To Equipment:",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "value1": "yes",
+          "value2": "no",
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "DamageToEquipment2",
+        "type": "radio",
+        "group": "Equipment",
+        "data": false,
+        "disabled": "",
+        "templateOptions": {
+          "label": "No",
+          "hideLabel": true,
+          "suffixLabel": "No",
+          "suffixLabelHide": true
+
+        }
+      },
+      {
+        "key": "lblDamageToEnvironment",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Damage To Environment:",
+          "required": false
+        }
+      },
+      {
+        "key": "DamageToEnvironment1",
+        "type": "radio",
+        "group": "Environment",
+        "data": "yes",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Damage To Environment:",
+          "hideLabel": false,
+          "suffixLabel": true,
+          "value1": "yes",
+          "value2": "no",
+          "label1": "Yes",
+          "label2": "No"
+        }
+      },
+      {
+        "key": "DamageToEnvironment2",
+        "type": "radio",
+        "group": "Environment",
+        "data": false,
+        "disabled": "",
+        "templateOptions": {
+          "label": "No",
+          "hideLabel": true,
+          "suffixLabel": "No",
+          "suffixLabelHide": true
+
+        }
+      },
+      {
+        "key": "ITARwarning",
+        "name": "ITARwarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "ITAR warning disclaimer",
+          "required": true,
+          "hideLabel": false,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "occuranceTable": {
+      "order": [
+        [ 0, "asc" ]
+      ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ 3, 4 ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [
+        {
+          "extend": "pdfHtml5",
+          "text": "Print",
+          "download": "open",
+          "orientation": "portrait",
+          "className": "fa fa-print",
+          "pageSize": "A4",
+          "title": "Safety Occurance Report Transmittal (SORT)",
+          "exportOptions": {
+            "columns": [ 0, 1, 2 ]
+          },
+          "message": "Date",
+          "customize": "function(doc) {console.log(doc);doc.content[1].text = navcon.getCurrentDate('DD/MM/YYYY HH:MM');}"
+        }
+      ],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "ID",
+          "data": "id",
+          "width": "0%"
+
+        },
+        {
+          "title": "Ref#",
+          "data": "refNo",
+          "width": "5%",
+          "className": "all"
+        },
+        {
+          "title": "Date of Occurance",
+          "data": "DOC",
+          "width": "15%",
+          "className": "all"
+        },
+        {
+          "title": "Title",
+          "data": "title",
+          "width": "40%",
+          "className": "desktop"
+        },
+        {
+          "title": "Submitted On",
+          "data": "SubmittedOn",
+          "width": "10%"
+        },
+        {
+          "title": "Base/Department",
+          "data": "dept",
+          "width": "20%"
+        },
+        {
+          "title": "Status",
+          "data": "status",
+          "width": "10%"
+        }
+      ]
+    }
+
+  }
+
+}

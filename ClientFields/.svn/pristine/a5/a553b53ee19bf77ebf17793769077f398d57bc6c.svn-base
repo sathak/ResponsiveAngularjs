@@ -1,0 +1,135 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "icon-user",
+      "title": "My Profile",
+      "url": "userprofile"
+    }
+  ],
+  "fields": {
+    "userProfileFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "img",
+        "type": "photoupload",
+        "save": true,
+        "ischangeable": true,
+        "readonly": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Id",
+          "required": "no",
+          "minlength": 2,
+          "key": "Id",
+          "folderType": "users",          
+          "fileType": [
+            "jpeg",
+            "jpg",
+            "png"
+          ]
+        }
+      },
+      {
+        "key": "ClockNumber",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Clock Number :",
+          "placeholder": "",
+          "required": "no"
+        }
+      },
+      {
+        "key": "UserName",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "User Name :",
+          "placeholder": "",
+          "required": "no"
+        }
+      },
+      {
+        "key": "FirstName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "First Name :",
+          "placeholder": "Enter First name..",
+          "required": "yes",
+          "requiredMessage": "First name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "LastName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Last Name :",
+          "placeholder": "Enter Last name..",
+          "required": "no",
+          "requiredMessage": "Last name is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "PhoneNumber",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Mobile Number :",
+          "placeholder": "Enter Mobile Number..",
+          "required": "no",
+          "requiredMessage": "Mobile Number is required.",
+          "minlength": 1,
+          "maxlength": 500,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 500 characters only allowed"
+        }
+      },
+      {
+        "key": "Email",
+        "type": "email",
+        "data": "",
+        "templateOptions": {
+          "label": "E-mail :",
+          "placeholder": "Enter E-mail..",
+          "required": "yes",
+          "requiredMessage": "E-mail is required.",
+          "minlength": 1,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 1 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "emailMessage": "Invalid email"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ]
+  }
+}

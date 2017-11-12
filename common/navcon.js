@@ -777,9 +777,10 @@ var navcon = (function () {
     var callPrint = function (report, reportId, callback) {
         if (report.reportFrom === undefined)
             report.reportFrom = "page";
+        
         var dataservice = angular.element(document).injector().invoke(function (dataservice) { return dataservice; });
         var ngAuthSettings = angular.element(document).injector().invoke(function (ngAuthSettings) { return ngAuthSettings; });
-        var reportURL = ngAuthSettings.appURL + "ViewsStatic/ReportForm.aspx?"
+        var reportURL = ngAuthSettings.appURL + "ViewsStatic/XtraReport.aspx?"
         var authService = angular.element(document).injector().invoke(function (authService) { return authService; });
         var userId = "0";
         if (authService.authentication !== undefined && authService.authentication.userId !== undefined && authService.authentication.userId !== "")
@@ -792,7 +793,7 @@ var navcon = (function () {
             if (report.parameters !== undefined && report.parameters !== null && report.parameters.length !== 0)
                 report.source = reportURL + "r=" + data.GuId + "&rp=" + JSON.stringify(report.parameters) + "&export=" + report.export + "&title=" + report.title + "&userid=" + userId;
             else
-                report.source = reportURL + "r=" + data.GuId + "&export=" + report.export + "&title=" + report.title + "&userid=" + userId;
+                report.source = reportURL + "r=" + data.GuId + "&export=" + report.export + "&title=" + report.title + "&userid=" + userId ;
 
             callback(data);
         });
@@ -4189,7 +4190,7 @@ var navcon = (function () {
         var authData = localStorageService.get('authorizationData');
         if (authData !== undefined && authData !== null) {
             //var version = ngAuthSettings.version;
-            var version = authData.SafetalVersion;
+            var version = authData.RMSVersion;
             if (version === undefined || version === "")
                 version = "1.0.0";
         }
@@ -4217,7 +4218,7 @@ var navcon = (function () {
                     if (scope !== undefined && scope !== null && scope !== "") {
                         scope[index] = angular.copy(fields);
 
-                        updateFields(scope[index]);
+                        updateFields(scope[index], index, pageConfig);
 
                         //Data Assign
                         if (pageConfig.data !== undefined && pageConfig.data !== null && pageConfig.data.length !== 0) {
@@ -4227,7 +4228,7 @@ var navcon = (function () {
 
                 });
             } else {
-                updateFields(pageConfig);
+                updateFields(pageConfig, "", pageConfig);
             }
 
             if (scope !== undefined && scope !== null && scope !== "") {
@@ -4259,12 +4260,24 @@ var navcon = (function () {
             }
         }
 
-        function updateFields(fields) {
-            if (fieldConfigName === undefined || fieldConfigName === null || fieldConfigName === "") fieldConfigName = "fieldConfig";
-            var fieldPrimaryIndex = navcon.getItemIndexByProperty(fields, fieldConfigName);
-            if (fieldPrimaryIndex !== undefined && fieldPrimaryIndex !== -1) {
-                var fieldData = fields[fieldPrimaryIndex];
+        function updateFields(fields, fieldName, clientConfig) {
+            var fieldData = null;
 
+            if (clientConfig !== undefined && clientConfig.models !== undefined && clientConfig.models.length !== 0 && fieldName !== "") {
+                if (fieldConfigName === undefined || fieldConfigName === null || fieldConfigName === "") fieldConfigName = "fieldsetName";
+                var fieldPrimaryIndex = navcon.getItemIndexByKeyValue(clientConfig.models, fieldConfigName, fieldName);;
+                if (fieldPrimaryIndex !== undefined && fieldPrimaryIndex !== -1) {
+                    fieldData = clientConfig.models[fieldPrimaryIndex];
+                }
+            } else {
+                if (fieldConfigName === undefined || fieldConfigName === null || fieldConfigName === "") fieldConfigName = "fieldConfig";
+                var fieldPrimaryIndex = navcon.getItemIndexByProperty(fields, fieldConfigName);
+                if (fieldPrimaryIndex !== undefined && fieldPrimaryIndex !== -1) {
+                    fieldData = fields[fieldPrimaryIndex];
+                }
+            }
+
+            if (fieldData !== null) {
                 if (fieldData.primaryKey !== undefined && fieldData.primaryKey !== null && fieldData.primaryKey !== "") fields.primaryKey = fieldData.primaryKey;
                 if (fieldData.displayKey !== undefined && fieldData.displayKey !== null && fieldData.displayKey !== "") fields.displayKey = fieldData.displayKey;
                 if (fieldData.alternatePrimaryKey !== undefined && fieldData.alternatePrimaryKey !== null && fieldData.alternatePrimaryKey !== "") fields.alternatePrimaryKey = fieldData.alternatePrimaryKey;

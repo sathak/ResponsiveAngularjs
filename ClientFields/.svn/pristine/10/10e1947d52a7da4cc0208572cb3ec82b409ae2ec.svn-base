@@ -1,0 +1,295 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-group",
+      "title": "Notification Setup",
+      "url": "notificationsetup"
+    }
+  ],
+  "fields": {    
+    "emailFields": [     
+      {
+        "key": "NotificationConfigId",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Type",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "ServerName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "Server Name",
+          "placeholder": "Enter Server name..",
+          "required": "yes",
+          "requiredMessage": "Server name required.",
+          "minlength": 3,
+          "minlengthMessage": "Minimum 3 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "userGroupTableData",
+          "isExistMessage": "Group Name already exists.."
+        }
+      },
+      {
+        "key": "Port",
+        "type": "input",
+        "data": "587",
+        "templateOptions": {
+          "focus": false,
+          "label": "Port Name",
+          "placeholder": "Enter Port..",
+          "required": "yes",
+          "requiredMessage": "Port required.",
+          "minlength": 3,
+          "minlengthMessage": "Minimum 3 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "FromAddress",
+        "type": "email",
+        "data": "",
+        "templateOptions": {
+          "label": "From Address",
+          "placeholder": "Enter From Address ..",
+          "required": "yes",
+          "requiredMessage": "From Address required.",
+          "emailMessage": "Invalid email"
+        }
+      },      
+      {
+        "key": "LogonUserName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "User Name",
+          "placeholder": "Enter User Name..",
+          "required": "yes",
+          "requiredMessage": "User Name required.",
+          "minlength": 3,
+          "minlengthMessage": "Minimum 3 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "LogonPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Password",
+          "placeholder": "Enter Password..",
+          "required": "yes",
+          "requiredMessage": "Password required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required."
+        }
+      },
+      {
+        "key": "IsSSLEnabled",
+        "type": "radio",
+        "group": "personal",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "SSL Enabled :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "ToAddress",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "To Address",
+          "placeholder": "Enter To Address ..",
+          "required": "no",
+          "requiredMessage": "To Address required.",
+          "emailMessage": "Invalid email"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "smsFields": [
+      {
+        "key": "NotificationConfigId",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Type",
+        "type": "label",
+        "data": "1"
+      },
+      {
+        "key": "SameAsEmail",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Same As Email :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": false
+        }
+      },      
+      {
+        "key": "ServerName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "Server Name",
+          "placeholder": "Enter Server name..",
+          "required": "yes",
+          "requiredMessage": "Server name required.",
+          "minlength": 3,
+          "minlengthMessage": "Minimum 3 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "userGroupTableData",
+          "isExistMessage": "Group Name already exists.."
+        }
+      },
+      {
+        "key": "Port",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "Port Name",
+          "placeholder": "Enter Port..",
+          "required": "yes",
+          "requiredMessage": "Port required.",
+          "minlength": 3,
+          "minlengthMessage": "Minimum 3 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "FromAddress",
+        "type": "email",
+        "data": "",
+        "templateOptions": {
+          "label": "From Address",
+          "placeholder": "Enter From Address ..",
+          "required": "yes",
+          "requiredMessage": "From Address required.",
+          "emailMessage": "Invalid email"
+        }
+      },
+      {
+        "key": "LogonUserName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "focus": false,
+          "label": "User Name",
+          "placeholder": "Enter User Name..",
+          "required": "yes",
+          "requiredMessage": "User Name required.",
+          "minlength": 3,
+          "minlengthMessage": "Minimum 3 characters required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed."
+        }
+      },
+      {
+        "key": "LogonPassword",
+        "type": "password",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Password",
+          "placeholder": "Enter Password..",
+          "required": "yes",
+          "requiredMessage": "Password required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required."
+        }
+      },
+      {
+        "key": "IsSSLEnabled",
+        "type": "radio",
+        "group": "personal",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "SSL Enabled :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "ToAddress",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Mobile Number",
+          "placeholder": "Enter Mobile Number..",
+          "required": "no",
+          "requiredMessage": "Mobile Number required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  }
+}

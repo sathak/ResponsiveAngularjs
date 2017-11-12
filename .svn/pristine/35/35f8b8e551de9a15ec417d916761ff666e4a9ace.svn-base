@@ -1,0 +1,27 @@
+﻿<navcon-form navcon-data="" field-data="historyFields" footer='' type="addHistory">
+    <div class="form-group" ng-if="navconData.historyState=='Detailhistory'">
+        <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+            <input type="text" class="form-control" placeholder="Search" ng-model="searchItems">
+
+        </div>
+    </div>
+    <!--<div class="form-group" ng-if="navconData.historyState=='View' && CreatedHistoryPanel">
+        <table class="tblHistory" style="width:100%;">
+            <tr style="background-color: #243649;color: #E7E7E7;">
+                <th>Created By</th>
+                <th>Created On</th>
+            </tr>
+            <tr ng-repeat="create in navconData.CreatedHistory">
+                <td>{{create.CreatedBy}}</td>
+                <td>{{dateConvert(create.CreatedOn)}}</td>
+            </tr>
+        </table>
+    </div>-->
+    <div class="divHistory" style="overflow:auto;" ng-if="!hideHistory">
+        <navcon-table table-settings="navconData.historyTable" type="History" navcon-data="navconData"></navcon-table>
+
+        
+    </div>
+</navcon-form>

@@ -1,0 +1,146 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "User Import",
+      "url": "userimport"
+    }
+  ],
+  "fields": {
+    "userImportFields": [
+      {
+        "key": "Id",
+        "type": "label",
+        "data": 0
+      },  
+       {
+        "key": "ProjectId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select Project..",
+          "required": "yes",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Projects"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "BaseId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select Location..",
+          "required": "yes",
+          "requiredMessage": "Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "Locations"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [],
+        "templateOptions": {
+          "label": "Upload File",
+          "required": "no",
+          "key": "attachmentid",
+          "agreeText": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "folderType": "",
+          "multipleFile": false
+        }
+      },    
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "userImportTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl.No",
+          "data": "SlNo",
+          "width": "10px"
+        },
+        {
+          "title": "Message",
+          "data": "Message",
+          "width": "20%"
+        },
+        {
+          "title": "Legaecy ID",
+          "data": "legaecyID"
+        },
+        {
+          "title": "Title",
+          "data": "Title",
+          "width": "20%"
+        },
+        {
+          "title": "Sheet Name",
+          "data": "SheetName"
+        },
+        {
+          "title": "File Name",
+          "data": "FileName"
+        },
+        {
+          "title": "Successfully Processed",
+          "data": "SuccessfullyProcessed",
+          "width": "10px"
+        }
+      ]
+    }
+  }
+}

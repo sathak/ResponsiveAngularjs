@@ -1,0 +1,12 @@
+{
+  "aboutUs": {
+    "title": "About Safetal",
+    "titleIcon": "fa fa-info-circle",
+    "companyName": "SAFETAL",
+    "version": "Version:1.0.0",
+    "description": "All rights reserved.",
+    "yearBy": "2017 by",
+	"copyWriter": "Navcon Aerospace",
+    "website": "http://www.navconaerospace.com/"
+  }
+}

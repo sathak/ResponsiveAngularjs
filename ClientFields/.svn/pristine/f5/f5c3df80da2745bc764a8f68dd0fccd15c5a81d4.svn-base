@@ -1,0 +1,1125 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "GMLFields": [
+      {
+        "key": "SortPage2Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "OccuranceTypeId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Occurance Type :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Occurance type is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "OccuranceTypeName",
+            "dataField": "OccuranceTypeId",
+            "defaultField": "OccuranceType"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "TypeOfFlightOccurence",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": 0,
+        "refkey": "SortPage2Id",
+        "altkey": "SortPage2OccuranceId",
+        "templateOptions": {
+          "label": "Type of Flight Occurrence:",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Type of flight occurrence is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "FlightOccuranceTypeName",
+            "dataField": "FlightOccuranceTypeId",
+            "defaultField": "TypeofflightOccurence"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "SORTCrewInvolvedSORTPage2",
+        "type": "tableeditor",
+        "data": [],
+        "templateOptions": {
+          "settings": "groundTableEditor",
+          "key": "SORTCrewInvolvedId"
+        }
+      },
+      {
+        "key": "SORTInjuriesToPersonals",
+        "type": "tableeditor",
+        "disabled": false,
+        "data": [],
+        "templateOptions": {
+          "settings": "InjuriesToPersonnelTableEditor",
+          "label": "",
+          "key": "SORTInjuriesToPersonalId"
+        }
+      },
+      {
+        "key": "BuildingNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Location/Building # :",
+          "placeholder": "",
+          "tooltip": "Enter the occurrence building No.",
+          "required": "no",
+          "requiredMessage": "Location/Building # is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Location/Building # already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Area",
+        "type": "select",
+        "class": "col-md-2",
+        "data": [],
+        "templateOptions": {
+          "label": "Area:",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Area is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "AreaName",
+            "dataField": "AreaId",
+            "defaultField": "Area"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "Other",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Other :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "emergency",
+        "type": "label",
+        "data": "",
+        "datatype": "integer",
+        "templateOptions": {
+          "label": "Emergency Services  Attended:"
+        }
+      },
+      {
+        "key": "Ambulance",
+        "type": "radio",
+        "group": "grpEmergency1",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Ambulance :",
+          "tooltip": "Did the ambulance respond?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "Police",
+        "type": "radio",
+        "group": "grpEmergency2",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Police :",
+          "tooltip": "Did the police respond ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "Fire",
+        "type": "radio",
+        "group": "grpEmergency3",
+        "data":null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Fire :",
+          "tooltip": "Did the fire department respond ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "FirstAidApplied",
+        "type": "radio",
+        "group": "FirstAidApplied",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "First Aid :",
+          "tooltip": "Was first aid applied ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "FirstAidByWhom",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "By Whom :",
+          "tooltip": "Who ",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "By Whom is required.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTDamageToEnvironments",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "refkey": "SortPage2Id",
+        "altkey": "SORTDamageToEnvironmentId",
+        "templateOptions": {
+          "label": "Environmental Damage Type :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Environmental Damage Type is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "EnvironmentName",
+            "dataField": "EnvironmentId",
+            "defaultField": "DamageToEnvironment"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "ExtentOfEnvironmentalDamage",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Environmental Damage Details :",
+          "tooltip": "Describe Environmental Damage Details, if any",
+          "placeholder": "Describe the environmental damage",
+          "required": "yes",
+          "requiredMessage": "Environmental Damage Details is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ExtentOfDamageToEquipment",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Equipment Damage Details :",
+          "tooltip": "Enter the details of the damage equipments",
+          "placeholder": "Describe the damaged equipment ",
+          "required": "yes",
+          "requiredMessage": "Equipment Damage Details is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "Injuries_ImmediateContainmentActionsCarriedOut",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Immediate Containment Actions :",
+          "placeholder": "Injury Immediate Containment Actions Carried Out",
+          "required": "yes",
+          "requiredMessage": "Immediate Containment Actions is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "tooltip": "Describe the Immediate Containment Actions Carried Out"
+        }
+      },
+      {
+        "key": "Environment_ImmediateContainmentActionsCarriedOut",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Immediate Containment Actions :",
+          "placeholder": "Environment Immediate Containment Actions Carried Out",
+          "requiredMessage": "Immediate Containment Actions is required.",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "tooltip": "Describe the Immediate Containment Actions Carried Out"
+        }
+      },
+      {
+        "key": "Equipment_ImmediateContainmentActionsCarriedOut",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Immediate Containment Actions :",
+          "placeholder": "Equipment Immediate Containment Actions Carried Out",
+          "requiredMessage": "Immediate Containment Actions is required.",
+          "required": "yes",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "tooltip": "Describe the Immediate Containment Actions Carried Out"
+        }
+      },
+      {
+        "key": "persdeptinformed",
+        "type": "label",
+        "data": "",
+        "datatype": "integer",
+        "templateOptions": {
+          "label": "Personnel or Department Informed:"
+        }
+      },
+      {
+        "key": "LineManager",
+        "type": "radio",
+        "group": "grppersdeptinformed1",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Line Manager :",
+          "tooltip": "Was the line manager informed ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "ProductSafetyManager",
+        "type": "radio",
+        "group": "grppersdeptinformed2",
+        "data":null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Product Safety Manager :",
+          "tooltip": "Was the product safety manager informed ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "SHE",
+        "type": "radio",
+        "group": "grppersdeptinformed3",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "SHE :",
+          "tooltip": "Was SHE informed ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "Quality",
+        "type": "radio",
+        "group": "grppersdeptinformed4",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Quality :",
+          "tooltip": "Was the quality informed ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "HOD",
+        "type": "radio",
+        "group": "grppersdeptinformed5",
+        "data":null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "HOD :",
+          "tooltip": "Was Head of the department informed ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "txtwitfullname",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Full Name :",
+          "placeholder": "Enter Full Name ",
+          "required": "no",
+          "requiredMessage": "Full Name  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtwitemail",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Email :",
+          "placeholder": "Enter Email Address",
+          "required": "no",
+          "requiredMessage": "Email  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtwitphoneno",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Phone # :",
+          "placeholder": "Enter Phone #",
+          "required": "no",
+          "requiredMessage": "Phone #  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTRelatedOccurrences",
+        "type": "multiselect",
+        "save": true,
+        "data": [],
+        "refkey": "SORTRelatedOccurrencesId",
+        "altkey": "SORTpage2Id",
+        "templateOptions": {
+          "label": "Related Occurrences :",
+          "placeholder": "Select ..."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "SORTName",
+            "dataField": "SORTId",
+            "defaultField": "RelatedOccurance"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "CustomerFormsRaised",
+        "type": "radio",
+        "group": "Customer",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Customer Forms Raised :",
+          "tooltpi":"Have you raised the customer forms ?",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "DefineRaisedCustomerFormsId",
+        "name": "DefineRaisedCustomerForms",
+        "type": "select",
+        "class": "col-md-2",
+        "data": [],
+        "templateOptions": {
+          "label": " Customer Forms :",
+          "placeholder": " Select raised customer forms",
+          "required": "no",
+          "requiredMessage": "Customer Forms is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {},
+            "displayField": "CustomerFormsName",
+            "dataField": "CustomerFormsId",
+            "defaultField": "CustomerForms"
+          },
+          "items": []
+        }
+      },
+      {
+        "key": "CustomerFormsOther",
+        "type": "input",
+        "class": "col-md-2",
+        "data": "",
+        "templateOptions": {
+          "label": "Other :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Other is required"
+        }
+      },
+      {
+        "key": "formdocumentid",
+        "type": "label",
+        "data": "0",
+        "datatype": "integer",
+        "templateOptions": {}
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "attachmentid",
+          "agreeText": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "Deleterecord",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Reason for Deletion :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "name": "ITARwarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "injuriesAssociatedTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [],
+      "pageLength": 10,
+      "data": [],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": []
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl #",
+          "data": "SlNo",
+          "width": "5%",
+          "className": "all"
+        },
+        {
+          "title": "Organization",
+          "data": "Organization",
+          "width": "15%",
+          "className": "all"
+        },
+        {
+          "title": "Full Name",
+          "data": "Full Name",
+          "width": "50%",
+          "className": "desktop"
+        },
+        {
+          "title": "Extent of Injuries",
+          "data": "StatusName",
+          "width": "10%"
+        },
+        {
+          "title": "Delete",
+          "data": null,
+          "defaultContent": "<a class='delete btn default btn-xs default' href='javascript:;'><i class='fa fa-trash-o'></i> Delete </a>",
+          "width": "5%"
+        }
+      ]
+    },
+    "witnessesAssociatedTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [],
+      "pageLength": 10,
+      "data": [],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": []
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": []
+        }
+      ],
+      "filterBar": {
+        "paginate": false,
+        "filter": true,
+        "info": true
+      },
+      "buttons": [],
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Sl #",
+          "data": "SlNo",
+          "width": "5%",
+          "className": "all"
+        },
+        {
+          "title": "Full Name",
+          "data": "FullName",
+          "width": "60%",
+          "className": "all"
+        },
+        {
+          "title": "Email",
+          "data": "Email",
+          "width": "60%",
+          "className": "all"
+        },
+        {
+          "title": "Phone #",
+          "data": "Phone No.",
+          "width": "60%",
+          "className": "desktop"
+        },
+        {
+          "title": "Delete",
+          "data": null,
+          "defaultContent": "<a class='delete btn default btn-xs default' href='javascript:;'><i class='fa fa-trash-o'></i> Delete </a>",
+          "width": "5%"
+        }
+      ]
+    }
+  },
+  "tableEditor": {
+    "InjuriesToPersonnelTableEditor": {
+      "fields": [
+        {
+          "key": "SORTInjuriesToPersonalId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "SortPage2Id",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "OrganisationId",
+          "name": "Organization",
+          "type": "select",
+          "class": "col-md-2",
+          "data": [],
+          "templateOptions": {
+            "label": "Organization:",
+            "placeholder": "Select ...",
+            "required": "yes",
+            "requiredMessage": "Organization is required"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": {},
+              "displayField": "OrganisationName",
+              "dataField": "OrganisationId",
+              "defaultField": "Organisation"
+            },
+            "items": []
+          }
+        },
+        {
+          "key": "UserId",
+          "name": "Name",
+          "type": "select",
+          "data": "",
+          "titlenotrequired": true,
+          "visible": false,
+          "class": "col-md-2",
+          "templateOptions": {
+            "placeholder": "Personnel Involved",
+            "required": "no",
+            "requiredMessage": "Personnel Involved is required.",
+            "isExistData": "",
+            "isExistMessage": "Personnel Involved already exists..",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": {},
+              "displayField": "UserName",
+              "dataField": "UserId",
+              "defaultField": "Users",
+              "addNew": "no"
+            },
+            "items": []
+          }
+        },
+        {
+          "key": "Name",
+          "type": "input",
+          "data": "",
+          "name": "Name",
+          "class": "col-md-2",
+          "addtionalField": "UserId",
+          "addtionalFieldVisible": false,
+          "visible": true,
+          "templateOptions": {
+            "label": "Name :",
+            "placeholder": "Enter Full Name ",
+            "required": "no",
+            "requiredMessage": "Full Name  is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 100,
+            "maxlengthMessage": "Maximum 100 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "DescriptionOfInjuries",
+          "type": "textarea",
+          "name": "Description of Injuries",
+          "data": "",
+          "class": "col-md-5",
+          "templateOptions": {
+            "label": "Extent of Injuries:",
+            "placeholder": "Describe any Injuries to personnel ",
+            "required": "yes",
+            "requiredMessage": "Extent of Injuries  is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 200,
+            "maxlengthMessage": "Maximum 200 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": []
+    },
+    "groundTableEditor": {
+      "fields": [
+        {
+          "key": "SORTCrewInvolvedId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "OrganisationId",
+          "name": "Organization",
+          "type": "select",
+          "class": "col-md-2",
+          "data": "",
+          "templateOptions": {
+            "label": "Organization:",
+            "placeholder": "Select ...",
+            "required": "no",
+            "requiredMessage": "Organization is required"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": {},
+              "displayField": "OrganisationName",
+              "dataField": "OrganisationId",
+              "defaultField": "Organisation"
+            },
+            "items": []
+          }
+        },
+        {
+          "key": "SortPage2Id",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "UserId",
+          "name": "Name",
+          "type": "select",
+          "data": "",
+          "titlenotrequired": true,
+          "visible": false,
+          "class": "col-md-2",
+          "templateOptions": {
+            "placeholder": "Personnel Involved",
+            "required": "no",
+            "requiredMessage": "Personnel Involved is required.",
+            "isExistData": "",
+            "isExistMessage": "Personnel Involved already exists..",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": {},
+              "displayField": "UserName",
+              "dataField": "UserId",
+              "defaultField": "Users",
+              "addNew": "no"
+            },
+            "items": []
+          }
+        },
+        {
+          "key": "Name",
+          "type": "input",
+          "data": "",
+          "name": "Name",
+          "class": "col-md-2",
+          "addtionalField": "UserId",
+          "addtionalFieldVisible": false,
+          "visible": true,
+          "templateOptions": {
+            "label": "Full Name :",
+            "placeholder": "Enter Full Name ",
+            "required": "no",
+            "requiredMessage": "Full Name  is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 100,
+            "maxlengthMessage": "Maximum 100 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ClockNumber",
+          "type": "input",
+          "data": "",
+          "name": "Clock Number",
+          "class": "col-md-2",
+          "templateOptions": {
+            "label": "Clock Number :",
+            "placeholder": "Enter Clock Number",
+            "required": "no",
+            "requiredMessage": "Clock Number is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ContactDetails",
+          "type": "input",
+          "data": "",
+          "name": "Contact Details",
+          "class": "col-md-2",
+          "templateOptions": {
+            "label": "Contact Details :",
+            "placeholder": "Enter Contact Details",
+            "required": "no",
+            "requiredMessage": "Contact Details is required.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "TypeOfInvolvementId",
+          "name": "Involvement Type",
+          "type": "select",
+          "save": true,
+          "data": "",
+          "class": "col-md-2",
+          "templateOptions": {
+            "label": "Involvement Type :",
+            "placeholder": "Select",
+            "required": "no",
+            "requiredMessage": "Involvement Type is required"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": {},
+              "displayField": "TypeofInvolvementName",
+              "dataField": "TypeofInvolvementId",
+              "defaultField": "TypeofInvolvement"
+            },
+            "items": []
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": []
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+    "hazardmgmtFilterFields": [
+      {
+        "key": "projects",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "projects"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "bases",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Location is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "locations"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "CauseRefNo",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Ref No :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Ref No is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "CauseTitle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Cause Title :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Cause Title is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "source",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Source :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Source is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "sources"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "status",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "Status :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Status is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "StatusTypeName",
+            "dataField": "CauseStatusTypeId",
+            "defaultField": "causestatustype"
+          },
+          "items": [ ]
+        }
+      }
+    ],
+    "hazardmgmtFields": [
+      {
+        "key": "CauseDetailId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CreatedBy",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "CauseStatusId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "MeetingRefNo",
+        "type": "input",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Meeting Ref # :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Meeting Ref is required.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "CauseStatusTypeId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Cause Status :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Cause Status is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "StatusTypeName",
+            "dataField": "CauseStatusTypeId",
+            "defaultField": "AllCauseStatusType"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "Please provide justification for the changes",
+          "required": "yes",
+          "requiredMessage": "Remarks is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "causeHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "hazardmgmtTable": {
+      "order": [
+        [
+          3,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [
+        4
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "#",
+          "data": "FormIndicator",
+          "width": "2%"
+        },
+        {
+          "title": "CauseDetailId",
+          "data": "CauseDetailId",
+          "visible": false
+        },
+        {
+          "title": "Cause Id",
+          "data": "CauseRefNo",
+          "width": "10%"
+        },
+        {
+          "title": "Cause Title",
+          "data": "CauseTitle",
+          "width": "30%",
+          "sType": "string"
+        },
+        {
+          "title": "Date of Observation",
+          "data": "DateAndTimeOfObservation",
+          "width": "5%",
+          "sType": "date-euro"
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName",
+          "width": "5%"
+        },
+        {
+          "title": "Status",
+          "data": "StatusName",
+          "width": "5%"
+        },
+        {
+          "title": "color",
+          "data": "ColorCode",
+          "visible": false
+        }
+      ]
+    }
+  },
+  "tableEditor": { }
+}

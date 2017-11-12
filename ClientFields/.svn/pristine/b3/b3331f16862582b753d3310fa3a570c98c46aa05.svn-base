@@ -1,0 +1,1092 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+
+    }
+  ],
+  "fields": {
+    "atmFields": [
+      {
+        "key": "SORTAirtrafficManagementId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "LocationOfEvent",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Location of Event. :",
+          "placeholder": "Enter location of Event. :",
+          "required": "no",
+          "requiredMessage": "Location of Event. is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Latitude",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Latitude :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Latitude is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Longitude",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Longitude :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Longitude is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Others",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Others :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Others is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AirspaceClassificationId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": " Airspace Classification :",
+          "placeholder": "Select",
+          "required": "no",
+          "requiredMessage": "Airspace Classification  is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AirspaceClassificationName",
+            "dataField": "AirspaceClassificationId",
+            "defaultField": "AirspaceClassification",
+            "addNew": "yes"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "txtatmgeneralairspace",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Airspace Classification :",
+          "placeholder": "e.g. GIMLI, 56N30W, MID360/10",
+          "required": "no",
+          "requiredMessage": "Airspace Classification  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "RunwayInUse",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Runway in Use :",
+          "tooltip": " (Terminal Only) :",
+          "placeholder": "e.g. GIMLI, 56N30W, MID360/10",
+          "required": "no",
+          "requiredMessage": "Airspace Classification  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 15,
+          "maxlengthMessage": "Maximum 15 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTAirTrafficGenInfo",
+        "type": "tableeditor",
+        "data": [ ],
+        "templateOptions": {
+          "settings": "atmGeneralTableEditor",
+          "key": "SORTAirTrafficGeneralInfoId"
+        }
+      },
+      {
+        "key": "RTFrequency",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "RT Frequency :",
+          "placeholder": "Enter RT Frequency :",
+          "required": "no",
+          "requiredMessage": "RT Frequency :  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 15,
+          "maxlengthMessage": "Maximum 15 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "RadarEquipment",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Radar Equipment :",
+          "placeholder": "",
+          "tooltip": "Specify Radar Equipment in Use",
+          "required": "no",
+          "requiredMessage": "'Radar Equipment in use'  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 25,
+          "maxlengthMessage": "Maximum 25 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "EquipmentServiceabilityId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": " Equipment Serviceability :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": " Equipment Serviceability is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "EquipmentServiceabilityName",
+            "dataField": "EquipmentServiceabilityId",
+            "defaultField": "EquipmentServiceability"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "NoOfAircraftInvolved",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Aircrafts Involved :",
+          "tooltip": "Select Number of Aircrafts Involved",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'No. of aircraft involved'  is required.",
+          "minlength": "1",
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": "20",
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px",
+          "min": 0,
+          "max": 10
+        }
+      },
+      {
+        "key": "AircraftOnFrequency",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Aircrafts on Frequency :",
+          "placeholder": "",
+          "tooltip": "Select Number of Aircrafts on Frequency",
+          "required": "no",
+          "requiredMessage": "'No. of aircraft on frequency'  is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px",
+          "min": 0,
+          "max": 10
+        }
+      },
+      {
+        "key": "AircraftCoordinatedId",
+        "type": "radio",
+        "group": "genwereairccoord",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Aircraft Coordinated?",
+          "tooltip": "Were the Aircrafts coordinated?",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no",
+          "item": {
+            "defaultField": "AircraftCoordinated"
+          }
+        }
+      },
+
+      {
+        "key": "TrafficInformationGivenId",
+        "type": "radio",
+        "group": "genwastraffic",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Traffic Information Given :",
+          "tooltip": "Did you give traffic information?",
+          "items": [ ],
+          "item": {
+            "defaultField": "TrafficInformationGiven"
+          },
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "AvoidingActionGivenId",
+        "type": "radio",
+        "group": "genwasavoid",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Avoiding Action Taken :",
+          "tooltip": "Did you take avoiding action?",
+          "items": [ ],
+          "item": { "defaultField": "AvoidingActionGiven" },
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "TCASRAReceivedId",
+        "type": "radio",
+        "group": "gendideither",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "TCAS/RA Received :",
+          "tooltip": "Did either pilot receive a TCAS /RA?",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no",
+          "item": { "defaultField": "PilotReceiveTCASRA" }
+        }
+      },
+      {
+        "key": "PrescribedSeparationLostId",
+        "type": "radio",
+        "group": "genwaspresc",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Prescribed Separation Lost?",
+          "tooltip": "Was prescribed separation lost?",
+          "items": [ ],
+          "item": { "defaultField": "SeparationLost" },
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+
+      {
+        "key": "MinimumVerticalSeparation",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Minimum Vertical Separation :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Minimum Vertical Separation is required.",
+          "minlength": "1",
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": "20",
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "MinimumHorizontalSeparation",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "  Minimum Horizontal - Separation :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": " Minimum Horizontal Separation is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ShiftStartTime",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Shift Start Time?",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Shift Start Time is required.",
+          "timeonly": false,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": "",
+          "compareDateMessage": "Date/Time of Shift Start Time should not be a future date."
+        }
+      },
+      {
+        "key": "TimeSinceLastBreak",
+        "type": "datetime",
+        "data": "",
+        "templateOptions": {
+          "label": "Time Since Last Break?",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Time since last break' is required.",
+          "timeonly": true,
+          "format": "",
+          "hours24": true,
+          "compareDateToday": true,
+          "compareDateBy": "",
+          "compareDateMessage": "Date/Time of Time since last break should not be a future date."
+        }
+      },
+      {
+        "key": "DaysSinceLastDayOff",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Days Since Last Day Off?",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Days since last day off' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 5,
+          "maxlengthMessage": "Maximum 5 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "WorkloadId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Workload :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "Workload is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WorkloadName",
+            "dataField": "WorkloadId",
+            "defaultField": "Workload"
+          },
+          "items": [
+
+          ]
+        }
+      },
+
+      {
+        "key": "TaskDifficultyforControllerDescription",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Task Difficulty for Controller :",
+          "placeholder": "At time of the occurrence?",
+          "required": "no",
+          "requiredMessage": "Task difficulty is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "RunwayIncursionDetails",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Details :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Details is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "RunwayIncursionAircraft",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Aircraft or Vehicle Type :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Aircraft or vehicle type' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "RunwayIncursionSpecificVehicle",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Specific Vehicle Details :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Specific vehicle details' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ATMATSFacilityId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "ATS Facility :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "ATS Facility is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ATMATSFacilityName",
+            "dataField": "ATMATSFacilityId",
+            "defaultField": "ATMATSFacility"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "ATMEquipmentLocation",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Equipment Location?",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Equipment Location' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ATMDurationOfOutage",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Duration of Outage?",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Duration of outage' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 35,
+          "maxlengthMessage": "Maximum 35 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ATMEquipmentStatus",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Equipment Status?",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Equipment Status' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 35,
+          "maxlengthMessage": "Maximum 35 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "txtatmeqtype",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Equipment Type?",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Equipment Type' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 35,
+          "maxlengthMessage": "Maximum 35 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ATMPreviousDefectsOccurrences",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Previous Defects/Occurrences :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Previous Defects/Occurrences' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 35,
+          "maxlengthMessage": "Maximum 35 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ATMFacilityConfiguration",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Facility Configuration?",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'Facility configuration' is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 35,
+          "maxlengthMessage": "Maximum 35 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "LineManagerInformed",
+        "type": "radio",
+        "group": "personnellinemgr",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Line Manager :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "Line Manager is required."
+        }
+      },
+      {
+        "key": "ProductSafetyManagerInformed",
+        "type": "radio",
+        "group": "personnelprodsm",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Product Safety Manager :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "Product Safety Manager is required."
+        }
+      },
+      {
+        "key": "SHEInformed",
+        "type": "radio",
+        "group": "personnelshe",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SHE :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "SHE is required."
+        }
+      },
+      {
+        "key": "QualityInformed",
+        "type": "radio",
+        "group": "personnelquality",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Quality :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "Quality is required."
+        }
+      },
+      {
+        "key": "HODInformed",
+        "type": "radio",
+        "group": "personnelhod",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "HOD :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": 1,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": 0,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "requiredMessage": "HOD is required."
+        }
+      },
+
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "attachmentid",
+          "agreeText": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "Deleterecord",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Reason for Deletion :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarningDisclaimer",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Deleterecord",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Reason for Deletion :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      }
+    ]
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+    "atmGeneralTableEditor": {
+      "fields": [
+        {
+          "key": "SORTAirTrafficGeneralInfoId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "SORTAirTrafficManagementId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "CallSign",
+          "name": "Call Sign",
+          "type": "input",
+          "data": "",
+          "class": "col-md-1",
+          "templateOptions": {
+            //"placeholder": "Enter Call Sign",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "Call Sign  is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 10,
+            "maxlengthMessage": "Maximum 10 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "Call Sign already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "Type",
+          "name": "Type",
+          "type": "input",
+          "data": "",
+          "class": "col-md-1",
+          "templateOptions": {
+            //"placeholder": "Type",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "Type  is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 10,
+            "maxlengthMessage": "Maximum 10 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "Type already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "SSR",
+          "name": "SSR",
+          "type": "input",
+          "data": "",
+          "class": "col-md-1",
+          "templateOptions": {
+            //"placeholder": "SSR",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "SSR  is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 6,
+            "maxlengthMessage": "Maximum 6 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "SSR already exists..",
+            "customClass": "margin-top:100px"
+
+          }
+        },
+        {
+          "key": "HeightAltitudeFLNMC",
+          "name": "Height /Altitude /FL/NMC",
+          "type": "input",
+          "data": "",
+          "class": "col-md-2",
+          "templateOptions": {
+            //"placeholder": "Height/Altitude/FL/NMC",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "Height/Altitude/FL/NMC  is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 20,
+            "maxlengthMessage": "Maximum 20 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "Height/Altitude/FL/NMC already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "PressureSetting",
+          "name": "Pressure Setting",
+          "type": "input",
+          "data": "",
+          "class": "col-md-1",
+          "templateOptions": {
+            //"placeholder": "Pressure Setting",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "Pressure Setting  is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 8,
+            "maxlengthMessage": "Maximum 8 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "Pressure Setting already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ServiceType",
+          "name": "Service Type",
+          "type": "input",
+          "data": "",
+          "class": "col-md-1",
+          "templateOptions": {
+            //"placeholder": "Type of service",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "Type of service is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 12,
+            "maxlengthMessage": "Maximum 12 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "Type of service already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "HdgTrack",
+          "name": "Hdg/Track",
+          "type": "input",
+          "data": "",
+          "class": "col-md-1",
+          "templateOptions": {
+            //"placeholder": "Hdg or track",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "Hdg or track is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 8,
+            "maxlengthMessage": "Maximum 8 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "Hdg or track already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "AltitudeId",
+          "name": "Altitude",
+          "type": "select",
+          "data": "",
+          "class": "col-md-1",
+          "templateOptions": {
+            //"placeholder": "Climbing/Descending/ Level",
+            "placeholder": "",
+            "tooltip": "Climbing/Descending/ Level",
+            "required": "no",
+            "requiredMessage": "Climbing/Descending/Level is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 18,
+            "maxlengthMessage": "Maximum 18 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "Climbing/Descending/Level already exists..",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "AltitudeName",
+              "dataField": "AltitudeId",
+              "defaultField": "Altitude",
+              "addNew": "yes"
+            },
+            "items": [ ]
+          }
+
+        },
+        {
+          "key": "ControllingUnit",
+          "name": "Controlling Unit",
+          "type": "input",
+          "data": "",
+          "class": "col-md-1",
+          "templateOptions": {
+            //"placeholder": "Under control of (Unit)",
+            "placeholder": "",
+            "required": "no",
+            "requiredMessage": "Under control of (Unit) is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 10,
+            "maxlengthMessage": "Maximum 10 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "Climbing/Descending/Level already exists..",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [
+      ]
+    }
+  }
+}

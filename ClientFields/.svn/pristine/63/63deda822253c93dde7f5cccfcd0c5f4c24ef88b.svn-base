@@ -1,0 +1,70 @@
+{  
+   "breadcrumbs":[  
+      {  
+         "class":"fa fa-home",
+         "title":"Hazard",
+         "url":"Hazard"
+      },
+      {  
+         "class":"fa fa-edit",
+         "title":"Bow-Tie Analysis",
+         "url":"bowtieanalysis"
+      }
+   ],
+   "fields":{  
+      "bowtieFilterFields":[  
+         {  
+            "key":"Hazard",
+            "type":"select",
+            "save":true,
+            "data":[ ],
+            "templateOptions":{  
+               "label":"Hazard :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Project is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"HazardName",
+                  "dataField":"id",
+                  "defaultField":"projects"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+		  {  
+            "key":"projects",
+            "type":"select",
+            "save":true,
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Project :",
+               "placeholder":"Select ...",
+               "required":"no",
+               "requiredMessage":"Project is required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"ProjectName",
+                  "dataField":"ProjectId",
+                  "defaultField":"projects"
+               },
+               "items":[  
+
+               ]
+            }
+         }
+      ]
+   }
+}

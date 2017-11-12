@@ -1,0 +1,335 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "edaErrorPreventionStrategiesFields": [
+      {
+        "key": "EDAErrorPSID",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTEDAInvestigationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "MaintenancePolicyOrProcess",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Maintenance Polices or processes",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Maintenance Polices or processes",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "MaintenancePolicyOrProcessValue",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Maintenance Polices Or Processes is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 100 characters only allowed."
+        }
+      },
+      {
+        "key": "InspectionOrFunctionalCheck",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Inspection Or Functional Check",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "Inspection Or Functional Check",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "InspectionOrFunctionalCheckValue",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Inspection or Functional Check is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 100 characters only allowed."
+        }
+      },
+      {
+        "key": "SORTEDAErrorPSMaintenanceDocs",
+        "type": "tableeditor",
+        "data": [ ],
+        "disabled": false,
+        "templateOptions": {
+          "settings": "MaintenanceTableEditor",
+          "key": "EDAErrorPSMaintenanceID",
+          "label": "Error Maintenance Documents",
+          "showAdd": true,
+          "showDel": false
+        }
+      },
+      {
+        "key": "SORTEDACausalAndContributingEvents",
+        "type": "tableeditor",
+        "data": [ ],
+        "disabled": false,
+        "templateOptions": {
+          "settings": "RecommendationsTableEditor",
+          "label": "Causal And Contributing Events",
+          "key": "EDACFCLEventID",
+          "showAdd": false,
+          "showDel": false
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      }, {
+        "key": "PageSavedStatus",
+        "type": "label",
+        "data": []
+      }
+    ]
+
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+    "MaintenanceTableEditor": {
+      "fields": [
+        {
+          "key": "MaintenanceDocID",
+          "name": "Maintenance Documents",
+          "type": "select",
+          "class": "col-md-3",
+          "data": "",
+          "readonly": false,
+          "templateOptions": {
+            "label": "",
+            "placeholder": "Select ...",
+            "required": "yes",
+            "requiredMessage": "Maintenance Document is required"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "MaintenanceDocumentName",
+              "dataField": "MaintenanceDocumentID",
+              "defaultField": "MaintenanceDocuments",
+              "addNew": "yes"
+            },
+            "items": [
+
+            ]
+          }
+        },
+        {
+          "key": "MaintenanceDocDescription",
+          "type": "input",
+          "name": "Maintenance Documents Details",
+          "data": "",
+          "readonly": false,
+          "class": "col-md-6",
+          "templateOptions": {
+            "label": "",
+            "placeholder": "Enter Maintenance Documents Detail",
+            "required": "yes",
+            "requiredMessage": "Maintenance Documents Detail is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 20,
+            "maxlengthMessage": "Maximum 50 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "EDAErrorPSID",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "EDAErrorPSMaintenanceID",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ReadOnly",
+          "type": "label",
+          "data": false,
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [
+
+      ]
+    },
+    "RecommendationsTableEditor": {
+      "fields": [
+        {
+          "key": "ContributingFactor",
+          "type": "labeldata",
+          "name": "Contributing Factor",
+          "save": false,
+          "data": "",
+          "class": "col-md-5",
+          "templateOptions": {
+            "customClass": "",
+            "label": "",
+            "required": "no"
+          }
+        },
+        {
+          "key": "EventRecommendation",
+          "type": "textarea",
+          "name": "Recommendations",
+          "data": "",
+          "class": "col-md-6",
+          "templateOptions": {
+            "label": "",
+            "placeholder": "Enter Recommendation",
+            "required": "yes",
+            "requiredMessage": "Recommendation Detail is required.",
+            "minlength": 1,
+            "minlengthMessage": "Minimum 1 character required.",
+            "maxlength": 500,
+            "maxlengthMessage": "Maximum 500 characters only allowed.",
+            "isExistData": "",
+            "isExistMessage": "",
+            "customClass": "margin-top:100px"
+          }
+        },
+        {
+          "key": "EDACausalAndContributingEventID",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "EventID",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "SORTEDAInvestigationId",
+          "type": "label",
+          "data": "",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "TypeID",
+          "type": "label",
+          "data": "",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [
+
+      ]
+    }
+  }
+}

@@ -1,0 +1,1528 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "Hazard System Configuration",
+      "url": "hazardsystemconfig"
+    }
+  ],
+  "fields": {
+    "filterFields": [
+      {
+        "key": "ProjectFilter",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "AllProject"
+          },
+          "items": [
+
+          ]
+        }
+      }
+    ],
+    "severityFields": [
+      {
+        "key": "SeverityId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [
+
+        ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "Project",
+        "type": "input",
+        "data": "",
+        "readonly": true,
+        "disabled": true,
+        "save": false,
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Project",
+          "required": "yes",
+          "requiredMessage": "Select a Project.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Project already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ProjectId",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :"
+        }
+      },
+      {
+        "key": "SeverityCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Code :",
+          "placeholder": "Code",
+          "required": "yes",
+          "requiredMessage": "Code is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Code already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SeverityName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Severity Name :",
+          "placeholder": "Severity Name",
+          "required": "yes",
+          "requiredMessage": "Severity Name is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Severity Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Impact",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Impact Name :",
+          "placeholder": "Impact Name",
+          "required": "no",
+          "requiredMessage": "Impact is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Impact already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Color",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Color :",
+          "placeholder": "Color",
+          "required": "no",
+          "requiredMessage": "Color is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Color already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Background",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "readonly": true,
+        "templateOptions": {
+          "label": "Background :",
+          "placeholder": "Background",
+          "required": "no",
+          "requiredMessage": "Background is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Background already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "3",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Description",
+          "required": "no",
+          "requiredMessage": "Description is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 1000,
+          "maxlengthMessage": "Maximum 1000 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Description already exists..",
+          "customClass": "margin-top:100px",
+          "rows": "3"
+        }
+
+      },
+      {
+        "key": "SeverityOrder",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Severity Order :",
+          "tooltip": "Select Severity Order",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Severity Order is required.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "probabilityFields": [
+      {
+        "key": "ProbabilityId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [
+
+        ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ProjectFilter",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "AllProject"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Project",
+        "type": "input",
+        "data": "",
+        "readonly": true,
+        "disabled": true,
+        "save": false,
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Project",
+          "required": "yes",
+          "requiredMessage": "Select a Project",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Project already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ProjectId",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :"
+        }
+      },
+      {
+        "key": "ProbabilityCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Code :",
+          "placeholder": "Code",
+          "required": "yes",
+          "requiredMessage": "Probability Code is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Probability Code already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ProbabilityName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Probability :",
+          "placeholder": "Name",
+          "required": "yes",
+          "requiredMessage": "Probability Name is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Probability Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Occurance",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Occurence :",
+          "placeholder": "Occurence",
+          "required": "no",
+          "requiredMessage": "Occurence is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Occurence already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ProbabilityOrder",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Probability Order :",
+          "tooltip": "Select Probability Order",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Probability Order is required.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "3",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Description",
+          "required": "no",
+          "requiredMessage": "Description is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 1000,
+          "maxlengthMessage": "Maximum 1000 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Description already exists..",
+          "customClass": "margin-top:100px",
+          "rows": "3"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "riskclassFields": [
+      {
+        "key": "RiskClassId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [
+
+        ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "Project",
+        "type": "input",
+        "data": "",
+        "save": false,
+        "readonly": true,
+        "disabled": true,
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Project",
+          "required": "yes",
+          "requiredMessage": "Select a Project.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Project already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "BackgroundColor",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Background Color :",
+          "placeholder": "Background Color",
+          "required": "yes",
+          "requiredMessage": "Background Color is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 aracters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Color already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ProjectId",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :"
+        }
+      },
+      {
+        "key": "ProjectFilter",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "AllProject"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Class",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Class :",
+          "placeholder": "Class",
+          "required": "yes",
+          "requiredMessage": "Class is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Class already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Title",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Title :",
+          "placeholder": "Title",
+          "required": "yes",
+          "requiredMessage": "Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Title already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "3",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Description",
+          "required": "no",
+          "requiredMessage": "Description is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 1000,
+          "maxlengthMessage": "Maximum 1000 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Description already exists..",
+          "customClass": "margin-top:100px",
+          "rows": "3"
+        }
+      },
+      {
+        "key": "TargetRiskClassId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Target Risk Class :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Target Risk Class is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "Class",
+            "dataField": "RiskClassId",
+            "defaultField": "RiskClass"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "AccidentId",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Accident Code :",
+          "placeholder": "Accident Code",
+          "required": "no",
+          "requiredMessage": "Accident Code is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Accident Code already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AccidentTilte",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Accident Tilte :",
+          "placeholder": "Accident Tilte",
+          "required": "no",
+          "requiredMessage": "Accident Tilte is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Accident Tilte already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ColorCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "ColorCode :",
+          "placeholder": "Color Code",
+          "required": "yes",
+          "requiredMessage": "ColorCode is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Color Code already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "riskmatrixFields": [
+      {
+        "key": "RiskMatrixId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+
+      {
+        "key": "RiskClassName",
+        "type": "label",
+        "data": ""
+
+      },
+      {
+        "key": "RiskMatrixs",
+        "type": "label",
+        "data": [
+        ],
+        "name": "riskmatrix",
+        "id": "RiskMatrixId"
+      },
+      {
+        "key": "ProjectId",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :"
+        }
+      },
+      {
+        "key": "ProjectFilter",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "AllProject"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "ProbabilityId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Probability :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Probability is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProbabilityName",
+            "dataField": "ProbabilityId",
+            "defaultField": "Probability"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "SeverityId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Severity :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Severity is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "SeverityName",
+            "dataField": "SeverityId",
+            "defaultField": "Severity"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "RiskClassId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Risk Class :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "RiskClass is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "Class",
+            "dataField": "RiskClassId",
+            "defaultField": "RiskClass"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Title",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Title :",
+          "placeholder": "Title",
+          "required": "no",
+          "requiredMessage": "Title is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Title already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Remarks",
+        "type": "textarea",
+        "data": "",
+        "rows": "3",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "Remarks",
+          "required": "no",
+          "requiredMessage": "Remarks is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Remarks already exists..",
+          "customClass": "margin-top:100px",
+          "rows": "3"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "hazardClassificationFields": [
+      {
+        "key": "HazardId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "data": [ ],
+        "readonly": true,
+        "templateOptions": {
+          "label": "Project",
+          "placeholder": "Select Project...",
+          "required": "yes",
+          "requiredMessage": "Project required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "AllProject"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "Project",
+        "type": "input",
+        "data": "",
+        "readonly": true,
+        "disabled": true,
+        "save": false,
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Project",
+          "required": "yes",
+          "requiredMessage": "Select a Project.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Project already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "HazardStatusId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "HazardCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Hazard Code :",
+          "placeholder": "Hazard Code",
+          "required": "no",
+          "requiredMessage": "HazardCode is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Hazard Code already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "HazardName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Hazard Name :",
+          "placeholder": "Hazard Name",
+          "required": "no",
+          "requiredMessage": "Hazard Name is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Hazard Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "OwnerId",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Owner :",
+          "placeholder": "Select Owner...",
+          "required": "no",
+          "requiredMessage": "Owner required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": {
+
+            },
+            "displayField": "UserName",
+            "dataField": "UserId",
+            "defaultField": "Users"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter Description..",
+          "required": "yes",
+          "requiredMessage": "Description required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 1000,
+          "maxlengthMessage": "Maximum 1000 characters only allowed."
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+
+        }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": {
+
+        }
+      }
+    ],
+    "hazardClassificationHistoryFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "severityTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            0,
+            5
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "#",
+          "data": "SeverityId",
+          "width": "5%"
+        },
+        {
+          "title": "Project",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName",
+          "width": "250px"
+        },
+        {
+          "title": "Severity Code",
+          "data": "SeverityCode",
+          "width": "250px"
+        },
+        {
+          "title": "Title",
+          "data": "SeverityName"
+        },
+        {
+          "title": "Impact",
+          "data": "Impact",
+          "width": "250px"
+        },
+        {
+          "title": "Severity Order",
+          "data": "SeverityOrder",
+          "width": "200px"
+        }
+      ]
+    },
+    "probabilityTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "#",
+          "data": "ProbabilityId",
+          "width": "80px"
+        },
+        {
+          "title": "Project",
+          "data": "ProjectId",
+          "visible": false,
+          "width": "250px"
+        },
+        {
+          "title": "Code",
+          "data": "ProbabilityCode",
+          "width": "250px"
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName",
+          "width": "250px"
+        },
+        {
+          "title": "Title",
+          "data": "ProbabilityName",
+          "width": "250px"
+        },
+        {
+          "title": "Occurence",
+          "data": "Occurance",
+          "width": "250px"
+        },
+        {
+          "title": "Probability Order",
+          "data": "ProbabilityOrder",
+          "width": "200px"
+        },
+        {
+          "title": "Description",
+          "data": "Description"
+        }
+      ]
+    },
+    "riskclassTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "#",
+          "data": "RiskClassId",
+          "width": "80px"
+        },
+        {
+          "title": "ProjectId",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName",
+          "width": "300px"
+        },
+        {
+          "title": "Class",
+          "data": "Class",
+          "width": "200px"
+        },
+        {
+          "title": "Title",
+          "data": "Title",
+          "width": "300px"
+        },
+        {
+          "title": "Description",
+          "data": "Description"
+        },
+        {
+          "title": "Target RiskClass",
+          "data": "TargetRiskClass",
+          "width": "300px"
+        },
+        {
+          "title": "Accident",
+          "data": "AccidentId",
+          "width": "200px"
+        },
+        {
+          "title": "Accident Tilte",
+          "data": "AccidentTilte",
+          "width": "450px"
+        },
+        {
+          "title": "ColorCode",
+          "data": "ColorCode",
+          "width": "200px"
+        },
+        {
+          "title": "Background",
+          "data": "BackgroundColor",
+          "width": "200px"
+
+        }
+      ]
+    },
+    "riskmatrixTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          10,
+          20,
+          -1
+        ],
+        [
+          5,
+          10,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "dateFields": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+
+          ]
+        }
+      ],
+      "filterBar": {
+        "paginate": true,
+        "filter": true,
+        "info": true
+      },
+      "columns": [
+        {
+          "title": "#",
+          "data": "RiskMatrixId",
+          "width": "5%"
+        },
+        {
+          "title": "ProjectId",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "Project",
+          "data": "ProjectName"
+        },
+        {
+          "title": "Probability",
+          "data": "ProbabilityId",
+          "width": "10%",
+          "visible": false
+        },
+        {
+          "title": "Probability Name",
+          "data": "ProbabilityName",
+          "width": "10%"
+        },
+        {
+          "title": "Severity",
+          "data": "SeverityId",
+          "width": "10%",
+          "visible": false
+        },
+        {
+          "title": "Severity Name",
+          "data": "SeverityName",
+          "width": "10%"
+        },
+        {
+          "title": "Risk Class",
+          "data": "RiskClassName",
+          "width": "10%",
+          "visible": false
+        },
+        {
+          "title": "Remarks",
+          "data": "Remarks",
+          "width": "35%"
+        }
+      ]
+    },
+    "hazardClassificationTable": {
+      "order": [
+        [
+          0,
+          "asc"
+        ]
+      ],
+      "lengthMenu": [
+        [
+          5,
+          15,
+          20,
+          -1
+        ],
+        [
+          5,
+          15,
+          20,
+          "All"
+        ]
+      ],
+      "pageLength": 10,
+      "data": [
+
+      ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [
+
+          ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            4,
+            6
+
+          ]
+        }
+      ],
+      "filterBar": {
+
+      },
+      "autoWidth": {
+
+      },
+      "columns": [
+        {
+          "title": "HazardId",
+          "data": "HazardId",
+          "visible": false
+        },
+        {
+          "title": "ProjectId",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "HazardStatusId",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "OwnerId",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "Hazard Code",
+          "data": "HazardCode",
+          "width": "120px"
+        },
+        {
+          "title": "Hazard Name",
+          "data": "HazardName",
+          "width": "10%"
+        },
+        {
+          "title": "Hazard Status",
+          "data": "HazardStatusName",
+          "width": "120px"
+        },
+        {
+          "title": "Project Name",
+          "data": "ProjectName",
+          "width": "10%"
+        },
+        {
+          "title": "Owner",
+          "data": "OwnerName",
+          "width": "10%"
+        },
+        {
+          "title": "Description",
+          "data": "Description"
+        }
+      ]
+    }
+  },
+  "riskMatrixData": [
+    {
+      "ProjectId": 10,
+      "PrpobilityId": 1,
+      "PrpobilityName": "Likely",
+      "Negligible": "A",
+      "Marginal": "D",
+      "Critical": "C",
+      "Catastrophic": "B",
+      "NegligibleId": "4",
+      "MarginalId": "5",
+      "CriticalId": "6",
+      "CatastrophicId": "7"
+    },
+    {
+      "ProjectId": 12,
+      "PrpobilityId": 3,
+      "PrpobilityName": "Possible",
+      "Negligible": "C",
+      "Marginal": "A",
+      "Critical": "B",
+      "Catastrophic": "D",
+      "NegligibleId": "4",
+      "MarginalId": "5",
+      "CriticalId": "6",
+      "CatastrophicId": "7"
+    },
+    {
+      "ProjectId": 7,
+      "PrpobilityId": 4,
+      "PrpobilityName": "Unlikely",
+      "Negligible": "A",
+      "Marginal": "D",
+      "Critical": "C",
+      "Catastrophic": "B",
+      "NegligibleId": "4",
+      "MarginalId": "5",
+      "CriticalId": "6",
+      "CatastrophicId": "7"
+    },
+    {
+      "ProjectId": 4,
+      "PrpobilityId": 3,
+      "PrpobilityName": "Rare",
+      "Negligible": "C",
+      "Marginal": "A",
+      "Critical": "B",
+      "Catastrophic": "D",
+      "NegligibleId": "4",
+      "MarginalId": "5",
+      "CriticalId": "6",
+      "CatastrophicId": "7"
+    }
+  ]
+}

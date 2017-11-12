@@ -1,0 +1,995 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+
+    "sortAirProximityFields": [
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTAirproximityId",
+        "type": "label",
+        "data": 0
+      },
+
+      {
+        "key": "AirCraftRearPosition",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "AirCraftFrontPosition",
+        "type": "label",
+        "data": ""
+      },
+
+
+      {
+        "key": "ColourSchemeAndExternalLighting",
+        "type": "input",
+        "data": "",
+
+        "templateOptions": {
+          "label": "Colour Scheme & External Lighting :",
+          "tooltip": "(Strobes, HISLs, Nav Lights Etc...)",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "colour scheme & external lighting is required.",
+
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "RadioCallSign",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Radio Call Sign :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Radio call sign is required.",
+
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AerodromeOfDeparture",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Aerodrome of Departure :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Aerodrome of Departure is required.",
+
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AerodromeOfDestination",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Aerodrome of Destination :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Aerodrome of Destination is required.",
+
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "RTFrequency",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": " RT Frequency :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "'RT Frequency' is required.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SSRTransponder1",
+        "type": "radio",
+        "group": "SSRTransponder1",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "SSRTransponder1 :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "SSRTransponder1StatusId",
+        "type": "radio",
+        "group": "SSRStatus1",
+        "data": "Off",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [
+           
+          ],
+          "hideLabel": false,
+          "required": "no",
+          "item": {
+            "suffixLabel": true,
+            "defaultField": "SSRTransponderStatus1"
+          }
+        }
+      },
+      {
+        "key": "SSRTransponder1Details",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": " Details :",
+          "placeholder": "Enter Transponder Details",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SSRTransponder2",
+        "type": "radio",
+        "group": "SSRTransponder2",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "SSRTransponder2 :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "SSRTransponder2StatusId",
+        "type": "radio",
+        "group": "SSRStatus2",
+        "data": "Off",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no",
+          "item": {
+            "suffixLabel": true,
+            "defaultField": "SSRTransponderStatus2"
+          }
+        }
+      },
+      {
+        "key": "SSRTransponder2Details",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": " Details :",
+          "placeholder": "Enter Transponder Details",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "FlightClassificationTrainingId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Flight Classification :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "'Classification of flight' is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightClassificationTrainingName",
+            "dataField": "FlightClassificationTrainingId",
+            "defaultField": "ClassificationOfFlight3"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "Formation",
+        "type": "radio",
+        "group": "FlightFormation",
+        "data": "no",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Formation :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "FlightRulesAtTimeOfAirproxId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Type of Flight Plan :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "Flight Rules at time of Airprox is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightRulesTimeOfAirproxName",
+            "dataField": "FlightRulesTimeOfAirproxId",
+            "defaultField": "FlightRules"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "Latitude",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Latitude :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Latitude is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Longitude",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Longitude :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Longitude is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AircraftHeadingDesc",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Aircraft Heading :",
+          "placeholder": "Enter Aircraft Heading",
+          "required": "no",
+          "requiredMessage": "Aircraft Heading is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Aircraft Heading already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AircraftHeadingId",
+        "type": "radio",
+        "group": "FlightAircraftHeading",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "FlightAircraft Heading :",
+          "items": [ ],
+          "item": {
+            "defaultField": "AircraftHeading"
+          },
+          "hideLabel": true,
+          "requiredMessage": "Aircraft Heading is required.",
+          "required": "yes"
+        }
+      },
+      {
+        "key": "AltimeterSettingDesc",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Enter Altimeter setting ",
+          "required": "no",
+          "requiredMessage": "Altimeter setting is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Altimeter setting already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AltimeterSettingMeasurementId",
+        "type": "radio",
+        "group": "FlightAltimeter",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "FlightAltimeter :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": "yes",
+              "label": "Mbar"
+            },
+            {
+              "suffixLabel": true,
+              "value": "no",
+              "label": "In Hg"
+            }
+          ],
+          "hideLabel": true,
+          "requiredMessage": "Altimeter setting is required.",
+          "required": "no"
+        }
+      },
+      {
+        "key": "AltimeterSettingId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Altimeter setting :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "Flight Altimeter is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightRulesTimeOfAirproxName",
+            "dataField": "FlightRulesTimeOfAirproxId",
+            "defaultField": "AltimeterSettingReading"
+          },
+          "items": [ ]
+        }
+
+      },
+      {
+        "key": "AircraftAttitudeLevelId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Aircraft Attitude :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "Aircraft Attitude is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AircraftAttitudeLevelName",
+            "dataField": "AircraftAttitudeLevelId",
+            "defaultField": "AircraftAttitudeLevel"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "AircraftAttitudeWingsLevelId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "Aircraft Attitude is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AircraftWingsLevelName",
+            "dataField": "AircraftWingsLevelId",
+            "defaultField": "AircraftWingsLevel"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "FlightWeatherDistanceLevelId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "Distance(ft). is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightWeatherDistanceLevelName",
+            "dataField": "FlightWeatherDistanceLevelId",
+            "defaultField": "FlightWeatherDistanceLevel"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "FlightWeatherDistanceFtDesc",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Distance(ft). :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Distance(ft). is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Distance(ft). already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "DistanceFromHorizandalId",
+        "type": "select",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "Distance Horizontally from Cloud is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DistanceFromHorizandalName",
+            "dataField": "DistanceFromHorizandalId",
+            "defaultField": "FlightWeatherDistanceFromHorizandal"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "DistanceHorizontallyFromCloudDesc",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Distance Horizontally from Cloud :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Distance Horizontally from cloud is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Distance Horizontally from cloud already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "FlightWeatherInId",
+        "type": "select",
+        "save": true,
+        "data": [ ],
+        "templateOptions": {
+          "label": "In :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "In is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightWeatherInName",
+            "dataField": "FlightWeatherInId",
+            "defaultField": "FlightWeatherFlyingIn"
+          },
+          "items": [
+
+          ]
+        }
+      },
+      {
+        "key": "FlightWeatherFlyingId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Flying :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "In is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "FlightWeatherFlyingName",
+            "dataField": "FlightWeatherFlyingId",
+            "defaultField": "FlightWeatherFlying"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "FlyingVisibility",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Flying Visibility(km) :",
+          "placeholder": "Enter flying visibility(km) :",
+          "required": "no",
+          "requiredMessage": "Flying visibility(km) is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Flying visibility(km) already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "TimeOfDayId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Time of Day :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "Time of Day is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "text",
+            "dataField": "FlightWeatherTimeOfDayId",
+            "defaultField": "FlightWeatherTimeOfDay"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "AircraftTypeDesc",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Type, High/Low Wing, Number of Engines :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "DescriptionRadioCallSign",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Radio Call-Sign, Registration :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "MarkingsAndColourdDescription",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Markings, Colour, Lighting :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "AircraftAttitudeDescrition",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Aircraft Attitude :",
+          "placeholder": "Other Details",
+          "required": "no",
+          "requiredMessage": "Aircraft Attitude is required.",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "FirstSightingDistanceDescription",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+
+        "templateOptions": {
+          "label": "First Sighting :",
+          "tooltip": "Distance/Radar/ TCAS/TAS Contact",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SeparationAtTimeOfAirproxDesc",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Minimum Separation :",
+          "placeholder": "Minimum Horizontal & Vertical Separation at Time of Airprox",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "required": "no",
+          "requiredMessage": "Minimum Separation is required"
+        }
+      },
+      {
+        "key": "FormOfAvoidingActionTaken",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Form of Avoiding Action Taken :",
+          "placeholder": "if none, state reason",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "requiredMessage": "Form of Avoiding Action Taken is required"
+        }
+      },
+      {
+        "key": "AssessmentOfRskOfCollisionId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Assessment of Risk of Collision :",
+          "placeholder": "select",
+          "required": "no",
+          "requiredMessage": "'Assessment of Risk of Collision' is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AssessmentOfRiskOfCollisionName",
+            "dataField": "AssessmentOfRiskOfCollisionId",
+            "defaultField": "AssessmentOfRiskOfCollision"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "OtherRelevantFactors",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "55",
+        "data": "",
+        "templateOptions": {
+          "label": "Other Relevant Factors :",
+          "placeholder": "i.e. workload, emergencies, vision from cockpit, etc...",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "AirborneCollisionAvoidanceSystemId",
+        "type": "select",
+        "save": true,
+        "data": [
+        ],
+        "templateOptions": {
+          "label": "Airborne Collision Avoidance System :",
+          "placeholder": "(e.g. TCAS)",
+          "required": "no",
+          "requiredMessage": "Airborne Collision Avoidance System is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AirborneCollisionAvoidanceName",
+            "dataField": "AirborneCollisionAvoidanceId",
+            "defaultField": "AirborneCollisionAvoidance"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "TAIndicated",
+        "type": "radio",
+        "group": "DescriptionTAInd",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "TA Indicated :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "RAIndicated",
+        "type": "radio",
+        "group": "DescriptionRAInd",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "RA Indicated :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "RAFollowed",
+        "type": "radio",
+        "group": "DescriptionRAFollow",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "RA Followed :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Yes"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "No"
+            }
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+
+
+      {
+        "key": "lbldescriptionhowdid",
+        "type": "label",
+        "alternateType": "",
+        "save": false,
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "How Did You Report/Hear About the Airprox Report :",
+          "required": "no"
+        }
+      },
+      {
+        "key": "HearByRadio",
+        "type": "radio",
+        "group": "DescriptionByRadio",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "1. By Radio :",
+          "items": [
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "HearByRadioDescription",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "To/From Whom",
+          "required": "no",
+          "requiredMessage": "By Radio-To/From Whom is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "By Radio-To/From Whom already exists..",
+          "customClass": "margin-top:100px",
+          "hideLabel": true
+        }
+      },
+      {
+        "key": "HearByRadioFrequency",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Frequency",
+          "required": "no",
+          "requiredMessage": "By Radio-Freequency is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "By Radio-Frequency already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "HearByPhone",
+        "type": "radio",
+        "group": "DescriptionByPhone",
+        "data": true,
+        "disabled": "",
+        "templateOptions": {
+          "label": "2. By Phone :",
+          "items": [
+          ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "HearByPhoneDescription",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "To/From Whom",
+          "required": "no",
+          "requiredMessage": "By Phone-To/From Whom is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "By Phone-To/From Whom already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+
+
+  },
+  "tables": {
+
+
+  },
+  "tableEditor": {
+
+
+
+  }
+}

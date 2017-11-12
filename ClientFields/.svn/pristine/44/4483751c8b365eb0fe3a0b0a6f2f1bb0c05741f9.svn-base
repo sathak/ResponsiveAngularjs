@@ -1,0 +1,603 @@
+{  
+   "breadcrumbs":[  
+      {  
+         "class":"fa fa-male",
+         "title":"Administration",
+         "url":"administration"
+      },
+      {  
+         "class":"fa fa-book",
+         "title":"Master Configuration",
+         "url":"masterconfiguration"
+      }
+   ],
+   "fields":{  
+      "masterFields":[  
+         {  
+            "key":"ConfigType",
+            "type":"select",
+            "data":[  
+
+            ],
+            "templateOptions":{  
+               "label":"Type",
+               "placeholder":"Select type...",
+               "required":"yes",
+               "requiredMessage":"Type required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"DisplayText",
+                  "dataField":"ConfigType",
+                  "defaultField":"ConfigType"
+               },
+               "items":[  
+
+               ]
+            }
+         }
+      ],
+      "masterConfigurationFields":[  
+         {  
+            "key":"CommonConfigId",
+            "type":"label",
+            "data":"0",
+            "primarykey":true,
+            "datatype":"integer"
+         },
+         {  
+            "key":"History",
+            "type":"label",
+            "data":[ ]
+         },
+         {  
+            "key":"ConfigType",
+            "type":"label",
+            "data":""
+         },
+         {  
+            "key":"DisplayType",
+            "type":"input",
+            "data":"",
+            "readonly":true,
+            "disabled":true,
+            "templateOptions":{  
+               "label":"Type",
+               "required":"yes",
+               "requiredMessage":"Type required."
+            }
+         },
+         {  
+            "key":"ParentId",
+            "type":"select",
+            "data":"",
+            "templateOptions":{  
+               "customClass":"text-primary",
+               "label":"Parent Type",
+               "placeholder":"Select parent type...",
+               "required":"no",
+               "requiredMessage":"Parent type required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"DisplayText",
+                  "dataField":"CommonConfigId",
+                  "defaultField":"ParentDropdown"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"DisplayText",
+            "name":"displaytext",
+            "type":"input",
+            "data":"",
+            "templateOptions":{  
+               "label":"Title",
+               "focus":false,
+               "placeholder":"Enter title..",
+               "required":"yes",
+               "requiredMessage":"Title required.",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":100,
+               "maxlengthMessage":"Maximum 100 characters only allowed.",
+               "pattern":"^[a-zA-Z0-9 -]*$",
+               "patternMessage":"Alphabets and numbers only allowed.",
+               "isExistData":"masterConfigurationTableData",
+               "isExistMessage":"Title already exists.."
+            }
+         },
+         {  
+            "key":"Description",
+            "type":"textarea",
+            "rows":"5",
+            "cols":"50",
+            "data":"",
+            "templateOptions":{  
+               "label":"Description",
+               "placeholder":"Enter description..",
+               "required":"no",
+               "requiredMessage":"Description required.",
+               "minlength":1,
+               "minlengthMessage":"Minimum 1 character required.",
+               "maxlength":100,
+               "maxlengthMessage":"Maximum 100 characters only allowed."
+            }
+         },
+         {  
+            "key":"ObjectState",
+            "type":"label",
+            "data":"0",
+            "templateOptions":{  
+
+            }
+         },
+         {  
+            "key":"Status",
+            "type":"label",
+            "data":"0",
+            "templateOptions":{  
+
+            }
+         }
+      ],
+      "baseConfigurationFields":[  
+         {  
+            "key":"BaseId",
+            "type":"label",
+            "data":"0"
+         }, 
+		{  
+            "key":"History",
+            "type":"label",
+            "data":[ ]
+         },		 
+         {  
+            "key":"ProjectId",
+            "type":"select",
+            "data":[   ],
+            "templateOptions":{  
+               "label":"Project",
+               "placeholder":"Select Project...",
+               "required":"yes",
+               "requiredMessage":"Project required."
+            },
+            "selectOptions":{  
+               "item":{  
+                  "selected":{  
+
+                  },
+                  "displayField":"ProjectName",
+                  "dataField":"ProjectId",
+                  "defaultField":"Projects"
+               },
+               "items":[  
+
+               ]
+            }
+         },
+         {  
+            "key":"BaseCode",
+            "type":"input",
+            "data":"",
+            "readonly":false,
+            "templateOptions":{  
+               "label":"Base Code",
+               "required":"yes",
+               "requiredMessage":"Base Code required."
+            }
+         },
+         {  
+            "key":"BaseName",
+            "type":"input",
+            "data":"",
+            "readonly":false,
+            "templateOptions":{  
+               "label":"Base Name",
+               "required":"yes",
+               "requiredMessage":"Base Name required."
+            }
+         },
+         {  
+            "key":"ObjectState",
+            "type":"label",
+            "data":"0",
+            "templateOptions":{  
+
+            }
+         },
+         {  
+            "key":"Status",
+            "type":"label",
+            "data":"0",
+            "templateOptions":{  
+
+            }
+         }
+      ],
+      "projectConfigurationFields":[  
+         {  
+            "key":"ProjectId",
+            "type":"label",
+            "data":""
+         },
+		 {  
+            "key":"History",
+            "type":"label",
+            "data":[ ]
+         },
+         {  
+            "key":"ProjectCode",
+            "type":"input",
+            "data":"",
+            "readonly":false,
+            "templateOptions":{  
+               "label":"Project Code",
+               "required":"yes",
+               "requiredMessage":"Project Code required."
+            }
+         },
+         {  
+            "key":"ProjectName",
+            "type":"input",
+            "data":"",
+            "readonly":false,
+            "templateOptions":{  
+               "label":"Project Name",
+               "required":"yes",
+               "requiredMessage":"Project Name required."
+            }
+         },
+         {  
+            "key":"ObjectState",
+            "type":"label",
+            "data":"0",
+            "templateOptions":{  
+
+            }
+         },
+         {  
+            "key":"Status",
+            "type":"label",
+            "data":"0",
+            "templateOptions":{  
+
+            }
+         }
+      ],
+      "causeStatusFields":[  
+         {  
+            "key":"CauseStatusTypeId",
+            "type":"label",
+            "data":""
+         },
+		 {  
+            "key":"History",
+            "type":"label",
+            "data":[ ]
+         },
+         {  
+            "key":"CauseStatusTypeCode",
+            "type":"input",
+            "data":"",
+            "readonly":false,
+            "templateOptions":{  
+               "label":"Status Code",
+               "required":"yes",
+               "requiredMessage":"Status Code required."
+            }
+         },
+         {  
+            "key":"StatusTypeName",
+            "type":"input",
+            "data":"",
+            "readonly":false,
+            "templateOptions":{  
+               "label":"Status Name",
+               "required":"yes",
+               "requiredMessage":"Status Name required."
+            }
+         },
+         {  
+            "key":"ColorCode",
+            "type":"input",
+            "data":"",
+            "readonly":false,
+            "templateOptions":{  
+               "label":"Color Code",
+               "required":"yes",
+               "requiredMessage":"Color Code required."
+            }
+         },
+         {  
+            "key":"ObjectState",
+            "type":"label",
+            "data":"0",
+            "templateOptions":{  
+
+            }
+         },
+         {  
+            "key":"Status",
+            "type":"label",
+            "data":"0",
+            "templateOptions":{  
+
+            }
+         }
+      ]
+   },
+   "tables":{  
+      "masterConfigurationTable":{  
+         "order":[  
+            [  
+               0,
+               "asc"
+            ]
+         ],
+         "lengthMenu":[  
+            [  
+               5,
+               15,
+               20,
+               -1
+            ],
+            [  
+               5,
+               15,
+               20,
+               "All"
+            ]
+         ],
+         "pageLength":10,
+         "data":[  
+
+         ],
+         "aoColumnDefs":[  
+            {  
+               "bSortable":false,
+               "aTargets":[  
+
+               ]
+            },
+            {  
+               "className":"tableColumnStyle",
+               "aTargets":[  
+
+               ]
+            }
+         ],
+         "filterBar":{  
+
+         },
+         "autoWidth":{  
+
+         },
+         "columns":[  
+            {  
+               "title":"Title",
+               "data":"DisplayText",
+               "width":"30%"
+            },
+            {  
+               "title":"Parent Type",
+               "data":"ParentName",
+               "width":"30%"
+            },
+            {  
+               "title":"Description",
+               "data":"Description",
+               "width":"30%"
+            }
+         ]
+      },
+      "projectConfigurationTable":{  
+         "order":[  
+            [  
+               0,
+               "asc"
+            ]
+         ],
+         "lengthMenu":[  
+            [  
+               5,
+               15,
+               20,
+               -1
+            ],
+            [  
+               5,
+               15,
+               20,
+               "All"
+            ]
+         ],
+         "pageLength":10,
+         "data":[  
+
+         ],
+         "aoColumnDefs":[  
+            {  
+               "bSortable":false,
+               "aTargets":[  
+
+               ]
+            },
+            {  
+               "className":"tableColumnStyle",
+               "aTargets":[  
+
+               ]
+            }
+         ],
+         "filterBar":{  
+
+         },
+         "autoWidth":{  
+
+         },
+         "columns":[  
+            {  
+               "title":"Project Code",
+               "data":"ProjectCode",
+               "width":"30%"
+            },
+            {  
+               "title":"Project Name",
+               "data":"ProjectName",
+               "width":"30%"
+            }
+         ]
+      },
+      "baseConfigurationTable":{  
+         "order":[  
+            [  
+               0,
+               "asc"
+            ]
+         ],
+         "lengthMenu":[  
+            [  
+               5,
+               15,
+               20,
+               -1
+            ],
+            [  
+               5,
+               15,
+               20,
+               "All"
+            ]
+         ],
+         "pageLength":10,
+         "data":[  
+
+         ],
+         "aoColumnDefs":[  
+            {  
+               "bSortable":false,
+               "aTargets":[  
+
+               ]
+            },
+            {  
+               "className":"tableColumnStyle",
+               "aTargets":[  
+
+               ]
+            }
+         ],
+         "filterBar":{  
+
+         },
+         "autoWidth":{  
+
+         },
+         "columns":[  
+            {  
+               "title":"BaseId",
+               "data":"BaseId",
+               "visible":false
+            },
+            {  
+               "title":"ProjectId",
+               "data":"ProjectId",
+               "visible":false
+            },
+            {  
+               "title":"Project Name",
+               "data":"ProjectName",
+               "width":"30%"
+            },
+            {  
+               "title":"Location Code",
+               "data":"BaseCode",
+               "width":"30%"
+            },
+            {  
+               "title":"Location Name",
+               "data":"BaseName",
+               "width":"30%"
+            }
+         ]
+      },
+      "causeStatusTable":{  
+         "order":[  
+            [  
+               0,
+               "asc"
+            ]
+         ],
+         "lengthMenu":[  
+            [  
+               5,
+               15,
+               20,
+               -1
+            ],
+            [  
+               5,
+               15,
+               20,
+               "All"
+            ]
+         ],
+         "pageLength":10,
+         "data":[  
+
+         ],
+         "aoColumnDefs":[  
+            {  
+               "bSortable":false,
+               "aTargets":[  
+
+               ]
+            },
+            {  
+               "className":"tableColumnStyle",
+               "aTargets":[  
+
+               ]
+            }
+         ],
+         "filterBar":{  
+
+         },
+         "autoWidth":{  
+
+         },
+         "columns":[  
+            {  
+               "title":"CauseStatusTypeId",
+               "data":"CauseStatusTypeId",
+               "visible":false
+            },
+            {  
+               "title":"Code",
+               "data":"CauseStatusTypeCode",
+               "width":"10%"
+            },
+            {  
+               "title":"Status Type",
+               "data":"StatusTypeName",
+               "width":"30%"
+            },
+            {  
+               "title":"Color Code",
+               "data":"ColorCode",
+               "width":"30%"
+            }
+         ]
+      }
+   }
+}

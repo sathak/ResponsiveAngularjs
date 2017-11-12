@@ -1,0 +1,111 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "EDA",
+      "url": "eda"
+    }
+  ],
+  "fields": {
+    "edaCFPersonalInjuryFields": [
+      {
+        "key": "EDACausalFactorID",
+        "type": "label",
+        "data": 0
+      }, 
+      {
+        "key": "TypeID",
+        "type": "label",
+        "data": 3
+      },
+      //{
+      //  "key": "SORTId",
+      //  "type": "label",
+      //  "data": 0
+      //},
+      {
+        "key": "SORTEDAInvestigationId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTEDACausalAndContributingEvents",
+        "type": "checkboxlist",
+        "data": [ ],
+        "refkey": "EDACausalFactorID",
+        "templateOptions": {
+          "item": {
+            "groupField": "ParentID",
+            "dataField": "EventID",
+            "displayField": "EventName",
+            "defaultField": "PersonalInjuryError"
+          },
+          "label": "",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "",
+          "suffixLabelHide": true,
+          "requiredMessage": ""
+        }
+      },
+      {
+        "key": "DescriptionHeading",
+        "type": "label",
+        "data": "",
+        "templateOptions": {
+          "label": "Describe the incident/degradation/failure (e.g. could not pressurize) that caused the occurrence :",
+          "required": false
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "4",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+
+  }
+}

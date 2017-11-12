@@ -1,0 +1,439 @@
+{
+  "breadcrumbs": [
+
+    {
+      "class": "fa fa-home",
+      "title": "Home",
+      "url": "Home"
+    },
+    {
+      "class": "fa fa-edit",
+      "title": "SORT",
+      "url": "sort"
+    }
+  ],
+  "fields": {
+
+    "sortPage3Fields": [
+      {
+        "key": "SortPage3Id",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "txtpsrsref",
+        "type": "input",
+        "data": "",
+        "disabled": true,
+        "save": false,
+        "templateOptions": {
+          "label": "PSRS Ref# :",
+          "placeholder": "<need to get format>",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "PSRS already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+
+      {
+        "key": "Lighting",
+        "type": "radio",
+        "group": "MetroLighting",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Lighting :",
+          "item": {
+            "suffixLabel": true,
+            "value": "AmbientLightId",
+            "label": "AmbientLightName",
+            "defaultField": "AmbientLight"
+          },
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "Humidity",
+        "type": "radio",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Humidity :",
+          "item": {
+            "suffixLabel": true,
+            "value": "HumidityId",
+            "label": "HumidityName",
+            "defaultField": "Humidity"
+          },
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no"
+        }
+      },
+      {
+        "key": "HumidityOthers",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Other:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Others is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Others already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "LightingOthers",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Other:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Others is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Others already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "AmbientNoise",
+        "type": "radio",
+        "group": "MetroAmbient",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Ambient Noise :",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no",
+          "item": {
+            "suffixLabel": true,
+            "value": "AmbientNoiseId",
+            "label": "AmbientNoiseName",
+            "defaultField": "AmbientNoise"
+          }
+        }
+      },
+      {
+        "key": "AmbientNoiseOthers",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Other:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Ambient Noise Others is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Ambient  Noise Others already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Ventilation",
+        "type": "radio",
+        "group": "MetroVenti",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Ventilation :",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no",
+          "item": {
+            "suffixLabel": true,
+            "value": "VentilationId",
+            "label": "VentilationName",
+            "defaultField": "Ventilation"
+          }
+        }
+      },
+      {
+        "key": "VentilationOthers",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Other:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Ventilation thers is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Ventilation Others already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+
+      {
+        "key": "Visibility",
+        "type": "radio",
+        "group": "MetroVisible",
+        "data": null,
+        "disabled": "",
+        "templateOptions": {
+          "label": "Visibility :",
+          "defaultField": "",
+          "items": [ ],
+          "hideLabel": false,
+          "required": "no",
+          "item": {
+            "suffixLabel": true,
+            "value": "VisibilityId",
+            "label": "VisibilityName",
+            "defaultField": "Visibility"
+          }
+        }
+      },
+      {
+        "key": "VisibilityOthers",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Other:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Visibility Others is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Visibility already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "WindSpeedKts",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "templateOptions": {
+          "label": "Wind Speed (kt.) :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Wind Speed (kt.) is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Wind Speed (kt.) already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "WindDirectionFrom",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "label": "Wind Direction:",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Wind Direction is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WindDirectionName",
+            "dataField": "WindDirectionId",
+            "defaultField": "WindDirection"
+
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "WindDirectionFrom1",
+        "type": "input",
+        "data": "",
+        "disabled": false,
+        "save": false,
+        "templateOptions": {
+          "label": "Wind Direction From :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Wind Direction From is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Wind Direction From already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTLocationsOfOtherEquipments",
+        "type": "input",
+        "save": true,
+        "data": "",
+        "refkey": "SortPage3Id",
+        "altkey": "EquipmentFaultId",
+        "templateOptions": {
+          "label": "Locations Of Other Equipments :",
+          "placeholder": "",
+          "required": "No",
+          "requiredMessage": "Locations Of Other Equipments "
+        }
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "attachmentid",
+          "agreeText": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "ITARWarningDisclaimer",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "SORTEquipmentDetails",
+        "type": "htmltable",
+        "data": [],
+        "objecttype": "",
+        "primarykey": "",
+        "section": "",
+        "subsection": "",
+        "columns": [
+          "Manufacturer",
+          "EquipmentTypeId",
+          "EquipmentPartNo",
+          "StockNo",
+          "EquipmentSystemCode",
+          "EquipmentUsageHours",
+          "EquipmentUsageUnit",
+          "UsageUnitOthers",
+          "HigherAssySystemCode",
+          "MaintenanceManual",
+          "OperatingManual",
+          "LocationEquipmentInvOccurence",
+          "EquipmentCurrentLocation",
+          "EquipmentFaultOther",
+          "AssociatedEquipment",
+          "EquipmentOtherAreas",
+          "QuantityOfEquipment",
+          "LastKnownUse",
+          "DateTimeOfLastKnownUse"
+        ],
+        "labelcolumns": [
+          "Manufacturer",
+          "Equipment Type Id",
+          "Equipment Part No",
+          "Stock No",
+          "Equipment System Code",
+          "Equipment Usage Hours",
+          "Equipment Usae Unit",
+          "Usage Unit Others",
+          "Higher Assy SystemCode",
+          "Maintenance Manual",
+          "Operating Manual",
+          "Location Equipment In vOccurence",
+          "Equipment Current Location",
+          "Equipment Fault Other",
+          "Associated Equipment",
+          "Equipment Other Areas",
+          "Quantity Of Equipment",
+          "Last Known Use",
+          "Date Time Of Last Known Use"
+        ]
+      },
+      {
+        "key": "deleterecord",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Reason for Deletion :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "SortStatus",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      }
+    ]
+
+  },
+  "tables": { },
+  "tableEditor": {
+
+
+  }
+}

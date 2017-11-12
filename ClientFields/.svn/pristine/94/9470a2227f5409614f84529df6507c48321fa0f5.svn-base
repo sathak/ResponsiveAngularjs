@@ -1,0 +1,205 @@
+{
+  "breadcrumbs": [
+    {
+      "class": "fa fa-male",
+      "title": "Administration",
+      "url": "administration"
+    },
+    {
+      "class": "fa fa-hand-o-up",
+      "title": "Role Management",
+      "url": "rolemanagement"
+    }
+  ],
+  "fields": {
+    "roleManagementFields": [
+      {
+        "key": "RoleId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "RoleName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Role Name :",
+          "placeholder": "Enter Role Name..",
+          "required": "yes",
+          "requiredMessage": "Role Name is required.",
+          "minlength": 7,
+          "maxlength": 100,
+          "minlengthMessage": "Minimum 7 characters required.",
+          "maxlengthMessage": "Maximun 100 characters only allowed",
+          "isExistData": "roleManagementTableData",
+          "isExistMessage": "Role Name already exists.."
+        }
+      },
+      {
+        "key": "AllRights",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "Enable All Data Rights :",
+          "required": false,
+          "hideLabel": false,
+          "suffixLabel": "Yes",
+          "suffixLabelHide": false,
+          "requiredMessage": "Enable All Rights is required."
+        }
+      },
+      {
+        "key": "ProjectRole",
+        "type": "multiselect",
+        "save": true,
+        "data": [ ],
+        "refkey": "Id",
+        "altkey": "ProjectRoleId",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Projects :",
+          "placeholder": "Select Project..",
+          "required": "yes",
+          "requiredMessage": "Project is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Projects"
+          },
+          "items": [
+          ]
+        }
+      },
+      {
+        "key": "RoleStatus",
+        "type": "radio",
+        "group": "personal",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Status :",
+          "items": [
+            {
+              "suffixLabel": true,
+              "value": true,
+              "label": "Active"
+            },
+            {
+              "suffixLabel": true,
+              "value": false,
+              "label": "Inactive"
+            }
+          ],
+          "hideLabel": false,
+          "required": "yes"
+        }
+      },
+      {
+        "key": "Remarks",
+        "name": "Remarks",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "30",
+        "data": "",
+        "templateOptions": {
+          "label": "Remarks :",
+          "placeholder": "Enter remarks..",
+          "required": "no",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "RoleStatusName",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "NoOfUsers",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": true,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network.Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer is required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+  },
+  "tables": {
+    "roleManagementTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "dateFields": [ 3 ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Role Id",
+          "data": "RoleId",
+          "visible": false
+        },
+        {
+          "title": "Role Name",
+          "data": "RoleName"
+        },
+        {
+          "title": "No.of Users",
+          "data": "NoOfUsers",
+          "width": "10%"
+        },
+        {
+          "title": "Created On",
+          "data": "CreatedOn",
+          "width": "15%"
+        },
+        {
+          "title": "Remarks",
+          "data": "Remarks",
+          "width": "30%"
+        },
+        {
+          "title": "Status",
+          "data": "RoleStatusName",
+          "width": "10%"
+        }
+      ]
+    }
+  }
+}

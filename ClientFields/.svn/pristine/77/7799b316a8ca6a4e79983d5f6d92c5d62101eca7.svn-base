@@ -1,0 +1,1290 @@
+{
+
+  "fields": {
+    "masterFields": [
+      {
+        "key": "ConfigType",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Type",
+          "placeholder": "Select type...",
+          "required": "yes",
+          "requiredMessage": "Type required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "ConfigType",
+            "defaultField": "ConfigType"
+          },
+          "items": [ ]
+        }
+      }
+    ],
+    "masterConfigurationFields": [
+      {
+        "key": "CommonConfigId",
+        "type": "label",
+        "data": "0",
+        "primarykey": true,
+        "datatype": "integer"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "Editable",
+        "type": "label",
+        "data": 1
+      }, 
+	  {
+        "key": "DepartmentLocation",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+        "refkey": "CommonConfigId",
+        "altkey": "DepartmentLocationId",
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Locaton is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "LocationName",
+            "dataField": "LocationId"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "UnitDepLocations",
+        "type": "multiselectcheckbox",
+        "data": [ ],
+        "refkey": "CommonConfigId",
+        "altkey": "UnitDepLocationId",
+        "templateOptions": {
+          "label": "Location/Department :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Location/Department is required"
+        },
+        "selectOptions": {
+          "isCustomFormat": true,
+          "customFilter": true,
+          "customFormat": "LocationDepartmentCustomFormat",
+          "item": {
+            "selected": { },
+            "displayField": "LocationName",
+            "dataField": "DepartmentLocationId",
+            "defaultField": "DepartmentLocation",
+            "secondDisplayField": "DepartmentName"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "ShortCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+		  "readonly": false,
+          "disabled": false,
+          "label": "Code : ",
+          "required": "yes",
+          "requiredMessage": "Code required.",
+          "pattern": "[a-zA-Z0-9]+",
+          "patternMessage": "Alpha numeric only allowed.",
+          "isExistData": "masterConfigurationTableData",
+          "isExistMessage": "Code already exists.."
+        }
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ConfigType",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "ParentId",
+        "type": "select",
+        "data": "",
+        "templateOptions": {
+          "customClass": "text-primary",
+          "label": "Parent Type",
+          "placeholder": "Select parent type...",
+          "required": "no",
+          "requiredMessage": "Parent type required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DisplayText",
+            "dataField": "CommonConfigId",
+            "defaultField": "ParentDropdown"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "DisplayText",
+        "name": "displaytext",
+        "type": "input",
+        "data": "",
+        "readonly": false,
+        "disabled": false,
+        "templateOptions": {
+          "label": "Name :",         
+          "placeholder": "Enter Name..",
+          "required": "yes",
+          "requiredMessage": "Name required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 50,
+          "maxlengthMessage": "Maximum 50 characters only allowed.",
+          "isExistData": "masterConfigurationTableData",
+          "isExistMessage": "Name already exists.."
+        }
+      },
+      {
+        "key": "SeqNo",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Sequence :",
+          "tooltip": "Select Sequence",
+          "placeholder": "",
+          "required": "yes",
+          "min": 1,
+          "max": 15,
+          "ng-min": 1,
+          "ng-max": 15,
+          "minMessage": "Invalid Sequence Order",
+          "maxMessage": "Invalid Sequence Order",
+          "requiredMessage": "Sequence  is required.",
+		  "isExistData": "masterConfigurationTableData",
+          "isExistMessage": "Sequence already exists..",
+          "customClass": "margin-top:100px",
+		  "pattern" : "^[0-9]+$",
+		  "patternMessage" : "Invalid Value."
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter description..",
+          "required": "no",
+          "requiredMessage": "Description required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed."
+        }
+      },
+      {
+        "key": "DisplayType",
+        "type": "input",
+        "data": "",
+        "readonly": true,
+        "disabled": true,
+        "templateOptions": {
+          "label": "Type:",
+          "required": "no",
+          "requiredMessage": "Type required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ],
+    "actionStatusFields": [
+      {
+        "key": "ActionStatusId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "Code",
+        "type": "input",
+        "data": "CODE",
+        "templateOptions": {
+          "label": "Status Code : ",
+          "required": "yes",
+          "requiredMessage": "Status Code required."
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "Name",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Status Name :",
+          "required": "no",
+          "requiredMessage": "Status Name required."
+        }
+      },
+      {
+        "key": "Colour",
+        "type": "colorpicker",
+        "data": "",
+        "readonly": false,
+        "disabled": false,
+        "templateOptions": {
+          "label": "Colour Code :",
+          "required": "no",
+          "requiredMessage": "Colour Code required.",
+          "minlength": 7,
+          "minlengthMessage": "Minimum 7 characters required.",
+          "maxlength": 7,
+          "maxlengthMessage": "Maximum 7 characters only allowed."
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "data": "",
+        "cols": 3,
+        "templateOptions": {
+          "label": "Description :",
+          "required": "no",
+          "requiredMessage": "Colour Code required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ],
+    "BaseConfigurationFields": [
+      {
+        "key": "BaseId",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },      
+      {
+        "key": "BaseProjects",
+        "type": "multiselectcheckbox",
+        "data": [ ],
+		"refkey": "BaseId",
+        "altkey": "BaseProjectId",
+        "templateOptions": {
+          "label": "Project :",
+          "placeholder": "Select Project...",
+          "required": "no",
+          "requiredMessage": "Project required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "BaseCode",
+        "type": "input",
+        "data": "",
+        "readonly": false,
+        "templateOptions": {
+          "label": "Location Code :",
+          "required": "yes",
+          "requiredMessage": "Status Code required.",
+          "isExistData": "baseConfigurationTableData",
+          "isExistMessage": "Location Code already exists..",
+          "pattern": "[a-zA-Z0-9]+",
+          "patternMessage": "Alpha numeric only allowed."
+        }
+      },
+      {
+        "key": "BaseName",
+        "type": "input",
+        "data": "",
+        "readonly": false,
+        "templateOptions": {
+          "label": "Location Name :",
+          "required": "yes",
+          "requiredMessage": "Location Name required.",
+          "isExistData": "baseConfigurationTableData",
+          "isExistMessage": "Location Name already exists.."
+        }
+      },
+      {
+        "key": "SeqNo",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Sequence :",
+          "tooltip": "Select Sequence",
+          "placeholder": "",
+          "required": "yes",
+          "min": 1,
+          "max": 15,
+          "ng-min": 1,
+          "ng-max": 15,
+          "minMessage": "Invalid Sequence Order",
+          "maxMessage": "Invalid Sequence Order",
+          "requiredMessage": "Sequence is required.",
+          "isExistData": "baseConfigurationTableData",
+          "isExistMessage": "Sequence already exists..",
+          "customClass": "margin-top:100px",
+		  "pattern" : "^[0-9]+$",
+		  "patternMessage" : "Invalid Value."
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter description..",
+          "required": "no",
+          "requiredMessage": "Description required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ],
+    "projectConfigurationFields": [
+      {
+        "key": "ProjectId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ProjectCode",
+        "type": "input",
+        "data": "",
+        "readonly": false,
+        "templateOptions": {
+          "label": "Project Code",
+          "required": "yes",
+          "requiredMessage": "Status Code required.",
+          "isExistData": "projectConfigurationTableData",
+          "isExistMessage": "Project Code already exists..",
+          "pattern": "[a-zA-Z0-9]+",
+          "patternMessage": "Alpha numeric only allowed."
+        }
+      },
+      {
+        "key": "ProjectName",
+        "type": "input",
+        "data": "",
+        "readonly": false,
+        "templateOptions": {
+          "label": "Project Name",
+          "required": "yes",
+          "requiredMessage": "Project Name required.",
+          "isExistData": "projectConfigurationTableData",
+          "isExistMessage": "Project Name already exists.."
+        }
+      },
+      {
+        "key": "SeqNo",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Sequence :",
+          "tooltip": "Select Sequence",
+          "placeholder": "",
+          "min": 1,
+          "max": 15,
+          "ng-min": 1,
+          "ng-max": 15,
+          "minMessage": "Invalid Sequence Order",
+          "maxMessage": "Invalid Sequence Order",
+          "required": "yes",
+          "requiredMessage": "Sequence  is required.",
+          "customClass": "margin-top:100px",
+          "isExistData": "projectConfigurationTableData",
+          "isExistMessage": "Sequence already exists..",
+		  "pattern" : "^[0-9]+$",
+		  "patternMessage" : "Invalid Value."
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter description..",
+          "required": "no",
+          "requiredMessage": "Description required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed."
+
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ],
+    "productsConfigurationFields": [
+      {
+        "key": "ProductId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ProductCode",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Product Code :",
+          "required": "yes",
+          "requiredMessage": "Product Code required.",
+          "isExistData": "productConfigurationTableData",
+          "isExistMessage": "Product Code already exists..",
+          "pattern": "[a-zA-Z0-9]+",
+          "patternMessage": "Alpha numeric only allowed."
+        }
+      },
+      {
+        "key": "ProductName",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Product Name :",
+          "required": "yes",
+          "requiredMessage": "Product Name required.",
+          "isExistData": "productConfigurationTableData",
+          "isExistMessage": "Product Name already exists.."
+        }
+      },
+      {
+        "key": "ProductDescription",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter Description..",
+          "required": "no",
+          "requiredMessage": "Description required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed."
+        }
+      },
+      {
+        "key": "SeqNo",
+        "type": "number",
+        "data": "",
+        "templateOptions": {
+          "label": "Sequence :",
+          "tooltip": "Select Sequence",
+          "placeholder": "",
+          "required": "yes",
+          "min": 1,
+          "max": 15,
+          "ng-min": 1,
+          "ng-max": 15,
+          "minMessage": "Invalid Sequence Order",
+          "maxMessage": "Invalid Sequence Order",
+          "requiredMessage": "Sequence  is required.",
+          "customClass": "margin-top:100px",
+		  "isExistData": "productConfigurationTableData",
+          "isExistMessage": "Sequence already exists..",
+		  "pattern" : "^[0-9]+$",
+		  "patternMessage" : "Invalid Value."
+        }
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter description..",
+          "required": "no",
+          "requiredMessage": "Description required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 100 characters only allowed."
+        }
+      },
+      {
+        "key": "ProductDepLocations",
+        "type": "multiselectcheckbox",
+        "data": [ ],
+        "refkey": "ProductId",
+        "altkey": "ProductDepLocationId",
+        "templateOptions": {
+          "label": "Location/Department :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Location/Department is required"
+        },
+        "selectOptions": {
+          "isCustomFormat": true,
+          "customFilter": true,
+          "customFormat": "LocationDepartmentCustomFormat",
+          "item": {
+            "selected": { },
+            "displayField": "LocationName",
+            "dataField": "DepartmentLocationId",
+            "defaultField": "DepartmentLocation",
+            "secondDisplayField": "DepartmentName"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "LocationId",
+        "save": false,
+        "type": "multiselectcheckbox",
+        "data": [ ],
+        "refkey": "ProductId",
+        "altkey": "DepartmentId",
+        "templateOptions": {
+          "label": "Location :",
+          "placeholder": "Select Location...",
+          "required": "no",
+          "requiredMessage": "Location required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "Locations"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "DepartmentId",
+        "save": false,
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Department :",
+          "placeholder": "Select Department...",
+          "required": "no",
+          "requiredMessage": "Department required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BaseName",
+            "dataField": "BaseId",
+            "defaultField": "Locations"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ],
+    "causeStatusFields": [
+      {
+        "key": "CauseStatusTypeId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "CauseStatusTypeCode",
+        "type": "input",
+        "data": "",
+        "readonly": false,
+        "templateOptions": {
+          "label": "Status Code",
+          "required": "yes",
+          "requiredMessage": "Status Code required."
+        }
+      },
+      {
+        "key": "StatusTypeName",
+        "type": "input",
+        "data": "",
+        "readonly": false,
+        "templateOptions": {
+          "label": "Status Name",
+          "required": "yes",
+          "requiredMessage": "Status Name required."
+        }
+      },
+      {
+        "key": "ColorCode",
+        "type": "colorpicker",
+        "data": "",
+        "readonly": false,
+        "disabled": false,
+        "templateOptions": {
+          "label": "Colour Code",
+          "required": "yes",
+          "requiredMessage": "Colour Code required."
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ],
+    "hazardClassificationFields": [
+      {
+        "key": "HazardId",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "ProjectId",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Project",
+          "placeholder": "Select Project...",
+          "required": "yes",
+          "requiredMessage": "Project required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ProjectName",
+            "dataField": "ProjectId",
+            "defaultField": "Projects"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "HazardStatusId",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Hazard Status :",
+          "placeholder": "Select Hazard Status...",
+          "required": "yes",
+          "requiredMessage": "Hazard Status required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "HazardStatusName",
+            "dataField": "HazardStatusId",
+            "defaultField": "HazardStatus"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "OwnerId",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Owner :",
+          "placeholder": "Select Owner...",
+          "required": "no",
+          "requiredMessage": "Owner required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "OwnerName",
+            "dataField": "OwnerId",
+            "defaultField": "Owner"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "HazardCodeSelect",
+        "type": "select",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Hazard Code :",
+          "placeholder": "Select Hazard Code...",
+          "required": "no",
+          "requiredMessage": "Hazard Code required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "HazardCodeName",
+            "dataField": "HazardCodeId",
+            "defaultField": "HazardCode"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "HazardCode",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "HazardNameSelect",
+        "type": "select",
+        "data": [ ],
+        "save": false,
+        "templateOptions": {
+          "label": "Hazard Name :",
+          "placeholder": "Select Hazard Name...",
+          "required": "no",
+          "requiredMessage": "Hazard Name required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "HazardName",
+            "dataField": "HazardId",
+            "defaultField": "Hazard"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "HazardName",
+        "type": "label",
+        "data": ""
+      },
+      {
+        "key": "Description",
+        "type": "textarea",
+        "rows": "5",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Description :",
+          "placeholder": "Enter Description..",
+          "required": "yes",
+          "requiredMessage": "Description required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 100,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "History",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "HistoryRemarks",
+        "type": "label",
+        "data": [ ]
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0",
+        "templateOptions": { }
+      }
+    ],
+    "historyFields": [
+      {
+        "key": "HistoryRemarks",
+        "type": "textarea",
+        "data": "",
+        "disabled": "",
+        "templateOptions": {
+          "label": "Rational :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Rational is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 500,
+          "maxlengthMessage": "Maximum 500 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "Name already exists..",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "ITARWarning",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      }
+    ]
+  },
+  "tables": {
+    "masterConfigurationTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            3
+          ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Code",
+          "data": "ShortCode",
+          "width": "10%"
+        },
+        {
+          "title": "Name",
+          "data": "DisplayText",
+          "width": "30%"
+        },
+        {
+          "title": "Description",
+          "data": "Description"
+        },
+        {
+          "title": "Sequence No.",
+          "data": "SeqNo",
+          "width": "12%"
+        }
+      ]
+    },
+    "actionStatusTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Name",
+          "data": "Name",
+          "width": "30%"
+        },
+        {
+          "title": "Colour Code",
+          "data": "Colour",
+          "width": "12%"
+        },
+        {
+          "title": "Description",
+          "data": "Description"
+        }
+      ]
+    },
+    "baseConfigurationTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            4
+          ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "BaseId",
+          "data": "BaseId",
+          "visible": false
+        },
+        {
+          "title": "Location Code",
+          "data": "BaseCode",
+          "width": "200px"
+        },
+        {
+          "title": "Location Name",
+          "data": "BaseName",
+          "width": "200px"
+        },
+        {
+          "title": "Description",
+          "data": "Description"
+        },
+        {
+          "title": "Sequence No.",
+          "data": "SeqNo",
+          "width": "200px"
+        }
+      ]
+    },
+    "causeStatusTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "CauseStatusTypeId",
+          "data": "CauseStatusTypeId",
+          "visible": false
+        },
+        {
+          "title": "Code",
+          "data": "CauseStatusTypeCode",
+          "width": "10%"
+        },
+        {
+          "title": "Status Type",
+          "data": "StatusTypeName",
+          "width": "30%"
+        },
+        {
+          "title": "Color Code",
+          "data": "ColorCode",
+          "width": "30%"
+        }
+      ]
+    },
+    "projectConfigurationTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [
+            3
+          ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Project Code",
+          "data": "ProjectCode",
+          "width": "200px"
+        },
+        {
+          "title": "Project Name",
+          "data": "ProjectName",
+          "width": "250px"
+        },
+        {
+          "title": "Description",
+          "data": "Description"
+        },
+        {
+          "title": "Sequence No.",
+          "data": "SeqNo",
+          "width": "200px"
+        }
+      ]
+    },
+    "productConfigurationTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "Product",
+          "data": "ProductId",
+          "visible": false
+        },
+        {
+          "title": "Product Code",
+          "data": "ProductCode",
+          "width": "150px"
+        },
+        {
+          "title": "Product Name",
+          "data": "ProductName",
+          "width": "200px"
+        },
+        {
+          "title": "Description",
+          "data": "ProductDescription"
+        },
+        {
+          "title": "Sequence No.",
+          "data": "SeqNo",
+          "width": "200px"
+        }
+      ]
+    },
+    "hazardClassificationTable": {
+      "order": [ [ 0, "asc" ] ],
+      "lengthMenu": [
+        [ 5, 15, 20, -1 ],
+        [ 5, 15, 20, "All" ]
+      ],
+      "pageLength": 10,
+      "data": [ ],
+      "aoColumnDefs": [
+        {
+          "bSortable": false,
+          "aTargets": [ ]
+        },
+        {
+          "className": "tableColumnStyle",
+          "aTargets": [ ]
+        }
+      ],
+      "filterBar": { },
+      "autoWidth": false,
+      "columns": [
+        {
+          "title": "HazardId",
+          "data": "HazardId",
+          "visible": false
+        },
+        {
+          "title": "ProjectId",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "HazardStatusId",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "OwnerId",
+          "data": "ProjectId",
+          "visible": false
+        },
+        {
+          "title": "Hazard Code",
+          "data": "HazardCode",
+          "width": "10%"
+        },
+        {
+          "title": "Hazard Name",
+          "data": "HazardName",
+          "width": "10%"
+        },
+        {
+          "title": "Hazard Status",
+          "data": "HazardStatus",
+          "width": "10%"
+        },
+        {
+          "title": "Project Name",
+          "data": "ProjectName",
+          "width": "10%"
+        },
+        {
+          "title": "Owner",
+          "data": "Owner",
+          "width": "10%"
+        },
+        {
+          "title": "Description",
+          "data": "Description"
+        }
+      ]
+    }
+  }
+}

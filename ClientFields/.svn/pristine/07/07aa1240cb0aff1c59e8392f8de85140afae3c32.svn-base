@@ -1,0 +1,796 @@
+{
+  "fields": {
+    "BirdStrikeFileds": [
+      {
+        "key": "SORTBirdStrikeId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "OccuranceTypeId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "FlightOccuranceTypeId",
+        "type": "label",
+        "data": 0
+      },
+      {
+        "key": "SORTCrewInvolved",
+        "type": "tableeditor",
+        "data": [ ],
+        "templateOptions": {
+          "settings": "birdstrikeTableEditor"
+        }
+      },
+      {
+        "key": "RoleDuringOccurrenceId",
+        "type": "Select",
+        "data": "",
+        "save": false,
+        "templateOptions": {
+          "label": "Role During Occurrence :",
+          "placeholder": "Enter the Occurrence. :",
+          "required": "no",
+          "requiredMessage": "Role During Occurrence required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "OrganisationName",
+            "dataField": "OrganisationId",
+            "defaultField": "Organisation"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "Lat1",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Lat :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Latitude is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px",
+          "hideLabel": false
+        }
+      },
+      {
+        "key": "Lat2",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "In Route Location Lat :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px",
+          "hideLabel": true
+        }
+      },
+      {
+        "key": "LatDirectionId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "",
+          "hideLabel": true
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "LatInfoName",
+            "dataField": "LatInfoId",
+            "defaultField": "LatInfo",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "Long1",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "In Route Location Long :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Longitude is required",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Long2",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px",
+          "hideLabel": true
+        }
+      },
+      {
+        "key": "LongDirectionId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "",
+          "hideLabel": true
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "LongInfoName",
+            "dataField": "LongInfoId",
+            "defaultField": "LongInfo",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "HISLsId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "HISLs :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "HISLsName",
+            "dataField": "HISLsId",
+            "defaultField": "HISLs",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "AirborneRadarId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Airborne RADAR :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AirborneRADARName",
+            "dataField": "AirborneRADARId",
+            "defaultField": "AirborneRADAR",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "AmbientLightId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Ambient Light :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "AmbientLightName",
+            "dataField": "AmbientLightId",
+            "defaultField": "AmbientLight",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "WeatherId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Weather :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Weather is required"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "WeatherName",
+            "dataField": "WeatherId",
+            "defaultField": "Weather",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "CrewInjury",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Crew Injury :",
+          "placeholder": "",
+          "required": "yes",
+          "requiredMessage": "Crew Injury is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTImpactPoint1",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+        "refkey": "SORTBirdStrikeId",
+        "altkey": "ImpactPoint1Id",
+        "templateOptions": {
+          "label": "Impact Point 1 :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Impact Point 1 is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ImpactPoint1Name",
+            "dataField": "ImpactId",
+            "defaultField": "ImpactPoint1",
+            "addNew": "yes"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "ImpactPointOther1",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Other :",
+          "placeholder": "",
+          "required": "No",
+          "requiredMessage": "Impact Point1 is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "Deleterecord",
+        "type": "textarea",
+        "rows": "3",
+        "cols": "50",
+        "data": "",
+        "templateOptions": {
+          "label": "Reason for Deletion :",
+          "placeholder": "",
+          "required": "no",
+          "maxlength": 500,
+          "hideLabel": false,
+          "maxlengthMessage": "Maximum 500 characters only allowed."
+        }
+      },
+      {
+        "key": "drprepaircategory",
+        "type": "select",
+        "save": false,
+        "data": "",
+        "templateOptions": {
+          "label": "Aircraft Repair Category :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Aircraft Repair Category is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "Category",
+            "dataField": "CategoryID",
+            "defaultField": "CategoryDetails",
+            "addNew": "no"
+          },
+          "items": [
+            {
+              "CategoryID": 0,
+              "Category": "No maintenance required"
+            },
+            {
+              "CategoryID": 1,
+              "Category": "Cat 1"
+            },
+            {
+              "CategoryID": 2,
+              "Category": "Cat 2"
+            },
+            {
+              "CategoryID": 3,
+              "Category": "Cat 3"
+            },
+            {
+              "CategoryID": 4,
+              "Category": "Cat 3 (Fly)"
+            },
+            {
+              "CategoryID": 5,
+              "Category": "Cat 3 (Prov)"
+            },
+            {
+              "CategoryID": 6,
+              "Category": "Cat 3 (Serv)"
+            },
+            {
+              "CategoryID": 7,
+              "Category": "Cat 3 (Depth)"
+            },
+            {
+              "CategoryID": 8,
+              "Category": "Cat 4"
+            },
+            {
+              "CategoryID": 9,
+              "Category": "Cat 4 (Wks)"
+            },
+            {
+              "CategoryID": 10,
+              "Category": "Cat 4 (Fly)"
+            },
+            {
+              "CategoryID": 11,
+              "Category": "Cat 4 (Ser)"
+            },
+            {
+              "CategoryID": 12,
+              "Category": "Cat 4 (UAS)"
+            },
+            {
+              "CategoryID": 13,
+              "Category": "Cat 5"
+            },
+            {
+              "CategoryID": 14,
+              "Category": "Cat 5 (Prov)"
+            },
+            {
+              "CategoryID": 15,
+              "Category": "Cat 5 (UAS)"
+            }
+          ]
+        }
+      },
+      {
+        "key": "SORTImpactPoint2",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+        "altkey": "ImpactPoint2Id",
+        "refkey": "SORTBirdStrikeId",
+        "templateOptions": {
+          "label": "Impact Point 2 :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Impact Point 2 is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "ImpactPoint2Name",
+            "dataField": "ImpactId",
+            "defaultField": "ImpactPoint2",
+            "addNew": "yes"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "ImpactPointOther2",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Other :",
+          "placeholder": "",
+          "required": "No",
+          "requiredMessage": "Impact Point2 is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "DamagePointOther1",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Other :",
+          "placeholder": "",
+          "required": "No",
+          "requiredMessage": "Damage Point1 is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "DamagePointOther2",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Other :",
+          "placeholder": "",
+          "required": "No",
+          "requiredMessage": "Damage Point2 is required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "SORTDamagePoint1",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+        "altkey": "DamagePoint1Id",
+        "refkey": "SORTBirdStrikeId",
+        "templateOptions": {
+          "label": "Damage Point 1 :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DamagePoint1Name",
+            "dataField": "DamageId",
+            "defaultField": "DamagePoint1",
+            "addNew": "yes"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "SizeofBirdId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Size of Bird :",
+          "placeholder": "Select ...",
+          "required": "yes",
+          "requiredMessage": "Size of Bird is required."
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "SizeOfBirdName",
+            "dataField": "SizeOfBirdId",
+            "defaultField": "SizeOfBird",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "SORTDamagePoint2",
+        "type": "multiselectcheckbox",
+        "save": true,
+        "data": "",
+        "altkey": "DamagePoint2Id",
+        "refkey": "SORTBirdStrikeId",
+
+        "templateOptions": {
+          "label": "Damage Point 2 :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": ""
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "DamagePoint2Name",
+            "dataField": "DamageId",
+            "defaultField": "DamagePoint2",
+            "addNew": "yes"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "RemainsIdentifiedbyId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Remains Identified by :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Reported by"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BirdRemainsIdentifiedByName",
+            "dataField": "BirdRemainsIdentifiedById",
+            "defaultField": "BirdRemainsIdentifiedBy",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "BirdRemainsCollectedId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Bird Remains Collected :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Bird Remains Collected"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BirdRemainsCollectedName",
+            "dataField": "BirdRemainsCollectedId",
+            "defaultField": "BirdRemainsCollected",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "BirdNumbersId",
+        "type": "select",
+        "save": true,
+        "data": "",
+        "templateOptions": {
+          "label": "Bird Numbers :",
+          "placeholder": "Select ...",
+          "required": "no",
+          "requiredMessage": "Bird Numbers"
+        },
+        "selectOptions": {
+          "item": {
+            "selected": { },
+            "displayField": "BirdNumbersName",
+            "dataField": "BirdNumbersId",
+            "defaultField": "BirdNumbers",
+            "addNew": "no"
+          },
+          "items": [ ]
+        }
+      },
+      {
+        "key": "BirdSpecies",
+        "type": "input",
+        "data": "",
+        "templateOptions": {
+          "label": "Bird Species :",
+          "placeholder": "",
+          "required": "no",
+          "requiredMessage": "Bird Species required.",
+          "minlength": 1,
+          "minlengthMessage": "Minimum 1 character required.",
+          "maxlength": 20,
+          "maxlengthMessage": "Maximum 20 characters only allowed.",
+          "isExistData": "",
+          "isExistMessage": "",
+          "customClass": "margin-top:100px"
+        }
+      },
+      {
+        "key": "fuattachments",
+        "type": "fileupload",
+        "data": [ ],
+        "templateOptions": {
+          "label": "Attachments",
+          "required": "no",
+          "key": "attachmentid",
+          "agreeText": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "folderType": "Forms",
+          "multipleFile": true
+        }
+      },
+      {
+        "key": "ITARDeclaration",
+        "type": "checkbox",
+        "data": "",
+        "templateOptions": {
+          "label": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "required": false,
+          "hideLabel": true,
+          "suffixLabel": "I confirm that the information I am uploading does not violate the security classifications approved for this site and network. Also, that the content is not Technical Data as defined under the International Traffic in Arms Regulations (ITAR) nor Technology as defined under the Export Administration Regulations (EAR).",
+          "suffixLabelHide": true,
+          "requiredMessage": "ITAR warning disclaimer required"
+        }
+      },
+      {
+        "key": "ObjectState",
+        "type": "label",
+        "data": "0"
+      },
+      {
+        "key": "Status",
+        "type": "label",
+        "data": "0"
+      }
+    ]
+
+
+  },
+  "tables": {
+
+  },
+  "tableEditor": {
+    "birdstrikeTableEditor": {
+      "fields": [
+        {
+          "key": "SORTCrewInvolvedId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "SORTBirdStrikeId",
+          "type": "label",
+          "data": 0,
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "FullName",
+          "name": "Personnel Involved",
+          "type": "select",
+          "data": "",
+          "class": "col-md-5",
+          "templateOptions": {
+            "placeholder": "Personnel Involved",
+            "required": "yes",
+            "requiredMessage": "Personnel Involved is required.",
+            "isExistData": "",
+            "isExistMessage": "Personnel Involved already exists..",
+            "customClass": "margin-top:100px"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "UserName",
+              "dataField": "UserId",
+              "defaultField": "Users",
+              "addNew": "yes"
+            },
+            "items": [ ]
+          }
+        },
+        {
+          "key": "RoleId",
+          "name": "Role",
+          "type": "select",
+          "save": true,
+          "data": [
+          ],
+          "class": "col-md-4",
+          "templateOptions": {
+            "label": "Role During Occurrence :",
+            "placeholder": "select",
+            "required": "yes",
+            "requiredMessage": "Role During Occurrence is required"
+          },
+          "selectOptions": {
+            "item": {
+              "selected": { },
+              "displayField": "RoleName",
+              "dataField": "RoleId",
+              "defaultField": "Roles"
+            },
+            "items": [ ]
+          }
+        },
+        {
+          "key": "ObjectState",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        },
+        {
+          "key": "Status",
+          "type": "label",
+          "data": "0",
+          "templateOptions": {
+            "label": ""
+          }
+        }
+      ],
+      "data": [
+      ]
+    }
+  }
+}
