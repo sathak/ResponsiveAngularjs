@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="evaluation-body">
+        <div class="row evaluation-header">
+            <div class="col-md-5"><div class="">Title</div></div>
+            <div class="col-md-3 text-center"><div class="">Grade</div></div>
+            <div class="col-md-4 text-center"><div class="">Remarks</div></div>
+        </div>
+        <div class="row">
+            <div ng-repeat="item in items" ng-include="'navconNodes'"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="navconNodeData">
+    <div class="row">
+        <div class="col-md-5">
+            <label id="{{item.id}}_text" style="padding-left: {{item.depth * 20}}px" class="navcon-select control-label evaluation-text" 
+                   ng-model="item.data[textFields]">{{item.data[textFields]}}</label>
+        </div>
+        <div class="col-md-3" ng-hide="item.children.length>0">
+            <ui-select id="{{item.id}}_grade" theme="selectize" class="evaluation-select evaluation-mandatory"
+                       ng-model="item.data[gradeFields]"
+                       ng-change="gradeChange(item.data[gradeFields],item,this)">
+                <ui-select-match><span ng-bind-html="$select.selected[optionText]"></span></ui-select-match>
+                <ui-select-choices repeat="itm in (optionData) | filter: ($select.search)">
+                    <span ng-bind-html="itm[optionText] | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+        <div class="col-md-4" ng-hide="item.children.length>0">
+            <textarea id="{{item.id}}_remarks" class="form-control evaluation-remarks" rows="1"
+                      ng-style='{"width": "100%"}'
+                      ng-model="item.data[remarksFields]"
+                      ng-change="RemarkChange(item.data[remarksFields],this,item.id)"></textarea>
+            <span id="{{item.id}}_spnremarks" style="display:none;"></span>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="navconNodes">
+    <div class="evaluation-row" ng-include="templateUrl"></div>
+    <div ng-model="item.children" ng-repeat="item in item.children  | filter: searchText.search" ng-include="'navconNodes'"></div>
+</script>

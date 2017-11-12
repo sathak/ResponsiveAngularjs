@@ -1,0 +1,24 @@
+﻿<!--Pagebar-->
+<navcon-pagebar breadcrumbs="vm.breadcrumbs"></navcon-pagebar>
+<!--Pagebar-->
+<!--content-->
+<div class="row">
+    <!--changepassword-->
+    <div class="col-md-5">
+        <navcon-portlet title="Change Password" navcon-data="vm" class="box blue-hoki" icon="fa fa-cogs" tools-disp="" tools-collapse="false" is-title="false">
+            <navcon-form navcon-data="vm" footer='S' field-data="vm.changePasswordFields" type="changePassword">
+                <div class="form-group row">
+                    <navcon-field class="col-md-10 col-md-push-1" field-key="OldPassword"></navcon-field>
+                </div>
+                <div class="form-group row">
+                    <navcon-field class="col-md-10 col-md-push-1" field-key="NewPassword"></navcon-field>
+                </div>
+                <div class="form-group row">
+                    <navcon-field class="col-md-10 col-md-push-1" field-key="ConfirmPassword"></navcon-field>
+                </div>
+            </navcon-form>
+        </navcon-portlet>
+    </div>
+    <!--changepassword-->
+</div>
+<!--content-->

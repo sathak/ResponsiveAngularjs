@@ -1,0 +1,8 @@
+<div class="block-ui-container">
+    <div ng-show="state.blockCount > 0" class="block-ui-overlay" ng-class="{ 'block-ui-visible': state.blocking }"></div>
+    <div ng-show="state.blocking" class="block-ui-message-container">
+        <div class="block-ui-message" style="background-color: transparent;">
+            <img style="width: 100px; height: 100px;" ng-src="{{'images/ajaxLoader.gif'}}" />
+        </div>
+    </div>
+</div>

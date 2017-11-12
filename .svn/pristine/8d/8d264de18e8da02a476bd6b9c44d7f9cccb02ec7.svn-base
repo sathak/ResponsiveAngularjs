@@ -1,0 +1,42 @@
+﻿
+
+<div class="row">
+    <div class="col-md-12">
+        <navcon-portlet title="User Import" navcon-data="vm" class="" icon="" type="userimport" tools-disp="">
+            <navcon-form navcon-data="vm" footer='' field-data="vm.userImportFields" type="userimport" ng-if="vm.userImportFields!=undefined" form-manage="vm.formManage">
+                <div class="form-group row">
+                    &nbsp;
+                </div>
+                <!--<div class="form-group row">
+                    <navcon-field label-class="col-md-1" field-class="col-md-3" field-key="ProjectId"></navcon-field>
+                    <navcon-field label-class="col-md-2" field-class="col-md-3" field-key="BaseId"></navcon-field>
+                </div>
+                <div class="form-group row">
+                    &nbsp;
+                </div>-->
+                <div class="form-group row">
+                    <navcon-field label-class="col-md-2" field-class="col-md-2" field-key="fuattachments"></navcon-field>
+                </div>
+                <div class="form-group row; col-md-12 text-center">
+                    <navcon-button class="btn btn-success center" icon="fa fa-file" text="Import" ng-click="vm.process()"></navcon-button>
+                    <navcon-button class="btn btn-primary center" icon="fa fa-download" text="Download Excel Format" ng-click="vm.download()"></navcon-button>
+                </div>
+
+            </navcon-form>
+        </navcon-portlet>
+        <div class="collapse center" id="ResultsTable">
+            <navcon-portlet title="User Import" navcon-data="vm" class="" icon="" type="userimport" tools-disp="">
+                <navcon-form navcon-data="vm" footer='' field-data="vm.userImportFields" type="userimport" ng-if="vm.userImportFields!=undefined" form-manage="vm.formManage">
+                    <navcon-table table-settings="vm.userImportTable" type="userimport" navcon-data="vm"></navcon-table>
+                    <div class="form-group row; col-md-12 text-center">
+                        <div class="form-group row">
+                            &nbsp;
+                        </div>
+                        <navcon-button class="btn btn-warning center" icon="fa fa-stop" text="Close" ng-click="vm.close()"></navcon-button>
+                    </div>
+
+                </navcon-form>
+            </navcon-portlet>
+        </div>
+    </div>
+</div>

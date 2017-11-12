@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <base href="/">
+    <title>RMS</title>
+    <link rel="stylesheet" href="assets/styles/rms_styles.css">
+</head>
+
+<body class="page-header-fixed page-quick-sidebar-over-content" flow-prevent-drop flow-drag-enter="style={border: '5px solid green'}" flow-drag-leave="style={}" ng-esc="clickEsc()" window-exit>
+
+    <div style="height:100%;">
+        <navcon-framework title="RMS" subtitle="" icon-file="">
+        </navcon-framework>
+    </div>
+
+    <script src="assets/scripts/rms_assets.js"></script>
+    <script src="assets/templates/rms_template.js"></script>
+    <script src="assets/scripts/rms_start.js"></script>
+    <script src="assets/scripts/rms_app.js"></script>
+    <script src="start/settings.js"></script>
+
+
+    <script>
+        jQuery(document).ready(function() {
+            Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout
+        });
+    </script>
+</body>
+
+</html>

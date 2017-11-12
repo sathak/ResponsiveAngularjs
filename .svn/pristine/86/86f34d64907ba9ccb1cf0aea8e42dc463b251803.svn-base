@@ -1,0 +1,33 @@
+"use strict";
+angular.module('app').directive('navconKendoTab', ['$timeout',
+function ($timeout) {
+    return {
+        /*E: Directive defined as an element. <navcon-table></navcon-table>
+        A: Directive applied as an attribute on existing element. <div navcon-table></div>
+        C: Directive applied as a css class to existing element <div class="navcon-table"></div>
+        M: Directive applied as comment.*/
+        restrict: 'E',
+        replace: true,
+        transclude: 'element',
+        scope: {
+            //@ reads the attribute value, = provides two-way binding, & works with functions
+            navconData: '=',
+            type: '@',
+            headers: '='            
+        },
+        templateUrl: function () {
+            return navcon.Menuroute.getTemplateUrl("navconKendoTab");
+        },
+        link: function (scope, el, attrs) {
+            scope.$watch('headers', function (newValue, oldValue) {
+                if (newValue !== undefined && (newValue !== oldValue)) {
+                    if ($(el.find("ul")[0]).length !== 0) {
+                        $.each(newValue, function (i, item) {
+                            $(el.find("ul")[0]).append('<li>' + item + '</li>');
+                        });
+                    }
+                }
+            }, true);
+        }
+    };
+}]);

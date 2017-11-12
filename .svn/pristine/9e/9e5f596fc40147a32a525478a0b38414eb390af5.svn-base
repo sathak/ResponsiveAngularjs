@@ -1,0 +1,7 @@
+<div class="navcon-widget-body">
+    <div class="navcon-widget-menu-area btn-group">
+        <!--<a class="collapse-link" ng-hide="!reportSetting" data-toggle="collapse"><i class="fa fa-chevron-up navcon-dashboard-icon"></i></a>-->
+        <a ng-if="options.reportSetting" navcon-popover items="reportList" template-settings="templateSettings" report-data="reportList" default-report="defaultReport" widget-id="widgetId"><i class="glyphicon glyphicon-cog navcon-dashboard-icon"></i></a>
+        <a ng-if="options.close" ng-click="close()"><i class="fa fa-close navcon-dashboard-icon"></i></a>
+    </div>
+</div>

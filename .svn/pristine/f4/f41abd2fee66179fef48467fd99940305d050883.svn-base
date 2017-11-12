@@ -1,0 +1,38 @@
+﻿//Custom View
+(function ($, undefined) {
+    var kendo = window.kendo,
+        ui = kendo.ui,
+        SchedulerTimelineView = ui.TimelineView,
+        extend = $.extend,
+        NS = ".kendoTimelineYearView";
+
+    var SchedulerTimelineYearView = SchedulerTimelineView.extend({
+        nextDate: function () {
+            var start = this.startDate();
+            return new Date(start.getFullYear() + 1, 0, 1);
+        },
+        previousDate: function () {
+            var start = this.startDate();
+            return new Date(start.getFullYear() - 1, 0, 1);
+        },
+        calculateDateRange: function () {
+            //var scheduler = $(event.currentTarget.parentElement).data("kendoScheduler");
+            var selectedDate = this.options.date,
+                start = new Date(selectedDate.getFullYear(), 0, 1),
+                end = kendo.date.previousDay(new Date(selectedDate.getFullYear() + 1, 0, 1)),
+                dates = [];
+
+            while (start <= end) {
+                dates.push(start);
+                start = kendo.date.nextDay(start);
+            }
+            this._render(dates);
+        }
+    })
+
+    //extend UI
+    extend(true, ui, {
+        SchedulerTimelineYearView: SchedulerTimelineYearView
+    });
+
+})(window.kendo.jQuery);

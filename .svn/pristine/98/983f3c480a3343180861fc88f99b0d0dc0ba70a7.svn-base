@@ -1,0 +1,85 @@
+<div id="reportpreview">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                    <div class="panel-heading" data-toggle="collapse" data-target='#collapse1' id="panelHeading1" ng-click="expandCollapse('panelHeading1','panelTitle1','collapse1')">
+                        <h4 class="panel-title collapsed" data-toggle="collapse" data-target='#collapse1' data-parent="#panelHeading1" id="panelTitle1">My Favourites</h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse1">
+                        <div class="panel-body padding0">
+                            <div id="myFav" class="report-list">
+                                <ul>
+                                    <li ng-repeat="favorite in favorites" ng-click="reportClick($event, favorite)">{{favorite.ReportName}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="panel2">
+                    <div class="panel-heading" data-toggle="collapse" data-target='#collapse2' id="panelHeading2" ng-click="expandCollapse('panelHeading2','panelTitle2','collapse2')">
+                        <h4 class="panel-title collapsed" data-toggle="collapse" data-target='#collapse2' data-parent="#panelHeading2" id="panelTitle2">All Reports</h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse2">
+                        <div class="panel-body padding0">
+                            <div id="allReports" class="report-list">
+                                <ul>
+                                    <li ng-repeat="report in reports" ng-click="reportClick($event, report)">{{report.ReportName}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <!-- Right container -------------------------------------------------------------->
+            <div id="graph_placeholder">
+                <!--<img id="dummy" src="images/report-preview.png">-->
+                <img id="dummy" ng-src="{{report.previewImage}}" alt="...">
+                <div class="text-center" style="margin-bottom:20px; margin-top:20px;">
+                    <navcon-button icon="" class="btn btn-success" text="Generate" ng-hide="rportId == undefined" ng-click="generate()"></navcon-button>
+                </div>
+                <!--<div ng-hide="rportId == undefined" ng-click="generate()" class="text-center"><a id="addtemplate" class="btn btn-info" style="margin-bottom:20px; margin-top:20px;"><span class="glyphicon"></span>Generate</a></div>-->
+            </div>
+
+            <!-- Right container End -------------------------------------------------------------->
+        </div>
+    </div>
+</div>
+
+<div id="reportgenerate" style="display:none;">
+    <div id="returntoreport" style="padding:10px 0px 10px 10px; border:0px solid #000; text-align:center; background-color:#D8D8D8;">
+        {{report.title}}
+        <span style="float:right;margin-top: -8px;margin-right: -4px;">
+            <navcon-button icon="" class="btn btn-success btnRight" text="Return to report list" ng-hide="rportId == undefined" ng-click="returntoreport()"></navcon-button>
+        </span>
+        <!--<span ng-click="returntoreport()" id="return-to-report-list" style="background-color:#900; padding:10px;color:#FFF; margin-top:-10px; float:right">
+        <span class="glyphicon glyphicon-arrow-left"></span> Return to report list
+        </span>-->
+    </div>
+    </p>
+    <div>
+        <div id="icons" style="width:75px; float:left;">
+            <!-- List container -------------------------------------------------------------->
+            <div class="display-result" data="favourite">
+                <span ng-class="isFavorite ? 'glyphicon-star' : 'glyphicon-star-empty'" ng-click="favoriteClick($event)" class="star glyphicon glyphicon-star-empty"></span>
+            </div>
+            <div ng-click="compare()" class="display-result" data="compare"><img src="images/compare.png"></div>
+            <!-- List container End -------------------------------------------------------------->
+        </div><!-- End left container ----------------------->
+        <div style="overflow:hidden;">
+            <!-- Right container -------------------------------------------------------------->
+            <div class="row">
+                <!-- Inner Left container -------------------------------------------------------------->
+                <div id="report1" ng-class="isSplit?'col-xs-6':'col-xs-12'" style="background-color:#F2F2F2; border:1px solid #CCC; text-align:center; padding-right:0px !important;">
+                    <navcon-report navcon-data="navconData" report-id="reportdiv1" report-source="report.source" report-title="report.title" page="yes"></navcon-report>
+                </div><!-- End Inner List container -------------------------------------------------------------->
+                <!-- Inner Right container -------------------------------------------------------------->
+                <div ng-if="isSplit" id="report2" class="col-xs-6" style="background-color:#F2F2F2; border:1px solid #CCC; text-align:center; padding-left:1px !important;">
+                    <navcon-report navcon-data="navconData" report-id="reportdiv2" report-source="report.source" report-title="report.title" page="yes"></navcon-report>
+                </div><!-- End Inner Right container -------------------------------------------------------------->
+            </div> <!-- Row end -->
+        </div><!-- End right container ----------------------->
+    </div>
+</div>

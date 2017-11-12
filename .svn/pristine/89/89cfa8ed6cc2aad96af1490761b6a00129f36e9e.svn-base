@@ -1,0 +1,6 @@
+<div class="k-content">
+    <div class="kendoTab" >
+        <ul></ul>
+        <ng-transclude></ng-transclude>
+    </div>
+</div>

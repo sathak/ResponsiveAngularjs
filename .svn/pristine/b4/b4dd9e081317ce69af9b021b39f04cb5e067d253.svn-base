@@ -1,0 +1,51 @@
+<div class="table-editor">
+    <table class="table table-striped table-bordered table-hover dt-responsive">
+        <thead>
+            <tr class="table-editor-header-row">
+                <td class="table-editor-header-data col-xs-1" ng-if="showSlno">SI. No.</td>
+                <td class="table-editor-header-data {{field.class}}" ng-repeat="field in settings.fields" ng-if="(field.titlenotrequired==undefined) && field.name!=undefined && field.name!=''">
+                    {{field.name}}
+                </td>
+                <td class="table-editor-header-data" ng-if="!readOnly && data.length==0 && showAdd">
+                    <button class="btn btn-primary" ng-click="action.addNew()" data-toggle="tooltip" data-original-title="Add" title="Add"><i class="fa fa-plus" /></button>
+                </td>
+                <td class="table-editor-header-data" ng-if="!readOnly && data.length>0 && (showAdd || showUpdate ||showDel)">
+                    &nbsp;
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-editor-body-row" ng-repeat="item in data">
+                <td class="table-editor-sno" ng-if="showSlno">{{item.fields.sno}}</td>
+                <td class="table-editor-data {{field.class}}" ng-repeat="field in item.fields" ng-if="field.titlenotrequired==undefined && field.name!=undefined?true:false ">
+                    <navcon-form field-data="item.fields" footer='' type="fileldtype1" navcon-data="navconData" read-only="readOnly" >
+                        <navcon-field label-class="labelhide" field-key="{{field.key}}" ng-show="field.visible!=undefined?field.visible:true"></navcon-field>
+                        <navcon-field label-class="labelhide" field-key="{{field.addtionalField}}" ng-show="field.addtionalFieldVisible!=undefined?field.addtionalFieldVisible:false" ng-if="field.addtionalField!==undefined"></navcon-field>
+                    </navcon-form>
+                    <!--<navcon-form field-data="item.fields" footer='' type="fileldtype1" navcon-data="navconData"  ng-if="field.templateOptions.hyperlink!=undefined&&field.templateOptions.hyperlink=='yes'">
+                        <navcon-field label-class="labelhide" field-key="{{field.key}}" ng-show="field.visible!=undefined?field.visible:true" ng-disabled="readOnly"></navcon-field>
+                    </navcon-form>-->
+                </td>
+                <td class="table-editor-save" ng-if="showUpdate && !readOnly">
+                    <button class="btn btn-floppy" ng-click="save($index)" data-toggle="tooltip" data-original-title="Save" title="Save"><i class="fa fa-floppy-o" /></button>
+                </td>
+                <td class="table-editor-del" ng-if="$last && showAdd && !readOnly">
+                    <button class="btn btn-primary " ng-click="action.addNew()" data-toggle="tooltip" data-original-title="Add" title="Add"><i class="fa fa-plus" /></button>
+                </td>
+                <td class="table-editor-del" ng-if="showDel && !readOnly && data.length>1">
+                    <button class="btn btndelete" ng-click="delete($index)" data-toggle="tooltip" data-original-title="Delete" title="Delete"><i class="fa fa-trash-o" /></button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row table-editor-bottom" ng-if="showoverAllsave && !readOnly">
+        <button class="btn btn-success rightSide table-editor-add" ng-click="save()" data-toggle="tooltip" data-original-title="Save" title="Save"> {{saveButtontext !="" ? saveButtontext:'Save'}} <i class="fa fa-floppy-o" /></button>
+    </div>
+    <div class="row table-editor-bottom" ng-if="showItar && !readOnly">
+        <label style="padding:10px"><input type="checkbox" ng-model="itarwarningChk"><span style="padding:4px">I confirm that any information I upload does not violate the security classifications approved for this site and network. I further confirm that the content is not technical data, as defined by International Traffic in Arms Regulations (ITAR), or technology, as defined by Export Administration Regulations (EAR).</span></label>
+        <button class="btn btn-success rightSide table-editor-add" ng-click="save()" data-toggle="tooltip" data-original-title="Save" title="Save" ng-disabled="!itarwarningChk"> {{saveButtontext !="" ? saveButtontext:'Save'}}  <i class="fa fa-floppy-o" /></button>
+    </div>
+</div>
+

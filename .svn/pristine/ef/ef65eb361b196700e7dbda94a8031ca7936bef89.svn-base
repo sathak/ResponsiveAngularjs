@@ -1,0 +1,79 @@
+/*.k-pager-wrap > .k-link {
+    border-radius: 1.0833em !important;
+}*/
+
+/*.k-grid > .k-grid-content {
+    height: calc(100% - 500px) !important;
+}*/
+
+/*.k-filtercell, .k-filtercell .k-widget, .k-filtercell>span[style='width: 100%;'] {
+    display: inline-block;
+}*/
+
+.k-page-template {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+    .k-page-template .header {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        border-bottom: 1px solid #888;
+        color: #888;
+    }
+
+    .k-page-template .footer {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        border-top: 1px solid #888;
+        text-align: center;
+        color: #888;
+    }
+
+    .k-page-template .watermark {
+        font-weight: bold;
+        font-size: 400%;
+        text-align: center;
+        margin-top: 30%;
+        color: #aaaaaa;
+        opacity: 0.1;
+        transform: rotate(-35deg) scale(1.7, 1.5);
+    }
+
+.k-draghandle.k-state-selected:hover, .k-ghost-splitbar-horizontal, .k-ghost-splitbar-vertical, .k-list > .k-state-highlight, .k-list > .k-state-selected, .k-marquee-color, .k-panel > .k-state-selected, .k-scheduler .k-scheduler-toolbar .k-state-selected, .k-scheduler .k-today.k-state-selected, .k-state-selected, .k-state-selected:link, .k-state-selected:visited, .k-tool.k-state-selected {
+    color: #000000;
+    background-color: blanchedalmond;
+    border-color: lightgray;
+}
+.k-grid td.k-state-selected:hover, .k-grid tr.k-state-selected:hover {
+    background-color: #bdb4af;
+    background-image: none;
+}
+
+.k-panelbar>li.k-state-default>.k-link.k-state-selected, .k-panelbar>li>.k-state-selected, .k-state-selected>.k-link {
+    color: #000; 
+}
+
+.k-event, .k-task-complete {
+    border-color: #ffc09c;
+    background: #aaaaaa 0 -257px url(textures/highlight.png) repeat-x;
+    color: #2e2e2e;
+}
+
+.k-scheduler-content .k-event {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.k-scheduler-event-title {
+    border: 2px solid #a1a1a1;
+    padding: 2px 2px;
+    border-radius: 125px;
+}
